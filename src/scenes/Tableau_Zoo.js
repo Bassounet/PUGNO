@@ -1,10 +1,10 @@
-class Tableau06 extends Tableau{
+class Tableau_Zoo extends Tableau{
 
     preload() {
         super.preload();
         this.load.image('star', 'assets/star.png');
         this.load.image('monster-violet', 'assets/monster-violet.png');
-        this.load.image('cerbere', 'assets/cerbere.png')
+        this.load.image('cerbere', 'assets/cerbere.jpg');
 
     }
     create() {
@@ -31,6 +31,15 @@ class Tableau06 extends Tableau{
         this.monstre.setCollideWorldBounds(true);
         this.monstre.setBounce(1);
         this.monstre.setVelocityX(50);
+        this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
+
+        // le nouveau monstre 
+        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"cerbere");
+        this.monstre.setOrigin(0,0);
+        this.monstre.setDisplaySize(65,65);
+        this.monstre.setCollideWorldBounds(true);
+        this.monstre.setBounce(2);
+        this.monstre.setVelocityX(70);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
 
 
