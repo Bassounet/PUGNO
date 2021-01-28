@@ -3,8 +3,11 @@ class Tableau_Zoo extends Tableau{
     preload() {
         super.preload();
         this.load.image('star', 'assets/star.png');
-        this.load.image('monster-violet', 'assets/monster-violet.png');
-        this.load.image('cerbere', 'assets/cerbere.jpg');
+        this.load.image('char', 'assets/char.png');
+        this.load.image('personnage', 'assets/personnage.png');
+        this.load.image('bato', 'assets/bato.png');
+        this.load.image('tourelle', 'assets/tourelle.png');
+        this.load.image('helico', 'assets/helico.png');
 
     }
     create() {
@@ -24,8 +27,8 @@ class Tableau_Zoo extends Tableau{
         });
         this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
 
-        //notre monstre
-        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"monster-violet");
+        //le charerino
+        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"char");
         this.monstre.setOrigin(0,0);
         this.monstre.setDisplaySize(65,65);
         this.monstre.setCollideWorldBounds(true);
@@ -33,14 +36,44 @@ class Tableau_Zoo extends Tableau{
         this.monstre.setVelocityX(50);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
 
-        // le nouveau monstre 
-        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-70,"cerbere");
+
+        // le soldat v_1 un peu pourrie 
+        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-25,"personnage");
         this.monstre.setOrigin(0,0);
-        this.monstre.setDisplaySize(65,65);
+        this.monstre.setDisplaySize(45,65);
         this.monstre.setCollideWorldBounds(true);
-        this.monstre.setBounce(2);
-        this.monstre.setVelocityX(70);
+        this.monstre.setBounce(1);
+        this.monstre.setVelocityX(125);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
+
+        // le batooooooooo 
+        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-150,"bato");
+        this.monstre.setOrigin(0,0);
+        this.monstre.setDisplaySize(90,90);
+        this.monstre.setCollideWorldBounds(true);
+        this.monstre.setBounce(0);
+        this.monstre.setVelocityX(30);
+        this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
+
+        // la tourelle non mobile
+        this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-150,"tourelle");
+        this.monstre.setOrigin(0,0);
+        this.monstre.setDisplaySize(120,80);
+        this.monstre.setCollideWorldBounds(true);
+        this.monstre.setBounce(0);
+        this.monstre.setVelocityX(0);
+        this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
+
+        // l'helicoherino
+        this.monstre=this.physics.add.sprite(150,this.sys.canvas.height-150,"helico");
+        this.monstre.setOrigin(0,0);
+        this.monstre.setDisplaySize(120,80);
+        this.monstre.setCollideWorldBounds(true);
+        this.monstre.setBounce(0);
+        this.monstre.setVelocityX(0);
+        this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
+
+        
 
 
 
