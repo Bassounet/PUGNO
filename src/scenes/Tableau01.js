@@ -2,7 +2,7 @@ class Tableau01 extends Tableau00{
 
     preload() {
         super.preload();
-        this.load.image('star', 'assets/star.png');
+        this.load.image('medikit_1', 'assets/star.png');
         this.load.image('ground', 'assets/platform.png');
     }
     create() {
@@ -16,9 +16,9 @@ class Tableau01 extends Tableau00{
         rouge.body.allowGravity=0; //la gravité n'a pas d'effet ici
         rouge.setImmovable(true); //ne bouge pas quand on rentre dedans
         this.physics.add.collider(this.player, rouge);//le joueur rebondit dessus
-        this.physics.add.collider(this.star1, rouge);//l'étoile1 rebondit dessus
-        this.physics.add.collider(this.star2, rouge);//l'étoile2 rebondit dessus
-        this.physics.add.collider(this.star3, rouge);//l'étoile3 rebondit dessus
+        this.physics.add.collider(this.medikit_1, rouge);//l'étoile1 rebondit dessus
+        this.physics.add.collider(this.smedikit_1, rouge);//l'étoile2 rebondit dessus
+        this.physics.add.collider(this.medikit_1, rouge);//l'étoile3 rebondit dessus
 
         //autre méthodes
 
@@ -40,9 +40,9 @@ class Tableau01 extends Tableau00{
         });
 
         this.physics.add.collider(this.player, groupeVert);//le joueur rebondit sur les plateformes du goupe vert
-        this.physics.add.collider(this.star1, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
-        this.physics.add.collider(this.star2, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
-        this.physics.add.collider(this.star3, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
+        this.physics.add.collider(this.medikit_1, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
+        this.physics.add.collider(this.medikit_1, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
+        this.physics.add.collider(this.medikit_1, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
 
     }
 
