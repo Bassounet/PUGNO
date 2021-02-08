@@ -36,7 +36,7 @@ class Tableau_Zoo extends Tableau{
         this.monstre.setOrigin(0,0);
         this.monstre.setDisplaySize(65,65);
         this.monstre.setCollideWorldBounds(true);
-        this.monstre.setBounce(1);
+        this.monstre.setBounce(0);
         this.monstre.setVelocityX(50);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
 
@@ -47,7 +47,7 @@ class Tableau_Zoo extends Tableau{
         this.monstre.setDisplaySize(45,65);
         this.monstre.setCollideWorldBounds(true);
         this.monstre.setBounce(1);
-        this.monstre.setVelocityX(125);
+        this.monstre.setVelocityX(180);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
 
         // le batooooooooo 
