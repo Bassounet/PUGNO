@@ -53,8 +53,9 @@ class Helicopter extends ObjetEnnemi{
             })
 
     }
+    // on lui met un coup de cul elle crève 
 
-    start(){
+     start(){
         this.scene.tweens.add({
             targets: this,
             x: {
