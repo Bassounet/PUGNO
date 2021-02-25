@@ -1,7 +1,7 @@
 class ObjetPhysique extends Phaser.Physics.Arcade.Sprite{
     /**
-     *
-     * @param {Tableau} scene
+     * // on crée une classe d'objets physique
+     * @param {Tableau} scene // tout ça je comprend pas vraiment 
      * @param {Number} x
      * @param {Number} y
      * @param {string} image
@@ -12,8 +12,8 @@ class ObjetPhysique extends Phaser.Physics.Arcade.Sprite{
          *
          * @type {Tableau}
          */
-        this.scene=scene;
-        scene.add.existing(this);
-        scene.physics.add.existing(this);
+        this.scene=scene; // on raccourcis le this.scene ... 
+        scene.add.existing(this); // ça je comprend pas vraiment ... 
+        scene.physics.add.existing(this); // je comprend toujours pas ... 
     }
 }

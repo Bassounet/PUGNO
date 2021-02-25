@@ -1,16 +1,17 @@
-class Player extends Phaser.Physics.Arcade.Sprite{
+class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de phaser physique arcade sprite 
     constructor(scene, x, y) {
-        super(scene, x, y, "player")
+        super(scene, x, y, "player") // c'est quoi cette merde de super ? ?
         scene.add.existing(this)
         scene.physics.add.existing(this)
 
-        this.setCollideWorldBounds(true)
+        this.setCollideWorldBounds(true) // on paramètre les rebonds 
         this.setBounce(0.3);
-        this.setGravityY(700)
-        this.setFriction(1,1);
+        this.setGravityY(700) // l'effet de la gravité 
+        this.setFriction(1,1); //jvois pas trop ce que c'est j'essaye mais ça change rien :/ 
 
-        this.setBodySize(this.body.width-6,this.body.height-10);
-        this.setOffset(3, 10);
+
+        this.setBodySize(this.body.width-6,this.body.height-10); // on règle sa taille ... 
+        this.setOffset(10, 10);
 
         this.anims.create({
             key: 'left',

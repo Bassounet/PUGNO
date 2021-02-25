@@ -1,7 +1,7 @@
 /**
  * Un objet qui écoute les touches du clavier et mouvements sur le pad et qui influent le déplacement du joueur
  */
-class GamePad extends Phaser.GameObjects.Container{
+class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick ( c'est l'horreur )
     constructor(scene, x, y,size=100) {
         super(scene, x, y)
         scene.add.existing(this);
@@ -11,7 +11,7 @@ class GamePad extends Phaser.GameObjects.Container{
         let dragW=this.size/2;
         let pad2=scene.add.container();
 
-        let circle=scene.add.circle(0,0,this.size/2,0xffffff,0.1)
+        let circle=scene.add.circle(0,0,this.size/2,0xffffff,0.1) // on donne les couleurs et tout le bordel ;) 
         let circleDrag=scene.add.circle(0,0,dragW/2,0xffffff,0.3)
         this.add(pad2);
         pad2.add(circle);
