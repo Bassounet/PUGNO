@@ -25,14 +25,14 @@ class Tableau extends Phaser.Scene{
     create(){
         Tableau.current=this;
         this.sys.scene.scale.lockOrientation("landscape")
-        console.log("On est sur "+this.constructor.name+" / "+this.scene.key);
+        console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
         /**
          * Le ciel en fond
          * @type {Phaser.GameObjects.Image}
          */
         this.sky=this.add.image(0, 0, 'sky').setOrigin(0,0);
         this.sky.displayWidth=14*64;
-        this.sky.setScrollFactor(0,0);
+        this.sky.setScrollFactor(0,0); // WTF ??? 
         /**
          * Le joueur
          * @type {Player}
@@ -42,7 +42,7 @@ class Tableau extends Phaser.Scene{
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
         this.blood.displayHeight=64;
-        this.blood.visible=false;
+        this.blood.visible=true;
 
     }
     
