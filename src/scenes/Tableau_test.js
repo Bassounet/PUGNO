@@ -47,7 +47,7 @@ class Tableau_test extends Tableau{
             this.load.image('helico', 'assets/helico.png');
             this.load.image('star', 'assets/star.png');
             this.load.image('ground', 'assets/platform.png');
-            this.load.image('sky-2', 'assets/sky-2.jpg');
+            this.load.image('sky-2', 'assets/sky-2.png');
         }
         create() {
             super.create();
@@ -71,14 +71,14 @@ class Tableau_test extends Tableau{
                 plate.setDisplaySize(60,10);
                 plate.refreshBody();
             }
-            this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, function(){ this.cameras.main.shake(200)}, this);
+            this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, function(){ this.cameras.main.shake(50)}, this);
             this.physics.add.collider(this.player,this.platforms);
     
     
             //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
             this.sky=this.add.tileSprite(
                 0,
-                0,
+                0, // on la descend un peu pour pa voir le truc moche en bas
                 this.sys.canvas.width,
                 this.sys.canvas.height,
                 'sky-2'
@@ -95,7 +95,7 @@ class Tableau_test extends Tableau{
             );
             this.sky2.setScrollFactor(0);
             this.sky2.setOrigin(0,0);
-            this.sky2.alpha=0.2;
+            // this.sky2.alpha=0.2;
             //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
     
     
