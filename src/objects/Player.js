@@ -5,17 +5,17 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
         scene.physics.add.existing(this)
 
         this.setCollideWorldBounds(true) // on paramètre les rebonds 
-        this.setBounce(0.3);
+        this.setBounce(0.3); // effet du rebond 
         this.setGravityY(700) // l'effet de la gravité 
         this.setFriction(1,1); //jvois pas trop ce que c'est j'essaye mais ça change rien :/ 
 
 
-        this.setBodySize(this.body.width-6,this.body.height-10); // on règle sa taille ... 
-        this.setOffset(10, 10);
+        this.setBodySize(this.body.width-6,this.body.height-10); // on règle sa taille ... celle du player avec le this. 
+        this.setOffset(3, 10); // jsp vraiment 
 
-        this.anims.create({
-            key: 'left',
-            frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }),
+        this.anims.create({ // gestion de l'anim de déplacement vers la gauche 
+            key: 'left', // utilisation de la partie gacuhe 
+            frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }), // on utilise la generation de frame et on choisit celle de 0 à 3 pour le déplacement vers la gauche 
             frameRate: 10,
             repeat: -1
         });
