@@ -11,9 +11,7 @@ class Tableau extends Phaser.Scene{
         super(key);
     }
 
-    /**
-     * Par défaut on charge un fond et le player
-     */
+   
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('spike', 'assets/spike.png');
@@ -21,6 +19,8 @@ class Tableau extends Phaser.Scene{
             { frameWidth: 32, frameHeight: 48  }
         );
     }
+
+
     create(){
         Tableau.current=this; // je comprend pas trop là ... 
         this.sys.scene.scale.lockOrientation("landscape")
@@ -79,11 +79,16 @@ class Tableau extends Phaser.Scene{
         })
     }
 
-    ramasserEtoile (player, medikit_1) // on crée la fonctioin qui s'active quand on apelle le ramassage d'étoile dans les éléments plus bas ... 
+    ramasserEtoile (player, medikit_1) // on crée la fonction qui s'active quand on apelle le ramassage d'étoile dans les éléments plus bas ... 
     {
-        medikit_1.disableBody(true, true);
-        ui.gagne();
 
+        medikit_1.disableBody(true, true);
+    
+
+        ui.gagne();
+        
+
+    
         //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
         let totalActive=0;
         for(let child of this.children.getChildren()){ // WTF ?????

@@ -71,7 +71,7 @@ class Tableau_test extends Tableau{
                 plate.setDisplaySize(60,10);
                 plate.refreshBody();
             }
-            this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
+            this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, function(){ this.cameras.main.shake(200)}, this);
             this.physics.add.collider(this.player,this.platforms);
     
     
