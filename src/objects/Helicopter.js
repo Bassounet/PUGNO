@@ -53,7 +53,6 @@ class Helicopter extends ObjetEnnemi{
             })
 
     }
-
     start(){
         this.scene.tweens.add({
             targets: this,

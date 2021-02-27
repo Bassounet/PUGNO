@@ -182,6 +182,13 @@ class Tableau extends Phaser.Scene{
         Tableau.suivant();
     }
 
+    shake(){
+        
+
+
+
+    }
+
     /**
      * Va au tableau suivant
      */

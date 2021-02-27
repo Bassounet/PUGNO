@@ -16,14 +16,14 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
         this.anims.create({ // gestion de l'anim de déplacement vers la gauche 
             key: 'left', // utilisation de la partie gacuhe 
             frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }), // on utilise la generation de frame et on choisit celle de 0 à 3 pour le déplacement vers la gauche 
-            frameRate: 10,
-            repeat: -1
+            frameRate: 20, // nombre de frame ( fréquence )
+            repeat: -1 // pourquoi 
         });
 
         this.anims.create({
             key: 'right',
             frames: this.anims.generateFrameNumbers('player', { start: 5, end: 8 }),
-            frameRate: 10,
+            frameRate: 20,
             repeat: -1
         });
         this.anims.create({
@@ -32,13 +32,13 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
             frameRate: 20
         });
 
-        this._directionX=0;
+        this._directionX=0; // position de base quand il apparaît ... 
         this._directionY=0;
 
 
     }
 
-    set directionX(value){
+    set directionX(value){ // jsp vraiment .. 
         this._directionX=value;
     }
     set directionY(value){
@@ -48,7 +48,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
     /**
      * arrête le joueur
      */
-    stop(){
+    stop(){ // on crée la focntion pour arrêter le joueur 
         this.setVelocityX(0);
         this.setVelocityY(0);
         this.directionY=0;
@@ -62,22 +62,23 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
 
         switch (true){
             case this._directionX<0:
+                this.setVelocityX(160); // réglage de la vitesse en X vers la gauche 
                 this.setVelocityX(-160);
                 this.anims.play('left', true);
                 break;
             case this._directionX>0:
 
-                this.setVelocityX(160);
+                this.setVelocityX(160); // réglage de la vitesse en X vers la droite
                 this.anims.play('right', true);
                 break;
             default:
-                this.setVelocityX(0);
+                this.setVelocityX(0); // je comprend pas vraiment 
                 this.anims.play('turn');
         }
 
         if(this._directionY<0){
-            if(this.body.blocked.down || this.body.touching.down){
-                this.setVelocityY(-550);
+            if(this.body.blocked.down || this.body.touching.down){ // wtffffffffffffffffffffffff
+                this.setVelocityY(-550); // vitesse en montée 
             }
         }
 

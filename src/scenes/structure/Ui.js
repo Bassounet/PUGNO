@@ -87,12 +87,18 @@ class Ui extends Phaser.Scene{
         btFs.x=this.sys.canvas.width;
         btFs.y=this.sys.canvas.height; // on le positionne ...
 
+
+        var camera = this.cameras.main;
+
     }
 
-    gagne(points=10) // combiend e points on remporte par étoiles attrapées ... 
+    gagne(points=10) // combien de points on remporte par étoiles attrapées ... 
     {
         this.score+=points;
-        this._scoreText.setText('Score: ' + this.score); // on ajoute directement le score 
+        this._scoreText.setText('Score: ' + this.score); // on ajoute directement le score
+        this.camera.shake(1000,1000,10,1,1);   // duration in ms
+        console.log( 'la putian de camera fonctionne ');// camera.shake(duration, intensity, force, callback, context);  // callback: invoked when completed 
+
     }
     update(){
         if(Tableau.current){

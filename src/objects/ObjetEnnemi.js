@@ -16,4 +16,5 @@ class ObjetEnnemi extends ObjetPhysique{
             scene
         );
     }
+
 }
