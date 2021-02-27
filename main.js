@@ -16,6 +16,8 @@ let config = {
     scene: [
         new Ui(),
 
+
+        new Tableau_test("on test des trucs vite fait"),
         new Tableau_Zoo("les nouveaux monstres"),
         new Tableau00("Des étoiles"),
         new Tableau01("Des plateformes"),
@@ -26,7 +28,6 @@ let config = {
         new Tableau06("Un monstre!"),
         new Tableau07("Un monstre volant!"),
         new Tableau08("Un plateau qui sort du cadre"),
-
     ],
     width: width,
     height: height,

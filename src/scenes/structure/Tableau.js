@@ -182,12 +182,12 @@ class Tableau extends Phaser.Scene{
         Tableau.suivant();
     }
 
-    shake(){
-        
+     //shake(){ /: on va créer une camera shake mais pas pour le moment on se concentre sur le rendu de lundi ;)
 
 
 
-    }
+
+    
 
     /**
      * Va au tableau suivant
