@@ -97,8 +97,8 @@ class Ui extends Phaser.Scene{
         this.score+=points;
         this._scoreText.setText('Score: ' + this.score); // on ajoute directement le score
         
-        //this.camera.shake(1000,1000,10,1,1);   // création d'un caméra shaker  mais ça marche pas des masses 
-        //console.log( 'la putian de camera fonctionne ');// camera.shake(duration, intensity, force, callback, context);  // callback: invoked when completed 
+        game.camera.shake(0.05,500);
+        console.log( 'la putian de camera fonctionne ');// camera.shake(duration, intensity, force, callback, context);  // callback: invoked when completed 
 
     }
     update(){
