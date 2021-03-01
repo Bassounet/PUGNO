@@ -97,6 +97,7 @@ class Ui extends Phaser.Scene{
         this.score+=points;
         this._scoreText.setText('Score: ' + this.score); // on ajoute directement le score
         
+        
 
     }
     update(){

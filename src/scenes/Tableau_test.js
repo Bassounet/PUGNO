@@ -70,6 +70,7 @@ class Tableau_test extends Tableau{
                 let plate=this.platforms.create(posX ,etoileY+50,"ground");
                 plate.setDisplaySize(60,10);
                 plate.refreshBody();
+                // child.setDisplaySize(35,30);
             }
             this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, function(){ this.cameras.main.shake(50)}, this);
             this.physics.add.collider(this.player,this.platforms);
@@ -78,7 +79,7 @@ class Tableau_test extends Tableau{
             //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
             this.sky=this.add.tileSprite(
                 0,
-                0, // on la descend un peu pour pa voir le truc moche en bas
+                100, // on la descend un peu pour pas voir le truc moche en bas
                 this.sys.canvas.width,
                 this.sys.canvas.height,
                 'sky-2'
@@ -94,16 +95,60 @@ class Tableau_test extends Tableau{
                 'sky-2'
             );
             this.sky2.setScrollFactor(0);
-            this.sky2.setOrigin(0,0);
+            this.sky2.setOrigin(10,0);
             // this.sky2.alpha=0.2;
             //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
-    
+            
+
+               
     
             //fait passer les éléments devant le ciel
             this.platforms.setDepth(10)
             this.stars.setDepth(10)
             this.player.setDepth(10)
+
+            this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-25,"char");
+            this.monstre.setOrigin(0,0);
+            this.monstre.setDisplaySize(65,65);
+            this.monstre.setCollideWorldBounds(true);
+            this.monstre.setBounce(1);
+            this.monstre.setVelocityX(50);
+            this.physics.add.overlap(this.player, this.monstre, this.hitMonster, null, this);
+    
+    
+            // le soldat v_1 un peu pourrie 
+            this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-25,"personnage");
+            this.monstre.setOrigin(0,0);
+            this.monstre.setDisplaySize(45,65);
+            this.monstre.setCollideWorldBounds(true);
+            this.monstre.setBounce(1);
+            this.monstre.setVelocityX(180);
+            this.physics.add.overlap(this.player, this.monstre, this.hitMonster, null, this);
+    
+
+            // la tourelle non mobile
+            this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-150,"tourelle");
+            this.monstre.setOrigin(0,0);
+            this.monstre.setDisplaySize(90,65);
+            this.monstre.setCollideWorldBounds(true);
+            this.monstre.setBounce(0);
+            this.monstre.setVelocityX(0);
+            this.physics.add.overlap(this.player, this.monstre, this.hitMonster, null, this);
+    
+            /*// le batooooooooo 
+            this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-10,"bato");
+            this.monstre.setOrigin(0,0);
+            this.monstre.setDisplaySize(90,90);
+            this.monstre.setCollideWorldBounds(true);
+            this.monstre.setBounce(1);
+            this.monstre.setVelocityX(20);
+            this.physics.add.overlap(this.player, this.monstre, this.hitMonster, null, this); */
+    
+        
+            new Helicopter(this,400,100);
         }
+
+        
     
         update(){
             super.update();
