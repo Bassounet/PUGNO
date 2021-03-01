@@ -83,12 +83,8 @@ class Tableau extends Phaser.Scene{
     {
 
         medikit_1.disableBody(true, true);
-    
-
+ 
         ui.gagne();
-        
-
-    
         //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
         let totalActive=0;
         for(let child of this.children.getChildren()){ // WTF ?????
