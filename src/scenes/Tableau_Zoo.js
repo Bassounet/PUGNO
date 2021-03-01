@@ -31,7 +31,7 @@ class Tableau_Zoo extends Tableau{
         });
         this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
 
-        //le charerino
+        /*le charerino
         this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-25,"char");
         this.monstre.setOrigin(0,0);
         this.monstre.setDisplaySize(65,65);
@@ -39,6 +39,7 @@ class Tableau_Zoo extends Tableau{
         this.monstre.setBounce(1);
         this.monstre.setVelocityX(50);
         this.physics.add.overlap(this.player, this.monstre, this.hitMonster, null, this);
+        */ 
 
 
         // le soldat v_1 un peu pourrie 
@@ -71,6 +72,7 @@ class Tableau_Zoo extends Tableau{
 
         
         new Helicopter(this,400,100);
+        new Char(this,100, 100)
         
         
         

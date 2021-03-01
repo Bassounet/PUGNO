@@ -50,6 +50,7 @@ class Tableau_test extends Tableau{
             this.load.image('sky-2', 'assets/sky-2.png');
         }
         create() {
+
             super.create();
     
             //on définit la taille du tableau
@@ -100,13 +101,13 @@ class Tableau_test extends Tableau{
             //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
             
 
-               
-    
             //fait passer les éléments devant le ciel
             this.platforms.setDepth(10)
             this.stars.setDepth(10)
             this.player.setDepth(10)
 
+
+             // le charerino 
             this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-25,"char");
             this.monstre.setOrigin(0,0);
             this.monstre.setDisplaySize(65,65);
@@ -146,6 +147,7 @@ class Tableau_test extends Tableau{
     
         
             new Helicopter(this,400,100);
+            new Char(this,100, 100);
         }
 
         
