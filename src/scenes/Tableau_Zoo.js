@@ -72,7 +72,7 @@ class Tableau_Zoo extends Tableau{
 
         
         new Helicopter(this,400,100);
-        new Char(this,100, 100)
+        // new Char(this,100, 100)
         
         
         
