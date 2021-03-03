@@ -17,6 +17,10 @@ class Char extends ObjetEnnemi{
         this.setBodySize(65,65);
         this.setOffset(0,0);// ici on règle le point de référence du départ réglage de noter hitbox ... 
 
+
+
+        //définir les propriété que l'on va utiliser dans notre animation
+
         // X
         this.originalX=x;
         this.minX=x-220;
