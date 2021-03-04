@@ -133,7 +133,7 @@ class Tableau extends Phaser.Scene{
                 // si le player descend
                 player.body.velocity.y > 0
                 // et si le bas du player est plus haut que le monstre
-                && player.getBounds().bottom < monster.getBounds().top+30 // c'est quoi && ??????? 
+                && player.getBounds().bottom < monster.getBounds().top+30 // ♥ && est un "et" 
 
             ){
                 ui.gagne(); // je comprend pas vrmt là ... 

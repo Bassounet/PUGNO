@@ -1,4 +1,4 @@
-class Helicopter extends ObjetEnnemi{
+class Tourelle extends ObjetEnnemi{
     /**
      *
      * @param {Tableau} scene
@@ -6,76 +6,20 @@ class Helicopter extends ObjetEnnemi{
      * @param y
      */
     constructor(scene, x, y) {
-        super(scene, x, y, "helico");
+        super(scene, x, y, "tourelle");
         //pas de gravité
-        this.body.allowGravity=false;
+        this.body.allowGravity=true;
+        this.setGravityY(100);
 
         //gestion de la taille
-        this.setDisplaySize(135,80);
+        this.setDisplaySize(90,60);
+        // this.physics.add.collider(this.Tourelle, this.platforms); // faut arriver à la mettre là la physique 
+
 
         //on réduit un peu la zone de hit
-        this.setBodySize(165,75);
-        this.setOffset(0,0);// ici on règle le point de référence du départ réglage de noter hitbox ... 
-        
-
-        //définir les propriété que l'on va utiliser dans notre animation
-
-        // X
-        this.originalX=x;
-        this.minX=x-220;
-        this.maxX=x+220;
-
-        // Y
-        this.originalY=y;
-        this.minY=y-5;
-        this.maxY=y+5;
-
-        // on applique les propriété du début de l'animation
-        this.x=this.minX;
-        this.y=this.minY;
-        this.alpha=0;
-        let me=this;
-
-        //on fait apparaitre notre objet avec un petit delay, puis on lance l'animation
-        //ceci a pour effet de décaler les animations pour ce même objet
-        scene.tweens.add({
-                targets:this,
-                duration:400,
-                delay:Math.random()*1000,
-                alpha:{
-                    startDelay:Math.random()*5000,
-                    from:0,
-                    to:1,
-                },
-                onComplete: function () {
-                    me.start();
-                }
-            })
+        // this.setBodySize(165,75);
+        this.setOffset(0,0);// ici on règle le point de référence du départ réglage de noter hitbox ...
+        this.setBounceX(1);
 
     }
-    // on lui met un coup de cul elle crève 
-
-     start(){
-        this.scene.tweens.add({
-            targets: this,
-            x: {
-                from: this.minX,
-                to:this.maxX,
-                duration: 10*1000,
-                ease: 'Sine.easeInOut',
-                yoyo: -1,
-                repeat:-1,
-                flipX:true,
-            },
-            y: {
-                from: this.minY,
-                to:this.maxY,
-                duration: 500,
-                ease: 'Sine.easeInOut',
-                yoyo: -1,
-                repeat:-1
-            }
-        });
-    }
-
 }
