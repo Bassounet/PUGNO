@@ -106,16 +106,7 @@ class Tableau_test extends Tableau{
             this.stars.setDepth(10)
             this.player.setDepth(10)
 
-            
-    
-            // la tourelle non mobile
-            this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-300,"tourelle");
-            this.monstre.setOrigin(0,0);
-            this.monstre.setDisplaySize(90,65);
-            this.monstre.setCollideWorldBounds(true);
-            this.monstre.setBounce(0);
-            this.monstre.setVelocityX(0);
-            this.physics.add.overlap(this.player, this.monstre, this.hitMonster, null, this);
+            // on pose nos assets
     
             new Helicopter(this,400,100);
             this.char1 = new Char(this,100, 100);
