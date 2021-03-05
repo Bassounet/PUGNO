@@ -2,38 +2,6 @@ class Tableau_test extends Tableau{
 
 
 
-    /*preload() {
-        super.preload();
-        this.load.image('blood', 'assets/blood.png');
-        this.load.image('medikit_1', 'assets/medikit_1.png');
-        this.load.image('char', 'assets/char.png');
-        this.load.image('personnage', 'assets/personnage.png');
-        this.load.image('bato', 'assets/bato.png');
-        this.load.image('tourelle', 'assets/tourelle.png');
-        this.load.image('helico', 'assets/helico.png');
-
-    }
-
-
-
-    create() {
-        super.create(); 
-
-        
-        let largeurDuTableau=4000;
-        let hauteurDuTableau=600; //la hauteur est identique au cadre du jeu
-        //this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
-        this.physics.world.setBounds(0, 0, largeurDuTableau,  hauteurDuTableau);
-
-        this.cameras.main.startFollow(this.player, false, 0.05, 0.05);
-
-    }
-
-    update(){
-        super.update();
-        
-    }*/
-
 
         preload() {
             super.preload();
@@ -51,6 +19,8 @@ class Tableau_test extends Tableau{
             this.load.image('sol', 'assets/platformes_sol.png');
             this.load.image('mechant', 'assets/mechant.png');
             this.load.image('plat', 'assets/platform_.png');
+            this.load.image('run_cycle', 'assets/run_cycle.png');
+
             
         }
 
@@ -74,7 +44,7 @@ class Tableau_test extends Tableau{
             this.platforms=this.physics.add.staticGroup();
             
             
-            for(let i=0; i<4; i++){
+            for(let i=0; i<4; i++){ // on crée le sol 
             this.platforms.create(i*630,417,'sol');
 
             }
@@ -89,10 +59,6 @@ class Tableau_test extends Tableau{
             this.physics.add.collider(this.player,this.platforms);
 
 
-
-            
-    
-    
             //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
             this.sky=this.add.tileSprite(
                 0,
@@ -111,32 +77,37 @@ class Tableau_test extends Tableau{
 
             // on pose nos assets
     
-            // new Helicopter(this,400,100);
-            //this.char1 = new Char(this,100, 100);
-            // this.physics.add.collider(this.char1, this.platforms);
-            //this.tour1 = new Tourelle(this,400,100);
-            // this.physics.add.collider(this.tour1, this.platforms);
-            //this.mechant1 = new mechant(this, 300, 200);
-            // this.physics.add.collider(this.mechant1, this.platforms);
+            new Helicopter(this,400,100);
+            
+            this.char1 = new Char(this,100, 100);
+            this.physics.add.collider(this.char1, this.platforms);
+
+            this.tour1 = new Tourelle(this,400,100);
+            this.physics.add.collider(this.tour1, this.platforms);
+            
+            this.mechant1 = new mechant(this, 300, 200);
+            this.physics.add.collider(this.mechant1, this.platforms);
 
             this.med1=this.physics.add.sprite(200,100,"medikit_1");
             this.physics.add.collider(this.med1, this.platforms);
-            this.physics.add.collider(this.player, this.med1);
-
-
+            this.med1.setDisplaySize(45,45);
+            
             this.med2=this.physics.add.sprite(400,100,"medikit_1");
             this.physics.add.collider(this.med2, this.platforms);
-            this.physics.add.collider(this.player, this.med2);
+            this.med2.setDisplaySize(45,45);
 
-
+            
             this.med3=this.physics.add.sprite(600,100,"medikit_1");
             this.physics.add.collider(this.med3, this.platforms);
-            this.physics.add.collider(this.player, this.med3);
+            this.med3.setDisplaySize(45,45);
 
-            // this.physics.add.overlap(this.player, this.med1, this.found_piece, null, this);
-            // this.physics.add.overlap(this.player, this.med2, this.found_piece, null, this);
-            // this.physics.add.overlap(this.player, this.med3, this.found_piece, null, this);
            
+            this.physics.add.overlap(this.player, this.med1, this.found_piece, null, this);
+            this.physics.add.overlap(this.player, this.med2, this.found_piece, null, this);
+            this.physics.add.overlap(this.player, this.med3, this.found_piece, null, this);
+
+
+                   
 
             
         }

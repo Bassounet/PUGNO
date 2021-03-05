@@ -29,7 +29,7 @@ class Tableau_Zoo extends Tableau{
             child.setVelocity( 0,Phaser.Math.Between(-100, 100));
             child.setMaxVelocity(0,500);
         });
-        this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
+        this.physics.add.overlap(this.player,this.platforms, this.stars, this.found_piece, null, this);
 
         /*le charerino
         this.monstre=this.physics.add.sprite(300,this.sys.canvas.height-25,"char");

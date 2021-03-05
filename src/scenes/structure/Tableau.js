@@ -15,8 +15,8 @@ class Tableau extends Phaser.Scene{
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('spike', 'assets/spike.png');
-        this.load.spritesheet('player','assets/player.png',
-            { frameWidth: 32, frameHeight: 48  }
+        this.load.spritesheet('player','assets/player1.png',
+            { frameWidth: 61, frameHeight: 64  }
         );
     }
 
@@ -165,7 +165,11 @@ class Tableau extends Phaser.Scene{
         }
 
     }
+        
 
+
+
+    
     /**
      * Pour reset cette scène proprement
      * @private
