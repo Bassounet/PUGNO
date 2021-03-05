@@ -79,7 +79,7 @@ class Tableau extends Phaser.Scene{
         })
     }
 
-    ramasserEtoile (player, medikit_1) // on crée la fonction qui s'active quand on apelle le ramassage d'étoile dans les éléments plus bas ... 
+    found_piece (player, medikit_1) // on crée la fonction qui s'active quand on apelle le ramassage d'étoile dans les éléments plus bas ... 
     {
 
         medikit_1.disableBody(true, true);
