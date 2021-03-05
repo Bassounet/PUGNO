@@ -49,12 +49,16 @@ class Tableau_test extends Tableau{
             this.load.image('ground', 'assets/platform.png');
             this.load.image('MAP_2D', 'assets/MAP_2D.png');
             this.load.image('plateforme_du_sol', 'assets/platformes_sol.png');
+            this.load.image('mechant', 'assets/mechant.png');
+
         }
 
 
         create() {
 
             super.create();
+
+            
     
             //on définit la taille du tableau
             let largeurDuTableau=2000;
@@ -67,24 +71,14 @@ class Tableau_test extends Tableau{
             //quelques étoiles et plateformes qui vont avec
             this.stars=this.physics.add.group();
             this.platforms=this.physics.add.staticGroup();
-            /* for(let posX=20;posX<largeurDuTableau;posX+=100){
-                let etoileY=350+Math.sin(posX)*100;
-                let star=this.stars.create(posX ,etoileY,"medikit_1");
-                star.body.allowGravity=false;
-                let plate=this.platforms.create(posX ,etoileY+50,"ground");
-                plate.setDisplaySize(60,10);
-                plate.refreshBody();
-                // child.setDisplaySize(35,30);
-            }
-
-            */ 
-
-           for(let i=0; i<4; i++){
+            
+            
+            for(let i=0; i<4; i++){
             this.platforms.create(i*630,417,'plateforme_du_sol');
 
             }
 
-            this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, function(){ this.cameras.main.shake(50)}, this);
+            this.physics.add.overlap(this.player, this.stars, this.found_piece, function(){ this.cameras.main.shake(50)}, this);
             this.physics.add.collider(this.player,this.platforms);
 
             
@@ -113,6 +107,9 @@ class Tableau_test extends Tableau{
             this.physics.add.collider(this.char1, this.platforms);
             this.tour1 = new Tourelle(this,400,100);
             this.physics.add.collider(this.tour1, this.platforms);
+            this.mechant1 = new mechant(this, 300, 200);
+            this.physics.add.collider(this.mechant1, this.platforms);
+
 
             
         }

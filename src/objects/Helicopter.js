@@ -16,14 +16,14 @@ class Helicopter extends ObjetEnnemi{
         //on réduit un peu la zone de hit
         this.setBodySize(165,75);
         this.setOffset(0,0);// ici on règle le point de référence du départ réglage de noter hitbox ... 
-        
+        this.setVelocityX(100);
 
         //définir les propriété que l'on va utiliser dans notre animation
 
         // X
         this.originalX=x;
         this.minX=x-220;
-        this.maxX=x+220;
+        this.maxX=x+1000;
 
         // Y
         this.originalY=y;
@@ -40,7 +40,7 @@ class Helicopter extends ObjetEnnemi{
         //ceci a pour effet de décaler les animations pour ce même objet
         scene.tweens.add({
                 targets:this,
-                duration:400,
+                duration:700,
                 delay:Math.random()*1000,
                 alpha:{
                     startDelay:Math.random()*5000,
