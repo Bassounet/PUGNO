@@ -110,6 +110,29 @@ class Tableau_test extends Tableau{
             this.mechant1 = new mechant(this, 300, 200);
             this.physics.add.collider(this.mechant1, this.platforms);
 
+            this.med1=this.physics.add.sprite(200,100,"medikit_1");
+            //this.star2.setCollideWorldBounds(true);
+            //this.star2.setBounce(0.5);
+            //this.physics.add.collider(this.med1, this.platforms);
+
+            this.med2=this.physics.add.sprite(400,100,"medikit_1");
+            // this.star2.setCollideWorldBounds(true);
+            // this.star2.setBounce(0.5);
+            //this.physics.add.collider(this.med2, this.platforms);
+
+            this.med3=this.physics.add.sprite(600,100,"medikit_1");
+            // this.star3.setCollideWorldBounds(true);
+            // this.star3.setBounce(1);
+            //this.physics.add.collider(this.med3, this.platforms);
+
+        //quand le joueur touche une étoile on appelle la fonction ramasserEtoile
+            //this.physics.add.overlap(this.player, this.med1, this.found_piece, null, this);
+            //this.physics.add.overlap(this.player, this.med2, this.found_piece, null, this);
+            //this.physics.add.overlap(this.player, this.med3, this.found_piece, null, this);
+            this.physics.add.overlap(this.player,this.platforms, this.med1, this.found_piece, null, this);
+            this.physics.add.overlap(this.player,this.platforms, this.med1, this.found_piece, null, this);
+            this.physics.add.overlap(this.player,this.platforms, this.med1, this.found_piece, null, this);
+
 
             
         }
