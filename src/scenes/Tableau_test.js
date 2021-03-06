@@ -92,7 +92,7 @@ class Tableau_test extends Tableau{
             this.physics.add.collider(this.med1, this.platforms);
             this.med1.setDisplaySize(45,45);
             
-            this.med2=this.physics.add.sprite(400,100,"medikit_1");
+            this.med2=this.physics.add.sprite(1000,100,"medikit_1");
             this.physics.add.collider(this.med2, this.platforms);
             this.med2.setDisplaySize(45,45);
 

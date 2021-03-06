@@ -19,6 +19,7 @@ class Char extends ObjetEnnemi{
         this.setOffset(0,0);// ici on règle le point de référence du départ réglage de noter hitbox ... 
         this.setBounceX(1);
         this.setVelocityX(100);
+        this.setCollideWorldBounds(true)
         
     }
 
