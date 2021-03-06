@@ -175,13 +175,13 @@ class Tableau_test extends Tableau{
             // this.char1 = new Char(this,100, 100);
             // this.physics.add.collider(this.char1, this.platforms);
 
-            // this.tour1 = new Tourelle(this,400,100);
-            // this.physics.add.collider(this.tour1, this.platforms);
             
-            // this.mechant1 = new mechant(this, 300, 200);
-            // this.physics.add.collider(this.mechant1, this.platforms);
+            
+            this.mechant1 = new mechant(this, 1880, 200);
+            this.physics.add.collider(this.mechant1, this.platforms);
 
-
+            this.tour1 = new Tourelle(this,1190,100);
+            this.physics.add.collider(this.tour1, this.platforms);
 
             let l_tono1 = 35;
             let h_tono1 = 53;
@@ -211,6 +211,8 @@ class Tableau_test extends Tableau{
             this.physics.add.collider(this.med3, this.platforms);
             this.med3.setDisplaySize(lmed,hmed);
             this.physics.add.overlap(this.player, this.med3, this.found_piece, null, this);
+
+
 
             // ----------------------** ASSETS ** -------------------------------// 
 

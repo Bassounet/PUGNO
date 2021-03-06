@@ -15,7 +15,7 @@ class Tableau extends Phaser.Scene{
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('spike', 'assets/spike.png');
-        this.load.spritesheet('player','assets/player1.png',
+        this.load.spritesheet('player','assets/player2.png',
             { frameWidth: 61, frameHeight: 64  }
         );
     }
@@ -36,7 +36,7 @@ class Tableau extends Phaser.Scene{
          * Le joueur
          * @type {Player}
          */
-        this.player=new Player(this,0,0);
+        this.player=new Player(this,1500,0);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
@@ -97,13 +97,7 @@ class Tableau extends Phaser.Scene{
         if(totalActive===0){ // quand toutes les étoiles ont été récup on apelle win , 
             this.win(); 
         }
-        /*
-        // this.stars est un groupe (plus tard)
-        if (this.stars.countActive(true) === 0)
-        {
-           this.win();
-        }
-         */
+       
     }
 
     /**
