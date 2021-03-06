@@ -17,6 +17,7 @@ class Tableau_test extends Tableau{
             this.load.image('mechant', 'assets/mechant.png');
             this.load.image('plat', 'assets/platform_.png');
             this.load.image('tono', 'assets/tono.png');
+            this.load.image('mine', 'assets/mine.png');
 
         }
 
@@ -172,8 +173,10 @@ class Tableau_test extends Tableau{
     
             new Helicopter(this,1570,100);
             
-            this.mechant1 = new mechant(this, 1880, 200);
+            this.mechant1 = new mechant(this, 1900, 200);
             this.physics.add.collider(this.mechant1, this.platforms);
+
+            let posx_tour = 1190
 
             this.tour1 = new Tourelle(this,1190,100);
             this.physics.add.collider(this.tour1, this.platforms);
@@ -181,15 +184,29 @@ class Tableau_test extends Tableau{
             let l_tono1 = 35;
             let h_tono1 = 53;
             
-            this.tono1 = this.physics.add.sprite(820,300,"tono");
+            this.tono1 = this.physics.add.sprite(820,350,"tono");
             this.physics.add.collider(this.tono1, this.platforms);
             this.physics.add.overlap(this.player, this.tono1, this.hit_tono, null, this);
             this.tono1.setBodySize(l_tono1, h_tono1);
             this.tono1.setOffset(16,11);
 
+            let l_mine = 20;
+            let h_mine = 20;
 
-            let lmed = 32
-            let hmed = 25
+            this.mine1 = this.physics.add.sprite(1170,300,"mine");
+            this.physics.add.collider(this.mine1, this.platforms);
+            this.physics.add.overlap(this.player, this.mine1, this.hit_tono, null, this);
+            this.mine1.setBodySize(l_mine, h_mine);
+            this.mine1.setOffset(7,5);
+
+            this.mine2 = this.physics.add.sprite(1650,200,"mine");
+            this.physics.add.collider(this.mine2, this.platforms);
+            this.physics.add.overlap(this.player, this.mine2, this.hit_tono, null, this);
+            this.mine2.setBodySize(l_mine, h_mine);
+            this.mine2.setOffset(7,5);
+
+            let lmed = 32;
+            let hmed = 25;
 
             this.med1=this.physics.add.sprite(200,250,"medikit_1");
             this.physics.add.collider(this.med1, this.platforms);
@@ -236,6 +253,21 @@ class Tableau_test extends Tableau{
             //le ciel se déplace moins vite que la caméra pour donner un effet paralax
             this.sky.tilePositionX=this.cameras.main.scrollX;
             // this.sky.tilePositionY=this.cameras.main.scrollY;
+
+
+            // ptite rota de la tourelle qui plus tard tirera ;) 
+
+            
+            if(Tableau.current.player.x > 1190 ){
+
+                this.tour1.flipX=true;
+
+            }
+
+            if(Tableau.current.player.x < 1190){
+
+                this.tour1.flipX = false;
+            }
         }
     
     

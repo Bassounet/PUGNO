@@ -23,8 +23,8 @@ class mechant extends ObjetEnnemi{
 
 
         this.originalX=x;
-        this.minX=x-10;
-        this.maxX=x+10;
+        this.minX=x-50;
+        this.maxX=x+50;
 
         // Y
         this.originalY=y;
@@ -35,7 +35,21 @@ class mechant extends ObjetEnnemi{
         this.x=this.minX;
         this.y=this.minY;
         
-        // let me=this;
+        let me=this;
+
+        scene.tweens.add({
+            targets:this,
+            duration:0,
+            delay:Math.random()*800,
+            alpha:{
+                startDelay:Math.random()*5000,
+                from:0,
+                to:1,
+            },
+            onComplete: function () {
+                me.start();
+            }
+        })
         
     }
 
@@ -46,7 +60,7 @@ class mechant extends ObjetEnnemi{
             x: {
                 from: this.minX,
                 to:this.maxX,
-                duration: 20,
+                duration: 2000,
                 ease: 'Sine.easeInOut',
                 yoyo: -1,
                 repeat:-1,
