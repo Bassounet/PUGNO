@@ -36,7 +36,7 @@ class Tableau extends Phaser.Scene{
          * Le joueur
          * @type {Player}
          */
-        this.player=new Player(this,1000,0);
+        this.player=new Player(this,0,0);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
@@ -111,12 +111,12 @@ class Tableau extends Phaser.Scene{
      * @param player
      * @param spike
      */
-    hitSpike (player, spike) // je ne compwend pas ...
+    hit_tono (player, spike) // je ne compwend pas ...
     {
         this.physics.pause();
-        player.setTint(0xff0000); /// wtf ????? 
+        player.setTint(0xff0000); 
         player.anims.play('turn');
-        this.scene.restart(); // mais du coup j'imagine que c'est quand tu crèves mais Wtf quand même ... 
+        this.scene.restart(); 
 
     }
   /**

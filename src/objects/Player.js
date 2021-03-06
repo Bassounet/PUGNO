@@ -10,20 +10,20 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
         this.setFriction(1,1); //jvois pas trop ce que c'est j'essaye mais ça change rien :/ 
 
 
-        this.setBodySize(this.body.width-6,this.body.height-10); // on règle sa taille ... celle du player avec le this. 
+        this.setBodySize(this.body.width-9,this.body.height-10); // on règle sa taille ... celle du player avec le this. 
         this.setOffset(3, 10); // jsp vraiment 
 
         this.anims.create({ // gestion de l'anim de déplacement vers la gauche 
             key: 'left', // utilisation de la partie gacuhe 
             frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }), // on utilise la generation de frame et on choisit celle de 0 à 3 pour le déplacement vers la gauche 
-            frameRate: 10, // nombre de frame ( fréquence )
+            frameRate: 15, // nombre de frame ( fréquence )
             repeat: -1 // pourquoi 
         });
 
         this.anims.create({
             key: 'right',
             frames: this.anims.generateFrameNumbers('player', { start: 4, end: 7 }),
-            frameRate: 10,
+            frameRate: 15,
             repeat: -1
         });
         this.anims.create({
