@@ -10,8 +10,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
         this.setFriction(1,1); //jvois pas trop ce que c'est j'essaye mais ça change rien :/ 
 
 
-        this.setBodySize(this.body.width-9,this.body.height-10); // on règle sa taille ... celle du player avec le this. 
-        this.setOffset(3, 10); // jsp vraiment 
+        this.setBodySize(this.body.width-30,this.body.height-10); // on règle sa taille ... celle du player avec le this. 
+        this.setOffset(13, 10); // jsp vraiment 
 
         this.anims.create({ // gestion de l'anim de déplacement vers la gauche 
             key: 'left', // utilisation de la partie gacuhe 
