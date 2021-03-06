@@ -170,12 +170,7 @@ class Tableau_test extends Tableau{
             // ----------------------** ASSETS ** -------------------------------// 
             
     
-            // new Helicopter(this,400,100);
-            
-            // this.char1 = new Char(this,100, 100);
-            // this.physics.add.collider(this.char1, this.platforms);
-
-            
+            new Helicopter(this,1570,100);
             
             this.mechant1 = new mechant(this, 1880, 200);
             this.physics.add.collider(this.mechant1, this.platforms);
@@ -196,21 +191,35 @@ class Tableau_test extends Tableau{
             let lmed = 32
             let hmed = 25
 
-            this.med1=this.physics.add.sprite(200,100,"medikit_1");
+            this.med1=this.physics.add.sprite(200,250,"medikit_1");
             this.physics.add.collider(this.med1, this.platforms);
             this.med1.setDisplaySize(lmed,hmed);
             this.physics.add.overlap(this.player, this.med1, this.found_piece, null, this);
+            this.med1.setBounce(0.2);
 
-            this.med2=this.physics.add.sprite(1000,100,"medikit_1");
+            this.med2=this.physics.add.sprite(619,100,"medikit_1");
             this.physics.add.collider(this.med2, this.platforms);
             this.med2.setDisplaySize(lmed,hmed);
             this.physics.add.overlap(this.player, this.med2, this.found_piece, null, this);
-
+            this.med2.setBounce(0.2);
             
-            this.med3=this.physics.add.sprite(1900,100,"medikit_1");
+            this.med3=this.physics.add.sprite(1000,100,"medikit_1");
             this.physics.add.collider(this.med3, this.platforms);
             this.med3.setDisplaySize(lmed,hmed);
             this.physics.add.overlap(this.player, this.med3, this.found_piece, null, this);
+            this.med3.setBounce(0.2);
+
+            this.med4=this.physics.add.sprite(1350,100,"medikit_1");
+            this.physics.add.collider(this.med4, this.platforms);
+            this.med4.setDisplaySize(lmed,hmed);
+            this.physics.add.overlap(this.player, this.med4, this.found_piece, null, this);
+            this.med4.setBounce(0.2);
+
+            this.med5=this.physics.add.sprite(1900,100,"medikit_1");
+            this.physics.add.collider(this.med5, this.platforms);
+            this.med5.setDisplaySize(lmed,hmed);
+            this.physics.add.overlap(this.player, this.med5, this.found_piece, null, this);
+            this.med5.setBounce(0.2);
 
 
 
