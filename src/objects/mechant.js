@@ -20,10 +20,48 @@ class mechant extends ObjetEnnemi{
         this.setBounceX(1);
         this.setVelocityX(0);
         this.setCollideWorldBounds(true)
+
+
+        this.originalX=x;
+        this.minX=x-10;
+        this.maxX=x+10;
+
+        // Y
+        this.originalY=y;
+        this.minY=y-5;
+        this.maxY=y+5;
+
+        // on applique les propriété du début de l'animation
+        this.x=this.minX;
+        this.y=this.minY;
+        this.alpha=0;
+        let me=this;
         
     }
 
 
-       
+    start(){
+        this.scene.tweens.add({
+            targets: this,
+            x: {
+                from: this.minX,
+                to:this.maxX,
+                duration: 7500,
+                ease: 'Sine.easeInOut',
+                yoyo: -1,
+                repeat:-1,
+                flipX:true,
+            },
+            y: {
+                from: this.minY,
+                to:this.maxY,
+                duration: 500,
+                ease: 'Sine.easeInOut',
+                yoyo: -1,
+                repeat:-1
+            }
+        });
 
+       
+    }
 }
