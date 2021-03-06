@@ -75,7 +75,7 @@ class Tableau_test extends Tableau{
             plat2.setBodySize(l_plat2,h_plat2);
             plat2.setOffset(150,10);
 
-            let posx_plat3 = 1183
+            let posx_plat3 = 1186
             let posy_plat3 = 250
             let plat3 = this.platforms.create(posx_plat3,posy_plat3,"plat");
             let h_plat3 = 13;
@@ -85,7 +85,17 @@ class Tableau_test extends Tableau{
             plat3.setBodySize(l_plat3,h_plat3);
             plat3.setOffset(120,10);
 
-            let posx_plat4 = 1340
+            let posx_plat35 = 1186
+            let posy_plat35 = 150
+            let plat35 = this.platforms.create(posx_plat35,posy_plat35,"plat");
+            let h_plat35 = 13;
+            let l_plat35 = 163;
+           
+            plat35.setDisplaySize( l_plat35, h_plat35);
+            plat35.setBodySize(l_plat35,h_plat35);
+            plat35.setOffset(120,10);
+
+            let posx_plat4 = 1352
             let posy_plat4 = 300
             let plat4 = this.platforms.create(posx_plat4,posy_plat4,"plat");
             let h_plat4 = 13;
@@ -94,10 +104,6 @@ class Tableau_test extends Tableau{
             plat4.setDisplaySize( l_plat4, h_plat4);
             plat4.setBodySize(l_plat4,h_plat4);
             plat4.setOffset(128,10);
-
-            plat3.setDisplaySize( l_plat3, h_plat3);
-            plat3.setBodySize(l_plat3,h_plat3);
-            plat3.setOffset(120,10);
 
             let posx_plat5 = 1654
             let posy_plat5 = 250
@@ -108,6 +114,26 @@ class Tableau_test extends Tableau{
             plat5.setDisplaySize( l_plat5, h_plat5);
             plat5.setBodySize(l_plat5,h_plat5);
             plat5.setOffset(128,10);
+
+            let posx_plat6 = 1900
+            let posy_plat6 = 115
+            let plat6 = this.platforms.create(posx_plat6,posy_plat6,"plat");
+            let h_plat6 = 13;
+            let l_plat6 = 190;
+           
+            plat6.setDisplaySize( l_plat6, h_plat6);
+            plat6.setBodySize(l_plat6,h_plat6);
+            plat6.setOffset(103,10);
+
+            let posx_plat7 = 1900
+            let posy_plat7 = 250
+            let plat7 = this.platforms.create(posx_plat7,posy_plat7,"plat");
+            let h_plat7 = 13;
+            let l_plat7 = 190;
+           
+            plat7.setDisplaySize( l_plat7, h_plat7);
+            plat7.setBodySize(l_plat7,h_plat7);
+            plat7.setOffset(103,10);
 
             // ----------------------** PLATFORMES ** -------------------------------// 
 

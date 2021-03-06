@@ -5,7 +5,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
         scene.physics.add.existing(this)
 
         this.setCollideWorldBounds(true) // on paramètre les rebonds 
-        this.setBounce(0.3); // effet du rebond 
+        this.setBounce(0.19); // effet du rebond 
         this.setGravityY(700) // l'effet de la gravité 
         this.setFriction(1,1); //jvois pas trop ce que c'est j'essaye mais ça change rien :/ 
 
