@@ -18,7 +18,7 @@ class mechant extends ObjetEnnemi{
         //on réduit un peu la zone de hit
         this.setOffset(0,0);// ici on règle le point de référence du départ réglage de noter hitbox ... 
         this.setBounceX(1);
-        this.setVelocityX(0);
+        this.setVelocityX(50);
         this.setCollideWorldBounds(true)
 
 
@@ -34,8 +34,8 @@ class mechant extends ObjetEnnemi{
         // on applique les propriété du début de l'animation
         this.x=this.minX;
         this.y=this.minY;
-        this.alpha=0;
-        let me=this;
+        
+        // let me=this;
         
     }
 
@@ -46,20 +46,20 @@ class mechant extends ObjetEnnemi{
             x: {
                 from: this.minX,
                 to:this.maxX,
-                duration: 7500,
+                duration: 20,
                 ease: 'Sine.easeInOut',
                 yoyo: -1,
                 repeat:-1,
                 flipX:true,
             },
-            y: {
-                from: this.minY,
-                to:this.maxY,
-                duration: 500,
-                ease: 'Sine.easeInOut',
-                yoyo: -1,
-                repeat:-1
-            }
+            // y: {
+            //     from: this.minY,
+            //     to:this.maxY,
+            //     duration: 500,
+            //     ease: 'Sine.easeInOut',
+            //     yoyo: -1,
+            //     repeat:-1
+            // }
         });
 
        
