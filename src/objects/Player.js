@@ -32,7 +32,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
             frameRate: 20
         });
 
-        this._directionX=0; // position de base quand il apparaît ... 
+        this._directionX=0; // direction de l'apparition ????? il marche ?
         this._directionY=0;
 
 

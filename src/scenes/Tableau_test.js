@@ -29,6 +29,8 @@ class Tableau_test extends Tableau{
 
             super.create();
 
+            console.log("WESh?");
+
             
     
             //on définit la taille du tableau
@@ -39,21 +41,76 @@ class Tableau_test extends Tableau{
     
             this.cameras.main.startFollow(this.player );
     
-            //quelques étoiles et plateformes qui vont avec
+            //quelques étoiles et plat1s qui vont avec
             this.stars=this.physics.add.group();
             this.platforms=this.physics.add.staticGroup();
             
-            
+            // ----------------------** c'est le sol ça abrutie -------------------------------// 
+
             for(let i=0; i<4; i++){ // on crée le sol 
             this.platforms.create(i*630,417,'sol');
-
+            
+            // ----------------------** c'est le sol ça abrutie -------------------------------// 
+            
             }
+             
+            // ----------------------** PLATFORMES ** -------------------------------// 
+            let posx_plat1 = 452
+            let posy_plat1 = 270
+            let plat1 = this.platforms.create(posx_plat1,posy_plat1,"plat");
+            let h_plat1 = 15;
+            let l_plat1 = 130;
+           
+            plat1.setDisplaySize( l_plat1, h_plat1);
+            plat1.setBodySize(l_plat1,h_plat1);
+            plat1.setOffset(135,10);
 
-            //des plateformes
-            // this.platforms.create(1000, 568, 'plat').setScale(3).refreshBody();
-            this.platforms.create(1150, 400, 'plat');
-            this.platforms.create(1000, 250, 'plat');
-            // this.platforms.SetDisplaySize(150,150)
+            let posx_plat2 = 620
+            let posy_plat2 = 205
+            let plat2 = this.platforms.create(posx_plat2,posy_plat2,"plat");
+            let h_plat2 = 13;
+            let l_plat2 = 100;
+           
+            plat2.setDisplaySize( l_plat2, h_plat2);
+            plat2.setBodySize(l_plat2,h_plat2);
+            plat2.setOffset(150,10);
+
+            let posx_plat3 = 1183
+            let posy_plat3 = 250
+            let plat3 = this.platforms.create(posx_plat3,posy_plat3,"plat");
+            let h_plat3 = 13;
+            let l_plat3 = 163;
+           
+            plat3.setDisplaySize( l_plat3, h_plat3);
+            plat3.setBodySize(l_plat3,h_plat3);
+            plat3.setOffset(120,10);
+
+            let posx_plat4 = 1340
+            let posy_plat4 = 300
+            let plat4 = this.platforms.create(posx_plat4,posy_plat4,"plat");
+            let h_plat4 = 13;
+            let l_plat4 = 140;
+           
+            plat4.setDisplaySize( l_plat4, h_plat4);
+            plat4.setBodySize(l_plat4,h_plat4);
+            plat4.setOffset(128,10);
+
+            plat3.setDisplaySize( l_plat3, h_plat3);
+            plat3.setBodySize(l_plat3,h_plat3);
+            plat3.setOffset(120,10);
+
+            let posx_plat5 = 1654
+            let posy_plat5 = 250
+            let plat5 = this.platforms.create(posx_plat5,posy_plat5,"plat");
+            let h_plat5 = 13;
+            let l_plat5 = 140;
+           
+            plat5.setDisplaySize( l_plat5, h_plat5);
+            plat5.setBodySize(l_plat5,h_plat5);
+            plat5.setOffset(128,10);
+
+            // ----------------------** PLATFORMES ** -------------------------------// 
+
 
             this.physics.add.overlap(this.player, this.stars, this.found_piece, function(){ this.cameras.main.shake(50)}, this);
             this.physics.add.collider(this.player,this.platforms);
@@ -77,37 +134,37 @@ class Tableau_test extends Tableau{
 
             // on pose nos assets
     
-            new Helicopter(this,400,100);
+            // new Helicopter(this,400,100);
             
-            this.char1 = new Char(this,100, 100);
-            this.physics.add.collider(this.char1, this.platforms);
+            // this.char1 = new Char(this,100, 100);
+            // this.physics.add.collider(this.char1, this.platforms);
 
-            this.tour1 = new Tourelle(this,400,100);
-            this.physics.add.collider(this.tour1, this.platforms);
+            // this.tour1 = new Tourelle(this,400,100);
+            // this.physics.add.collider(this.tour1, this.platforms);
             
-            this.mechant1 = new mechant(this, 300, 200);
-            this.physics.add.collider(this.mechant1, this.platforms);
+            // this.mechant1 = new mechant(this, 300, 200);
+            // this.physics.add.collider(this.mechant1, this.platforms);
 
-            this.med1=this.physics.add.sprite(200,100,"medikit_1");
-            this.physics.add.collider(this.med1, this.platforms);
-            this.med1.setDisplaySize(45,45);
-            
-            this.med2=this.physics.add.sprite(1000,100,"medikit_1");
-            this.physics.add.collider(this.med2, this.platforms);
-            this.med2.setDisplaySize(45,45);
+            // this.med1=this.physics.add.sprite(200,100,"medikit_1");
+            // this.physics.add.collider(this.med1, this.platforms);
+            // this.med1.setDisplaySize(45,45);
+            // this.physics.add.overlap(this.player, this.med1, this.found_piece, null, this);
+
+            // this.med2=this.physics.add.sprite(1000,100,"medikit_1");
+            // this.physics.add.collider(this.med2, this.platforms);
+            // this.med2.setDisplaySize(45,45);
+            // this.physics.add.overlap(this.player, this.med2, this.found_piece, null, this);
 
             
             this.med3=this.physics.add.sprite(600,100,"medikit_1");
             this.physics.add.collider(this.med3, this.platforms);
             this.med3.setDisplaySize(45,45);
-
-           
-            this.physics.add.overlap(this.player, this.med1, this.found_piece, null, this);
-            this.physics.add.overlap(this.player, this.med2, this.found_piece, null, this);
             this.physics.add.overlap(this.player, this.med3, this.found_piece, null, this);
 
+           
 
-                   
+            
+            
 
             
         }
@@ -119,7 +176,6 @@ class Tableau_test extends Tableau{
             //le ciel se déplace moins vite que la caméra pour donner un effet paralax
             this.sky.tilePositionX=this.cameras.main.scrollX;
             // this.sky.tilePositionY=this.cameras.main.scrollY;
-           
         }
     
     
