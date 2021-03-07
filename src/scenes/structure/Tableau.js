@@ -36,7 +36,7 @@ class Tableau extends Phaser.Scene{
          * Le joueur
          * @type {Player}
          */
-        this.player=new Player(this,1100,300);
+        this.player=new Player(this,0,300);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
@@ -64,6 +64,7 @@ class Tableau extends Phaser.Scene{
         me.blood.y=object.y;
         me.tweens.add({
             targets:me.blood,
+            
             duration:500, // temps en ms ... 
             displayHeight:{ // permet de distorde l'image et donc de donner l'effetd e la gerbe de sang ... 
                 from:10,
