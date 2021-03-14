@@ -34,6 +34,7 @@ class Tableau_tiled extends Tableau {
     create() {
         super.create();
 
+       
         //on en aura besoin...
         let ici = this;
 

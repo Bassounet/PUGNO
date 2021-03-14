@@ -16,6 +16,7 @@ let config = {
     scene: [
         new Ui(),
 
+        new Tableau_v("test_v"),
         new Tableau_tiled("la nouvelle MAP"),
         new Tableau_test("on test des trucs vite fait"),
      
