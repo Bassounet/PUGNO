@@ -20,7 +20,7 @@ class Tableau_tiled extends Tableau {
         // this.load.image('tiles', 'TILED/tableauTiledTileset.png');
         this.load.image('spritesheet', 'assets/images/sprite_shitV2.png');
         //les données du tableau qu'on a créé dans TILED
-        this.load.tilemapTiledJSON('map', 'TILED/level5.json');
+        this.load.tilemapTiledJSON('map', 'TILED/level13.json');
 
         // -----et puis aussi-------------
         
@@ -55,14 +55,10 @@ class Tableau_tiled extends Tableau {
         //---- ajoute les plateformes simples ----------------------------
 
         this.platform = this.map.createLayer('platforms_2', this.tileset, 0, 0);
-        this.platform_h = this.map.createLayer('Platfrom_h', this.tileset, 0, 0);
-        this.platform_t = this.map.createLayer('platform_test', this.tileset, 0, 0);
-        // this.tono = this.map.createLayer('tono', this.tileset, 0, 0);
-        // this.mechant = this.map.createLayer('mechants', this.tileset, 0, 0);
+        // this.platform_h = this.map.createLayer('Platfrom_h', this.tileset, 0, 0);
+        // this.platform_t = this.map.createLayer('platform_test', this.tileset, 0, 0);
+        
         this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
-
-        // this.derriere = this.map.createLayer('derriere', this.tileset, 0, 0);
-        // this.devant = this.map.createLayer('devant', this.tileset, 0, 0);
 
         //on définit les collisions, plusieurs méthodes existent:
 
@@ -70,8 +66,10 @@ class Tableau_tiled extends Tableau {
         //permet de travailler sur un seul layer dans tiled et des définir les collisions en fonction des graphiques
         //exemple ici https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6
         this.platform.setCollisionByExclusion(-1, true);
-        this.platform_h.setCollisionByExclusion(-1, true);
-        this.platform_t.setCollisionByExclusion(-1, true);
+        // this.platform_h.setCollisionByExclusion(-1, true);
+        // this.platform_t.setCollisionByExclusion(-1, true);
+        // this.platform.setCollisionFromCollisionGroup(true,true,this.platform);
+
 
 
 

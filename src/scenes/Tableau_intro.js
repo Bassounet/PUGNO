@@ -29,8 +29,6 @@ class Tableau_v extends Tableau {
          
     }
 
-    
-
 
     update() {
 

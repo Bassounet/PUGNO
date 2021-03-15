@@ -10,13 +10,16 @@ let config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 300 },
-            debug: false,
+            debug: true,
+
+            
         }
     },
+    
     scene: [
         new Ui(),
 
-        new Tableau_v("test_v"),
+        // new Tableau_v("test_v"),
         new Tableau_tiled("la nouvelle MAP"),
         new Tableau_test("on test des trucs vite fait"),
      

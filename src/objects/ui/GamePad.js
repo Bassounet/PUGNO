@@ -49,6 +49,8 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
 
 
 
+
+
             }
         });
         scene.input.keyboard.on('keyup', function(kevent){
@@ -68,6 +70,7 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
                 case "ArrowDown":
                     Tableau.current.player.directionY=0;
                     break;
+
             }
         });
 

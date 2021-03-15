@@ -23,7 +23,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
         this.anims.create({
             key: 'right',
             frames: this.anims.generateFrameNumbers('player', { start: 4, end: 7 }),
-            frameRate: 15,
+            frameRate: 10,
             repeat: -1
         });
         this.anims.create({
@@ -62,13 +62,13 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
 
         switch (true){
             case this._directionX<0:
-                this.setVelocityX(160); // réglage de la vitesse en X vers la gauche 
-                this.setVelocityX(-160);
+                this.setVelocityX(300); // réglage de la vitesse en X vers la gauche 
+                this.setVelocityX(-300);
                 this.anims.play('left', true);
                 break;
             case this._directionX>0:
 
-                this.setVelocityX(160); // réglage de la vitesse en X vers la droite
+                this.setVelocityX(300); // réglage de la vitesse en X vers la droite
                 this.anims.play('right', true);
                 break;
             default:
@@ -78,7 +78,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
 
         if(this._directionY<0){
             if(this.body.blocked.down || this.body.touching.down){ // wtffffffffffffffffffffffff
-                this.setVelocityY(-550); // vitesse en montée 
+                this.setVelocityY(-650); // vitesse en montée 
             }
         }
 
