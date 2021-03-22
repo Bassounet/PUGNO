@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="14" nextobjectid="68">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="64" tileheight="64" infinite="0" nextlayerid="14" nextobjectid="74">
  <editorsettings>
-  <export target="level14.json" format="json"/>
+  <export target="level17.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="sprite_shitV2" tilewidth="64" tileheight="64" tilecount="60" columns="15">
   <image source="../../../../Users/Grego/Desktop/ETPA/SEMESTRE 2/MATIERES/2D/PROJET DE PLATFORMER_test/toshop/tiled_for/sprite_shitV2.png" width="960" height="256"/>
@@ -61,7 +61,13 @@
 </data>
  </layer>
  <objectgroup id="13" name="mechant">
-  <object id="67" gid="22" x="448" y="640" width="64" height="64"/>
+  <object id="67" gid="22" x="733.333" y="321.333" width="64" height="64"/>
+  <object id="68" gid="22" x="566.667" y="298.667" width="64" height="64"/>
+  <object id="69" gid="22" x="384" y="1408" width="64" height="64"/>
+  <object id="70" gid="22" x="320" y="1408" width="64" height="64"/>
+  <object id="71" gid="22" x="896" y="2176" width="64" height="64"/>
+  <object id="72" gid="22" x="448" y="2176" width="64" height="64"/>
+  <object id="73" gid="22" x="646.667" y="372" width="64" height="64"/>
  </objectgroup>
  <layer id="11" name="hole" width="50" height="50">
   <data encoding="csv">

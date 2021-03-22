@@ -20,10 +20,10 @@ class Tableau_tiled extends Tableau {
         // this.load.image('tiles', 'TILED/tableauTiledTileset.png');
         this.load.image('spritesheet', 'assets/images/sprite_shitV2.png');
         //les données du tableau qu'on a créé dans TILED
-        this.load.tilemapTiledJSON('map', 'TILED/level13.json');
+        this.load.tilemapTiledJSON('map', 'TILED/level17.json');
 
         // -----et puis aussi-------------
-        
+
         this.load.image('back', 'assets/images/background.png');
         //atlas de texture généré avec https://free-tex-packer.com/app/
         //on y trouve notre étoiles et une tête de mort
@@ -34,7 +34,7 @@ class Tableau_tiled extends Tableau {
     create() {
         super.create();
 
-       
+
         //on en aura besoin...
         let ici = this;
 
@@ -52,10 +52,12 @@ class Tableau_tiled extends Tableau {
         this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
         this.cameras.main.startFollow(this.player, true, 1, 1);
 
+
+
         //---- ajoute les plateformes simples ----------------------------
 
         this.platform = this.map.createLayer('platforms_2', this.tileset, 0, 0);
-        // this.platform_h = this.map.createLayer('Platfrom_h', this.tileset, 0, 0);
+        // this.platform_h = this.map.createLayer('mechant', this.tileset, 0, 0);
         // this.platform_t = this.map.createLayer('platform_test', this.tileset, 0, 0);
         
         this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
@@ -69,6 +71,18 @@ class Tableau_tiled extends Tableau {
         // this.platform_h.setCollisionByExclusion(-1, true);
         // this.platform_t.setCollisionByExclusion(-1, true);
         // this.platform.setCollisionFromCollisionGroup(true,true,this.platform);
+
+        let mechantContainer = this.add.container();
+       
+        this.mechantObjects = this.map.getObjectLayer('mechant')['objects'];
+        // On crée des montres volants pour chaque objet rencontré
+        this.mechantObjects.forEach(monsterObject => {
+            let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
+            mechantContainer.add(mechant);
+            this.physics.add.collider(mechant, this.platform);
+        });
+
+        
 
 
 
@@ -234,7 +248,8 @@ class Tableau_tiled extends Tableau {
 
         //quoi collide avec quoi?
         this.physics.add.collider(this.player, this.platform);
-        this.physics.add.collider(this.player, this.platform2);
+        
+
 
         // this.physics.add.collider(this.stars, this.solides);
         // //si le joueur touche une étoile dans le groupe...
@@ -243,6 +258,10 @@ class Tableau_tiled extends Tableau {
         // this.physics.add.collider(this.player, this.lave, this.playerDie, null, this);
 
         //--------- Z order -----------------------
+
+
+
+        
 
         //on définit les z à la fin
         // let z = 1000; //niveau Z qui a chaque fois est décrémenté.

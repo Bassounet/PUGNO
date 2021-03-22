@@ -1,4 +1,4 @@
-class mechant extends ObjetEnnemi{
+class mechant1 extends ObjetEnnemi{
     /**
      *
      * @param {Tableau} scene
