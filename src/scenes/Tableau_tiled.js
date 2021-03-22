@@ -20,7 +20,7 @@ class Tableau_tiled extends Tableau {
         // this.load.image('tiles', 'TILED/tableauTiledTileset.png');
         this.load.image('spritesheet', 'assets/images/sprite_shitV2.png');
         //les données du tableau qu'on a créé dans TILED
-        this.load.tilemapTiledJSON('map', 'TILED/level17.json');
+        this.load.tilemapTiledJSON('map', 'TILED/level21.json');
 
         // -----et puis aussi-------------
 
@@ -72,15 +72,45 @@ class Tableau_tiled extends Tableau {
         // this.platform_t.setCollisionByExclusion(-1, true);
         // this.platform.setCollisionFromCollisionGroup(true,true,this.platform);
 
+
+        // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****---------
+
+
+
         let mechantContainer = this.add.container();
        
         this.mechantObjects = this.map.getObjectLayer('mechant')['objects'];
-        // On crée des montres volants pour chaque objet rencontré
+    
         this.mechantObjects.forEach(monsterObject => {
             let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
             mechantContainer.add(mechant);
             this.physics.add.collider(mechant, this.platform);
         });
+
+        let helicoContainer = this.add.container();
+       
+        this.helicoObjects = this.map.getObjectLayer('helico')['objects'];
+        
+        this.helicoObjects.forEach(monsterObject => {
+            let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
+            helicoContainer.add(helico);
+            this.physics.add.collider(helico, this.platform);
+        });
+
+        let tourelleContainer = this.add.container();
+       
+        this.tourelleObjects = this.map.getObjectLayer('tourelle')['objects'];
+        
+        this.tourelleObjects.forEach(monsterObject => {
+            let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y);
+            tourelleContainer.add(tourelle);
+            this.physics.add.collider(tourelle, this.platform);
+        });
+
+        
+        
+        
+        // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****---------
 
         
 
@@ -328,6 +358,9 @@ class Tableau_tiled extends Tableau {
 
             this.previousPosition = actualPosition;
             // this.optimizeDisplay();
+
+
+            
         }
     }
 }
