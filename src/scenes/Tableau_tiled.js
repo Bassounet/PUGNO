@@ -20,7 +20,7 @@ class Tableau_tiled extends Tableau {
         // this.load.image('tiles', 'TILED/tableauTiledTileset.png');
         this.load.image('spritesheet', 'assets/images/sprite_shitV2.png');
         //les données du tableau qu'on a créé dans TILED
-        this.load.tilemapTiledJSON('map', 'TILED/level21.json');
+        this.load.tilemapTiledJSON('map', 'TILED/level23s.json');
 
         // -----et puis aussi-------------
 
@@ -35,8 +35,7 @@ class Tableau_tiled extends Tableau {
         super.create();
 
 
-        //on en aura besoin...
-        let ici = this;
+        
 
         //--------chargement de la tile map & configuration de la scène-----------------------
 
@@ -76,6 +75,15 @@ class Tableau_tiled extends Tableau {
         // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****---------
 
 
+        let helicoContainer = this.add.container();
+       
+        this.helicoObjects = this.map.getObjectLayer('helico')['objects'];
+        
+        this.helicoObjects.forEach(monsterObject => {
+            let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
+            helicoContainer.add(helico);
+            this.physics.add.collider(helico, this.platform);
+        });
 
         let mechantContainer = this.add.container();
        
@@ -87,15 +95,6 @@ class Tableau_tiled extends Tableau {
             this.physics.add.collider(mechant, this.platform);
         });
 
-        let helicoContainer = this.add.container();
-       
-        this.helicoObjects = this.map.getObjectLayer('helico')['objects'];
-        
-        this.helicoObjects.forEach(monsterObject => {
-            let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
-            helicoContainer.add(helico);
-            this.physics.add.collider(helico, this.platform);
-        });
 
         let tourelleContainer = this.add.container();
        
@@ -358,7 +357,6 @@ class Tableau_tiled extends Tableau {
 
             this.previousPosition = actualPosition;
             // this.optimizeDisplay();
-
 
             
         }
