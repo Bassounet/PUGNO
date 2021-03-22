@@ -16,10 +16,9 @@ class Tableau_tiled extends Tableau {
         this.load.image('mine', 'assets/mine.png');
 
         // ------pour TILED-------------
-        // nos images
-        // this.load.image('tiles', 'TILED/tableauTiledTileset.png');
+        
         this.load.image('spritesheet', 'assets/images/sprite_shitV2.png');
-        //les données du tableau qu'on a créé dans TILED
+       
         this.load.tilemapTiledJSON('map', 'TILED/level23s.json');
 
         // -----et puis aussi-------------
@@ -61,25 +60,21 @@ class Tableau_tiled extends Tableau {
         
         this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
 
-        //on définit les collisions, plusieurs méthodes existent:
-
-        // 1 La méthode que je préconise (il faut définir une propriété dans tiled pour que ça marche)
-        //permet de travailler sur un seul layer dans tiled et des définir les collisions en fonction des graphiques
-        //exemple ici https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6
+       
         this.platform.setCollisionByExclusion(-1, true);
-        // this.platform_h.setCollisionByExclusion(-1, true);
-        // this.platform_t.setCollisionByExclusion(-1, true);
-        // this.platform.setCollisionFromCollisionGroup(true,true,this.platform);
-
+        
 
         // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****---------
 
 
+        let ici = this;
+
+
         let helicoContainer = this.add.container();
        
-        this.helicoObjects = this.map.getObjectLayer('helico')['objects'];
+        ici.helicoObjects = ici.map.getObjectLayer('helico')['objects'];
         
-        this.helicoObjects.forEach(monsterObject => {
+        ici.helicoObjects.forEach(monsterObject => {
             let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
             helicoContainer.add(helico);
             this.physics.add.collider(helico, this.platform);
@@ -87,9 +82,9 @@ class Tableau_tiled extends Tableau {
 
         let mechantContainer = this.add.container();
        
-        this.mechantObjects = this.map.getObjectLayer('mechant')['objects'];
+        ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
     
-        this.mechantObjects.forEach(monsterObject => {
+        ici.mechantObjects.forEach(monsterObject => {
             let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
             mechantContainer.add(mechant);
             this.physics.add.collider(mechant, this.platform);
@@ -105,136 +100,6 @@ class Tableau_tiled extends Tableau {
             tourelleContainer.add(tourelle);
             this.physics.add.collider(tourelle, this.platform);
         });
-
-        
-        
-        
-        // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****---------
-
-        
-
-
-
-
-
-
-        // 2 manière la plus simple (là où il y a des tiles ça collide et sinon non)
-        //this.solides.setCollisionByExclusion(-1, true);
-        //this.lave.setCollisionByExclusion(-1, true);
-
-        // 3 Permet d'utiliser l'éditeur de collision de Tiled...mais ne semble pas marcher pas avec le moteur de physique ARCADE, donc oubliez cette option :(
-        //this.map.setCollisionFromCollisionGroup(true,true,this.plateformesSimples);
-
-        //----------les étoiles (objets) ---------------------
-
-        // c'est un peu plus compliqué, mais ça permet de maîtriser plus de choses...
-        // this.med = this.physics.add.group({
-        //     allowGravity: true,
-        //     immovable: false,
-        //     bounceY: 1
-        // });
-        // this.medObjects = this.map.getObjectLayer('medikit_1')['objects'];
-        // // On crée des étoiles pour chaque objet rencontré
-        // this.medObjects.forEach(medObject => {
-        //     // Pour chaque étoile on la positionne pour que ça colle bien car les étoiles ne font pas 64x64
-        //     let star = this.med.create(medObject.x + 32, medObject.y + 32, 'particles', 'medikit_1');
-        // });
-
-
-        //----------les monstres volants (objets tiled) ---------------------
-
-        // let monstersContainer=this.add.container();
-        // this.flyingMonstersObjects = this.map.getObjectLayer('flyingMonsters')['objects'];
-        // // On crée des montres volants pour chaque objet rencontré
-        // this.flyingMonstersObjects.forEach(monsterObject => {
-        //     let monster=new MonsterFly(this,monsterObject.x,monsterObject.y);
-        //     monstersContainer.add(monster);
-        // });
-
-        //--------effet sur la lave------------------------
-
-        // this.laveFxContainer = this.add.container();
-        // this.lave.forEachTile(function (tile) { //on boucle sur TOUTES les tiles de lave pour générer des particules
-        //     if (tile.index !== -1) { //uniquement pour les tiles remplies
-
-        /*
-        //dé-commenter pour mieux comprendre ce qui se passe
-        console.log("lave tile",tile.index,tile);
-        let g=ici.add.graphics();
-        laveFxContainer.add(g);
-        g.setPosition(tile.pixelX,tile.pixelY)
-        g.lineStyle(1,0xFF0000);
-        g.strokeRect(0, 0, 64, 64);
-        */
-
-        //on va créer des particules
-        //         let props={
-        //             frame: [
-        //                 //'star', //pour afficher aussi des étoiles
-        //                 'death-white'
-        //             ],
-        //             frequency:200,
-        //             lifespan: 2000,
-        //             quantity:2,
-        //             x:{min:-32,max:32},
-        //             y:{min:-12,max:52},
-        //             tint:[  0xC11A05,0x883333,0xBB5500,0xFF7F27 ],
-        //             rotate: {min:-10,max:10},
-        //             speedX: { min: -10, max: 10 },
-        //             speedY: { min: -20, max: -30 },
-        //             scale: {start: 0, end: 1},
-        //             alpha: { start: 1, end: 0 },
-        //             blendMode: Phaser.BlendModes.ADD,
-        //         };
-        //         let props2={...props}; //copie props sans props 2
-        //         props2.blendMode=Phaser.BlendModes.MULTIPLY; // un autre blend mode plus sombre
-
-        //         //ok tout est prêt...ajoute notre objet graphique
-        //         let laveParticles = ici.add.particles('particles');
-
-        //         //ajoute le premier émetteur de particules
-        //         laveParticles.createEmitter(props);
-        //         //on ne va pas ajouter le second effet émetteur mobile car il consomme trop de ressources
-        //         if(!ici.isMobile) {
-        //             laveParticles.createEmitter(props2); // ajoute le second
-        //         }
-        //         // positionne le tout au niveau de la tile
-        //         laveParticles.x=tile.pixelX+32;
-        //         laveParticles.y=tile.pixelY+32;
-        //         ici.laveFxContainer.add(laveParticles);
-
-        //         //optimisation (les particules sont invisibles et désactivées par défaut)
-        //         //elles seront activées via update() et optimizeDisplay()
-        //         laveParticles.pause();
-        //         laveParticles.visible=false;
-        //         //on définit un rectangle pour notre tile de particules qui nous servira plus tard
-        //         laveParticles.rectangle=new Phaser.Geom.Rectangle(tile.pixelX,tile.pixelY,64,64);
-
-        //     }
-
-        //  })
-
-        //--------allez on se fait un peu la même en plus simple mais avec les étoiles----------
-
-        // let medFxContainer=ici.add.container();
-        // this.med.children.iterate(function(etoile) {
-        //     let particles=ici.add.particles("particles","star");
-        //     let emmiter=particles.createEmitter({
-        //         tint:[  0xFF8800,0xFFFF00,0x88FF00,0x8800FF ],
-        //         rotate: {min:0,max:360},
-        //         scale: {start: 0.8, end: 0.5},
-        //         alpha: { start: 1, end: 0 },
-        //         blendMode: Phaser.BlendModes.ADD,
-        //         speed:40
-        //     });
-        //     etoile.on("disabled",function(){
-        //         emmiter.on=false;
-        //     })
-        //     emmiter.startFollow(etoile);
-        //     starsFxContainer.add(particles);
-        // });
-
-
 
 
         //----------débug---------------------
@@ -310,33 +175,6 @@ class Tableau_tiled extends Tableau {
 
     }
 
-
-
-    // optimizeDisplay() {
-    //     //return;
-    //     let world = this.cameras.main.worldView; // le rectagle de la caméra, (les coordonnées de la zone visible)
-
-    //     // on va activer / désactiver les particules de lave
-    //     for (let particule of this.laveFxContainer.getAll()) { // parcours toutes les particules de lave
-    //         if (Phaser.Geom.Rectangle.Overlaps(world, particule.rectangle)) {
-    //             //si le rectangle de la particule est dans le rectangle de la caméra
-    //             if (!particule.visible) {
-    //                 //on active les particules
-    //                 particule.resume();
-    //                 particule.visible = true;
-    //             }
-    //         } else {
-    //             //si le rectangle de la particule n'est PAS dans le rectangle de la caméra
-    //             if (particule.visible) {
-    //                 //on désactive les particules
-    //                 particule.pause();
-    //                 particule.visible = false;
-    //             }
-    //         }
-    //     }
-
-    // }
-
     // moveParallax() {
     //     //le ciel se déplace moins vite que la caméra pour donner un effet paralax
     //     this.sky.tilePositionX = this.cameras.main.scrollX * 0.6;
@@ -362,8 +200,3 @@ class Tableau_tiled extends Tableau {
         }
     }
 }
-
-
-
-
-
