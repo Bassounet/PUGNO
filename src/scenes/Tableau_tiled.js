@@ -30,9 +30,16 @@ class Tableau_tiled extends Tableau {
         this.load.atlas('particles', 'assets/images/particles.png', 'assets/images/particles.json');
     }
 
+    
+
+
 
     create() {
+
         super.create();
+
+        var input;
+        input = this.input;
 
 
         //for mouse position
@@ -217,10 +224,13 @@ class Tableau_tiled extends Tableau {
             
         }
 
-        // angle between mouse and ball
-        let angle=Phaser.Math.Angle.Between(this.pnonate.x,this.pnonate.y,MouseEvent.x,MouseEvent.y);
+        //angle between mouse and ball
+        let angle=Phaser.Math.Angle.Between(this.pnonante.x,this.pnonante.y,this.input.x,this.input.y);
         //rotation cannon
         this.pnonante.setRotation(angle);
+
+        //rotation cannon with PI/2
+        this.pnonante.setRotation(angle+Math.PI/2); 
 
         
     
