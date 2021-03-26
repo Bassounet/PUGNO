@@ -202,5 +202,17 @@ class Tableau_tiled extends Tableau {
 
             
         }
+
+        if(Tableau.current.player.x > 400 ){
+
+            this.tourelle.flipX=true;
+
+        }
+
+        if(Tableau.current.player.x < 450){
+
+            this.tourelle.flipX = false;
+        }
+    
     }
 }

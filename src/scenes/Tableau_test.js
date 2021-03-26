@@ -179,8 +179,9 @@ class Tableau_test extends Tableau{
             this.physics.add.collider(this.mechant1, this.platforms);
 
             let posx_tour = 1190
+            let posy_tour = 100 
 
-            this.tour1 = new Tourelle(this,1190,100);
+            this.tour1 = new Tourelle(this,posx_tour,posy_tour);
             this.physics.add.collider(this.tour1, this.platforms);
 
             let l_tono1 = 35;
