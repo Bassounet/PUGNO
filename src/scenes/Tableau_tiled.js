@@ -55,6 +55,10 @@ class Tableau_tiled extends Tableau {
         //---- ajoute les plateformes simples ----------------------------
 
         this.platform = this.map.createLayer('platforms_2', this.tileset, 0, 0);
+        
+        
+        // this.platform.setBodySize(50,50);
+        
         // this.platform_h = this.map.createLayer('mechant', this.tileset, 0, 0);
         // this.platform_t = this.map.createLayer('platform_test', this.tileset, 0, 0);
         
