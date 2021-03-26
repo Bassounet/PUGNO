@@ -14,6 +14,7 @@ class Tableau_tiled extends Tableau {
         this.load.image('plat', 'assets/platform_.png');
         this.load.image('tono', 'assets/tono.png');
         this.load.image('mine', 'assets/mine.png');
+        this.load.image('gun', 'assets/Pnonante.png');
 
         // ------pour TILED-------------
         
@@ -34,7 +35,10 @@ class Tableau_tiled extends Tableau {
         super.create();
 
 
-        
+        //for mouse position
+        // input = this.input;
+
+
 
         //--------chargement de la tile map & configuration de la scène-----------------------
 
@@ -81,7 +85,8 @@ class Tableau_tiled extends Tableau {
         ici.helicoObjects.forEach(monsterObject => {
             let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
             helicoContainer.add(helico);
-            this.physics.add.collider(helico, this.platform);
+            // this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
+
         });
 
         let mechantContainer = this.add.container();
@@ -177,17 +182,7 @@ class Tableau_tiled extends Tableau {
         // this.sky2.setDepth(z--);
         // this.sky.setDepth(z--);
 
-        var coefDir;
-	    if ( Tableau.current.player.directionX == -1 ) { coefDir = -1; } else { coefDir = 1 }
-        // on crée la balle a coté du joueur
-        var bullet = groupeBullets.create(player.x + (25 * coefDir), player.y - 4, 'medikit_1');
-        // parametres physiques de la balle.
-        bullet.setCollideWorldBounds(true);
-        bullet.body.allowGravity =false;
-        bullet.setVelocity(1000 * coefDir, 0); // vitesse en x et en y
-
-        console.log("pip Ui")
-    }
+        
 
     
 
@@ -199,7 +194,12 @@ class Tableau_tiled extends Tableau {
     //     this.sky2.tilePositionY = this.cameras.main.scrollY * 0.7 + 100;
     // }
 
-    
+    this.pnonante = this.physics.add.sprite(384,500,'gun'); //.setAllowGravity(false);
+    this.pnonante.body.setAllowGravity(false);
+    // this.cannon.allowGravity=false;
+
+
+    }
 
 
     update() {
@@ -217,16 +217,12 @@ class Tableau_tiled extends Tableau {
             
         }
 
-        // if(Tableau.current.player.x > 400 ){
+        // angle between mouse and ball
+        let angle=Phaser.Math.Angle.Between(this.pnonate.x,this.pnonate.y,MouseEvent.x,MouseEvent.y);
+        //rotation cannon
+        this.pnonante.setRotation(angle);
 
-        //     this.tourelle.flipX=true;
-
-        // }
-
-        // if(Tableau.current.player.x < 450){
-
-        //     this.tourelle.flipX = false;
-        // }
+        
     
     }
 }
