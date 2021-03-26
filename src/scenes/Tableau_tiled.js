@@ -230,7 +230,9 @@ class Tableau_tiled extends Tableau {
         this.pnonante.setRotation(angle);
 
         //rotation cannon with PI/2
-        this.pnonante.setRotation(angle+Math.PI/2); 
+        this.pnonante.setRotation(angle+Math.PI/2); // à configurer pour que ça suive notre curseur de souris au poil de fion 
+        
+
 
         
     
