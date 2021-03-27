@@ -217,13 +217,7 @@ class Tableau_tiled extends Tableau {
     // let posx_arme = this.player.x + 150 
     //     let posy_arme = this.player.y - 100
     
-        if(this.mouse.isDown){
-            //for fire again
-            this.bullet=this.physics.add.sprite(posx_arme , posy_arme ,'bullet'); // genesis : from
-            // console.log("hello");
-            //move to mouse position 
-            this.physics.moveTo(this.bullet,this.input.x,this.input.y+150,300); // destination bullet ... à régler 
-        }
+     
 
     
 
@@ -254,15 +248,23 @@ class Tableau_tiled extends Tableau {
 
         //rotation cannon with PI/2
         // this.pnonante.setAngle(angle+Math.PI/2); // à configurer pour que ça suive notre curseur de souris au poil de fion 
-        let posx_arme = this.player.x + 33
-        let posy_arme = this.player.y 
+        let posx_arme = this.player.x + 150 
+        let posy_arme = this.player.y - 100
     
         if(this.mouse.isDown){
             //for fire again
-            this.bullet=this.physics.add.sprite(posx_arme , posy_arme ,'bullet'); // genesis : from it's OK
+            this.bullet=this.physics.add.sprite(posx_arme , posy_arme ,'bullet'); // genesis : from
             // console.log("hello");
             //move to mouse position 
-            this.physics.moveTo(this.bullet,this.input.x,this.input.y+150,300); // destination bullet ... à régler 
+            this.physics.moveTo(this.bullet,this.bullet.x,this.bullet.y,1000); // destination bullet ... à régler 
+        }
+
+        if(this.mouse.isDown){
+
+            console.log(this.input.x);
+            console.log(this.input.y);
+
+
         }
 
 
