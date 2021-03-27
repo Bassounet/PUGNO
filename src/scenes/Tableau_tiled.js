@@ -15,6 +15,7 @@ class Tableau_tiled extends Tableau {
         this.load.image('tono', 'assets/tono.png');
         this.load.image('mine', 'assets/mine.png');
         this.load.image('gun', 'assets/Pnonante.png');
+        this.load.image('bullet', 'assets/bullet.png');
 
         // ------pour TILED-------------
         
@@ -200,10 +201,31 @@ class Tableau_tiled extends Tableau {
     //     this.sky2.tilePositionX = this.cameras.main.scrollX * 0.7 + 100;
     //     this.sky2.tilePositionY = this.cameras.main.scrollY * 0.7 + 100;
     // }
+    // for mouse click
+    
 
-    this.pnonante = this.physics.add.sprite(384,500,'gun'); //.setAllowGravity(false);
+    let posx_arme = this.player.x
+    let posy_arme = this.player.y
+
+    this.mouse=this.input.mousePointer;
+
+
+    this.pnonante = this.physics.add.sprite(posy_arme,posx_arme,'gun'); //.setAllowGravity(false);
     this.pnonante.body.setAllowGravity(false);
     // this.cannon.allowGravity=false;
+
+    // let posx_arme = this.player.x + 150 
+    //     let posy_arme = this.player.y - 100
+    
+        if(this.mouse.isDown){
+            //for fire again
+            this.bullet=this.physics.add.sprite(posx_arme , posy_arme ,'bullet'); // genesis : from
+            // console.log("hello");
+            //move to mouse position 
+            this.physics.moveTo(this.bullet,this.input.x,this.input.y+150,300); // destination bullet ... à régler 
+        }
+
+    
 
 
     }
@@ -225,13 +247,23 @@ class Tableau_tiled extends Tableau {
         }
 
         //angle between mouse and ball
-        let angle=Phaser.Math.Angle.Between(this.pnonante.x,this.pnonante.y,this.input.x,this.input.y);
+        this.angle=Phaser.Math.Angle.Between(this.pnonante.x,this.pnonante.y,this.input.x,this.input.y);
         //rotation cannon
-        this.pnonante.setRotation(angle);
+        this.pnonante.setRotation(this.angle);
+        // console.log(this.angle);
 
         //rotation cannon with PI/2
-        this.pnonante.setRotation(angle+Math.PI/2); // à configurer pour que ça suive notre curseur de souris au poil de fion 
-        
+        // this.pnonante.setAngle(angle+Math.PI/2); // à configurer pour que ça suive notre curseur de souris au poil de fion 
+        let posx_arme = this.player.x + 33
+        let posy_arme = this.player.y 
+    
+        if(this.mouse.isDown){
+            //for fire again
+            this.bullet=this.physics.add.sprite(posx_arme , posy_arme ,'bullet'); // genesis : from it's OK
+            // console.log("hello");
+            //move to mouse position 
+            this.physics.moveTo(this.bullet,this.input.x,this.input.y+150,300); // destination bullet ... à régler 
+        }
 
 
         
