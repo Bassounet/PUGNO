@@ -20,6 +20,7 @@ let config = {
         new Ui(),
 
         // new Tableau_v("test_v"),
+        // new Tableau_start("start"),
         new Tableau_tiled("la nouvelle MAP"),
         new Tableau_test("on test des trucs vite fait"),
      

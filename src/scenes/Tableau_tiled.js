@@ -91,8 +91,9 @@ class Tableau_tiled extends Tableau {
         ici.helicoObjects = ici.map.getObjectLayer('helico')['objects'];
         
         ici.helicoObjects.forEach(monsterObject => {
-            let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
-            helicoContainer.add(helico);
+            //ici.create(this,monsterObject.x,monsterObject.y,"gun")
+            //let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
+            //helicoContainer.add(helico);
             // this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
 
         });
@@ -105,6 +106,7 @@ class Tableau_tiled extends Tableau {
             let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
             mechantContainer.add(mechant);
             this.physics.add.collider(mechant, this.platform);
+            this.physics.add.collider(mechant1, this.bullet);
         });
 
 
@@ -116,6 +118,7 @@ class Tableau_tiled extends Tableau {
             let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y);
             tourelleContainer.add(tourelle);
             this.physics.add.collider(tourelle, this.platform);
+            
         });
 
 
@@ -212,17 +215,15 @@ class Tableau_tiled extends Tableau {
 
     this.pnonante = this.physics.add.sprite(posy_arme,posx_arme,'gun'); //.setAllowGravity(false);
     this.pnonante.body.setAllowGravity(false);
+    
     // this.cannon.allowGravity=false;
 
     // let posx_arme = this.player.x + 150 
     //     let posy_arme = this.player.y - 100
-    
-     
 
     
-
-
     }
+    
 
 
     update() {
@@ -240,32 +241,49 @@ class Tableau_tiled extends Tableau {
             
         }
 
+        // let input=this.input;
+
+        if(this.mouse.isDown){
+            //for fire again
+            this.bullet=this.physics.add.sprite(this.player.x + 32 , this.player.y ,'bullet'); // genesis : from
+            
+            // console.log("hello");
+            //move to mouse position 
+            this.physics.moveTo(this.bullet,this.bullet.x + 10 ,this.bullet.y -3 ,600); // destination bullet ... à régler 
+            // this.physics.moveTo(this.bullet,this.input.x ,this.input.y ,2000); // destination bullet ... à régler 
+            
+            this.physics.add.collider(this.bullet, this.platform);
+            this.physics.add.collider(this.bullet, this.mechant1);
+            
+
+            this.bullet.setCollideWorldBounds(true) // on paramètre les rebonds 
+            this.bullet.setBounce(0.19);
+            
+            // this.bullet.allowGravity=true;
+            // this.bullet.setRotation(1);
+        
+        }
+        
+    
+        if(this.mouse.isDown){
+    
+            console.log(this.input.x);
+            console.log(this.input.y);
+    
+    
+        }
+
         //angle between mouse and ball
-        this.angle=Phaser.Math.Angle.Between(this.pnonante.x,this.pnonante.y,this.input.x,this.input.y);
-        //rotation cannon
-        this.pnonante.setRotation(this.angle);
+        // this.angle=Phaser.Math.Angle.Between(this.pnonante.x,this.pnonante.y,this.input.x,this.input.y);
+        // //rotation cannon
+        // this.pnonante.setRotation(this.angle);
         // console.log(this.angle);
 
         //rotation cannon with PI/2
         // this.pnonante.setAngle(angle+Math.PI/2); // à configurer pour que ça suive notre curseur de souris au poil de fion 
-        let posx_arme = this.player.x + 150 
-        let posy_arme = this.player.y - 100
+        
     
-        if(this.mouse.isDown){
-            //for fire again
-            this.bullet=this.physics.add.sprite(posx_arme , posy_arme ,'bullet'); // genesis : from
-            // console.log("hello");
-            //move to mouse position 
-            this.physics.moveTo(this.bullet,this.bullet.x,this.bullet.y,1000); // destination bullet ... à régler 
-        }
-
-        if(this.mouse.isDown){
-
-            console.log(this.input.x);
-            console.log(this.input.y);
-
-
-        }
+       
 
 
         
