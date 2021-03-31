@@ -7,7 +7,7 @@ class Tableau_tiled_V2 extends Tableau {
         // this.load.image('medikit_1', 'assets/medikit_1.png');
         // this.load.image('char', 'assets/char.png');
         this.load.image('tourelleV2', 'assets/tourelleV2.png');
-        this.load.image('helico', 'assets/helico.png');
+        this.load.image('drone', 'assets/drone.png');
         // this.load.image('MAP_2D', 'assets/MAP_2D.png');
         this.load.image('sol', 'assets/platformes_sol.png');
         this.load.image('mechant', 'assets/mechant.png');
@@ -21,7 +21,7 @@ class Tableau_tiled_V2 extends Tableau {
         
         this.load.image('spritesheet', 'assets/images/SPRITE_SHEET_with_map.png');
        
-        this.load.tilemapTiledJSON('map', 'TILED/new_mapV5.json');
+        this.load.tilemapTiledJSON('map', 'TILED/new_mapV6.json');
 
         // -----et puis aussi-------------
 
@@ -108,20 +108,31 @@ class Tableau_tiled_V2 extends Tableau {
             let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
             mechantContainer.add(mechant);
             this.physics.add.collider(mechant, this.platform);
-            this.physics.add.collider(mechant1, this.bullet);
+            // this.physics.add.collider(mechant1, this.bullet);
         });
 
 
         let tourelleContainer = this.add.container();
        
-        this.tourelleObjects = this.map.getObjectLayer('tourelles')['objects'];
+        ici.tourelleObjects = ici.map.getObjectLayer('tourelles')['objects'];
         
-        this.tourelleObjects.forEach(monsterObject => {
+        ici.tourelleObjects.forEach(monsterObject => {
             let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y);
             tourelleContainer.add(tourelle);
             this.physics.add.collider(tourelle, this.platform);
             
         });
+
+        // let droneContainer = this.add.container();
+       
+        // this.droneContainer = this.map.getObjectLayer('drone')['objects'];
+        
+        // this.tourelleObjects.forEach(monsterObject => {
+        //     let drone=new Drone(this,monsterObject.x,monsterObject.y);
+        //     droneContainer.add(drone);
+        //     this.physics.add.collider(drone, this.platform);
+            
+        // });
 
 
         //----------débug---------------------

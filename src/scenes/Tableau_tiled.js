@@ -4,11 +4,10 @@ class Tableau_tiled extends Tableau {
         super.preload();
 
         this.load.image('blood', 'assets/blood.png');
-        this.load.image('medikit_1', 'assets/medikit_1.png');
+        // this.load.image('medikit_1', 'assets/medikit_1.png');
         this.load.image('char', 'assets/char.png');
         this.load.image('tourelle', 'assets/tourelle.png');
         this.load.image('helico', 'assets/helico.png');
-        this.load.image('MAP_2D', 'assets/MAP_2D.png');
         this.load.image('sol', 'assets/platformes_sol.png');
         this.load.image('mechant', 'assets/mechant.png');
         this.load.image('plat', 'assets/platform_.png');

@@ -6,7 +6,7 @@ class Helicopter extends ObjetEnnemi{
      * @param y
      */
     constructor(scene, x, y) {
-        super(scene, x, y, "helico");
+        super(scene, x, y, "drone");
         //pas de gravité
         this.body.allowGravity=false;
 
