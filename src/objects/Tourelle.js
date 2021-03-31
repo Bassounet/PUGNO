@@ -17,6 +17,7 @@ class Tourelle extends ObjetEnnemi{
         //pas de gravité
         this.body.allowGravity=true;
         this.setGravityY(100);
+        this.setCollideWorldBounds(true);
 
         //gestion de la taille
         this.setDisplaySize(90,60);

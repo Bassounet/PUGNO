@@ -19,6 +19,8 @@ let config = {
     scene: [
         new Ui(),
 
+
+        new Tableau_tour("goooo"),
         new Tableau_v("test_v"),
         // new Tableau_start("start"),
         new Tableau_tiled_V2("la nouvelle MAP"),

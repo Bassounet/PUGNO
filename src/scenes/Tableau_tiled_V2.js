@@ -220,12 +220,14 @@ class Tableau_tiled_V2 extends Tableau {
     // for mouse click
     
 
+    
+    
     let posx_arme = this.player.x
     let posy_arme = this.player.y
 
     this.mouse=this.input.mousePointer;
 
-
+    this.tour1 = this.physics.add.sprite(300,300,'tourelleV2');
     this.pnonante = this.physics.add.sprite(posy_arme,posx_arme,'gun'); //.setAllowGravity(false);
     this.pnonante.body.setAllowGravity(false);
     
