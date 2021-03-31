@@ -21,7 +21,7 @@ class Tableau_tiled_V2 extends Tableau {
         
         this.load.image('spritesheet', 'assets/images/SPRITE_SHEET_with_map2.png');
        
-        this.load.tilemapTiledJSON('map', 'TILED/new_mapV12.json');
+        this.load.tilemapTiledJSON('map', 'TILED/new_mapV15.json');
 
         // -----et puis aussi-------------
 
@@ -52,10 +52,13 @@ class Tableau_tiled_V2 extends Tableau {
 
         //notre map
         this.map = this.make.tilemap({ key: 'map' });
+
         //nos images qui vont avec la map
+
         this.tileset = this.map.addTilesetImage('SPRITE_SHEET_with_map2', 'spritesheet');
 
         //on agrandit le champ de la caméra du coup
+
         let largeurDuTableau = this.map.widthInPixels;
         let hauteurDuTableau = this.map.heightInPixels;
         this.physics.world.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
@@ -67,9 +70,12 @@ class Tableau_tiled_V2 extends Tableau {
         //---- ajoute les plateformes simples ----------------------------
 
         this.platform = this.map.createLayer('platforms', this.tileset, 0, 0);
+        this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
+
         this.background = this.map.createLayer('background', this.tileset, 0, 0);
-        
+
         this.platform.setDepth(9);
+        this.floor.setDepth(9);
         this.player.setDepth(10);
         
         // this.platform.setBodySize(50,50);
@@ -78,9 +84,10 @@ class Tableau_tiled_V2 extends Tableau {
         // this.platform_t = this.map.createLayer('platform_test', this.tileset, 0, 0);
         // this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
 
-       
+        this.floor.setCollisionByExclusion(-1, true);
         this.platform.setCollisionByExclusion(-1, true);
-        
+
+
 
         // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****---------
 
@@ -132,6 +139,17 @@ class Tableau_tiled_V2 extends Tableau {
             droneContainer.add(drone);
             this.physics.add.collider(drone, this.platform);
             
+        });
+
+        let mineContainer = this.add.container();
+
+        ici.mineObjects = ici.map.getObjectLayer('mine')['objects'];
+
+        ici.mineObjects.forEach(monsterObject => {
+            let mine=new Tono(this,monsterObject.x,monsterObject.y);
+            mineContainer.add(mine);
+            this.physics.add.collider(mine, this.platform);
+
         });
 
 

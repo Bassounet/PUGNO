@@ -40,8 +40,8 @@ class Tableau_tiled extends Tableau {
 
         super.create();
 
-        var input;
-        input = this.input;
+        // var input;
+        // input = this.input;
 
 
         //for mouse position
