@@ -11,7 +11,7 @@ class Drone extends ObjetEnnemi{
         this.body.allowGravity=false;
 
         //gestion de la taille
-        this.setDisplaySize(20,20);
+        // this.setDisplaySize(20,20);
 
         //on réduit un peu la zone de hit
         // this.setBodySize(132,54);

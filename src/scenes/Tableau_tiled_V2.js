@@ -21,7 +21,7 @@ class Tableau_tiled_V2 extends Tableau {
         
         this.load.image('spritesheet', 'assets/images/SPRITE_SHEET_with_map.png');
        
-        this.load.tilemapTiledJSON('map', 'TILED/new_mapV6.json');
+        this.load.tilemapTiledJSON('map', 'TILED/new_mapV10.json');
 
         // -----et puis aussi-------------
 
@@ -117,7 +117,7 @@ class Tableau_tiled_V2 extends Tableau {
         ici.tourelleObjects = ici.map.getObjectLayer('tourelles')['objects'];
         
         ici.tourelleObjects.forEach(monsterObject => {
-            let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y);
+            let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y-100);
             tourelleContainer.add(tourelle);
             this.physics.add.collider(tourelle, this.platform);
             

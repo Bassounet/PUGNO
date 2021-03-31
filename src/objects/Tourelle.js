@@ -20,7 +20,7 @@ class Tourelle extends ObjetEnnemi{
         this.setCollideWorldBounds(true);
 
         //gestion de la taille
-        this.setDisplaySize(90,60);
+        this.setDisplaySize(120,64);
         // this.physics.add.collider(this.Tourelle, this.platforms); // faut arriver à la mettre là la physique 
 
 
