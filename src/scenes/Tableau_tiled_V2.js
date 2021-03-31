@@ -6,7 +6,7 @@ class Tableau_tiled_V2 extends Tableau {
         this.load.image('blood', 'assets/blood.png');
         this.load.image('medikit_1', 'assets/medikit_1.png');
         this.load.image('char', 'assets/char.png');
-        this.load.image('tourelle', 'assets/tourelle.png');
+        this.load.image('tourelleV2', 'assets/tourelleV2.png');
         this.load.image('helico', 'assets/helico.png');
         this.load.image('MAP_2D', 'assets/MAP_2D.png');
         this.load.image('sol', 'assets/platformes_sol.png');
@@ -21,7 +21,7 @@ class Tableau_tiled_V2 extends Tableau {
         
         this.load.image('spritesheet', 'assets/images/SPRITE_SHEET_with_map.png');
        
-        this.load.tilemapTiledJSON('map', 'TILED/new_mapV3.json');
+        this.load.tilemapTiledJSON('map', 'TILED/new_mapV5.json');
 
         // -----et puis aussi-------------
 
@@ -91,10 +91,10 @@ class Tableau_tiled_V2 extends Tableau {
         ici.helicoObjects = ici.map.getObjectLayer('drone')['objects'];
         
         ici.helicoObjects.forEach(monsterObject => {
-            //ici.create(this,monsterObject.x,monsterObject.y,"gun")
-            //let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
-            //helicoContainer.add(helico);
-            // this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
+            // ici.create(this,monsterObject.x,monsterObject.y,monsterObject.y)
+            let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
+            helicoContainer.add(helico);
+            this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
 
         });
 
@@ -112,7 +112,7 @@ class Tableau_tiled_V2 extends Tableau {
 
         let tourelleContainer = this.add.container();
        
-        this.tourelleObjects = this.map.getObjectLayer('tourelle')['objects'];
+        this.tourelleObjects = this.map.getObjectLayer('tourelles')['objects'];
         
         this.tourelleObjects.forEach(monsterObject => {
             let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y);
