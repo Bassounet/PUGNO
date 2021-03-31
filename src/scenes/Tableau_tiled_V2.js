@@ -19,9 +19,9 @@ class Tableau_tiled_V2 extends Tableau {
 
         // ------pour TILED-------------
         
-        this.load.image('spritesheet', 'assets/images/SPRITE_SHEET_with_map.png');
+        this.load.image('spritesheet', 'assets/images/SPRITE_SHEET_with_map2.png');
        
-        this.load.tilemapTiledJSON('map', 'TILED/new_mapV10.json');
+        this.load.tilemapTiledJSON('map', 'TILED/new_mapV12.json');
 
         // -----et puis aussi-------------
 
@@ -53,7 +53,7 @@ class Tableau_tiled_V2 extends Tableau {
         //notre map
         this.map = this.make.tilemap({ key: 'map' });
         //nos images qui vont avec la map
-        this.tileset = this.map.addTilesetImage('SPRITE_SHEET_with_map', 'spritesheet');
+        this.tileset = this.map.addTilesetImage('SPRITE_SHEET_with_map2', 'spritesheet');
 
         //on agrandit le champ de la caméra du coup
         let largeurDuTableau = this.map.widthInPixels;
