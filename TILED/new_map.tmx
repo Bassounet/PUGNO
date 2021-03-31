@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="56" height="7" tilewidth="64" tileheight="64" infinite="0" nextlayerid="12" nextobjectid="57">
  <editorsettings>
-  <export target="new_mapV9.json" format="json"/>
+  <export target="new_mapV10.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="SPRITE_SHEET_with_map" tilewidth="64" tileheight="64" tilecount="315" columns="45">
   <image source="../../../../Users/Grego/Desktop/ETPA/SEMESTRE 2/MATIERES/2D/PROJET DE PLATFORMER_test/toshop/scene/screen/map/rendu/SPRITE_SHEET_with_map.png" width="2880" height="448"/>
