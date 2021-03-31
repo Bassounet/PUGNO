@@ -14,7 +14,7 @@ class Tableau extends Phaser.Scene{
    
     preload(){
         this.load.image('sky', 'assets/sky.png');
-        this.load.image('spike', 'assets/spike.png');
+        // this.load.image('spike', 'assets/spike.png');
         this.load.spritesheet('player','assets/player2.png',
             { frameWidth: 61, frameHeight: 64  }
         );
@@ -105,9 +105,9 @@ class Tableau extends Phaser.Scene{
     /**
      * Aïeee ça fait mal
      * @param player
-     * @param spike
+     * @param tono
      */
-    hit_tono (player, spike) // je ne compwend pas ...
+    hit_tono (player, tono) // je ne compwend pas ...
     {
         this.physics.pause();
         player.setTint(0xff0000); 

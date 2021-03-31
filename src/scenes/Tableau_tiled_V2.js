@@ -4,11 +4,11 @@ class Tableau_tiled_V2 extends Tableau {
         super.preload();
 
         this.load.image('blood', 'assets/blood.png');
-        this.load.image('medikit_1', 'assets/medikit_1.png');
-        this.load.image('char', 'assets/char.png');
+        // this.load.image('medikit_1', 'assets/medikit_1.png');
+        // this.load.image('char', 'assets/char.png');
         this.load.image('tourelleV2', 'assets/tourelleV2.png');
         this.load.image('helico', 'assets/helico.png');
-        this.load.image('MAP_2D', 'assets/MAP_2D.png');
+        // this.load.image('MAP_2D', 'assets/MAP_2D.png');
         this.load.image('sol', 'assets/platformes_sol.png');
         this.load.image('mechant', 'assets/mechant.png');
         this.load.image('plat', 'assets/platform_.png');
@@ -67,14 +67,16 @@ class Tableau_tiled_V2 extends Tableau {
         //---- ajoute les plateformes simples ----------------------------
 
         this.platform = this.map.createLayer('platforms', this.tileset, 0, 0);
+        this.background = this.map.createLayer('background', this.tileset, 0, 0);
         
+        this.platform.setDepth(9);
+        this.player.setDepth(10);
         
         // this.platform.setBodySize(50,50);
         
         // this.platform_h = this.map.createLayer('mechant', this.tileset, 0, 0);
         // this.platform_t = this.map.createLayer('platform_test', this.tileset, 0, 0);
-        
-        this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
+        // this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
 
        
         this.platform.setCollisionByExclusion(-1, true);
@@ -86,17 +88,17 @@ class Tableau_tiled_V2 extends Tableau {
         let ici = this;
 
 
-        let helicoContainer = this.add.container();
+        // let helicoContainer = this.add.container();
        
-        ici.helicoObjects = ici.map.getObjectLayer('drone')['objects'];
+        // ici.helicoObjects = ici.map.getObjectLayer('drone')['objects'];
         
-        ici.helicoObjects.forEach(monsterObject => {
-            // ici.create(this,monsterObject.x,monsterObject.y,monsterObject.y)
-            let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
-            helicoContainer.add(helico);
-            this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
+        // ici.helicoObjects.forEach(monsterObject => {
+        //     // ici.create(this,monsterObject.x,monsterObject.y,monsterObject.y)
+        //     let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
+        //     helicoContainer.add(helico);
+        //     this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
 
-        });
+        // });
 
         let mechantContainer = this.add.container();
        
