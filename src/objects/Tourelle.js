@@ -2,7 +2,7 @@ class Tourelle extends ObjetEnnemi{
     
     preload() { 
 
-        this.load.image('fond', 'assets/tourelleV2.png');
+        this.load.image('tourelleV2', 'assets/tourelleV2.png');
         
     }
     
