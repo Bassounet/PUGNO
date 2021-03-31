@@ -123,16 +123,16 @@ class Tableau_tiled_V2 extends Tableau {
             
         });
 
-        // let droneContainer = this.add.container();
+        let droneContainer = this.add.container();
        
-        // this.droneContainer = this.map.getObjectLayer('drone')['objects'];
+        ici.droneObjects = ici.map.getObjectLayer('drone')['objects'];
         
-        // this.tourelleObjects.forEach(monsterObject => {
-        //     let drone=new Drone(this,monsterObject.x,monsterObject.y);
-        //     droneContainer.add(drone);
-        //     this.physics.add.collider(drone, this.platform);
+        ici.droneObjects.forEach(monsterObject => {
+            let drone=new Drone(this,monsterObject.x,monsterObject.y);
+            droneContainer.add(drone);
+            this.physics.add.collider(drone, this.platform);
             
-        // });
+        });
 
 
         //----------débug---------------------
@@ -227,7 +227,6 @@ class Tableau_tiled_V2 extends Tableau {
 
     this.mouse=this.input.mousePointer;
 
-    this.tour1 = this.physics.add.sprite(300,300,'tourelleV2');
     this.pnonante = this.physics.add.sprite(posy_arme,posx_arme,'gun'); //.setAllowGravity(false);
     this.pnonante.body.setAllowGravity(false);
     

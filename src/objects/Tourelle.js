@@ -13,7 +13,7 @@ class Tourelle extends ObjetEnnemi{
      * @param y
      */
     constructor(scene, x, y) {
-        super(scene, x, y, "tourellev2");
+        super(scene, x, y, "tourelleV2");
         //pas de gravité
         this.body.allowGravity=true;
         this.setGravityY(100);

@@ -1,4 +1,4 @@
-class Helicopter extends ObjetEnnemi{
+class Drone extends ObjetEnnemi{
     /**
      *
      * @param {Tableau} scene
@@ -11,10 +11,10 @@ class Helicopter extends ObjetEnnemi{
         this.body.allowGravity=false;
 
         //gestion de la taille
-        this.setDisplaySize(135,80);
+        this.setDisplaySize(20,20);
 
         //on réduit un peu la zone de hit
-        this.setBodySize(132,54);
+        // this.setBodySize(132,54);
         this.setOffset(0,0);// ici on règle le point de référence du départ réglage de noter hitbox ... 
         this.setVelocityX(100);
 
