@@ -20,7 +20,7 @@ class Tableau_start extends Tableau {
             var timedEvent;
 
             timedEvent = this.time.addEvent({ 
-                delay: 6400,
+                delay: 3000,
                 callback: Tableau.suivant,
                 callbackScope: this,
                 loop: true });

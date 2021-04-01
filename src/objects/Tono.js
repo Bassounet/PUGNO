@@ -11,7 +11,7 @@ class Tono extends ObjetEnnemi{
         this.flipX=false;
         
         this.setGravityY(40);
-        this.setDisplaySize(35,60);
+        this.setDisplaySize(64,64);
         this.setOffset(0,0);
         this.setCollideWorldBounds(true)
         

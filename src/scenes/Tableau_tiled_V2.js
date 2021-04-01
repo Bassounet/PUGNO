@@ -21,7 +21,7 @@ class Tableau_tiled_V2 extends Tableau {
         
         this.load.image('spritesheet', 'assets/images/SPRITE_SHEET_with_map2.png');
        
-        this.load.tilemapTiledJSON('map', 'TILED/new_mapV15.json');
+        this.load.tilemapTiledJSON('map', 'TILED/new_mapV18.json');
 
         // -----et puis aussi-------------
 
@@ -141,14 +141,25 @@ class Tableau_tiled_V2 extends Tableau {
             
         });
 
-        let mineContainer = this.add.container();
+        // let mineContainer = this.add.container();
+        //
+        // ici.mineObjects = ici.map.getObjectLayer('mine')['objects'];
+        //
+        // ici.mineObjects.forEach(monsterObject => {
+        //     let mine=new mine(this,monsterObject.x,monsterObject.y);
+        //     mineContainer.add(mine);
+        //     this.physics.add.collider(mine, this.platform);
+        //
+        // });
 
-        ici.mineObjects = ici.map.getObjectLayer('mine')['objects'];
+        let tonoContainer = this.add.container();
 
-        ici.mineObjects.forEach(monsterObject => {
-            let mine=new Tono(this,monsterObject.x,monsterObject.y);
-            mineContainer.add(mine);
-            this.physics.add.collider(mine, this.platform);
+        ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
+
+        ici.tonoObjects.forEach(monsterObject => {
+            let tono = new Tono(this,monsterObject.x,monsterObject.y);
+            tonoContainer.add(tono);
+            this.physics.add.collider(tono, this.platform);
 
         });
 
@@ -158,7 +169,7 @@ class Tableau_tiled_V2 extends Tableau {
         //pour débugger les collisions sur chaque layer
         let debug = this.add.graphics().setAlpha(this.game.config.physics.arcade.debug ? 0.75 : 0);
         if (this.game.config.physics.arcade.debug === false) {
-            debug.visible = false;
+            debug.visible = true;
         }
         //débug solides en vers
         this.platform.renderDebug(debug, {
