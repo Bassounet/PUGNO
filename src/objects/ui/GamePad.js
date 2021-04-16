@@ -52,6 +52,8 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
 
 
             }
+
+
         });
         scene.input.keyboard.on('keyup', function(kevent){
             switch (kevent.key){

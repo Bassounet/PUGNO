@@ -284,46 +284,42 @@ class Tableau_tiled_V2 extends Tableau {
             
         }
 
+        // if(this.mouse.isDown){
+        //
+        //     this.player.shoot();
+        //     console.log("hello");
+        // }
+
+
         // let input=this.input;
 
-        if(this.mouse.isDown){
-            //for fire again
-            this.bullet=this.physics.add.sprite(this.player.x + 32 , this.player.y ,'bullet'); // genesis : from
-            
-            // console.log("hello");
-            //move to mouse position 
-            this.physics.moveTo(this.bullet,this.bullet.x + 10 ,this.bullet.y -3 ,600); // destination bullet ... à régler 
-            // this.physics.moveTo(this.bullet,this.input.x ,this.input.y ,2000); // destination bullet ... à régler 
-            
-            this.physics.add.collider(this.bullet, this.platform);
-            this.physics.add.collider(this.bullet, this.mechant1);
-            
+        // if(this.mouse.isDown){
+        //     //for fire again
+        //     this.bullet=this.physics.add.sprite(this.player.x + 32 , this.player.y ,'bullet'); // genesis : from
+        //
+        //     // console.log("hello");
+        //     //move to mouse position
+        //     this.physics.moveTo(this.bullet,this.bullet.x + 10 ,this.bullet.y -3 ,600); // destination bullet ... à régler
+        //     // this.physics.moveTo(this.bullet,this.input.x ,this.input.y ,2000); // destination bullet ... à régler
+        //
+        //     this.bullet.setCollideWorldBounds(true) // on paramètre les rebonds
+        //     this.bullet.setBounce(0.19);
+        //
+        //     this.bullet.allowGravity=true;
+        //     // this.bullet.setRotation(1);
+        //
+        // }
+        //
+        //
+        // if(this.mouse.isDown){
+        //
+        //     console.log(this.input.x);
+        //     console.log(this.input.y);
+        //
+        //
+        // }
 
-            this.bullet.setCollideWorldBounds(true) // on paramètre les rebonds 
-            this.bullet.setBounce(0.19);
-            
-            // this.bullet.allowGravity=true;
-            // this.bullet.setRotation(1);
-        
-        }
-        
-    
-        if(this.mouse.isDown){
-    
-            console.log(this.input.x);
-            console.log(this.input.y);
-    
-    
-        }
 
-        //angle between mouse and ball
-        // this.angle=Phaser.Math.Angle.Between(this.pnonante.x,this.pnonante.y,this.input.x,this.input.y);
-        // //rotation cannon
-        // this.pnonante.setRotation(this.angle);
-        // console.log(this.angle);
-
-        //rotation cannon with PI/2
-        // this.pnonante.setAngle(angle+Math.PI/2); // à configurer pour que ça suive notre curseur de souris au poil de fion 
         
     
        

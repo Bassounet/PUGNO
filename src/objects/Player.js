@@ -84,4 +84,35 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
 
     }
 
+
+    // shoot() {
+    //
+    //     if (this.mouse.isDown) {
+    //         //for fire again
+    //         this.bullet = this.physics.add.sprite(this.player.x + 32, this.player.y, 'bullet'); // genesis : from
+    //
+    //         // console.log("hello");
+    //         //move to mouse position
+    //         this.physics.moveTo(this.bullet, this.bullet.x + 10, this.bullet.y - 3, 600); // destination bullet ... à régler
+    //         // this.physics.moveTo(this.bullet,this.input.x ,this.input.y ,2000); // destination bullet ... à régler
+    //
+    //         this.bullet.setCollideWorldBounds(true) // on paramètre les rebonds
+    //         this.bullet.setBounce(0.19);
+    //
+    //         this.bullet.allowGravity = true;
+    //         // this.bullet.setRotation(1);
+    //
+    //     }
+    //
+    //
+    //     if (this.mouse.isDown) {
+    //
+    //         console.log(this.input.x);
+    //         console.log(this.input.y);
+    //
+    //     }
+    //
+    // }
+
+
 }

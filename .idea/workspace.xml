@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/ui/GamePad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ui/GamePad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_tiled_V2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_tiled_V2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_v.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_v.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +55,12 @@
       <workItem from="1617207172362" duration="3856000" />
       <workItem from="1617220973679" duration="181000" />
       <workItem from="1617265303914" duration="101000" />
+      <workItem from="1617349429157" duration="7454000" />
+      <workItem from="1617485598611" duration="173000" />
+      <workItem from="1617696845584" duration="47000" />
+      <workItem from="1617789014735" duration="335000" />
+      <workItem from="1617906424613" duration="1000" />
+      <workItem from="1618248274221" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
@@ -79,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617265339280</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="yep">
+      <created>1617349454395</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617349454395</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +119,7 @@
     <MESSAGE value="Le test de webstorm ça tue :+1" />
     <MESSAGE value="Nouvel object" />
     <MESSAGE value="on push du bon jus de france" />
-    <option name="LAST_COMMIT_MESSAGE" value="on push du bon jus de france" />
+    <MESSAGE value="yep" />
+    <option name="LAST_COMMIT_MESSAGE" value="yep" />
   </component>
 </project>

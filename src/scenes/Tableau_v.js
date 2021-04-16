@@ -21,7 +21,7 @@ class Tableau_v extends Tableau {
             var timedEvent;
 
             timedEvent = this.time.addEvent({ 
-                delay: 6500,
+                delay: 10,
                 callback: Tableau.suivant,
                 callbackScope: this,
                 loop: true });
