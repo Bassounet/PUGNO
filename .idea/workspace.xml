@@ -7,10 +7,7 @@
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TILED/end/Level2.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/Level2.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/Level2_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/Level2_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_tour.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,7 @@
       <workItem from="1618679798363" duration="131000" />
       <workItem from="1618679956684" duration="778000" />
       <workItem from="1618680787997" duration="950000" />
-      <workItem from="1618685860739" duration="5397000" />
+      <workItem from="1618685860739" duration="7381000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
