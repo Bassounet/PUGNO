@@ -43,15 +43,6 @@
   <object id="78" gid="277" x="1668" y="352" width="64" height="64"/>
   <object id="80" gid="277" x="509.333" y="261.333" width="64" height="64"/>
  </objectgroup>
- <objectgroup id="13" name="HK">
-  <object id="84" gid="272" x="2098" y="252" width="64" height="64"/>
-  <object id="85" gid="272" x="2098" y="252" width="64" height="64"/>
-  <object id="86" gid="272" x="582" y="200" width="64" height="64"/>
- </objectgroup>
- <objectgroup id="14" name="sniper">
-  <object id="82" gid="273" x="414" y="102" width="64" height="64"/>
-  <object id="83" gid="273" x="3112" y="176" width="64" height="64"/>
- </objectgroup>
  <layer id="12" name="garbage" width="56" height="7">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

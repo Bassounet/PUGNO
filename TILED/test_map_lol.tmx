@@ -4,7 +4,7 @@
   <export target="level23s.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="sprite_shitV2" tilewidth="64" tileheight="64" tilecount="60" columns="15">
-  <image source="../../../../Users/Grego/Desktop/ETPA/SEMESTRE 2/MATIERES/2D/PROJET DE PLATFORMER_test/toshop/tiled_for/sprite_shitV2.png" width="960" height="256"/>
+  <image source="../../Platformer/TILED/support/sprite_shitV2.png" width="960" height="256"/>
  </tileset>
  <layer id="4" name="platforms_2" width="50" height="50">
   <data encoding="csv">
