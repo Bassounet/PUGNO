@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1">
+      <change afterPath="$PROJECT_DIR$/src/scenes/Tableau_tiled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_tiled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_tiled_V2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_tiled_V2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,7 @@
       <workItem from="1617906424613" duration="1000" />
       <workItem from="1618248274221" duration="50000" />
       <workItem from="1618657344245" duration="335000" />
-      <workItem from="1618658056737" duration="336000" />
+      <workItem from="1618658056737" duration="1335000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

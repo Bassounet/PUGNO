@@ -1,14 +1,15 @@
-class Tableau_tiled_V2 extends Tableau {
+class Tableau_tiled extends Tableau {
 
     preload() {
         super.preload();
 
+
+
         this.load.image('blood', 'assets/blood.png');
         // this.load.image('medikit_1', 'assets/medikit_1.png');
-        // this.load.image('char', 'assets/char.png');
-        this.load.image('tourelleV2', 'assets/tourelleV2.png');
-        this.load.image('drone', 'assets/drone.png');
-        // this.load.image('MAP_2D', 'assets/MAP_2D.png');
+        this.load.image('char', 'assets/char.png');
+        this.load.image('tourelle', 'assets/tourelle.png');
+        this.load.image('helico', 'assets/helico.png');
         this.load.image('sol', 'assets/platformes_sol.png');
         this.load.image('mechant', 'assets/mechant.png');
         this.load.image('plat', 'assets/platform_.png');
@@ -19,9 +20,9 @@ class Tableau_tiled_V2 extends Tableau {
 
         // ------pour TILED-------------
         
-        this.load.image('spritesheet', 'assets/images/SPRITE_SHEET_with_map2.png');
+        this.load.image('spritesheet', 'assets/images/sprite_shitV2.png');
        
-        this.load.tilemapTiledJSON('map', 'TILED/new_mapV18.json');
+        this.load.tilemapTiledJSON('map', 'TILED/level23s.json');
 
         // -----et puis aussi-------------
 
@@ -39,8 +40,8 @@ class Tableau_tiled_V2 extends Tableau {
 
         super.create();
 
-        var input;
-        input = this.input;
+        // var input;
+        // input = this.input;
 
 
         //for mouse position
@@ -52,13 +53,10 @@ class Tableau_tiled_V2 extends Tableau {
 
         //notre map
         this.map = this.make.tilemap({ key: 'map' });
-
         //nos images qui vont avec la map
-
-        this.tileset = this.map.addTilesetImage('SPRITE_SHEET_with_map2', 'spritesheet');
+        this.tileset = this.map.addTilesetImage('sprite_shitV2', 'spritesheet');
 
         //on agrandit le champ de la caméra du coup
-
         let largeurDuTableau = this.map.widthInPixels;
         let hauteurDuTableau = this.map.heightInPixels;
         this.physics.world.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
@@ -69,99 +67,60 @@ class Tableau_tiled_V2 extends Tableau {
 
         //---- ajoute les plateformes simples ----------------------------
 
-        this.platform = this.map.createLayer('platforms', this.tileset, 0, 0);
-        this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
-
-        this.background = this.map.createLayer('background', this.tileset, 0, 0);
-
-        this.platform.setDepth(9);
-        this.floor.setDepth(9);
-        this.player.setDepth(10);
+        this.platform = this.map.createLayer('platforms_2', this.tileset, 0, 0);
+        
         
         // this.platform.setBodySize(50,50);
         
         // this.platform_h = this.map.createLayer('mechant', this.tileset, 0, 0);
         // this.platform_t = this.map.createLayer('platform_test', this.tileset, 0, 0);
-        // this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
+        
+        this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
 
-        this.floor.setCollisionByExclusion(-1, true);
+       
         this.platform.setCollisionByExclusion(-1, true);
-
-
+        
 
         // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****---------
 
 
-        // let ici = this;
-        //
-        //
-        // // let helicoContainer = this.add.container();
-        //
-        // // ici.helicoObjects = ici.map.getObjectLayer('drone')['objects'];
-        //
-        // // ici.helicoObjects.forEach(monsterObject => {
-        // //     // ici.create(this,monsterObject.x,monsterObject.y,monsterObject.y)
-        // //     let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
-        // //     helicoContainer.add(helico);
-        // //     this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
-        //
-        // // });
-        //
-        // let mechantContainer = this.add.container();
-        //
-        // ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
-        //
-        // ici.mechantObjects.forEach(monsterObject => {
-        //     let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
-        //     mechantContainer.add(mechant);
-        //     this.physics.add.collider(mechant, this.platform);
-        //     // this.physics.add.collider(mechant1, this.bullet);
-        // });
-        //
-        //
-        // let tourelleContainer = this.add.container();
-        //
-        // ici.tourelleObjects = ici.map.getObjectLayer('tourelles')['objects'];
-        //
-        // ici.tourelleObjects.forEach(monsterObject => {
-        //     let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y-100);
-        //     tourelleContainer.add(tourelle);
-        //     this.physics.add.collider(tourelle, this.platform);
-        //
-        // });
-        //
-        // let droneContainer = this.add.container();
-        //
-        // ici.droneObjects = ici.map.getObjectLayer('drone')['objects'];
-        //
-        // ici.droneObjects.forEach(monsterObject => {
-        //     let drone=new Drone(this,monsterObject.x,monsterObject.y);
-        //     droneContainer.add(drone);
-        //     this.physics.add.collider(drone, this.platform);
-        //
-        // });
+        let ici = this;
 
-        // let mineContainer = this.add.container();
-        //
-        // ici.mineObjects = ici.map.getObjectLayer('mine')['objects'];
-        //
-        // ici.mineObjects.forEach(monsterObject => {
-        //     let mine=new mine(this,monsterObject.x,monsterObject.y);
-        //     mineContainer.add(mine);
-        //     this.physics.add.collider(mine, this.platform);
-        //
-        // });
 
-        // let tonoContainer = this.add.container();
-        //
-        // ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
-        //
-        // ici.tonoObjects.forEach(monsterObject => {
-        //     let tono = new Tono(this,monsterObject.x,monsterObject.y);
-        //     tonoContainer.add(tono);
-        //     this.physics.add.collider(tono, this.platform);
-        //
-        // });
+        let helicoContainer = this.add.container();
+       
+        ici.helicoObjects = ici.map.getObjectLayer('helico')['objects'];
+        
+        ici.helicoObjects.forEach(monsterObject => {
+            //ici.create(this,monsterObject.x,monsterObject.y,"gun")
+            //let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
+            //helicoContainer.add(helico);
+            // this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
+
+        });
+
+        let mechantContainer = this.add.container();
+       
+        ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
+    
+        ici.mechantObjects.forEach(monsterObject => {
+            let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
+            mechantContainer.add(mechant);
+            this.physics.add.collider(mechant, this.platform);
+            this.physics.add.collider(mechant1, this.bullet);
+        });
+
+
+        let tourelleContainer = this.add.container();
+       
+        this.tourelleObjects = this.map.getObjectLayer('tourelle')['objects'];
+        
+        this.tourelleObjects.forEach(monsterObject => {
+            let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y);
+            tourelleContainer.add(tourelle);
+            this.physics.add.collider(tourelle, this.platform);
+            
+        });
 
 
         //----------débug---------------------
@@ -169,7 +128,7 @@ class Tableau_tiled_V2 extends Tableau {
         //pour débugger les collisions sur chaque layer
         let debug = this.add.graphics().setAlpha(this.game.config.physics.arcade.debug ? 0.75 : 0);
         if (this.game.config.physics.arcade.debug === false) {
-            debug.visible = true;
+            debug.visible = false;
         }
         //débug solides en vers
         this.platform.renderDebug(debug, {
@@ -249,12 +208,11 @@ class Tableau_tiled_V2 extends Tableau {
     // for mouse click
     
 
-    
-    
     let posx_arme = this.player.x
     let posy_arme = this.player.y
 
     this.mouse=this.input.mousePointer;
+
 
     this.pnonante = this.physics.add.sprite(posy_arme,posx_arme,'gun'); //.setAllowGravity(false);
     this.pnonante.body.setAllowGravity(false);
@@ -284,42 +242,46 @@ class Tableau_tiled_V2 extends Tableau {
             
         }
 
-        // if(this.mouse.isDown){
-        //
-        //     this.player.shoot();
-        //     console.log("hello");
-        // }
-
-
         // let input=this.input;
 
-        // if(this.mouse.isDown){
-        //     //for fire again
-        //     this.bullet=this.physics.add.sprite(this.player.x + 32 , this.player.y ,'bullet'); // genesis : from
-        //
-        //     // console.log("hello");
-        //     //move to mouse position
-        //     this.physics.moveTo(this.bullet,this.bullet.x + 10 ,this.bullet.y -3 ,600); // destination bullet ... à régler
-        //     // this.physics.moveTo(this.bullet,this.input.x ,this.input.y ,2000); // destination bullet ... à régler
-        //
-        //     this.bullet.setCollideWorldBounds(true) // on paramètre les rebonds
-        //     this.bullet.setBounce(0.19);
-        //
-        //     this.bullet.allowGravity=true;
-        //     // this.bullet.setRotation(1);
-        //
-        // }
-        //
-        //
-        // if(this.mouse.isDown){
-        //
-        //     console.log(this.input.x);
-        //     console.log(this.input.y);
-        //
-        //
-        // }
+        if(this.mouse.isDown){
+            //for fire again
+            this.bullet=this.physics.add.sprite(this.player.x + 32 , this.player.y ,'bullet'); // genesis : from
+            
+            // console.log("hello");
+            //move to mouse position 
+            this.physics.moveTo(this.bullet,this.bullet.x + 10 ,this.bullet.y -3 ,600); // destination bullet ... à régler 
+            // this.physics.moveTo(this.bullet,this.input.x ,this.input.y ,2000); // destination bullet ... à régler 
+            
+            this.physics.add.collider(this.bullet, this.platform);
+            this.physics.add.collider(this.bullet, this.mechant1);
+            
 
+            this.bullet.setCollideWorldBounds(true) // on paramètre les rebonds 
+            this.bullet.setBounce(0.19);
+            
+            // this.bullet.allowGravity=true;
+            // this.bullet.setRotation(1);
+        
+        }
+        
+    
+        if(this.mouse.isDown){
+    
+            console.log(this.input.x);
+            console.log(this.input.y);
+    
+    
+        }
 
+        //angle between mouse and ball
+        // this.angle=Phaser.Math.Angle.Between(this.pnonante.x,this.pnonante.y,this.input.x,this.input.y);
+        // //rotation cannon
+        // this.pnonante.setRotation(this.angle);
+        // console.log(this.angle);
+
+        //rotation cannon with PI/2
+        // this.pnonante.setAngle(angle+Math.PI/2); // à configurer pour que ça suive notre curseur de souris au poil de fion 
         
     
        
