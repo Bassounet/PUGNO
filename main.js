@@ -20,14 +20,14 @@ let config = {
         new Ui(),
 
 
-        // new Tableau_tour("goooo"),
+
         new Tableau_v("test_v"),
         // new Tableau_start("start"),
         new Level_1("un début"),
         new Level_2("un caca"),
-        new Tableau_tiled_V2("la nouvelle MAP"),
-        // new Tableau_tiled("la nouvelle MAP"),
-        new Tableau_test("on test des trucs vite fait"),
+        // new Tableau_tiled_V2("la nouvelle MAP"),
+        // // new Tableau_tiled("la nouvelle MAP"),
+        // new Tableau_test("on test des trucs vite fait"),
      
     ],
     width: width,
