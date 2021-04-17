@@ -107,39 +107,39 @@ class Tableau_tiled_V2 extends Tableau {
 
         // });
 
-        let mechantContainer = this.add.container();
-       
-        ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
-    
-        ici.mechantObjects.forEach(monsterObject => {
-            let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
-            mechantContainer.add(mechant);
-            this.physics.add.collider(mechant, this.platform);
-            // this.physics.add.collider(mechant1, this.bullet);
-        });
-
-
-        let tourelleContainer = this.add.container();
-       
-        ici.tourelleObjects = ici.map.getObjectLayer('tourelles')['objects'];
-        
-        ici.tourelleObjects.forEach(monsterObject => {
-            let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y-100);
-            tourelleContainer.add(tourelle);
-            this.physics.add.collider(tourelle, this.platform);
-            
-        });
-
-        let droneContainer = this.add.container();
-       
-        ici.droneObjects = ici.map.getObjectLayer('drone')['objects'];
-        
-        ici.droneObjects.forEach(monsterObject => {
-            let drone=new Drone(this,monsterObject.x,monsterObject.y);
-            droneContainer.add(drone);
-            this.physics.add.collider(drone, this.platform);
-            
-        });
+        // let mechantContainer = this.add.container();
+        //
+        // ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
+        //
+        // ici.mechantObjects.forEach(monsterObject => {
+        //     let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
+        //     mechantContainer.add(mechant);
+        //     this.physics.add.collider(mechant, this.platform);
+        //     // this.physics.add.collider(mechant1, this.bullet);
+        // });
+        //
+        //
+        // let tourelleContainer = this.add.container();
+        //
+        // ici.tourelleObjects = ici.map.getObjectLayer('tourelles')['objects'];
+        //
+        // ici.tourelleObjects.forEach(monsterObject => {
+        //     let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y-100);
+        //     tourelleContainer.add(tourelle);
+        //     this.physics.add.collider(tourelle, this.platform);
+        //
+        // });
+        //
+        // let droneContainer = this.add.container();
+        //
+        // ici.droneObjects = ici.map.getObjectLayer('drone')['objects'];
+        //
+        // ici.droneObjects.forEach(monsterObject => {
+        //     let drone=new Drone(this,monsterObject.x,monsterObject.y);
+        //     droneContainer.add(drone);
+        //     this.physics.add.collider(drone, this.platform);
+        //
+        // });
 
         // let mineContainer = this.add.container();
         //
