@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1">
+      <change afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/new_map.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/new_map.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/test_map_lol.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/test_map_lol.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/objects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scenes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -38,6 +38,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\pugno\src\scenes" />
       <recent name="C:\xampp\htdocs\Platformer\src\objects" />
     </key>
   </component>
@@ -61,6 +62,7 @@
       <workItem from="1618248274221" duration="50000" />
       <workItem from="1618657344245" duration="335000" />
       <workItem from="1618658056737" duration="2575000" />
+      <workItem from="1618674209160" duration="5238000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
