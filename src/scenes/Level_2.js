@@ -1,4 +1,4 @@
-class Level_1 extends Tableau {
+class Level_2 extends Tableau {
 
     preload() {
         super.preload();
@@ -18,7 +18,7 @@ class Level_1 extends Tableau {
         
         this.load.image('sprite', 'ref/sprite.png');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/Level1_5.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/Level2_1.json');
 
         // -----et puis aussi-------------
 
@@ -68,7 +68,7 @@ class Level_1 extends Tableau {
 
         // this.platform = this.map.createLayer('platforms', this.tileset, 0, 0);
         this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
-        this.background = this.map.createLayer('back', this.tileset, 0, 0);
+        this.background = this.map.createLayer('backg', this.tileset, 0, 0);
 
         // this.platform.setDepth(9);
         this.floor.setDepth(9);
