@@ -1,3 +1,3 @@
-https://bassounet.github.io/Plaftormer/
 
-http://localhost/Platformer/
+
+http://localhost/pugno/
