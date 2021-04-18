@@ -18,7 +18,7 @@ class Level_2 extends Tableau {
         
         this.load.image('sprite', 'ref/sprite.png');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/d.json');
+        this.load.tilemapTiledJSON('map', 'TILED/d.json');
 
         // -----et puis aussi-------------
 
