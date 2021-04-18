@@ -36,8 +36,7 @@ class Drone extends ObjetEnnemi{
         this.alpha=0;
         let me=this;
 
-        //on fait apparaitre notre objet avec un petit delay, puis on lance l'animation
-        //ceci a pour effet de décaler les animations pour ce même objet
+
         scene.tweens.add({
                 targets:this,
                 duration:0,

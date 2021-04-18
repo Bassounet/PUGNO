@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1">
+      <change afterPath="$PROJECT_DIR$/src/objects/Platform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/01_LevelVF_1.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/LevelVF_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/LevelVF_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/LevelVF_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/LevelVF_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/VFX.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/VFX.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/VFX_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/VF/test.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/level1/Level1.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/level1/Level1_5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/level1/level_end_V1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/level2/Level2.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/level2/a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/level2/b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/level2/c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/level2/level2_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Drone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Drone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scenes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/objects" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -55,6 +42,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\pugno\src\objects" />
       <recent name="C:\xampp\htdocs\pugno\src\scenes" />
       <recent name="C:\xampp\htdocs\Platformer\src\objects" />
     </key>
@@ -89,6 +77,7 @@
       <workItem from="1618738807353" duration="5171000" />
       <workItem from="1618749308810" duration="3112000" />
       <workItem from="1618753780796" duration="1822000" />
+      <workItem from="1618756234465" duration="7299000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

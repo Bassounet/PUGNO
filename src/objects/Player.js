@@ -1,23 +1,23 @@
-class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de phaser physique arcade sprite 
+class Player extends Phaser.Physics.Arcade.Sprite{
     constructor(scene, x, y) {
-        super(scene, x, y, "player") // c'est quoi cette merde de super ? ?
+        super(scene, x, y, "player")
         scene.add.existing(this)
         scene.physics.add.existing(this)
 
-        this.setCollideWorldBounds(true) // on paramètre les rebonds 
-        this.setBounce(0.19); // effet du rebond 
-        this.setGravityY(700) // l'effet de la gravité 
-        this.setFriction(1,1); //jvois pas trop ce que c'est j'essaye mais ça change rien :/ 
+        this.setCollideWorldBounds(true)
+        this.setBounce(0.19);
+        this.setGravityY(700)
+        this.setFriction(1,1);
 
 
-        this.setBodySize(this.body.width-30,this.body.height-10); // on règle sa taille ... celle du player avec le this. 
-        this.setOffset(13, 10); // jsp vraiment 
+        this.setBodySize(this.body.width-30,this.body.height-10);
+        this.setOffset(13, 10);
 
-        this.anims.create({ // gestion de l'anim de déplacement vers la gauche 
-            key: 'left', // utilisation de la partie gacuhe 
-            frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }), // on utilise la generation de frame et on choisit celle de 0 à 3 pour le déplacement vers la gauche 
-            frameRate: 15, // nombre de frame ( fréquence )
-            repeat: -1 // pourquoi 
+        this.anims.create({
+            key: 'left',
+            frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }),
+            frameRate: 15,
+            repeat: -1
         });
 
         this.anims.create({
@@ -32,13 +32,13 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
             frameRate: 20
         });
 
-        this._directionX=0; // direction de l'apparition ????? il marche ?
+        this._directionX=0;
         this._directionY=0;
 
 
     }
 
-    set directionX(value){ // jsp vraiment .. 
+    set directionX(value){
         this._directionX=value;
     }
     set directionY(value){
@@ -48,8 +48,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
     /**
      * arrête le joueur
      */
-    stop(){ // on crée la focntion pour arrêter le joueur 
-        this.setVelocityX(0);
+    stop(){
         this.setVelocityY(0);
         this.directionY=0;
         this.directionX=0;
@@ -62,22 +61,21 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
 
         switch (true){
             case this._directionX<0:
-                this.setVelocityX(300); // réglage de la vitesse en X vers la gauche 
-                this.setVelocityX(-300);
+                this.setVelocityX(-1000);
                 this.anims.play('left', true);
                 break;
             case this._directionX>0:
 
-                this.setVelocityX(300); // réglage de la vitesse en X vers la droite
+                this.setVelocityX(1000);
                 this.anims.play('right', true);
                 break;
             default:
-                this.setVelocityX(0); // je comprend pas vraiment 
+                this.setVelocityX(0);
                 this.anims.play('turn');
         }
 
         if(this._directionY<0){
-            if(this.body.blocked.down || this.body.touching.down){ // wtffffffffffffffffffffffff
+            if(this.body.blocked.down || this.body.touching.down){
                 this.setVelocityY(-650); // vitesse en montée 
             }
         }
@@ -85,34 +83,11 @@ class Player extends Phaser.Physics.Arcade.Sprite{ // on l'associe au sprite de 
     }
 
 
-    // shoot() {
-    //
-    //     if (this.mouse.isDown) {
-    //         //for fire again
-    //         this.bullet = this.physics.add.sprite(this.player.x + 32, this.player.y, 'bullet'); // genesis : from
-    //
-    //         // console.log("hello");
-    //         //move to mouse position
-    //         this.physics.moveTo(this.bullet, this.bullet.x + 10, this.bullet.y - 3, 600); // destination bullet ... à régler
-    //         // this.physics.moveTo(this.bullet,this.input.x ,this.input.y ,2000); // destination bullet ... à régler
-    //
-    //         this.bullet.setCollideWorldBounds(true) // on paramètre les rebonds
-    //         this.bullet.setBounce(0.19);
-    //
-    //         this.bullet.allowGravity = true;
-    //         // this.bullet.setRotation(1);
-    //
-    //     }
-    //
-    //
-    //     if (this.mouse.isDown) {
-    //
-    //         console.log(this.input.x);
-    //         console.log(this.input.y);
-    //
-    //     }
-    //
-    // }
+
+
+
+
+
 
 
 }

@@ -56,7 +56,7 @@ class Tableau extends Phaser.Scene{
      * @param {function} onComplete Fonction à appeler quand l'anim est finie
      */
     saigne(object,onComplete){
-        let me=this; // pk le m. devant ? à kécaserre ?
+        let me=this;
         me.blood.visible=true;
         me.blood.setDepth(10);
         me.blood.rotation = Phaser.Math.Between(0,21);
@@ -182,16 +182,16 @@ class Tableau extends Phaser.Scene{
         Tableau.suivant();
     }
 
-     //shake(){ /: on va créer une camera shake mais pas pour le moment on se concentre sur le rendu de lundi ;)
+
 
     /**
      * Va au tableau suivant
      */
-    static suivant(){ // wtf static ? 
-        let ceSeraLaSuivante=false; // je comprend pas vraiment l'intérêt du let ... je sais pas trop ce que c'est ... 
+    static suivant(){
+        let ceSeraLaSuivante=false;
         let nextScene=null;
         if(Tableau.current){
-            for(let sc of game.scene.scenes){ // ok à partir de là je comprend plus rien ... 
+            for(let sc of game.scene.scenes){
                 if(sc.scene.key !== "ui"){
                     if(!nextScene){
                         if(ceSeraLaSuivante){

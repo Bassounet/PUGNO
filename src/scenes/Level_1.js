@@ -18,7 +18,7 @@ class Level_1 extends Tableau {
         
         this.load.image('sprite', 'ref/sprite.png');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_6.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_9.json');
 
         // -----et puis aussi-------------
 
@@ -55,10 +55,16 @@ class Level_1 extends Tableau {
 
 
         //---- ajoute les plateformes simples ----------------------------
+
+
+
         this.tono = this.map.createLayer('graphiques/tono', this.tileset, 0, 0);
         this.gun = this.map.createLayer('graphiques/gun', this.tileset, 0, 0);
         this.med = this.map.createLayer('graphiques/medikit', this.tileset, 0, 0);
         this.mine = this.map.createLayer('graphiques/mine', this.tileset, 0, 0);
+
+        this.mechant = this.map.createLayer('graphiques/mechant', this.tileset, 0, 0);
+
 
         this.platform = this.map.createLayer('graphiques/platform', this.tileset, 0, 0);
         this.playerx = this.map.createLayer('graphiques/player', this.tileset, 0, 0);
@@ -68,13 +74,54 @@ class Level_1 extends Tableau {
 
         // this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
 
-        this.platform.setDepth(10);
-        this.player.setDepth(10);
-
-        this.floor.setDepth(9);
 
         //on définit les z à la fin
-        // let z = 1000; //niveau Z qui a chaque fois est décrémenté.
+        let z = 1000; //niveau Z qui a chaque fois est décrémenté.
+
+        this.tono.setDepth(z);
+        this.gun.setDepth(z);
+        this.med.setDepth(z);
+        this.mine.setDepth(z);
+        this.mechant.setDepth(z);
+
+        this.platform.setDepth(z--);
+        this.player.setDepth(z--);
+
+        this.floor.setDepth(z--);
+        this.background.setDepth(z--);
+
+        // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
+
+        // this.platforms=this.physics.add.staticGroup();
+
+          this.platformx = new Platform(this, 100, 100, 'sol'),
+
+
+
+        // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
+
+
+
+        //----------collisions---------------------
+
+        //quoi collide avec quoi?
+
+              // this.setCollisionByProperty(-1, true);
+              this.physics.add.collider(this.player, this.platformx);
+
+        this.floor.setCollisionByExclusion(-1, true);
+        this.physics.add.collider(this.player, this.floor);
+
+
+
+
+        // this.physics.add.collider(this.stars, this.solides);
+        // //si le joueur touche une étoile dans le groupe...
+        // this.physics.add.overlap(this.player, this.stars, this.found_piece, null, this);
+        // //quand on touche la lave, on meurt
+        // this.physics.add.collider(this.player, this.lave, this.playerDie, null, this);
+
+
 
 
 
@@ -190,32 +237,17 @@ class Level_1 extends Tableau {
         // this.map2.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
         // this.map2.blendMode = Phaser.BlendModes.ADD;
 
-        //----------collisions---------------------
-
-        //quoi collide avec quoi?
-
-        this.floor.setCollisionByExclusion(-1, true);
-        this.physics.add.collider(this.player, this.floor);
-
-        
-
-
-        // this.physics.add.collider(this.stars, this.solides);
-        // //si le joueur touche une étoile dans le groupe...
-        // this.physics.add.overlap(this.player, this.stars, this.found_piece, null, this);
-        // //quand on touche la lave, on meurt
-        // this.physics.add.collider(this.player, this.lave, this.playerDie, null, this);
 
 
 
-    // moveParallax() {
-    //     //le ciel se déplace moins vite que la caméra pour donner un effet paralax
-    //     this.sky.tilePositionX = this.cameras.main.scrollX * 0.6;
-    //     this.sky.tilePositionY = this.cameras.main.scrollY * 0.6;
-    //     this.sky2.tilePositionX = this.cameras.main.scrollX * 0.7 + 100;
-    //     this.sky2.tilePositionY = this.cameras.main.scrollY * 0.7 + 100;
-    // }
-    // for mouse click
+        // moveParallax() {
+        //     //le ciel se déplace moins vite que la caméra pour donner un effet paralax
+        //     this.sky.tilePositionX = this.cameras.main.scrollX * 0.6;
+        //     this.sky.tilePositionY = this.cameras.main.scrollY * 0.6;
+        //     this.sky2.tilePositionX = this.cameras.main.scrollX * 0.7 + 100;
+        //     this.sky2.tilePositionY = this.cameras.main.scrollY * 0.7 + 100;
+        // }
+        // for mouse click
 
     
     }
