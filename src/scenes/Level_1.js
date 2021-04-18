@@ -17,16 +17,13 @@ class Level_1 extends Tableau {
         // ------pour TILED-------------
         
         this.load.image('sprite', 'ref/sprite.png');
-        // this.load.tilemapTiledJSON('map', 'TILED/end/VF/LevelVF_4.json');
-        // this.load.tilemapTiledJSON('map', 'TILED/end/VF/test.json');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VF/VFX_1.json');
+
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_6.json');
 
         // -----et puis aussi-------------
 
         this.load.image('back', 'assets/images/background.png');
-        //atlas de texture généré avec https://free-tex-packer.com/app/
-        //on y trouve notre étoiles et une tête de mort
-        // this.load.atlas('particles', 'assets/images/particles.png', 'assets/images/particles.json');
+
     }
 
     
@@ -36,14 +33,6 @@ class Level_1 extends Tableau {
     create() {
 
         super.create();
-
-        var input;
-        input = this.input;
-
-
-        //for mouse position
-        // input = this.input;
-
 
 
         //--------chargement de la tile map & configuration de la scène-----------------------
@@ -66,26 +55,27 @@ class Level_1 extends Tableau {
 
 
         //---- ajoute les plateformes simples ----------------------------
+        this.tono = this.map.createLayer('graphiques/tono', this.tileset, 0, 0);
+        this.gun = this.map.createLayer('graphiques/gun', this.tileset, 0, 0);
+        this.med = this.map.createLayer('graphiques/medikit', this.tileset, 0, 0);
+        this.mine = this.map.createLayer('graphiques/mine', this.tileset, 0, 0);
 
-        // this.platform = this.map.createLayer('platforms', this.tileset, 0, 0);
-        this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
-        this.background = this.map.createLayer('backgroundF', this.tileset, 0, 0);
+        this.platform = this.map.createLayer('graphiques/platform', this.tileset, 0, 0);
+        this.playerx = this.map.createLayer('graphiques/player', this.tileset, 0, 0);
+        this.floor = this.map.createLayer('graphiques/floor', this.tileset, 0, 0);
+
+        this.background = this.map.createLayer('graphiques/backgroundF', this.tileset, 0, 0);
+
         // this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
 
-        // this.platform.setDepth(9);
-        this.floor.setDepth(9);
+        this.platform.setDepth(10);
         this.player.setDepth(10);
-        
-        // this.platform.setBodySize(50,50);
-        
-        // this.platform_h = this.map.createLayer('mechant', this.tileset, 0, 0);
-        // this.platform_t = this.map.createLayer('platform_test', this.tileset, 0, 0);
-        // this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
 
-        this.floor.setCollisionByExclusion(-1, true);
-        // this.platform.setCollisionByExclusion(-1, true);
-        this.floor.setCollisionByProperty({collides : true});
-        this.physics.add.collider(this.player, this.floor);
+        this.floor.setDepth(9);
+
+        //on définit les z à la fin
+        // let z = 1000; //niveau Z qui a chaque fois est décrémenté.
+
 
 
 
@@ -203,7 +193,10 @@ class Level_1 extends Tableau {
         //----------collisions---------------------
 
         //quoi collide avec quoi?
-        this.physics.add.collider(this.player, this.platform);
+
+        this.floor.setCollisionByExclusion(-1, true);
+        this.physics.add.collider(this.player, this.floor);
+
         
 
 
@@ -213,31 +206,7 @@ class Level_1 extends Tableau {
         // //quand on touche la lave, on meurt
         // this.physics.add.collider(this.player, this.lave, this.playerDie, null, this);
 
-        //--------- Z order -----------------------
 
-
-
-        
-
-        //on définit les z à la fin
-        // let z = 1000; //niveau Z qui a chaque fois est décrémenté.
-        // debug.setDepth(z--);
-        // this.blood.setDepth(z--);
-        // monstersContainer.setDepth(z--);
-        // this.stars.setDepth(z--);
-        // starsFxContainer.setDepth(z--);
-        // this.devant.setDepth(z--);
-        // this.solides.setDepth(z--);
-        // this.laveFxContainer.setDepth(z--);
-        // this.lave.setDepth(z--);
-        // this.player.setDepth(z--);
-        // this.derriere.setDepth(z--);
-        // this.sky2.setDepth(z--);
-        // this.sky.setDepth(z--);
-
-        
-
-    
 
     // moveParallax() {
     //     //le ciel se déplace moins vite que la caméra pour donner un effet paralax
@@ -247,22 +216,6 @@ class Level_1 extends Tableau {
     //     this.sky2.tilePositionY = this.cameras.main.scrollY * 0.7 + 100;
     // }
     // for mouse click
-    
-
-    
-    
-    let posx_arme = this.player.x
-    let posy_arme = this.player.y
-
-    this.mouse=this.input.mousePointer;
-
-    this.pnonante = this.physics.add.sprite(posy_arme,posx_arme,'gun'); //.setAllowGravity(false);
-    this.pnonante.body.setAllowGravity(false);
-    
-    // this.cannon.allowGravity=false;
-
-    // let posx_arme = this.player.x + 150 
-    //     let posy_arme = this.player.y - 100
 
     
     }
@@ -283,47 +236,6 @@ class Level_1 extends Tableau {
 
             
         }
-
-        // if(this.mouse.isDown){
-        //
-        //     this.player.shoot();
-        //     console.log("hello");
-        // }
-
-
-        // let input=this.input;
-
-        // if(this.mouse.isDown){
-        //     //for fire again
-        //     this.bullet=this.physics.add.sprite(this.player.x + 32 , this.player.y ,'bullet'); // genesis : from
-        //
-        //     // console.log("hello");
-        //     //move to mouse position
-        //     this.physics.moveTo(this.bullet,this.bullet.x + 10 ,this.bullet.y -3 ,600); // destination bullet ... à régler
-        //     // this.physics.moveTo(this.bullet,this.input.x ,this.input.y ,2000); // destination bullet ... à régler
-        //
-        //     this.bullet.setCollideWorldBounds(true) // on paramètre les rebonds
-        //     this.bullet.setBounce(0.19);
-        //
-        //     this.bullet.allowGravity=true;
-        //     // this.bullet.setRotation(1);
-        //
-        // }
-        //
-        //
-        // if(this.mouse.isDown){
-        //
-        //     console.log(this.input.x);
-        //     console.log(this.input.y);
-        //
-        //
-        // }
-
-
-        
-    
-       
-
 
         
     

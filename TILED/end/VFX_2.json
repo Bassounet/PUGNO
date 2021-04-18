@@ -1,0 +1,14 @@
+{ "columns":45,
+ "image":"..\/..\/..\/ref\/sprite.png",
+ "imageheight":448,
+ "imagewidth":2880,
+ "margin":0,
+ "name":"sprite_",
+ "spacing":0,
+ "tilecount":315,
+ "tiledversion":"1.4.3",
+ "tileheight":64,
+ "tilewidth":64,
+ "type":"tileset",
+ "version":1.4
+}
