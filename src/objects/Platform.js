@@ -9,12 +9,9 @@ class Platform extends ObjetPhysique{
     constructor(scene, x, y,image) {
         super(scene, x, y,image);
 
+        this.body.setImmovable();
         this.body.allowGravity=false;
 
-
-
-
-        // this.physics.add.overlap( this.player, this, null, scene );
     }
 
 }

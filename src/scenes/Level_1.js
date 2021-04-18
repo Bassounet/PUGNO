@@ -87,16 +87,17 @@ class Level_1 extends Tableau {
         this.platform.setDepth(z--);
         this.player.setDepth(z--);
 
+
         this.floor.setDepth(z--);
         this.background.setDepth(z--);
 
-        // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
+        // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-
 
-        // this.platforms=this.physics.add.staticGroup();
+        let profondeur_platforme = 998;
 
-          this.platformx = new Platform(this, 100, 100, 'sol'),
-
-
+        this.platformx = new Platform(this, 100, 300, 'sol');
+        this.physics.add.collider(this.player, this.platformx);
+        this.platformx.setDepth(profondeur_platforme);
 
         // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
 
@@ -104,10 +105,8 @@ class Level_1 extends Tableau {
 
         //----------collisions---------------------
 
-        //quoi collide avec quoi?
 
-              // this.setCollisionByProperty(-1, true);
-              this.physics.add.collider(this.player, this.platformx);
+
 
         this.floor.setCollisionByExclusion(-1, true);
         this.physics.add.collider(this.player, this.floor);
