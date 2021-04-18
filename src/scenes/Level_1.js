@@ -17,8 +17,9 @@ class Level_1 extends Tableau {
         // ------pour TILED-------------
         
         this.load.image('sprite', 'ref/sprite.png');
-
-        this.load.tilemapTiledJSON('map', 'TILED/end/Level1_5.json');
+        // this.load.tilemapTiledJSON('map', 'TILED/end/VF/LevelVF_4.json');
+        // this.load.tilemapTiledJSON('map', 'TILED/end/VF/test.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VF/VFX_1.json');
 
         // -----et puis aussi-------------
 
@@ -52,7 +53,7 @@ class Level_1 extends Tableau {
 
         //nos images qui vont avec la map
 
-        this.tileset = this.map.addTilesetImage('sprite_sheet', 'sprite');
+        this.tileset = this.map.addTilesetImage('sprite_', 'sprite');
 
         //on agrandit le champ de la caméra du coup
 
@@ -68,7 +69,8 @@ class Level_1 extends Tableau {
 
         // this.platform = this.map.createLayer('platforms', this.tileset, 0, 0);
         this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
-        this.background = this.map.createLayer('back', this.tileset, 0, 0);
+        this.background = this.map.createLayer('backgroundF', this.tileset, 0, 0);
+        // this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
 
         // this.platform.setDepth(9);
         this.floor.setDepth(9);
