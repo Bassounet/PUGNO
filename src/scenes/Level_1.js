@@ -13,12 +13,12 @@ class Level_1 extends Tableau {
         this.load.image('mine', 'assets/mine.png');
         this.load.image('gun', 'assets/Pnonante.png');
         this.load.image('bullet', 'assets/bullet.png');
-
+        this.load.image('platform', 'assets/new_image/platform.png');
         // ------pour TILED-------------
         
         this.load.image('sprite', 'ref/sprite.png');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_9.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_10.json');
 
         // -----et puis aussi-------------
 
@@ -63,7 +63,7 @@ class Level_1 extends Tableau {
         this.med = this.map.createLayer('graphiques/medikit', this.tileset, 0, 0);
         this.mine = this.map.createLayer('graphiques/mine', this.tileset, 0, 0);
 
-        this.mechant = this.map.createLayer('graphiques/mechant', this.tileset, 0, 0);
+        // this.mechant = this.map.createLayer('graphiques/mechant', this.tileset, 0, 0);
 
 
         this.platform = this.map.createLayer('graphiques/platform', this.tileset, 0, 0);
@@ -82,7 +82,7 @@ class Level_1 extends Tableau {
         this.gun.setDepth(z);
         this.med.setDepth(z);
         this.mine.setDepth(z);
-        this.mechant.setDepth(z);
+        // this.mechant.setDepth(z);
 
         this.platform.setDepth(z--);
         this.player.setDepth(z--);
@@ -95,7 +95,7 @@ class Level_1 extends Tableau {
 
         let profondeur_platforme = 998;
 
-        this.platformx = new Platform(this, 100, 300, 'sol');
+        this.platformx = new Platform(this, 352, 190, 'platform');
         this.physics.add.collider(this.player, this.platformx);
         this.platformx.setDepth(profondeur_platforme);
 
@@ -143,16 +143,20 @@ class Level_1 extends Tableau {
         //
         // // });
         //
-        // let mechantContainer = this.add.container();
-        //
-        // ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
-        //
-        // ici.mechantObjects.forEach(monsterObject => {
-        //     let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
-        //     mechantContainer.add(mechant);
-        //     this.physics.add.collider(mechant, this.platform);
-        //     // this.physics.add.collider(mechant1, this.bullet);
-        // });
+
+        let ici = this;
+
+        let mechantContainer = this.add.container();
+
+        ici.mechantObjects = ici.map.getObjectLayer('objets/mechant')['objects'];
+
+        ici.mechantObjects.forEach(monsterObject => {
+            let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
+            mechantContainer.add(mechant);
+            this.physics.add.collider(mechant, this.platform);
+
+        });
+
         //
         //
         // let tourelleContainer = this.add.container();
