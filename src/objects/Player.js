@@ -6,7 +6,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         this.setCollideWorldBounds(true)
         this.setBounce(0.19);
-        this.setGravityY(700)
+        this.setGravityY(900)
         this.setFriction(1,1);
 
 
@@ -28,8 +28,9 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         });
         this.anims.create({
             key: 'turn',
-            frames: [ { key: 'player', frame: 4 } ],
-            frameRate: 20
+            // frames: [ { key: 'player', frame: 4 } ],
+            frames: this.anims.generateFrameNumbers('player', { start: 4, end: 7 }),
+            frameRate: 10
         });
 
         this._directionX=0;
@@ -71,7 +72,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
                 break;
             default:
                 this.setVelocityX(0);
-                this.anims.play('turn');
+                this.anims.play('turn', true);
         }
 
         if(this._directionY<0){

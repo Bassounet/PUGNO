@@ -16,8 +16,4 @@ class mine extends ObjetEnnemi{
         this.setCollideWorldBounds(true)
         
     }
-
-
-       
-
 }

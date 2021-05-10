@@ -25,13 +25,7 @@ class Tableau extends Phaser.Scene{
         Tableau.current=this; // je comprend pas trop là ... 
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
-        /**
-         * Le ciel en fond
-         * @type {Phaser.GameObjects.Image}
-         */
-        this.sky=this.add.image(0, 0, 'sky').setOrigin(0,0); // position de l'image ... 
-        this.sky.displayWidth=14*64;
-        this.sky.setScrollFactor(0,0); // WTF ??? 
+
         /**
          * Le joueur
          * @type {Player}
@@ -115,24 +109,23 @@ class Tableau extends Phaser.Scene{
         this.scene.restart(); 
 
     }
-  /**
+    /**
      * Quand on touche un monstre
      * si on le touche par en haut on le tue, sinon c'est lui qui nous tue
      * @param {Player} player
-     * @param {Phaser.Physics.Arcade.Sprite} monster // enfait on attribue à nos différents éléments les règles qu'on veut leur donner ... 
-     * 
+     * @param {Phaser.Physics.Arcade.Sprite} monster
      */
-    hitMonster(player, monster){ // voilà parametrage des  acteurs de la fonction ... 
+    hitMonster(player, monster){ // voilà parametrage des  acteurs de la fonction ...
         let me=this;
         if(monster.isDead !== true){ //si notre monstre n'est pas déjà mort
             if(
                 // si le player descend
                 player.body.velocity.y > 0
                 // et si le bas du player est plus haut que le monstre
-                && player.getBounds().bottom < monster.getBounds().top+30 // ♥ && est un "et" 
+                && player.getBounds().bottom < monster.getBounds().top+30 // ♥ && est un "et"
 
             ){
-                ui.gagne(); // je comprend pas vrmt là ... 
+                ui.gagne(); // je comprend pas vrmt là ...
                 monster.isDead=true; //ok le monstre est mort
                 monster.visible=false;
                 this.saigne(monster,function(){
@@ -142,7 +135,7 @@ class Tableau extends Phaser.Scene{
                 player.directionY=500;
             }else{
                 //le joueur est mort
-                if(!me.player.isDead){ // wtf le point d'interrogation ... 
+                if(!me.player.isDead){ // wtf le point d'interrogation ...
                     me.player.isDead=true;
                     me.player.visible=false;
                     //ça saigne...
@@ -155,14 +148,10 @@ class Tableau extends Phaser.Scene{
                     })
 
                 }
-
-
             }
         }
 
     }
-        
-
 
 
     

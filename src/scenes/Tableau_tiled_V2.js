@@ -31,10 +31,6 @@ class Tableau_tiled_V2 extends Tableau {
         this.load.atlas('particles', 'assets/images/particles.png', 'assets/images/particles.json');
     }
 
-    
-
-
-
     create() {
 
         super.create();
