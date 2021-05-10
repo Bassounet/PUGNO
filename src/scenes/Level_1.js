@@ -18,9 +18,9 @@ class Level_1 extends Tableau {
         
         this.load.image('sprite', 'ref/sprite.png');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_10.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_21.json');
 
-        // -----et puis aussi-------------
+        // -----et puis aussi-------------s
 
         this.load.image('back', 'assets/images/background.png');
 
@@ -66,7 +66,7 @@ class Level_1 extends Tableau {
         // this.mechant = this.map.createLayer('graphiques/mechant', this.tileset, 0, 0);
 
 
-        this.platform = this.map.createLayer('graphiques/platform', this.tileset, 0, 0);
+        // this.platform = this.map.createLayer('graphiques/platform', this.tileset, 0, 0);
         this.playerx = this.map.createLayer('graphiques/player', this.tileset, 0, 0);
         this.floor = this.map.createLayer('graphiques/floor', this.tileset, 0, 0);
 
@@ -95,9 +95,17 @@ class Level_1 extends Tableau {
 
         let profondeur_platforme = 998;
 
-        this.platformx = new Platform(this, 352, 190, 'platform');
-        this.physics.add.collider(this.player, this.platformx);
-        this.platformx.setDepth(profondeur_platforme);
+        this.platform1 = new Platform(this, 244, 190, 'platform');
+        this.physics.add.collider(this.player, this.platform1);
+        this.platform1.setDepth(profondeur_platforme);
+
+        this.platform2 = new Platform(this, 448, 114, 'platform');
+        this.physics.add.collider(this.player, this.platform2);
+        this.platform2.setDepth(profondeur_platforme);
+
+        this.platform3 = new Platform(this, 1015, 335, 'platform');
+        this.physics.add.collider(this.player, this.platform3);
+        this.platform3.setDepth(profondeur_platforme);
 
         // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
 
@@ -153,10 +161,24 @@ class Level_1 extends Tableau {
         ici.mechantObjects.forEach(monsterObject => {
             let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
             mechantContainer.add(mechant);
-            this.physics.add.collider(mechant, this.platform);
+            this.physics.add.collider(mechant, this.floor);
 
         });
 
+        // this.mechant.setDepth(1000);
+
+        let platform_container = this.add.container();
+
+        ici.platform_container = ici.map.getObjectLayer('objets/_platform_')['objects'];
+
+        ici.mechantObjects.forEach(monsterObject => {
+            let platform_=new Platform(this,monsterObject.x,monsterObject.y);
+            mechantContainer.add(platform_);
+            this.physics.add.collider(platform_, this.player);
+
+
+
+        });
         //
         //
         // let tourelleContainer = this.add.container();
@@ -192,19 +214,25 @@ class Level_1 extends Tableau {
         //
         // });
 
-        // let tonoContainer = this.add.container();
-        //
-        // ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
-        //
-        // ici.tonoObjects.forEach(monsterObject => {
-        //     let tono = new Tono(this,monsterObject.x,monsterObject.y);
-        //     tonoContainer.add(tono);
-        //     this.physics.add.collider(tono, this.platform);
-        //
-        // });
 
+        // this.tab = [];
+        let tonoContainer = this.add.container();
+
+        ici.tonoObjects = ici.map.getObjectLayer('objets/tono')['objects'];
+
+        ici.tonoObjects.forEach(monsterObject => {
+            let tono = new Tono(this,monsterObject.x,monsterObject.y);
+            tonoContainer.add(tono);
+            this.physics.add.collider(tono, this.floor);
+            // this.tab.push(tono);
+
+        });
+
+        // this.tab.setDepth(1000);
 
         //----------débug---------------------
+
+
 
         //pour débugger les collisions sur chaque layer
         let debug = this.add.graphics().setAlpha(this.game.config.physics.arcade.debug ? 0.75 : 0);
@@ -217,6 +245,9 @@ class Level_1 extends Tableau {
             collidingTileColor: new Phaser.Display.Color(0, 255, 0, 255), //Couleur des tiles qui collident
             faceColor: null // Color of colliding face edges
         });
+
+
+
         //---------- parallax ciel (rien de nouveau) -------------
 
         //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
