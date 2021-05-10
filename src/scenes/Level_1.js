@@ -17,7 +17,7 @@ class Level_1 extends Tableau {
 
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_24.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_27.json');
         this.load.image('back', 'assets/images/background.png');
 
 
@@ -56,10 +56,10 @@ class Level_1 extends Tableau {
 
 
 
-        this.tono = this.map.createLayer('graphiques/tono', this.tileset, 0, 0);
+        // this.tono = this.map.createLayer('graphiques/tono', this.tileset, 0, 0);
         this.gun = this.map.createLayer('graphiques/gun', this.tileset, 0, 0);
         this.med = this.map.createLayer('graphiques/medikit', this.tileset, 0, 0);
-        this.mine = this.map.createLayer('graphiques/mine', this.tileset, 0, 0);
+        // this.mine = this.map.createLayer('graphiques/mine', this.tileset, 0, 0);
         this.playerx = this.map.createLayer('graphiques/player', this.tileset, 0, 0);
         this.floor = this.map.createLayer('graphiques/floor', this.tileset, 0, 0);
         this.background = this.map.createLayer('graphiques/backgroundF', this.tileset, 0, 0);
@@ -75,7 +75,7 @@ class Level_1 extends Tableau {
 
         // créeons nos platform
 
-        this.platforms.create(245, 194, 'plat');
+        this.platforms.create(216, 206, 'plat');
 
         this.platforms.children.iterate(function (child) {
             child.setImmovable(true); // pour ne pas bouger quand il y a collision
@@ -89,22 +89,6 @@ class Level_1 extends Tableau {
 
 
 
-        // let profondeur_platform = 998;
-        //
-        // this.platform1 = new Platform(this, 244, 190, 'platform');
-        // this.physics.add.collider(this.player, this.platform1);
-        // this.platform1.setDepth(profondeur_platforme);
-        //
-        // this.platform2 = new Platform(this, 448, 114, 'platform');
-        // this.physics.add.collider(this.player, this.platform2);
-        // this.platform2.setDepth(profondeur_platforme);
-        //
-        // this.platform3 = new Platform(this, 1015, 335, 'platform');
-        // this.physics.add.collider(this.player, this.platform3);
-        // this.platform3.setDepth(profondeur_platforme);
-        //
-        // this.plat = new Platform(this,987,130, 'plat');
-        // this.plat.setDepth(profondeur_platforme);
 
 
 
@@ -118,7 +102,6 @@ class Level_1 extends Tableau {
 
         let ici = this;
 
-        let mechantContainer = this.add.container();
 
         ici.mechantObjects = ici.map.getObjectLayer('objets/mechant')['objects'];
 
@@ -143,6 +126,15 @@ class Level_1 extends Tableau {
             // this.tab.push(tono);
 
         });
+
+        ici.mineObjects = ici.map.getObjectLayer('objets/mines')['objects'];
+        ici.mineObjects.forEach(monsterObject => {
+            let minex = new mine(this, monsterObject.x, monsterObject.y);
+            this.objetcts_container.add(minex);
+            this.physics.add.collider(minex, this.floor);
+
+        });
+
 
         // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****-
 
@@ -191,7 +183,7 @@ class Level_1 extends Tableau {
         // this.gun.setDepth(z);
 
         this.med.setDepth(z);
-        this.mine.setDepth(z);
+        // this.mine.setDepth(z);
         this.player.setDepth(z--);
         this.objetcts_container.setDepth(z);
         this.platforms.setDepth(z);
@@ -199,6 +191,26 @@ class Level_1 extends Tableau {
         this.background.setDepth(z--);
 
         // ***-*-*-*-*-*-*- Z ORDER -*-*-*-*-*-*-*-*-
+
+        let sprite = this.add.sprite(400, 300, 'mechant').setInteractive();
+
+        sprite.on('pointerdown', function (pointer) {
+
+            this.setTint(0xff0000);
+
+        });
+
+        sprite.on('pointerout', function (pointer) {
+
+            this.clearTint();
+
+        });
+
+        sprite.on('pointerup', function (pointer) {
+
+            this.clearTint();
+
+        });
 
     
     }
@@ -219,8 +231,6 @@ class Level_1 extends Tableau {
 
             
         }
-
-        
     
     }
 }

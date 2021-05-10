@@ -47,6 +47,7 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
                         console.log("Y du joueur " + ( Tableau.current.player.y));
                         console.log("X de la platforme "+ ( Tableau.current.player.x + 14.5 ));
                         console.log("Y de la platforme " + ( Tableau.current.player.y + 35));
+
                         break;
 
 
@@ -57,6 +58,10 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
 
 
         });
+
+
+
+
         scene.input.keyboard.on('keyup', function(kevent){
             switch (kevent.key){
                 case "ArrowRight":
@@ -77,6 +82,8 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
 
             }
         });
+
+
 
         circleDrag.on('drag', (pointer, dragX, dragY) => {
             circleDrag.x = dragX
@@ -107,6 +114,8 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
         });
 
     }
+
+
 
 
 }

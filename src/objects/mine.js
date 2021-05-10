@@ -11,7 +11,7 @@ class mine extends ObjetEnnemi{
         this.flipX=false;
         
         this.setGravityY(40);
-        this.setDisplaySize(20,20);
+        this.setDisplaySize(35,25);
         this.setOffset(0,0);
         this.setCollideWorldBounds(true)
         
