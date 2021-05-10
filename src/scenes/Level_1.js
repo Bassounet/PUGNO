@@ -14,15 +14,13 @@ class Level_1 extends Tableau {
         this.load.image('gun', 'assets/Pnonante.png');
         this.load.image('bullet', 'assets/bullet.png');
         this.load.image('platform', 'assets/new_image/platform.png');
-        // ------pour TILED-------------
-        
+
+
         this.load.image('sprite', 'ref/sprite.png');
-
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_21.json');
-
-        // -----et puis aussi-------------s
-
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_24.json');
         this.load.image('back', 'assets/images/background.png');
+
+
 
     }
 
@@ -54,7 +52,7 @@ class Level_1 extends Tableau {
 
 
 
-        //---- ajoute les plateformes simples ----------------------------
+        //   ---- PLACEMENT GRAPH ------
 
 
 
@@ -62,95 +60,61 @@ class Level_1 extends Tableau {
         this.gun = this.map.createLayer('graphiques/gun', this.tileset, 0, 0);
         this.med = this.map.createLayer('graphiques/medikit', this.tileset, 0, 0);
         this.mine = this.map.createLayer('graphiques/mine', this.tileset, 0, 0);
-
-        // this.mechant = this.map.createLayer('graphiques/mechant', this.tileset, 0, 0);
-
-
-        // this.platform = this.map.createLayer('graphiques/platform', this.tileset, 0, 0);
         this.playerx = this.map.createLayer('graphiques/player', this.tileset, 0, 0);
         this.floor = this.map.createLayer('graphiques/floor', this.tileset, 0, 0);
-
         this.background = this.map.createLayer('graphiques/backgroundF', this.tileset, 0, 0);
 
-        // this.hole = this.map.createLayer('hole', this.tileset, 0, 0);
+
+        //   ---- PLACEMENT INTERACT/ MOV  ------
 
 
-        //on définit les z à la fin
-        let z = 1000; //niveau Z qui a chaque fois est décrémenté.
-
-        this.tono.setDepth(z);
-        this.gun.setDepth(z);
-        this.med.setDepth(z);
-        this.mine.setDepth(z);
-        // this.mechant.setDepth(z);
-
-        this.platform.setDepth(z--);
-        this.player.setDepth(z--);
-
-
-        this.floor.setDepth(z--);
-        this.background.setDepth(z--);
 
         // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-
 
-        let profondeur_platforme = 998;
+        this.platforms = this.physics.add.group();
 
-        this.platform1 = new Platform(this, 244, 190, 'platform');
-        this.physics.add.collider(this.player, this.platform1);
-        this.platform1.setDepth(profondeur_platforme);
+        // créeons nos platform
 
-        this.platform2 = new Platform(this, 448, 114, 'platform');
-        this.physics.add.collider(this.player, this.platform2);
-        this.platform2.setDepth(profondeur_platforme);
+        this.platforms.create(245, 194, 'plat');
 
-        this.platform3 = new Platform(this, 1015, 335, 'platform');
-        this.physics.add.collider(this.player, this.platform3);
-        this.platform3.setDepth(profondeur_platforme);
+        this.platforms.children.iterate(function (child) {
+            child.setImmovable(true); // pour ne pas bouger quand il y a collision
+            child.body.allowGravity=false; // on désactive l'effet de la gravité
+            child.setCollideWorldBounds(false);
+            child.setFriction(1); // pour que les éléments ne glissent sur cette plateforme
+            child.setOrigin(0,0); // pour positionner plus facilement, repère en haut à gauche (descendant, vers la droite)
+            child.setDisplaySize(103,7);
+            //child.refreshBody();
+        });
+
+
+
+        // let profondeur_platform = 998;
+        //
+        // this.platform1 = new Platform(this, 244, 190, 'platform');
+        // this.physics.add.collider(this.player, this.platform1);
+        // this.platform1.setDepth(profondeur_platforme);
+        //
+        // this.platform2 = new Platform(this, 448, 114, 'platform');
+        // this.physics.add.collider(this.player, this.platform2);
+        // this.platform2.setDepth(profondeur_platforme);
+        //
+        // this.platform3 = new Platform(this, 1015, 335, 'platform');
+        // this.physics.add.collider(this.player, this.platform3);
+        // this.platform3.setDepth(profondeur_platforme);
+        //
+        // this.plat = new Platform(this,987,130, 'plat');
+        // this.plat.setDepth(profondeur_platforme);
+
+
 
         // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
 
+        // ----------- ***** ---- ON CREE NOS MONSTRES ---*****---------
 
 
-        //----------collisions---------------------
+        this.objetcts_container=this.add.container();
 
-
-
-
-        this.floor.setCollisionByExclusion(-1, true);
-        this.physics.add.collider(this.player, this.floor);
-
-
-
-
-        // this.physics.add.collider(this.stars, this.solides);
-        // //si le joueur touche une étoile dans le groupe...
-        // this.physics.add.overlap(this.player, this.stars, this.found_piece, null, this);
-        // //quand on touche la lave, on meurt
-        // this.physics.add.collider(this.player, this.lave, this.playerDie, null, this);
-
-
-
-
-
-
-        // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****---------
-
-
-        // let ici = this;
-        //
-        //
-        // // let helicoContainer = this.add.container();
-        //
-        // // ici.helicoObjects = ici.map.getObjectLayer('drone')['objects'];
-        //
-        // // ici.helicoObjects.forEach(monsterObject => {
-        // //     // ici.create(this,monsterObject.x,monsterObject.y,monsterObject.y)
-        // //     let helico=new Helicopter(this,monsterObject.x,monsterObject.y);
-        // //     helicoContainer.add(helico);
-        // //     this.physics.add.collider(helico, this.platform); // pas besoin de collide avec les platformes c un helico
-        //
-        // // });
-        //
 
         let ici = this;
 
@@ -160,75 +124,45 @@ class Level_1 extends Tableau {
 
         ici.mechantObjects.forEach(monsterObject => {
             let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
-            mechantContainer.add(mechant);
+            this.objetcts_container.add(mechant);
             this.physics.add.collider(mechant, this.floor);
 
-        });
-
-        // this.mechant.setDepth(1000);
-
-        let platform_container = this.add.container();
-
-        ici.platform_container = ici.map.getObjectLayer('objets/_platform_')['objects'];
-
-        ici.mechantObjects.forEach(monsterObject => {
-            let platform_=new Platform(this,monsterObject.x,monsterObject.y);
-            mechantContainer.add(platform_);
-            this.physics.add.collider(platform_, this.player);
-
-
+            // this.physics.add.collider(mechant, this.floor);
 
         });
-        //
-        //
-        // let tourelleContainer = this.add.container();
-        //
-        // ici.tourelleObjects = ici.map.getObjectLayer('tourelles')['objects'];
-        //
-        // ici.tourelleObjects.forEach(monsterObject => {
-        //     let tourelle=new Tourelle(this,monsterObject.x,monsterObject.y-100);
-        //     tourelleContainer.add(tourelle);
-        //     this.physics.add.collider(tourelle, this.platform);
-        //
-        // });
-        //
-        // let droneContainer = this.add.container();
-        //
-        // ici.droneObjects = ici.map.getObjectLayer('drone')['objects'];
-        //
-        // ici.droneObjects.forEach(monsterObject => {
-        //     let drone=new Drone(this,monsterObject.x,monsterObject.y);
-        //     droneContainer.add(drone);
-        //     this.physics.add.collider(drone, this.platform);
-        //
-        // });
 
-        // let mineContainer = this.add.container();
-        //
-        // ici.mineObjects = ici.map.getObjectLayer('mine')['objects'];
-        //
-        // ici.mineObjects.forEach(monsterObject => {
-        //     let mine=new mine(this,monsterObject.x,monsterObject.y);
-        //     mineContainer.add(mine);
-        //     this.physics.add.collider(mine, this.platform);
-        //
-        // });
-
-
-        // this.tab = [];
-        let tonoContainer = this.add.container();
 
         ici.tonoObjects = ici.map.getObjectLayer('objets/tono')['objects'];
 
         ici.tonoObjects.forEach(monsterObject => {
             let tono = new Tono(this,monsterObject.x,monsterObject.y);
-            tonoContainer.add(tono);
+            this.objetcts_container.add(tono);
             this.physics.add.collider(tono, this.floor);
+
+            // this.physics.add.collider(tono, this.floor);
             // this.tab.push(tono);
 
         });
 
-        // this.tab.setDepth(1000);
+        // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****-
+
+
+        //   ---- PLACEMENT INTERACT/ MOV  ------
+
+
+        //----------collisions---------------------
+
+
+        this.floor.setCollisionByExclusion(-1, true);
+        this.physics.add.collider(this.player, this.floor);
+        this.physics.add.collider(this.player, this.platforms);
+        this.physics.add.collider(this.objetcts_container, this.floor);
+
+
+        //----------collisions---------------------
+
+
+
 
         //----------débug---------------------
 
@@ -247,41 +181,24 @@ class Level_1 extends Tableau {
         });
 
 
+        //--------------- Debug-----------------
 
-        //---------- parallax ciel (rien de nouveau) -------------
+        // ***-*-*-*-*-*-*- Z ORDER -*-*-*-*-*-*-*-*-
 
-        //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
-        // this.back = this.add.tileSprite(
-        //     0,
-        //     0,
-        //     this.sys.canvas.width,
-        //     this.sys.canvas.height,
-        //     'MAP_2D'
-        // );
-        // this.map2 = this.add.tileSprite(
-        //     0,
-        //     0,
-        //     this.sys.canvas.width,
-        //     this.sys.canvas.height,
-        //     'MAP_2D'
-        // );
-        // this.back.setOrigin(0, 0);
-        // this.map2.setOrigin(0, 0);
-        // this.back.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
-        // this.map2.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
-        // this.map2.blendMode = Phaser.BlendModes.ADD;
+        let z = 1000; //niveau Z qui a chaque fois est décrémenté.
 
+        // this.tono.setDepth(z);
+        // this.gun.setDepth(z);
 
+        this.med.setDepth(z);
+        this.mine.setDepth(z);
+        this.player.setDepth(z--);
+        this.objetcts_container.setDepth(z);
+        this.platforms.setDepth(z);
+        this.floor.setDepth(z--);
+        this.background.setDepth(z--);
 
-
-        // moveParallax() {
-        //     //le ciel se déplace moins vite que la caméra pour donner un effet paralax
-        //     this.sky.tilePositionX = this.cameras.main.scrollX * 0.6;
-        //     this.sky.tilePositionY = this.cameras.main.scrollY * 0.6;
-        //     this.sky2.tilePositionX = this.cameras.main.scrollX * 0.7 + 100;
-        //     this.sky2.tilePositionY = this.cameras.main.scrollY * 0.7 + 100;
-        // }
-        // for mouse click
+        // ***-*-*-*-*-*-*- Z ORDER -*-*-*-*-*-*-*-*-
 
     
     }

@@ -7,14 +7,8 @@
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/LevelVF_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/LevelVF_1.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/ui/GamePad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ui/GamePad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Platform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_v.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_v.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +34,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -93,6 +88,7 @@
       <workItem from="1620208725840" duration="594000" />
       <workItem from="1620231717180" duration="596000" />
       <workItem from="1620630786421" duration="1599000" />
+      <workItem from="1620632457818" duration="7817000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

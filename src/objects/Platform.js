@@ -1,16 +1,15 @@
-class Platform extends ObjetPhysique{
-    /**
-     * Quand Player touche cet objet, il a perdu
-     * @param {Tableau} scene
-     * @param {Number} x
-     * @param {Number} y
-     * @param {string} image
-     */
-    constructor(scene, x, y,image) {
+class Platform extends ObjetPhysique
+{
+
+    constructor(scene, x, y,image)
+    {
         super(scene, x, y,image);
+        scene.add.existing(this);
 
         this.body.setImmovable();
         this.body.allowGravity=false;
+        // this.physics.add.collider(this.player, this);
+        // this.setCollideWorldBounds(true)
 
     }
 
