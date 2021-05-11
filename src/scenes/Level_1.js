@@ -14,7 +14,7 @@ class Level_1 extends Tableau {
         this.load.image('gun', 'assets/Pnonante.png');
         this.load.image('bullet', 'assets/bullet.png');
         this.load.image('platform', 'assets/new_image/platform.png');
-
+        this.load.image('blue_sky', 'assets/blue_sky.png');
 
         this.load.image('sprite', 'ref/sprite.png');
         this.load.tilemapTiledJSON('map', 'TILED/end/VFX_27.json');
@@ -67,7 +67,7 @@ class Level_1 extends Tableau {
             0,
             this.sys.canvas.width * 2,
             this.sys.canvas.height * 2,
-            'sky'
+            'blue_sky'
         );
         this.sky.setOrigin(0, 0);
         this.sky.setScrollFactor(0);
