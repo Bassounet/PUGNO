@@ -17,12 +17,14 @@ class Level_1 extends Tableau {
         this.load.image('blue_sky', 'assets/blue_sky.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_27.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_29.json');
         this.load.image('back', 'assets/images/background.png');
 
     }
 
     create() {
+
+        console.log(Phaser);
 
         super.create();
 
@@ -50,16 +52,16 @@ class Level_1 extends Tableau {
 
 
 
-        // this.tono = this.map.createLayer('graphiques/tono', this.tileset, 0, 0);
-        this.gun = this.map.createLayer('graphiques/gun', this.tileset, 0, 0);
-        this.med = this.map.createLayer('graphiques/medikit', this.tileset, 0, 0);
-        // this.mine = this.map.createLayer('graphiques/mine', this.tileset, 0, 0);
-        this.playerx = this.map.createLayer('graphiques/player', this.tileset, 0, 0);
+        // this.tono = this.map.createLayer('tono', this.tileset, 0, 0);
+        this.gun = this.map.createLayer('gun', this.tileset, 0, 0);
+        this.med = this.map.createLayer('medikit', this.tileset, 0, 0);
+        // this.mine = this.map.createLayer('mine', this.tileset, 0, 0);
+        this.playerx = this.map.createLayer('player', this.tileset, 0, 0);
 
-        this.floor = this.map.createLayer('graphiques/floor', this.tileset, 0, 0);
+        this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
         this.floor.setOrigin(0, 0);
 
-        this.background = this.map.createLayer('graphiques/backgroundF', this.tileset, 0, 0);
+        this.background = this.map.createLayer('backgroundF', this.tileset, 0, 0);
         this.background.setOrigin(0, 0);
 
         this.sky = this.add.tileSprite(
@@ -95,7 +97,10 @@ class Level_1 extends Tableau {
 
         // créeons nos platform
 
-        this.platforms.create(216, 206, 'plat');
+        // this.platforms.create(216, 206, 'plat');
+        this.platforms.create(638, 262, 'plat');
+        this.platforms.create(404, 145, 'plat');
+        this.platforms.create(1893, 199, 'plat');
 
         this.platforms.children.iterate(function (child) {
             child.setImmovable(true); // pour ne pas bouger quand il y a collision
@@ -125,35 +130,35 @@ class Level_1 extends Tableau {
         let ici = this;
 
 
-        ici.mechantObjects = ici.map.getObjectLayer('objets/mechant')['objects'];
+        ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
 
         ici.mechantObjects.forEach(monsterObject => {
-            let mechant=new mechant1(this,monsterObject.x,monsterObject.y);
-            this.mechantContainer.add(mechant);
-            this.physics.add.collider(mechant, this.floor);
+            let mechant=new mechant1(ici,monsterObject.x,monsterObject.y);
+            ici.mechantContainer.add(mechant);
+            ici.physics.add.collider(mechant, this.floor);
 
             // this.physics.add.collider(mechant, this.floor);
 
         });
 
 
-        ici.tonoObjects = ici.map.getObjectLayer('objets/tono')['objects'];
+        ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
 
         ici.tonoObjects.forEach(tonoObject => {
-            let tono = new Tono(this,tonoObject.x,tonoObject.y);
-            this.tonoContainer.add(tono);
-            this.physics.add.collider(tono, this.floor);
+            let tono = new Tono(ici,tonoObject.x,tonoObject.y);
+            ici.tonoContainer.add(tono);
+            ici.physics.add.collider(tono, this.floor);
 
             // this.physics.add.collider(tono, this.floor);
             // this.tab.push(tono);
 
         });
 
-        ici.mineObjects = ici.map.getObjectLayer('objets/mines')['objects'];
+        ici.mineObjects = ici.map.getObjectLayer('mines')['objects'];
         ici.mineObjects.forEach(mineObject => {
-            let minex = new mine(this, mineObject.x, mineObject.y);
-            this.mineContainer.add(minex);
-            this.physics.add.collider(minex, this.floor);
+            let minex = new mine(ici, mineObject.x, mineObject.y);
+            ici.mineContainer.add(minex);
+            ici.physics.add.collider(minex, this.floor);
 
         });
 
@@ -275,8 +280,13 @@ class Level_1 extends Tableau {
 
             this.previousPosition = actualPosition;
             // this.optimizeDisplay();
-            
+
+
+
         }
+
+
+
     
     }
 }

@@ -4,6 +4,9 @@
 class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick ( c'est l'horreur )
     constructor(scene, x, y,size=100) {
         super(scene, x, y)
+
+        scene.pointer = scene.input.activePointer;
+
         scene.add.existing(this);
 
         this.size=size;
@@ -43,10 +46,14 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
                     break;
                 
                 case "Control":
-                        console.log("X du joueur " + ( Tableau.current.player.x +38.5 ));
-                        console.log("Y du joueur " + ( Tableau.current.player.y));
-                        console.log("X de la platforme "+ ( Tableau.current.player.x + 14.5 ));
-                        console.log("Y de la platforme " + ( Tableau.current.player.y + 35));
+
+
+                        // console.log("X de la platforme "+ ( Tableau.current.player.x + 14.5 ));
+                        // console.log("Y de la platforme " + ( Tableau.current.player.y + 35));
+                        console.log(' le x pointeur est : ' +( ( Tableau.current.player.x )-448 + scene.pointer.x));
+                        console.log(' le y pointeur est : ' + (( scene.pointer.y) - 7 ));
+                        // console.log("X du joueur " + ( Tableau.current.player.x ));
+                        // console.log("Y du joueur " + ( Tableau.current.player.y));
 
                         break;
 
