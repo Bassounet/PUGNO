@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref/01_MAP_2D_V9.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/01_MAP_2D_V9.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref/sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/ref/sprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/mechant1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/mechant1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/ui/GamePad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ui/GamePad.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +109,7 @@
       <workItem from="1620907818568" duration="315000" />
       <workItem from="1621235281088" duration="3510000" />
       <workItem from="1621259257373" duration="3478000" />
+      <workItem from="1621276589610" duration="1862000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

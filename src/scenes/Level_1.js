@@ -16,6 +16,8 @@ class Level_1 extends Tableau {
         this.load.image('platform', 'assets/new_image/platform.png');
         this.load.image('blue_sky', 'assets/blue_sky.png');
 
+        this.load.image('test_1', 'assets/new_image/test-dgt-1.png');
+
         this.load.image('sprite', 'ref/sprite.png');
         this.load.tilemapTiledJSON('map', 'TILED/end/VFX_44.json');
         this.load.image('back', 'assets/images/background.png');
@@ -32,7 +34,7 @@ class Level_1 extends Tableau {
         //--------chargement de la tile map & configuration de la scène-----------------------
 
         //notre map
-        this.map = this.make.tilemap({ key: 'map' });
+        this.map = this.make.tilemap({key: 'map'});
 
         //nos images qui vont avec la map
 
@@ -45,7 +47,6 @@ class Level_1 extends Tableau {
         this.physics.world.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
         this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
         this.cameras.main.startFollow(this.player, true, 1, 1);
-
 
 
         //   ---- PLACEMENT GRAPH ------
@@ -66,7 +67,7 @@ class Level_1 extends Tableau {
         );
         this.sky.setOrigin(0, 0);
         this.sky.setScrollFactor(0);
-        this.sky.displayWidth=21*64;
+        this.sky.displayWidth = 21 * 64;
 
         this.sky2 = this.add.tileSprite(
             0,
@@ -77,11 +78,10 @@ class Level_1 extends Tableau {
         );
         this.sky2.setOrigin(0, 0);
         this.sky2.setScrollFactor(0);
-        this.sky2.displayWidth=21*64;
+        this.sky2.displayWidth = 21 * 64;
 
 
         //   ---- PLACEMENT INTERACT/ MOV  ------
-
 
 
         // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-
@@ -91,20 +91,15 @@ class Level_1 extends Tableau {
         // créeons nos platform
 
 
-
         this.platforms.children.iterate(function (child) {
             child.setImmovable(true); // pour ne pas bouger quand il y a collision
-            child.body.allowGravity=false; // on désactive l'effet de la gravité
+            child.body.allowGravity = false; // on désactive l'effet de la gravité
             child.setCollideWorldBounds(false);
             child.setFriction(1); // pour que les éléments ne glissent sur cette plateforme
-            child.setOrigin(0,0); // pour positionner plus facilement, repère en haut à gauche (descendant, vers la droite)
-            child.setDisplaySize(103,7);
+            child.setOrigin(0, 0); // pour positionner plus facilement, repère en haut à gauche (descendant, vers la droite)
+            child.setDisplaySize(103, 7);
             //child.refreshBody();
         });
-
-
-
-
 
 
         // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
@@ -112,9 +107,9 @@ class Level_1 extends Tableau {
         // ----------- ***** ---- ON CREE NOS MONSTRES ---*****---------
 
 
-        this.mechantContainer=this.add.container();
-        this.mineContainer=this.add.container();
-        this.tonoContainer=this.add.container();
+        this.mechantContainer = this.add.container();
+        this.mineContainer = this.add.container();
+        this.tonoContainer = this.add.container();
 
 
         let ici = this;
@@ -123,7 +118,7 @@ class Level_1 extends Tableau {
         ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
 
         ici.mechantObjects.forEach(monsterObject => {
-            let mechant=new mechant1(ici,monsterObject.x,monsterObject.y);
+            let mechant = new mechant1(ici, monsterObject.x, monsterObject.y);
             ici.mechantContainer.add(mechant);
             ici.physics.add.collider(mechant, this.floor);
 
@@ -135,7 +130,7 @@ class Level_1 extends Tableau {
         ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
 
         ici.tonoObjects.forEach(tonoObject => {
-            let tono = new Tono(ici,tonoObject.x,tonoObject.y);
+            let tono = new Tono(ici, tonoObject.x, tonoObject.y);
             ici.tonoContainer.add(tono);
             ici.physics.add.collider(tono, this.floor);
 
@@ -173,10 +168,7 @@ class Level_1 extends Tableau {
         //----------collisions---------------------
 
 
-
-
         //----------débug---------------------
-
 
 
         //pour débugger les collisions sur chaque layer
@@ -192,7 +184,7 @@ class Level_1 extends Tableau {
         });
 
 
-        //--------------- Debug-----------------
+        //--------------- Debug -----------------
 
         // ***-*-*-*-*-*-*- Z ORDER -*-*-*-*-*-*-*-*-
 
@@ -219,27 +211,36 @@ class Level_1 extends Tableau {
 
         // ***-*-*-*-*-*-*- Z ORDER FIN -*-*-*-*-*-*-*-*-
 
-        let sprite = this.add.sprite(400, 300, 'mechant').setInteractive();
+        //
 
-        sprite.on('pointerdown', function (pointer) {
 
-            this.setTint(0xff0000);
+        apparitionTexte()
+        {
+            if (this.player.x < 1) {
+                console.log('ok');
+                //this.tuto_dash.alpha=1;
+                Tableau.current.tweens.add({
+                    targets: Tableau.current.test_1,
+                    alpha: 1,
+                    duration: 100,
+                    ease: 'Sine.easeInOut',
 
-        });
+                })
+            } else if (this.player.x >= 1) {
+                console.log('ok');
+                //this.tuto_dash.alpha=0;
+                Tableau.current.tweens.add({
+                    targets: Tableau.current.test_1,
+                    alpha: 0,
+                    duration: 100,
+                    ease: 'Sine.easeInOut',
 
-        sprite.on('pointerout', function (pointer) {
+                })
+            }
 
-            this.clearTint();
+        }
 
-        });
 
-        sprite.on('pointerup', function (pointer) {
-
-            this.clearTint();
-
-        });
-
-    
     }
     
 

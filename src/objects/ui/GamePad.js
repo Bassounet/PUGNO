@@ -48,12 +48,9 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
                 case "Control":
 
 
-                        // console.log("X de la platforme "+ ( Tableau.current.player.x + 14.5 ));
-                        // console.log("Y de la platforme " + ( Tableau.current.player.y + 35));
+
                         console.log(' le x pointeur est : ' +( ( Tableau.current.player.x )-448 + scene.pointer.x));
                         console.log(' le y pointeur est : ' + (( scene.pointer.y) - 7 ));
-                        // console.log("X du joueur " + ( Tableau.current.player.x ));
-                        // console.log("Y du joueur " + ( Tableau.current.player.y));
 
                         break;
 
