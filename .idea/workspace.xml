@@ -4,7 +4,67 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1" />
+    <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Le test de webstorm ça tue :+1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/Level_1.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/Level_1_ok.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/TEST_MAP.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level20.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level23s.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/level9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_map.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/new_mapV9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/sprite_shit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/test1..json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/test1.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/test_map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/test_map_lol.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/TILED - Raccourci.lnk" beforeDir="false" afterPath="$PROJECT_DIR$/assets/TILED - Raccourci.lnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/ref/sprite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V9.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V9.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +163,7 @@
       <workItem from="1620831191126" duration="596000" />
       <workItem from="1620843874490" duration="594000" />
       <workItem from="1620907818568" duration="315000" />
+      <workItem from="1621235281088" duration="3510000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

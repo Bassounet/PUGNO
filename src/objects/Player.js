@@ -83,6 +83,29 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
     }
 
+    shooter ()
+    {
+
+
+        this.input.on('pointerdown', function (pointer) {
+
+            console.log( 'down B');
+            }, this);
+    }
+
+
+    shoot(){
+
+        let pointer = this.input.activePointer;
+        if (pointer.isDown) {
+
+            console.log ( 'hello');
+            // let touchX = pointer.x;
+            // var touchY = pointer.y;
+            // // ...
+        }
+    }
+
 
 
 

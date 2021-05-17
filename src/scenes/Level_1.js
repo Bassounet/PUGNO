@@ -17,7 +17,7 @@ class Level_1 extends Tableau {
         this.load.image('blue_sky', 'assets/blue_sky.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_29.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_33.json');
         this.load.image('back', 'assets/images/background.png');
 
     }
