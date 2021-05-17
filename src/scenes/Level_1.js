@@ -17,7 +17,7 @@ class Level_1 extends Tableau {
         this.load.image('blue_sky', 'assets/blue_sky.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_33.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_44.json');
         this.load.image('back', 'assets/images/background.png');
 
     }
@@ -50,13 +50,6 @@ class Level_1 extends Tableau {
 
         //   ---- PLACEMENT GRAPH ------
 
-
-
-        // this.tono = this.map.createLayer('tono', this.tileset, 0, 0);
-        this.gun = this.map.createLayer('gun', this.tileset, 0, 0);
-        this.med = this.map.createLayer('medikit', this.tileset, 0, 0);
-        // this.mine = this.map.createLayer('mine', this.tileset, 0, 0);
-        this.playerx = this.map.createLayer('player', this.tileset, 0, 0);
 
         this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
         this.floor.setOrigin(0, 0);
@@ -97,10 +90,7 @@ class Level_1 extends Tableau {
 
         // créeons nos platform
 
-        // this.platforms.create(216, 206, 'plat');
-        this.platforms.create(638, 262, 'plat');
-        this.platforms.create(404, 145, 'plat');
-        this.platforms.create(1893, 199, 'plat');
+
 
         this.platforms.children.iterate(function (child) {
             child.setImmovable(true); // pour ne pas bouger quand il y a collision
@@ -210,11 +200,7 @@ class Level_1 extends Tableau {
 
         //devant
 
-        // this.tono.setDepth(z);
-        // this.gun.setDepth(z);
 
-        this.med.setDepth(z);
-        // this.mine.setDepth(z);
         this.player.setDepth(z--);
 
         this.tonoContainer.setDepth(z);
