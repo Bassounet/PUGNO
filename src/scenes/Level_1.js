@@ -214,31 +214,31 @@ class Level_1 extends Tableau {
         //
 
 
-        apparitionTexte()
-        {
-            if (this.player.x < 1) {
-                console.log('ok');
-                //this.tuto_dash.alpha=1;
-                Tableau.current.tweens.add({
-                    targets: Tableau.current.test_1,
-                    alpha: 1,
-                    duration: 100,
-                    ease: 'Sine.easeInOut',
-
-                })
-            } else if (this.player.x >= 1) {
-                console.log('ok');
-                //this.tuto_dash.alpha=0;
-                Tableau.current.tweens.add({
-                    targets: Tableau.current.test_1,
-                    alpha: 0,
-                    duration: 100,
-                    ease: 'Sine.easeInOut',
-
-                })
-            }
-
-        }
+        // apparitionTexte()
+        // {
+        //     if (this.player.x < 1) {
+        //         console.log('ok');
+        //         //this.tuto_dash.alpha=1;
+        //         Tableau.current.tweens.add({
+        //             targets: Tableau.current.test_1,
+        //             alpha: 1,
+        //             duration: 100,
+        //             ease: 'Sine.easeInOut',
+        //
+        //         })
+        //     } else if (this.player.x >= 1) {
+        //         console.log('ok');
+        //         //this.tuto_dash.alpha=0;
+        //         Tableau.current.tweens.add({
+        //             targets: Tableau.current.test_1,
+        //             alpha: 0,
+        //             duration: 100,
+        //             ease: 'Sine.easeInOut',
+        //
+        //         })
+        //     }
+        //
+        // }
 
 
     }
