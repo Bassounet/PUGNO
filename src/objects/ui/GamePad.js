@@ -39,6 +39,8 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
 
                 case "ArrowUp":
                     Tableau.current.player.directionY=-1;
+
+
                     break;
 
                 case "ArrowDown":

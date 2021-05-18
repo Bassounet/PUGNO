@@ -22,6 +22,9 @@ class Level_1 extends Tableau {
         this.load.tilemapTiledJSON('map', 'TILED/end/VFX_44.json');
         this.load.image('back', 'assets/images/background.png');
 
+        this.load.audio('jump', 'son/jump.wav');
+        this.load.audio('amb', 'son/ambiance.wav');
+
     }
 
     create() {
@@ -29,6 +32,20 @@ class Level_1 extends Tableau {
         console.log(Phaser);
 
         super.create();
+
+        this.musicamb = this.sound.add('amb');
+
+        var musicConfig =
+            {
+                mute: false,
+                volume: 0.2,
+                rate : 1,
+                detune: 0,
+                seek: 0,
+                loop: true,
+                delay:0,
+            }
+        this.musicamb.play(musicConfig);
 
 
         //--------chargement de la tile map & configuration de la scène-----------------------
@@ -74,7 +91,7 @@ class Level_1 extends Tableau {
             100,
             this.sys.canvas.width * 2,
             this.sys.canvas.height * 2,
-            'sky'
+            'back'
         );
         this.sky2.setOrigin(0, 0);
         this.sky2.setScrollFactor(0);
