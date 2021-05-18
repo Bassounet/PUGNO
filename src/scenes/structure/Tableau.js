@@ -18,6 +18,7 @@ class Tableau extends Phaser.Scene{
         this.load.spritesheet('player','assets/player2.png',
             { frameWidth: 61, frameHeight: 64  }
         );
+        this.load.audio('moleu', 'son/collect.mov');
     }
 
 
@@ -37,12 +38,20 @@ class Tableau extends Phaser.Scene{
         this.blood.displayHeight=64;
         this.blood.visible=false; // wtf ??? >> apparition du sang middle screen ..; wtf
 
+        this.boutonTir = this.input.keyboard.addKey('A');
     }
     
     update(){
         super.update();
         this.player.move();
-        
+        this.tirPlayer();
+    }
+
+    tirPlayer(){
+        if (Phaser.Input.Keyboard.JustDown(this.boutonTir)){
+            this.player.shoot();
+            this.sound.play('moleu', {volume : 0.2});
+        }
     }
 /**
      *
@@ -52,14 +61,14 @@ class Tableau extends Phaser.Scene{
     saigne(object,onComplete){
         let me=this;
         me.blood.visible=true;
-        me.blood.setDepth(10);
+        //me.blood.setDepth(10);
         me.blood.rotation = Phaser.Math.Between(0,21);
         me.blood.x=object.x;
         me.blood.y=object.y;
         me.tweens.add({
             targets:me.blood,
             
-            duration:500, // temps en ms ... 
+            duration:500, // temps en ms ...
             displayHeight:{ // permet de distorde l'image et donc de donner l'effetd e la gerbe de sang ... 
                 from:10,
                 to:100,
@@ -79,6 +88,7 @@ class Tableau extends Phaser.Scene{
     {
 
         medikit_1.disableBody(true, true);
+
  
         ui.gagne();
         //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
@@ -87,6 +97,7 @@ class Tableau extends Phaser.Scene{
             if(child.texture && child.texture.key==="medikit_1"){
                 if(child.active){
                     totalActive++;
+
                 }
             }
         }
@@ -128,6 +139,7 @@ class Tableau extends Phaser.Scene{
                 ui.gagne(); // je comprend pas vrmt là ...
                 monster.isDead=true; //ok le monstre est mort
                 monster.visible=false;
+                this.sound.play('recup');
                 this.saigne(monster,function(){
                     //à la fin de la petite anim...ben il se passe rien :)
                 })
@@ -153,7 +165,33 @@ class Tableau extends Phaser.Scene{
 
     }
 
+    ramasserEtoile (player, star)
+    {
+        star.disableBody(true, true);
+        ui.gagne();
 
+
+        //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
+        let totalActive=0;
+        for(let child of this.children.getChildren()){
+            if(child.texture && child.texture.key==="star"){
+                if(child.active){
+                    totalActive++;
+                    this.sound.play('recup', {volume : 0.2});
+                }
+            }
+        }
+        //if(totalActive===0){
+        //    this.win();
+        //}
+        /*
+        // this.stars est un groupe (plus tard)
+        if (this.stars.countActive(true) === 0)
+        {
+           this.win();
+        }
+         */
+    }
     
     /**
      * Pour reset cette scène proprement

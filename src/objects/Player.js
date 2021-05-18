@@ -12,6 +12,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         this.setBodySize(this.body.width-30,this.body.height-10);
         this.setOffset(13, 10);
+        this.sens = 1;
+
 
         this.anims.create({
             key: 'left',
@@ -59,8 +61,23 @@ class Player extends Phaser.Physics.Arcade.Sprite{
      * Déplace le joueur en fonction des directions données
      */
     move(){
-
         switch (true){
+            case this._directionX<0:
+                this.sens=-1;
+                this.setVelocityX(-300);
+                this.anims.play('left', true);
+                break;
+            case this._directionX>0:
+                this.sens=1;
+                this.setVelocityX(300);
+                this.anims.play('right', true);
+                break;
+            default:
+                this.setVelocityX(0);
+            // this.anims.play('stance', true);
+            //this.anims.play(this.sens===-1 ? 'back' : 'stance' ,true); //équivalent d'un if, pour mémoriser la position du personnage pour qu'il regarde à gauche ou à droite en fonction du dernier déplacement effectué
+        }
+        /*switch (true){
             case this._directionX<0:
                 this.setVelocityX(-300);
                 this.anims.play('left', true);
@@ -73,7 +90,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             default:
                 this.setVelocityX(0);
                 this.anims.play('turn', true);
-        }
+        }*/
 
         if(this._directionY<0){
             if(this.body.blocked.down || this.body.touching.down){
@@ -85,8 +102,6 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
     shooter ()
     {
-
-
         this.input.on('pointerdown', function (pointer) {
 
             console.log( 'down B');
@@ -95,15 +110,12 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
 
     shoot(){
+        var bullet = new Tir(this.scene,this.x, this.y);
+        console.log("Tir");
+        setTimeout(function(){
+            bullet.destroy();
+            },1500);
 
-        let pointer = this.input.activePointer;
-        if (pointer.isDown) {
-
-            console.log ( 'hello');
-            // let touchX = pointer.x;
-            // var touchY = pointer.y;
-            // // ...
-        }
     }
 
 

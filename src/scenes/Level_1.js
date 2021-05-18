@@ -15,7 +15,8 @@ class Level_1 extends Tableau {
         this.load.image('bullet', 'assets/bullet.png');
         this.load.image('platform', 'assets/new_image/platform.png');
         this.load.image('blue_sky', 'assets/blue_sky.png');
-
+        this.load.image('tir', 'assets/new_image/Bullet.png');
+        this.load.image('star', 'assets/medikitV2.png');
         this.load.image('test_1', 'assets/new_image/test-dgt-1.png');
 
         this.load.image('sprite', 'ref/sprite.png');
@@ -143,6 +144,19 @@ class Level_1 extends Tableau {
 
         });
 
+        this.stars=this.physics.add.group();
+        this.stars.create(663,263,"star");
+
+        this.stars.children.iterate(function (child) {
+            child.setCollideWorldBounds(true);
+            child.setBounce(0);
+            child.setDisplaySize(30,30)
+            child.setBodySize(20,20);
+            child.body.allowGravity = false;
+        });
+        //si le joueur touche une étoile dans le groupe...
+        this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
+
 
         ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
 
@@ -209,9 +223,9 @@ class Level_1 extends Tableau {
 
         //devant
 
-
+        this.blood.setDepth(z--);
+        this.stars.setDepth(z--);
         this.player.setDepth(z--);
-
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
         this.mechantContainer.setDepth(z);

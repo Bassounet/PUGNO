@@ -16,5 +16,8 @@ class ObjetEnnemi extends ObjetPhysique{
             scene
         );
     }
+    Tupue(){
+        this.disableBody(true, true);
+    }
 
 }
