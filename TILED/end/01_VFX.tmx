@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="500" height="7" tilewidth="64" tileheight="64" infinite="0" nextlayerid="21" nextobjectid="46">
  <editorsettings>
-  <export target="VFX_44.json" format="json"/>
+  <export target="VFX_45.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="sprite_" tilewidth="64" tileheight="64" tilecount="308" columns="44">
   <image source="../../ref/sprite.png" width="2816" height="448"/>
  </tileset>
  <objectgroup id="17" name="tono" offsetx="-1" offsety="-11">
-  <object id="15" gid="271" x="760.333" y="354.333" width="64" height="64"/>
+  <object id="15" gid="271" x="855.333" y="172.333" width="64" height="64"/>
   <object id="37" gid="271" x="3843" y="353" width="64" height="64"/>
   <object id="38" gid="271" x="2285" y="395" width="64" height="64"/>
   <object id="39" gid="271" x="1321" y="350" width="64" height="64"/>

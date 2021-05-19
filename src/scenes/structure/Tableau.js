@@ -22,6 +22,7 @@ class Tableau extends Phaser.Scene{
         this.load.audio('die', 'son/die.wav');
         this.load.audio('talkie', 'son/talkie.wav');
         this.load.audio('jump', 'son/jump.wav');
+        this.load.audio('explosion', 'son/explo.wav');
     }
 
 
@@ -47,6 +48,7 @@ class Tableau extends Phaser.Scene{
         this.sound.add('die');
         this.sound.add('talkie');
         this.sound.add('jump');
+        this.sound.add('explosion');
     }
     
     update(){
@@ -93,12 +95,47 @@ class Tableau extends Phaser.Scene{
     }
 
 
-    hit_tono (player, tono)
+    hitTono (player, tono)
     {
-        this.physics.pause();
-        player.setTint(0xff0000); 
-        player.anims.play('turn');
-        this.scene.restart(); 
+        let me=this;
+        if(tono.isDead !== true){
+            if(
+
+                player.body.velocity.y > 0
+
+                && player.getBounds().bottom < tono.getBounds().top+30
+
+            ){
+                ui.gagne();
+                tono.isDead=true;
+                tono.visible=false;
+
+                this.sound.play('explosion', {volume : 1 });
+
+                this.saigne(tono,function(){
+
+                })
+
+                player.directionY=500;
+            }else{
+
+                if(!me.player.isDead){
+                    me.player.isDead=true;
+                    me.player.visible=false;
+
+                    me.saigne(me.player,function(){
+
+                        me.blood.visible=false;
+                        me.player.anims.play('turn');
+                        me.player.isDead=false;
+                        me.scene.restart();
+                        // this.sound.play('die', {volume : 1 });
+
+                    })
+
+                }
+            }
+        }
 
     }
 

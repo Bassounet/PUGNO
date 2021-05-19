@@ -11,7 +11,6 @@ class Level_1 extends Tableau {
         this.load.image('plat', 'assets/platform_.png');
         this.load.image('tono', 'assets/tono.png');
         this.load.image('mine', 'assets/mine.png');
-        this.load.image('gun', 'assets/Pnonante.png');
         this.load.image('bullet', 'assets/bullet.png');
         this.load.image('platform', 'assets/new_image/platform.png');
         this.load.image('blue_sky', 'assets/blue_sky.png');
@@ -20,10 +19,10 @@ class Level_1 extends Tableau {
         this.load.image('test_1', 'assets/new_image/test-dgt-1.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_44.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_45.json');
         this.load.image('back', 'assets/images/background.png');
 
-        this.load.audio('jump', 'son/jump.wav');
+
         this.load.audio('amb', 'son/ambiance.wav');
 
 
