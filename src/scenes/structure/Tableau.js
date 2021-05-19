@@ -18,7 +18,7 @@ class Tableau extends Phaser.Scene{
         this.load.spritesheet('player','assets/player2.png',
             { frameWidth: 61, frameHeight: 64  }
         );
-        this.load.audio('moleu', 'son/collect.mov');
+        this.load.audio('moleu', 'son/collect.wav');
     }
 
 
@@ -39,6 +39,7 @@ class Tableau extends Phaser.Scene{
         this.blood.visible=false; // wtf ??? >> apparition du sang middle screen ..; wtf
 
         this.boutonTir = this.input.keyboard.addKey('A');
+        this.sound.add('moleu');
     }
     
     update(){
@@ -50,7 +51,7 @@ class Tableau extends Phaser.Scene{
     tirPlayer(){
         if (Phaser.Input.Keyboard.JustDown(this.boutonTir)){
             this.player.shoot();
-            this.sound.play('moleu', {volume : 0.2});
+
         }
     }
 /**
@@ -68,8 +69,8 @@ class Tableau extends Phaser.Scene{
         me.tweens.add({
             targets:me.blood,
             
-            duration:500, // temps en ms ...
-            displayHeight:{ // permet de distorde l'image et donc de donner l'effetd e la gerbe de sang ... 
+            duration:500,
+            displayHeight:{
                 from:10,
                 to:100,
             },
@@ -78,41 +79,14 @@ class Tableau extends Phaser.Scene{
                 to:100,
             },
             onComplete: function () {
-                me.blood.visible=false; // fait disparaître le sang quand l'objet est mort donc apres le nb de s requis ??? 
+                me.blood.visible=false;
                 onComplete();
             }
         })
     }
 
-    found_piece (player, medikit_1) // on crée la fonction qui s'active quand on apelle le ramassage d'étoile dans les éléments plus bas ... 
-    {
 
-        medikit_1.disableBody(true, true);
-
- 
-        ui.gagne();
-        //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
-        let totalActive=0;
-        for(let child of this.children.getChildren()){ // WTF ?????
-            if(child.texture && child.texture.key==="medikit_1"){
-                if(child.active){
-                    totalActive++;
-
-                }
-            }
-        }
-        if(totalActive===0){ // quand toutes les étoiles ont été récup on apelle win , 
-            this.win(); 
-        }
-       
-    }
-
-    /**
-     * Aïeee ça fait mal
-     * @param player
-     * @param tono
-     */
-    hit_tono (player, tono) // je ne compwend pas ...
+    hit_tono (player, tono)
     {
         this.physics.pause();
         player.setTint(0xff0000); 
@@ -120,39 +94,35 @@ class Tableau extends Phaser.Scene{
         this.scene.restart(); 
 
     }
-    /**
-     * Quand on touche un monstre
-     * si on le touche par en haut on le tue, sinon c'est lui qui nous tue
-     * @param {Player} player
-     * @param {Phaser.Physics.Arcade.Sprite} monster
-     */
-    hitMonster(player, monster){ // voilà parametrage des  acteurs de la fonction ...
+
+
+    hitMonster(player, monster){
         let me=this;
-        if(monster.isDead !== true){ //si notre monstre n'est pas déjà mort
+        if(monster.isDead !== true){
             if(
-                // si le player descend
+
                 player.body.velocity.y > 0
-                // et si le bas du player est plus haut que le monstre
-                && player.getBounds().bottom < monster.getBounds().top+30 // ♥ && est un "et"
+
+                && player.getBounds().bottom < monster.getBounds().top+30
 
             ){
-                ui.gagne(); // je comprend pas vrmt là ...
-                monster.isDead=true; //ok le monstre est mort
+                ui.gagne();
+                monster.isDead=true;
                 monster.visible=false;
-                this.sound.play('recup');
+
                 this.saigne(monster,function(){
-                    //à la fin de la petite anim...ben il se passe rien :)
+
                 })
-                //notre joueur rebondit sur le monstre
+
                 player.directionY=500;
             }else{
-                //le joueur est mort
-                if(!me.player.isDead){ // wtf le point d'interrogation ...
+
+                if(!me.player.isDead){
                     me.player.isDead=true;
                     me.player.visible=false;
                     //ça saigne...
                     me.saigne(me.player,function(){
-                        //à la fin de la petite anim, on relance le jeu
+
                         me.blood.visible=false;
                         me.player.anims.play('turn');
                         me.player.isDead=false;
@@ -171,49 +141,32 @@ class Tableau extends Phaser.Scene{
         ui.gagne();
 
 
-        //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
+
         let totalActive=0;
         for(let child of this.children.getChildren()){
             if(child.texture && child.texture.key==="star"){
                 if(child.active){
                     totalActive++;
-                    this.sound.play('recup', {volume : 0.2});
+                    this.sound.play('moleu', {volume : 0.2});
+
                 }
             }
         }
-        //if(totalActive===0){
-        //    this.win();
-        //}
-        /*
-        // this.stars est un groupe (plus tard)
-        if (this.stars.countActive(true) === 0)
-        {
-           this.win();
-        }
-         */
+
     }
     
-    /**
-     * Pour reset cette scène proprement
-     * @private
-     */
+
     _destroy(){
         this.player.stop();
         this.scene.stop();
     }
 
-    /**
-     * Quand on a gagné
-     */
+
     win(){
         Tableau.suivant();
     }
 
 
-
-    /**
-     * Va au tableau suivant
-     */
     static suivant(){
         let ceSeraLaSuivante=false;
         let nextScene=null;
@@ -247,8 +200,5 @@ class Tableau extends Phaser.Scene{
 
 }
 
-/**
- * Le tableau en cours
- * @type {null|Tableau} // je comprend toujours rien ... 
- */
+
 Tableau.current=null;
