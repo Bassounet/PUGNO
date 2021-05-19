@@ -109,7 +109,7 @@ class Tableau extends Phaser.Scene{
                 && player.getBounds().bottom < tono.getBounds().top+30
 
             ){
-                // ui.gagne();
+                
                 tono.isDead=true;
                 tono.visible=false;
 
@@ -153,7 +153,7 @@ class Tableau extends Phaser.Scene{
                 && player.getBounds().bottom < mine.getBounds().top+30
 
             ){
-                // ui.gagne();
+
                 mine.isDead=true;
                 mine.visible=false;
 
