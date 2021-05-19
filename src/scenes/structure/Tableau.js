@@ -103,7 +103,7 @@ class Tableau extends Phaser.Scene{
     }
 
 
-    hitMonster(player, monster){
+    hitMechant(player, monster){
         let me=this;
         if(monster.isDead !== true){
             if(

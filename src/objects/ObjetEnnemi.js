@@ -11,7 +11,7 @@ class ObjetEnnemi extends ObjetPhysique{
         scene.physics.add.overlap(
             scene.player,
             this,
-            scene.hitMonster,
+            scene.hitMechant,
             null,
             scene
         );
