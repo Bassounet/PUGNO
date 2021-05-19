@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/ObjetEnnemi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ObjetEnnemi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Tono.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Tono.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/mine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/mine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +119,7 @@
       <workItem from="1621347840232" duration="7519000" />
       <workItem from="1621411498283" duration="5715000" />
       <workItem from="1621420583927" duration="1852000" />
-      <workItem from="1621424517362" duration="671000" />
+      <workItem from="1621424517362" duration="3002000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
@@ -158,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621359695619</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok">
+      <created>1621429621081</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1621429621081</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

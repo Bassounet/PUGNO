@@ -23,6 +23,7 @@ class Tableau extends Phaser.Scene{
         this.load.audio('talkie', 'son/talkie.wav');
         this.load.audio('jump', 'son/jump.wav');
         this.load.audio('explosion', 'son/explo.wav');
+        this.load.audio('fire', 'son/fire.wav');
     }
 
 
@@ -49,6 +50,7 @@ class Tableau extends Phaser.Scene{
         this.sound.add('talkie');
         this.sound.add('jump');
         this.sound.add('explosion');
+        this.sound.add('fire');
     }
     
     update(){
@@ -60,6 +62,7 @@ class Tableau extends Phaser.Scene{
     tirPlayer(){
         if (Phaser.Input.Keyboard.JustDown(this.boutonTir)){
             this.player.shoot();
+            this.sound.play('fire', {volume: 3});
 
         }
     }
@@ -106,13 +109,57 @@ class Tableau extends Phaser.Scene{
                 && player.getBounds().bottom < tono.getBounds().top+30
 
             ){
-                ui.gagne();
+                // ui.gagne();
                 tono.isDead=true;
                 tono.visible=false;
 
-                this.sound.play('explosion', {volume : 1 });
+                this.sound.play('explosion', {volume : 2 });
 
                 this.saigne(tono,function(){
+
+                })
+
+                player.directionY=500;
+            }else{
+
+                if(!me.player.isDead){
+                    me.player.isDead=true;
+                    me.player.visible=false;
+
+                    me.saigne(me.player,function(){
+
+                        me.blood.visible=false;
+                        me.player.anims.play('turn');
+                        me.player.isDead=false;
+                        me.scene.restart();
+                        // this.sound.play('die', {volume : 1 });
+
+                    })
+
+                }
+            }
+        }
+
+    }
+
+    hitMine (player, mine)
+    {
+        let me=this;
+        if(mine.isDead !== true){
+            if(
+
+                player.body.velocity.y > 0
+
+                && player.getBounds().bottom < mine.getBounds().top+30
+
+            ){
+                // ui.gagne();
+                mine.isDead=true;
+                mine.visible=false;
+
+                this.sound.play('explosion', {volume : 2 });
+
+                this.saigne(mine,function(){
 
                 })
 

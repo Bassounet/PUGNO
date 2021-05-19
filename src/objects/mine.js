@@ -1,19 +1,15 @@
-class mine extends ObjetEnnemi{
-    /**
-     *
-     * @param {Tableau} scene
-     * @param x
-     * @param y
-     */
-    constructor(scene, x, y) {
-        super(scene, x, y, "mine");
-        this.body.allowGravity=true;
-        this.flipX=false;
-        
-        this.setGravityY(40);
-        this.setDisplaySize(35,25);
-        this.setOffset(0,0);
-        this.setCollideWorldBounds(true)
-        
+class mine extends ObjetPhysique{
+
+    constructor(scene, x, y,image) {
+        super(scene, x, y,"mine");
+        scene.physics.add.overlap(
+            scene.player,
+            this,
+            scene.hitMine,
+            null,
+            scene
+        );
+        // this.setBodySize(30,55);
+        // this.setOffset(20,10);
     }
 }

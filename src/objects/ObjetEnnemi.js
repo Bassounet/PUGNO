@@ -5,7 +5,11 @@ class ObjetEnnemi extends ObjetPhysique{
      * @param {Number} x
      * @param {Number} y
      * @param {string} image
+     *
+     *
      */
+
+
     constructor(scene, x, y,image) {
         super(scene, x, y,image);
         scene.physics.add.overlap(
@@ -18,6 +22,8 @@ class ObjetEnnemi extends ObjetPhysique{
     }
     Tupue(){
         this.disableBody(true, true);
+        this.sound.play('die', {volume : 1 });
+
     }
 
 }
