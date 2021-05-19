@@ -19,6 +19,9 @@ class Tableau extends Phaser.Scene{
             { frameWidth: 61, frameHeight: 64  }
         );
         this.load.audio('moleu', 'son/collect.wav');
+        this.load.audio('die', 'son/die.wav');
+        this.load.audio('talkie', 'son/talkie.wav');
+        this.load.audio('jump', 'son/jump.wav');
     }
 
 
@@ -39,7 +42,11 @@ class Tableau extends Phaser.Scene{
         this.blood.visible=false; // wtf ??? >> apparition du sang middle screen ..; wtf
 
         this.boutonTir = this.input.keyboard.addKey('A');
+
         this.sound.add('moleu');
+        this.sound.add('die');
+        this.sound.add('talkie');
+        this.sound.add('jump');
     }
     
     update(){
@@ -110,6 +117,8 @@ class Tableau extends Phaser.Scene{
                 monster.isDead=true;
                 monster.visible=false;
 
+                this.sound.play('die', {volume : 1 });
+
                 this.saigne(monster,function(){
 
                 })
@@ -120,7 +129,7 @@ class Tableau extends Phaser.Scene{
                 if(!me.player.isDead){
                     me.player.isDead=true;
                     me.player.visible=false;
-                    //ça saigne...
+
                     me.saigne(me.player,function(){
 
                         me.blood.visible=false;
@@ -139,6 +148,7 @@ class Tableau extends Phaser.Scene{
     {
         star.disableBody(true, true);
         ui.gagne();
+        this.sound.play('moleu', {volume : 1 });
 
 
 
@@ -147,7 +157,7 @@ class Tableau extends Phaser.Scene{
             if(child.texture && child.texture.key==="star"){
                 if(child.active){
                     totalActive++;
-                    this.sound.play('moleu', {volume : 0.2});
+                    this.sound.play('collect_1', {volume : 1 });
 
                 }
             }

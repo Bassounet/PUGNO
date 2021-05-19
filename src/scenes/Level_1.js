@@ -25,7 +25,7 @@ class Level_1 extends Tableau {
 
         this.load.audio('jump', 'son/jump.wav');
         this.load.audio('amb', 'son/ambiance.wav');
-        this.load.audio('moleu', 'son/collect.wav');
+
 
     }
 
@@ -36,7 +36,7 @@ class Level_1 extends Tableau {
         super.create();
 
         this.musicamb = this.sound.add('amb');
-        this.sound.add('moleu');
+
 
         var musicConfig =
             {
