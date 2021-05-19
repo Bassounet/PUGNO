@@ -16,7 +16,7 @@ class Level_1 extends Tableau {
         this.load.image('platform', 'assets/new_image/platform.png');
         this.load.image('blue_sky', 'assets/blue_sky.png');
         this.load.image('tir', 'assets/new_image/Bullet.png');
-        this.load.image('star', 'assets/medikitV2.png');
+        this.load.image('star', 'assets/moleu.png');
         this.load.image('test_1', 'assets/new_image/test-dgt-1.png');
 
         this.load.image('sprite', 'ref/sprite.png');

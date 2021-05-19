@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V9.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V9.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/ObjetEnnemi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ObjetEnnemi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +112,7 @@
       <workItem from="1621332333089" duration="2042000" />
       <workItem from="1621347840232" duration="7519000" />
       <workItem from="1621411498283" duration="5715000" />
+      <workItem from="1621420583927" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
