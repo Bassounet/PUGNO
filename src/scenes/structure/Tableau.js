@@ -117,7 +117,7 @@ class Tableau extends Phaser.Scene{
                 monster.isDead=true;
                 monster.visible=false;
 
-                this.sound.play('die', {volume : 1 });
+                // this.sound.play('die', {volume : 1 });
 
                 this.saigne(monster,function(){
 
