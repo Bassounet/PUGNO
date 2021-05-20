@@ -15,7 +15,7 @@ class Level_1 extends Tableau {
         this.load.image('platform', 'assets/new_image/platform.png');
         this.load.image('blue_sky', 'assets/blue_sky.png');
         this.load.image('tir', 'assets/new_image/Bullet.png');
-        this.load.image('star', 'assets/moleu.png');
+        this.load.image('moleu_', 'assets/moleu.png');
         this.load.image('test_1', 'assets/new_image/test-dgt-1.png');
         this.load.image('cible', 'assets/cible.png');
 
@@ -143,22 +143,24 @@ class Level_1 extends Tableau {
             ici.mechantContainer.add(mechant);
             ici.physics.add.collider(mechant, this.floor);
 
-            // this.physics.add.collider(mechant, this.floor);
+
 
         });
 
-        this.stars=this.physics.add.group();
-        this.stars.create(663,263,"star");
+        this.moleu=this.physics.add.group();
+        this.moleu.create(663,263,"moleu_");
 
-        this.stars.children.iterate(function (child) {
+        this.moleu.children.iterate(function (child) {
             child.setCollideWorldBounds(true);
             child.setBounce(0);
-            child.setDisplaySize(30,30)
-            child.setBodySize(20,20);
+            child.setDisplaySize(30,50)
+            child.setBodySize(20,45);
             child.body.allowGravity = false;
+            child.flipX = true;
+
         });
-        //si le joueur touche une étoile dans le groupe...
-        this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
+
+        this.physics.add.overlap(this.player, this.moleu, this.getMoleu, null, this);
 
 
         ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
@@ -229,12 +231,12 @@ class Level_1 extends Tableau {
 
         // ***-*-*-*-*-*-*- Z ORDER -*-*-*-*-*-*-*-*-
 
-        let z = 1000; //niveau Z qui a chaque fois est décrémenté.
+        let z = 1000;
 
         //devant
 
         this.blood.setDepth(z--);
-        this.stars.setDepth(z--);
+        this.moleu.setDepth(z--);
         this.player.setDepth(z--);
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
@@ -300,7 +302,7 @@ class Level_1 extends Tableau {
         this.background.tilePositionX = this.cameras.main.scrollX * 0.2;
         this.background.tilePositionY = this.cameras.main.scrollY * 0.15;
 
-        // this.moveParallax();
+
 
         //optimisation
         //teste si la caméra a bougé

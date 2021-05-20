@@ -12,11 +12,6 @@ class Tir extends ObjetPhysique{
         this.setBounce(1);
         this.setDepth(1000);
 
-        scene.cibleContainer.iterate(monster=>{
-            scene.physics.add.overlap(this, monster, function(){monster.Tupue()}, null, scene);
-
-        })
-
         scene.mechantContainer.iterate(monster=>{
             scene.physics.add.overlap(this, monster, function(){monster.Tupue()}, null, scene);
 

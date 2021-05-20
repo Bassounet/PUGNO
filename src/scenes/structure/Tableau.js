@@ -221,7 +221,7 @@ class Tableau extends Phaser.Scene{
 
     }
 
-    ramasserEtoile (player, star)
+    getMoleu (player, star)
     {
         star.disableBody(true, true);
         ui.gagne();

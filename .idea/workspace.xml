@@ -4,16 +4,9 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok">
-      <change afterPath="$PROJECT_DIR$/src/objects/cible1.js" afterDir="false" />
+    <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="cibles presk oké">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/moleu.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/moleu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/ObjetEnnemi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ObjetEnnemi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/objects/Tir.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Tir.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/mechant1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/mechant1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
     </list>
@@ -127,7 +120,7 @@
       <workItem from="1621433515777" duration="1565000" />
       <workItem from="1621492623105" duration="1817000" />
       <workItem from="1621509774723" duration="1022000" />
-      <workItem from="1621521388554" duration="2458000" />
+      <workItem from="1621521388554" duration="4304000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
@@ -178,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621429621081</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="cibles presk oké">
+      <created>1621523909719</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621523909719</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +202,8 @@
     <MESSAGE value="on push du bon jus de france" />
     <MESSAGE value="yep" />
     <MESSAGE value="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok" />
+    <MESSAGE value="cibles presk oké" />
+    <option name="LAST_COMMIT_MESSAGE" value="cibles presk oké" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
