@@ -1,13 +1,5 @@
 class ObjetEnnemi extends ObjetPhysique{
-    /**
-     * Quand Player touche cet objet, il a perdu
-     * @param {Tableau} scene
-     * @param {Number} x
-     * @param {Number} y
-     * @param {string} image
-     *
-     *
-     */
+
 
 
     constructor(scene, x, y,image) {
@@ -22,6 +14,7 @@ class ObjetEnnemi extends ObjetPhysique{
     }
     Tupue(){
         this.disableBody(true, true);
+        console.log('gg');
         // this.sound.play('die', {volume : 1 });
 
     }

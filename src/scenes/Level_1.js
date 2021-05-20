@@ -17,9 +17,10 @@ class Level_1 extends Tableau {
         this.load.image('tir', 'assets/new_image/Bullet.png');
         this.load.image('star', 'assets/moleu.png');
         this.load.image('test_1', 'assets/new_image/test-dgt-1.png');
+        this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_53.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_55.json');
         this.load.image('back', 'assets/images/background.png');
 
 
@@ -129,6 +130,7 @@ class Level_1 extends Tableau {
         this.mechantContainer = this.add.container();
         this.mineContainer = this.add.container();
         this.tonoContainer = this.add.container();
+        this.cibleContainer = this.add.container();
 
 
         let ici = this;
@@ -175,6 +177,14 @@ class Level_1 extends Tableau {
             let minex = new mine(ici, mineObject.x, mineObject.y);
             ici.mineContainer.add(minex);
             ici.physics.add.collider(minex, this.floor);
+
+        });
+
+        ici.cibleObjects = ici.map.getObjectLayer('cibles')['objects'];
+        ici.cibleObjects.forEach(cibleObject => {
+            let cibleu = new cible1(ici, cibleObject.x, cibleObject.y);
+            ici.mineContainer.add(cibleu);
+            ici.physics.add.collider(cibleu, this.floor);
 
         });
 
@@ -229,6 +239,7 @@ class Level_1 extends Tableau {
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
         this.mechantContainer.setDepth(z);
+        this.cibleContainer.setDepth(z);
 
         this.platforms.setDepth(z);
         this.floor.setDepth(z--);

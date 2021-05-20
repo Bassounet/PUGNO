@@ -28,20 +28,17 @@ class Tableau extends Phaser.Scene{
 
 
     create(){
-        Tableau.current=this; // je comprend pas trop là ... 
+        Tableau.current=this;
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
 
-        /**
-         * Le joueur
-         * @type {Player}
-         */
-        this.player=new Player(this,50,250);
+
+        this.player=new Player(this,20,250);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
         this.blood.displayHeight=64;
-        this.blood.visible=false; // wtf ??? >> apparition du sang middle screen ..; wtf
+        this.blood.visible=false;
 
         this.boutonTir = this.input.keyboard.addKey('A');
 
@@ -66,11 +63,7 @@ class Tableau extends Phaser.Scene{
 
         }
     }
-/**
-     *
-     * @param {Sprite} object Objet qui saigne
-     * @param {function} onComplete Fonction à appeler quand l'anim est finie
-     */
+
     saigne(object,onComplete){
         let me=this;
         me.blood.visible=true;
