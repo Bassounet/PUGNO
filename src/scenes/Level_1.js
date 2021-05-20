@@ -20,7 +20,7 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_55.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_61.json');
         this.load.image('back', 'assets/images/background.png');
 
 
@@ -149,6 +149,9 @@ class Level_1 extends Tableau {
 
         this.moleu=this.physics.add.group();
         this.moleu.create(663,263,"moleu_");
+        this.moleu.create(6750,220,"moleu_");
+        this.moleu.create(7066,220,"moleu_");
+        this.moleu.create(7519,270,"moleu_");
 
         this.moleu.children.iterate(function (child) {
             child.setCollideWorldBounds(true);
@@ -156,7 +159,7 @@ class Level_1 extends Tableau {
             child.setDisplaySize(30,50)
             child.setBodySize(20,45);
             child.body.allowGravity = false;
-            child.flipX = true;
+            child.flipX = false;
 
         });
 
@@ -185,7 +188,7 @@ class Level_1 extends Tableau {
         ici.cibleObjects = ici.map.getObjectLayer('cibles')['objects'];
         ici.cibleObjects.forEach(cibleObject => {
             let cibleu = new cible1(ici, cibleObject.x, cibleObject.y);
-            ici.mineContainer.add(cibleu);
+            ici.cibleContainer.add(cibleu);
             ici.physics.add.collider(cibleu, this.floor);
 
         });
