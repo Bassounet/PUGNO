@@ -13,6 +13,7 @@ class Level_1 extends Tableau {
         this.load.image('mine', 'assets/mine.png');
         this.load.image('bullet', 'assets/bullet.png');
         this.load.image('platform', 'assets/new_image/platform.png');
+        this.load.image('platform_t', 'assets/tente_barre.png');
         this.load.image('blue_sky', 'assets/blue_sky.png');
         this.load.image('tir', 'assets/new_image/Bullet.png');
         this.load.image('moleu_', 'assets/moleu.png');
@@ -20,7 +21,7 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_61.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_68.json');
         this.load.image('back', 'assets/images/background.png');
 
 
@@ -121,6 +122,26 @@ class Level_1 extends Tableau {
             //child.refreshBody();
         });
 
+        this.platform_t = this.physics.add.group();
+
+        this.platform_t.create(1000,150,"platform_t");
+        this.platform_t.create(2688,288,"platform_t");
+        this.platform_t.create(3326,288,"platform_t");
+        this.platform_t.create(3519,288,"platform_t");
+        this.platform_t.create(3710,288,"platform_t");
+        this.platform_t.create(5889,288,"platform_t");
+        this.platform_t.create(6208,288,"platform_t");
+
+        this.platform_t.children.iterate(function (child) {
+            child.setImmovable(true); // pour ne pas bouger quand il y a collision
+            child.body.allowGravity = false; // on désactive l'effet de la gravité
+            child.setCollideWorldBounds(false);
+            child.setFriction(1); // pour que les éléments ne glissent sur cette plateforme
+            child.setOrigin(0, 0); // pour positionner plus facilement, repère en haut à gauche (descendant, vers la droite)
+            child.setDisplaySize(190, 8);
+            //child.refreshBody();
+        });
+
 
         // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
 
@@ -206,9 +227,11 @@ class Level_1 extends Tableau {
         this.floor.setCollisionByExclusion(-1, true);
         this.physics.add.collider(this.player, this.floor);
         this.physics.add.collider(this.player, this.platforms);
+        this.physics.add.collider(this.player, this.platform_t);
         this.physics.add.collider(this.mineContainer, this.floor);
         this.physics.add.collider(this.tonoContainer, this.floor);
         this.physics.add.collider(this.mechantContainer, this.floor);
+        this.physics.add.collider(this.mechantContainer, this.platform_t);
 
 
         //----------collisions---------------------
@@ -244,6 +267,7 @@ class Level_1 extends Tableau {
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
         this.mechantContainer.setDepth(z);
+        this.platform_t.setDepth(z);
         this.cibleContainer.setDepth(z);
 
         this.platforms.setDepth(z);
