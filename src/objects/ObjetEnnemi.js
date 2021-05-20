@@ -22,7 +22,7 @@ class ObjetEnnemi extends ObjetPhysique{
     }
     Tupue(){
         this.disableBody(true, true);
-        this.sound.play('die', {volume : 1 });
+        // this.sound.play('die', {volume : 1 });
 
     }
 
