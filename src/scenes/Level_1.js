@@ -231,7 +231,7 @@ class Level_1 extends Tableau {
         this.physics.add.collider(this.mineContainer, this.floor);
         this.physics.add.collider(this.tonoContainer, this.floor);
         this.physics.add.collider(this.mechantContainer, this.floor);
-        this.physics.add.collider(this.mechantContainer, this.platform_t);
+        this.physics.add.collider(this.platform_t, this.mechantContainer);
 
 
         //----------collisions---------------------

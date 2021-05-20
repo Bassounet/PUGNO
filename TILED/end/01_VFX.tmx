@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="500" height="7" tilewidth="64" tileheight="64" infinite="0" nextlayerid="25" nextobjectid="84">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="500" height="7" tilewidth="64" tileheight="64" infinite="0" nextlayerid="25" nextobjectid="85">
  <editorsettings>
-  <export target="VFX_67.json" format="json"/>
+  <export target="VFX_68.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="sprite_" tilewidth="64" tileheight="64" tilecount="308" columns="44">
   <image source="../../ref/sprite.png" width="2816" height="448"/>
