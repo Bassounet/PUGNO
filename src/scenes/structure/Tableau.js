@@ -109,7 +109,7 @@ class Tableau extends Phaser.Scene{
                 && player.getBounds().bottom < tono.getBounds().top+30
 
             ){
-                
+
                 tono.isDead=true;
                 tono.visible=false;
 
