@@ -36,6 +36,13 @@ class Level_1 extends Tableau {
 
         super.create();
 
+        this.tuto = this.add.image(300,200,"test_1")
+        this.tuto.setDisplaySize(100,100);
+
+        // this.tuto.create(1000,150,"test_1");
+
+
+
         this.musicamb = this.sound.add('amb');
 
 
@@ -264,6 +271,7 @@ class Level_1 extends Tableau {
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
         this.player.setDepth(z--);
+        this.tuto.setDepth(z);
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
         this.mechantContainer.setDepth(z);
@@ -285,39 +293,41 @@ class Level_1 extends Tableau {
         //
 
 
-        // apparitionTexte()
-        // {
-        //     if (this.player.x < 1) {
-        //         console.log('ok');
-        //         //this.tuto_dash.alpha=1;
-        //         Tableau.current.tweens.add({
-        //             targets: Tableau.current.test_1,
-        //             alpha: 1,
-        //             duration: 100,
-        //             ease: 'Sine.easeInOut',
-        //
-        //         })
-        //     } else if (this.player.x >= 1) {
-        //         console.log('ok');
-        //         //this.tuto_dash.alpha=0;
-        //         Tableau.current.tweens.add({
-        //             targets: Tableau.current.test_1,
-        //             alpha: 0,
-        //             duration: 100,
-        //             ease: 'Sine.easeInOut',
-        //
-        //         })
-        //     }
-        //
-        // }
 
 
+
+
+    }
+
+    apparitionTexte() {
+
+        if (this.player.x < 520) {
+            //this.tuto_dash.alpha=1;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.tuto,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+        } else if (this.player.x >= 0) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.tuto,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+        }
     }
     
 
 
     update() {
         super.update();
+
+        this.apparitionTexte();
         //le second plan se déplace moins vite pour accentuer l'effet
         this.sky.tilePositionX = this.cameras.main.scrollX * 0.1;
         this.sky.tilePositionY = this.cameras.main.scrollY * 0.05;
