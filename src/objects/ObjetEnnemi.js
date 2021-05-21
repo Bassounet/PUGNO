@@ -16,6 +16,7 @@ class ObjetEnnemi extends ObjetPhysique{
     Tupue(){
         this.disableBody(true, true);
         console.log('gg');
+        this.scene.sound.play('die',{volume : 1});
         // this.sound.play('die', {volume : 1 });
 
     }
