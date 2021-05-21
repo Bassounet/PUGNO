@@ -11,6 +11,7 @@ class ObjetEnnemi extends ObjetPhysique{
             null,
             scene
         );
+        scene.physics.add.collider(scene.platform_t, this);
     }
     Tupue(){
         this.disableBody(true, true);
