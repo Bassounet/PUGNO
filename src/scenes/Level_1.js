@@ -36,11 +36,6 @@ class Level_1 extends Tableau {
 
         super.create();
 
-        this.tuto = this.add.image(300,200,"test_1")
-        this.tuto.setDisplaySize(100,100);
-
-        // this.tuto.create(1000,150,"test_1");
-
 
 
         this.musicamb = this.sound.add('amb');
@@ -64,7 +59,7 @@ class Level_1 extends Tableau {
         //notre map
         this.map = this.make.tilemap({key: 'map'});
 
-        //nos images qui vont avec la map
+
 
         this.tileset = this.map.addTilesetImage('sprite_', 'sprite');
 
@@ -78,6 +73,13 @@ class Level_1 extends Tableau {
 
 
         //   ---- PLACEMENT GRAPH ------
+
+        //   ---- PLACEMENT texte ------
+
+        this.tuto = this.add.image(300,200,"test_1")
+        this.tuto.setDisplaySize(100,100);
+
+        //   ---- PLACEMENT texte FIN ------
 
 
         this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
@@ -109,25 +111,21 @@ class Level_1 extends Tableau {
         this.sky2.displayWidth = 21 * 64;
 
 
-        //   ---- PLACEMENT INTERACT/ MOV  ------
-
 
         // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-
 
         this.platforms = this.physics.add.group();
-
-        // créeons nos platform
-
-
         this.platforms.children.iterate(function (child) {
-            child.setImmovable(true); // pour ne pas bouger quand il y a collision
-            child.body.allowGravity = false; // on désactive l'effet de la gravité
+            child.setImmovable(true);
+            child.body.allowGravity = false;
             child.setCollideWorldBounds(false);
-            child.setFriction(1); // pour que les éléments ne glissent sur cette plateforme
-            child.setOrigin(0, 0); // pour positionner plus facilement, repère en haut à gauche (descendant, vers la droite)
+            child.setFriction(1);
+            child.setOrigin(0, 0);
             child.setDisplaySize(103, 7);
-            //child.refreshBody();
+
         });
+
+        // _*_*_*_*_*_*__* PLATFORM tente  *--*-*-*-*-
 
         this.platform_t = this.physics.add.group();
 
@@ -149,8 +147,13 @@ class Level_1 extends Tableau {
             //child.refreshBody();
         });
 
+        // _*_*_*_*_*_*__* PLATFORM tente FIN   *--*-*-*-*-
 
-        // _*_*_*_*_*_*__* PLATFORMS *--*-*-*-*-*
+        // _*_*_*_*_*_*__* PLATFORMS FIN *--*-*-*-*-*
+
+
+
+        // ----------- ***** ---- ON CREE NOS ITEM ---*****---------
 
         // ----------- ***** ---- ON CREE NOS MONSTRES ---*****---------
 
@@ -174,25 +177,6 @@ class Level_1 extends Tableau {
 
 
         });
-
-        this.moleu=this.physics.add.group();
-        this.moleu.create(663,263,"moleu_");
-        this.moleu.create(6750,220,"moleu_");
-        this.moleu.create(7066,220,"moleu_");
-        this.moleu.create(7519,270,"moleu_");
-
-        this.moleu.children.iterate(function (child) {
-            child.setCollideWorldBounds(true);
-            child.setBounce(0);
-            child.setDisplaySize(30,50)
-            child.setBodySize(20,45);
-            child.body.allowGravity = false;
-            child.flipX = false;
-
-        });
-
-        this.physics.add.overlap(this.player, this.moleu, this.getMoleu, null, this);
-
 
         ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
 
@@ -221,15 +205,37 @@ class Level_1 extends Tableau {
 
         });
 
+        // ----------- ***** ---- ON CREE NOS MONSTRES FIN ---*****---------
 
-        // ----------- ***** ----------- ON CREE NOS MONSTRES ---------*****-
+        // ----------- ***** ---- ON CREE NOS CRISTAUX  ---*****---------
+
+        this.moleu=this.physics.add.group();
+        this.moleu.create(663,263,"moleu_");
+        this.moleu.create(6750,220,"moleu_");
+        this.moleu.create(7066,220,"moleu_");
+        this.moleu.create(7519,270,"moleu_");
+
+        this.moleu.children.iterate(function (child) {
+            child.setCollideWorldBounds(true);
+            child.setBounce(0);
+            child.setDisplaySize(30,50)
+            child.setBodySize(20,45);
+            child.body.allowGravity = false;
+            child.flipX = false;
+
+        });
+
+        this.physics.add.overlap(this.player, this.moleu, this.getMoleu, null, this);
+
+        // ----------- ***** ---- ON CREE NOS CRISTAUX FIN   ---*****---------
+
+        // ----------- ***** ---- ON CREE NOS ITEM FIN ---*****---------
 
 
-        //   ---- PLACEMENT INTERACT/ MOV  ------
+
 
 
         //----------collisions---------------------
-
 
         this.floor.setCollisionByExclusion(-1, true);
         this.physics.add.collider(this.player, this.floor);
@@ -240,8 +246,7 @@ class Level_1 extends Tableau {
         this.physics.add.collider(this.mechantContainer, this.floor);
         this.physics.add.collider(this.platform_t, this.mechantContainer);
 
-
-        //----------collisions---------------------
+        //----------collisions FIN ---------------------
 
 
         //----------débug---------------------
@@ -290,14 +295,10 @@ class Level_1 extends Tableau {
 
         // ***-*-*-*-*-*-*- Z ORDER FIN -*-*-*-*-*-*-*-*-
 
-        //
-
-
-
-
-
 
     }
+
+    // ***-*-*-*-*-*-*- NEW FONCTIONS  -*-*-*-*-*-*-*-*-
 
     apparitionTexte() {
 
@@ -321,6 +322,8 @@ class Level_1 extends Tableau {
             })
         }
     }
+
+    // ***-*-*-*-*-*-*- NEW FONCTIONS FIN  -*-*-*-*-*-*-*-*-
     
 
 
@@ -339,8 +342,6 @@ class Level_1 extends Tableau {
         this.background.tilePositionX = this.cameras.main.scrollX * 0.2;
         this.background.tilePositionY = this.cameras.main.scrollY * 0.15;
 
-
-
         //optimisation
         //teste si la caméra a bougé
         let actualPosition = JSON.stringify(this.cameras.main.worldView);
@@ -349,12 +350,6 @@ class Level_1 extends Tableau {
             this.previousPosition = actualPosition;
             // this.optimizeDisplay();
 
-
-
         }
-
-
-
-    
     }
 }
