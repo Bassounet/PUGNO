@@ -4,16 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="cibles presk oké">
+    <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V11.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V11.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_start.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_start.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_tiled.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_tiled_V2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_v.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_v.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +119,7 @@
       <workItem from="1621509774723" duration="1022000" />
       <workItem from="1621521388554" duration="12009000" />
       <workItem from="1621584967171" duration="1319000" />
-      <workItem from="1621600813451" duration="4704000" />
+      <workItem from="1621600813451" duration="4818000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
@@ -185,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621523909719</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Little_clean_for_vide_and_start">
+      <created>1621686542628</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621686542628</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +209,8 @@
     <MESSAGE value="yep" />
     <MESSAGE value="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok" />
     <MESSAGE value="cibles presk oké" />
-    <option name="LAST_COMMIT_MESSAGE" value="cibles presk oké" />
+    <MESSAGE value="Little_clean_for_vide_and_start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little_clean_for_vide_and_start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
