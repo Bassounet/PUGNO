@@ -24,6 +24,7 @@ let config = {
         new Tableau_v("test_v"),
         new Tableau_start("start"),
         new Level_1("un début"),
+        new settings ("settings"),
 
      
     ],

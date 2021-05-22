@@ -16,8 +16,7 @@ class Tableau_start extends Tableau {
         super.create();
 
         this.add.image(448,224,'fond');
-        this.motiv = this.sound.add('go');
-        this.woosh = this.sound.add('woosh');
+
 
         // ---- *** ---- VERS SUIVANT  ---- *** ----
 
@@ -52,8 +51,8 @@ class Tableau_start extends Tableau {
                 this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) =>
                 {
                     // Tableau.suivant();
-                    this.game.scene.start(Tableau_v);
-                    this.scene.start("test_v");
+                    this.game.scene.start(settings);
+                    this.scene.start("settings");
 
                 })
             }
@@ -73,7 +72,9 @@ class Tableau_start extends Tableau {
                 this.cameras.main.fadeOut(1000, 0, 0, 0)
                 this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) =>
                 {
-                    Tableau.suivant();
+                    this.game.scene.start(tableau_v);
+                    this.scene.start("test_v");
+
 
                 })
             }

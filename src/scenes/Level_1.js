@@ -21,7 +21,7 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_68.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_73.json');
         this.load.image('back', 'assets/images/background.png');
 
 
@@ -131,9 +131,9 @@ class Level_1 extends Tableau {
 
         this.platform_t.create(1000,150,"platform_t");
         this.platform_t.create(2688,288,"platform_t");
-        this.platform_t.create(3326,288,"platform_t");
-        this.platform_t.create(3519,288,"platform_t");
-        this.platform_t.create(3710,288,"platform_t");
+        this.platform_t.create(3390,288,"platform_t");
+        this.platform_t.create(3583,288,"platform_t");
+        this.platform_t.create(3774,288,"platform_t");
         this.platform_t.create(5889,288,"platform_t");
         this.platform_t.create(6208,288,"platform_t");
 
