@@ -76,7 +76,10 @@ class Level_1 extends Tableau {
 
         //   ---- PLACEMENT texte ------
 
-        this.tuto = this.add.image(300,200,"test_1")
+        let text1_x = 560;
+        let text1_y = 160;
+
+        this.tuto = this.add.image(text1_x,text1_y,"test_1")
         this.tuto.setDisplaySize(100,100);
 
         //   ---- PLACEMENT texte FIN ------
@@ -302,7 +305,7 @@ class Level_1 extends Tableau {
 
     apparitionTexte() {
 
-        if (this.player.x < 520) {
+        if (this.player.x < 300 ) {
             //this.tuto_dash.alpha=1;
             Tableau.current.tweens.add({
                 targets: Tableau.current.tuto,
@@ -311,7 +314,8 @@ class Level_1 extends Tableau {
                 ease: 'Sine.easeInOut',
 
             })
-        } else if (this.player.x >= 0) {
+            console.log('ok');
+        } else if (this.player.x >= 100 ) {
             //this.tuto_dash.alpha=0;
             Tableau.current.tweens.add({
                 targets: Tableau.current.tuto,
