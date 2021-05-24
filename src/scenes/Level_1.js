@@ -20,7 +20,7 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_100.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_104.json');
         this.load.image('back', 'assets/images/background.png');
 
         this.load.image('txt1', 'assets/txt1.png');
@@ -104,7 +104,7 @@ class Level_1 extends Tableau {
         this.txt4 = this.add.image(text4_x, text4_y, "txt4")
         this.txt4.setDisplaySize(160,60);
 
-        let text5_x = 7850;
+        let text5_x = 7530;
         let text5_y = 285;
 
         this.txt5 = this.add.image(text5_x, text5_y, "txt5")
@@ -247,7 +247,7 @@ class Level_1 extends Tableau {
         this.moleu.create(663,263,"moleu_");
         this.moleu.create(6750,220,"moleu_");
         this.moleu.create(7066,220,"moleu_");
-        this.moleu.create(7519,270,"moleu_");
+        this.moleu.create(7354,220,"moleu_");
 
         this.moleu.children.iterate(function (child) {
             child.setCollideWorldBounds(true);
@@ -547,8 +547,8 @@ class Level_1 extends Tableau {
 
         // -*-*-*-*-*-*- TXT 5
 
-        let x_ok_start_5 = 7576;
-        let x_ok_fin_5 = 7916;
+        let x_ok_start_5 = 7370;
+        let x_ok_fin_5 = 7616;
 
 
         if (this.player.x < x_ok_start_5) {
@@ -645,8 +645,8 @@ class Level_1 extends Tableau {
         }
         // -*-*-*-*-*-*- TP3 FIN
 
-        let TP4_X = 7985;
-        let target_X4 = 8500;
+        let TP4_X = 7783;
+        let target_X4 = 8600;
 
 
         if (this.player.x > TP4_X &&  this.player.x < TP4_X + 128 ) {
