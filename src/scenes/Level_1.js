@@ -599,6 +599,67 @@ class Level_1 extends Tableau {
 
     // ***-*-*-*-*-*-*- TXT FIN -*-*-*-*-*-*-*-*-
 
+    TP() {
+
+        // -*-*-*-*-*-*- TP 1 FIN
+
+        let TP1_X = 2493;
+        let TP_Y = 400;
+        let target_X1 = 200;
+
+        if (this.player.x > TP1_X && this.player.y > TP_Y && this.player.x < TP1_X + 128 ) {
+
+            this.player.setPosition(target_X1,200);
+            this.sound.play('die', {volume : 1 });
+
+
+        }
+        // -*-*-*-*-*-*- TP 1 FIN
+
+        // -*-*-*-*-*-*- TP 2
+
+        let TP2_X = 4800;
+        let target_X2 = 3045;
+
+
+        if (this.player.x > TP2_X && this.player.y > TP_Y && this.player.x < TP2_X + 128 ) {
+
+            this.player.setPosition(target_X2,200);
+            this.sound.play('die', {volume : 1 });
+
+
+        }
+        // -*-*-*-*-*-*- TP 2 FIN
+
+        // -*-*-*-*-*-*- TP 3
+
+        let TP3_X = 6590;
+        let target_X3 = 5550;
+
+
+        if (this.player.x > TP3_X && this.player.y > TP_Y && this.player.x < TP3_X + 128 ) {
+
+            this.player.setPosition(target_X3,200);
+            this.sound.play('die', {volume : 1 });
+
+
+        }
+        // -*-*-*-*-*-*- TP3 FIN
+
+        let TP4_X = 7985;
+        let target_X4 = 8500;
+
+
+        if (this.player.x > TP4_X &&  this.player.x < TP4_X + 128 ) {
+
+            this.player.setPosition(target_X4,200);
+
+        }
+        // -*-*-*-*-*-*- TP3 FIN
+
+    }
+
+
 
     // ***-*-*-*-*-*-*- NEW FONCTIONS FIN  -*-*-*-*-*-*-*-*-
     
@@ -608,6 +669,8 @@ class Level_1 extends Tableau {
         super.update();
 
         this.apparitionText1();
+        this.TP();
+
         //le second plan se déplace moins vite pour accentuer l'effet
         this.sky.tilePositionX = this.cameras.main.scrollX * 0.1;
         this.sky.tilePositionY = this.cameras.main.scrollY * 0.05;
