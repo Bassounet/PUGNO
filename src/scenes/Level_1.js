@@ -21,10 +21,14 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_76.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_80.json');
         this.load.image('back', 'assets/images/background.png');
 
         this.load.image('txt1', 'assets/txt1.png');
+        this.load.image('txt2', 'assets/txt2.png');
+        this.load.image('txt3', 'assets/txt3.png');
+        this.load.image('txt4', 'assets/txt4.png');
+        this.load.image('txt5', 'assets/txt5.png');
 
 
         this.load.audio('amb', 'son/ambiance.wav');
@@ -75,15 +79,37 @@ class Level_1 extends Tableau {
 
         //   ---- PLACEMENT texte ------
 
-        // txt 1
+
 
         let text1_x = 580;
         let text1_y = 140;
+
         this.txt1 = this.add.image(text1_x, text1_y, "txt1")
         this.txt1.setDisplaySize(165,100);
 
-        // txt1 fin
+        let text2_x = 3210;
+        let text2_y = 145;
 
+        this.txt2 = this.add.image(text2_x, text2_y, "txt2")
+        this.txt2.setDisplaySize(165,80);
+
+        let text3_x = 4620;
+        let text3_y = 90;
+
+        this.txt3 = this.add.image(text3_x, text3_y, "txt3")
+        this.txt3.setDisplaySize(160,60);
+
+        let text4_x = 6470;
+        let text4_y = 160;
+
+        this.txt4 = this.add.image(text4_x, text4_y, "txt4")
+        this.txt4.setDisplaySize(160,60);
+
+        let text5_x = 7850;
+        let text5_y = 285;
+
+        this.txt5 = this.add.image(text5_x, text5_y, "txt5")
+        this.txt5.setDisplaySize(160,60);
 
 
 
@@ -285,14 +311,21 @@ class Level_1 extends Tableau {
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
         this.player.setDepth(z--);
-        this.txt1.setDepth(z);
+
+        this.txt1.setDepth(z)
+        this.txt2.setDepth(z);
+        this.txt3.setDepth(z);
+        this.txt4.setDepth(z);
+        this.txt5.setDepth(z);
+
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
         this.mechantContainer.setDepth(z);
-        this.platform_t.setDepth(z);
         this.cibleContainer.setDepth(z);
 
+        this.platform_t.setDepth(z);
         this.platforms.setDepth(z);
+
         this.floor.setDepth(z--);
 
         this.background.setDepth(z--);
@@ -313,11 +346,13 @@ class Level_1 extends Tableau {
 
     apparitionText1() {
 
-        let x_ok_start = 250;
-        let x_ok_fin = 735;
+        // -*-*-*-*-*-*- TXT 1
+
+        let x_ok_start_1 = 250;
+        let x_ok_fin_1 = 735;
 
 
-        if (this.player.x < x_ok_start) {
+        if (this.player.x < x_ok_start_1) {
             //this.tuto_dash.alpha=1;
             Tableau.current.tweens.add({
                 targets: Tableau.current.txt1,
@@ -327,7 +362,7 @@ class Level_1 extends Tableau {
 
             })
 
-        } else if (this.player.x > x_ok_fin) {
+        } else if (this.player.x > x_ok_fin_1) {
             //this.tuto_dash.alpha=0;
             Tableau.current.tweens.add({
                 targets: Tableau.current.txt1,
@@ -337,7 +372,7 @@ class Level_1 extends Tableau {
 
             })
 
-        } else if (this.player.x > x_ok_start + 1) {
+        } else if (this.player.x > x_ok_start_1 + 1) {
             //this.tuto_dash.alpha=0;
             Tableau.current.tweens.add({
                 targets: Tableau.current.txt1,
@@ -347,7 +382,7 @@ class Level_1 extends Tableau {
 
             })
 
-        } else if (this.player.x < x_ok_fin - 1) {
+        } else if (this.player.x < x_ok_fin_1 - 1) {
             //this.tuto_dash.alpha=0;
             Tableau.current.tweens.add({
                 targets: Tableau.current.txt1,
@@ -358,6 +393,208 @@ class Level_1 extends Tableau {
             })
 
         }
+
+        // -*-*-*-*-*-*- TXT 1 FIN
+
+        // -*-*-*-*-*-*- TXT 2
+
+        let x_ok_start_2 = 2920;
+        let x_ok_fin_2 = 3150;
+
+
+        if (this.player.x < x_ok_start_2) {
+            //this.tuto_dash.alpha=1;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt2,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_fin_2) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt2,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_start_2 + 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt2,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x < x_ok_fin_2 - 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt2,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        }
+
+        // -*-*-*-*-*-*- TXT 2 FIN
+
+        // -*-*-*-*-*-*- TXT 3
+
+        let x_ok_start_3 = 4366;
+        let x_ok_fin_3 = 4656;
+
+
+        if (this.player.x < x_ok_start_3) {
+            //this.tuto_dash.alpha=1;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt3,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_fin_3) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt3,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_start_3 + 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt3,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x < x_ok_fin_3 - 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt3,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        }
+
+        // -*-*-*-*-*-*- TXT 3 FIN
+
+        // -*-*-*-*-*-*- TXT 4
+
+        let x_ok_start_4 = 6450;
+        let x_ok_fin_4 = 6690;
+
+
+        if (this.player.x < x_ok_start_4) {
+            //this.tuto_dash.alpha=1;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt4,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_fin_4) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt4,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_start_4 + 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt4,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x < x_ok_fin_4 - 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt4,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        }
+
+        // -*-*-*-*-*-*- TXT 4 FIN
+
+        // -*-*-*-*-*-*- TXT 5
+
+        let x_ok_start_5 = 7576;
+        let x_ok_fin_5 = 7916;
+
+
+        if (this.player.x < x_ok_start_5) {
+            //this.tuto_dash.alpha=1;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt5,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_fin_5) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt5,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_start_5 + 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt5,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x < x_ok_fin_5 - 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt5,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        }
+
+        // -*-*-*-*-*-*- TXT 5 FIN
     }
 
     // ***-*-*-*-*-*-*- TXT FIN -*-*-*-*-*-*-*-*-

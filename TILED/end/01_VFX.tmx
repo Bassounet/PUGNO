@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="500" height="7" tilewidth="64" tileheight="64" infinite="0" nextlayerid="25" nextobjectid="85">
  <editorsettings>
-  <export target="VFX_77.json" format="json"/>
+  <export target="VFX_79.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="sprite_" tilewidth="64" tileheight="64" tilecount="308" columns="44">
   <image source="../../ref/sprite.png" width="2816" height="448"/>
@@ -13,12 +13,11 @@
   <object id="71" gid="271" x="7625" y="371" width="64" height="64"/>
  </objectgroup>
  <objectgroup id="14" name="mechant" offsetx="-3.66667" offsety="35">
-  <object id="52" gid="269" x="4451.67" y="139" width="64" height="64"/>
   <object id="66" gid="269" x="5487.67" y="171" width="64" height="64"/>
-  <object id="67" gid="269" x="6301.67" y="243" width="64" height="64"/>
-  <object id="68" gid="269" x="6207.67" y="249" width="64" height="64"/>
-  <object id="69" gid="269" x="6003.67" y="253" width="64" height="64"/>
-  <object id="70" gid="269" x="5911.67" y="247" width="64" height="64"/>
+  <object id="67" gid="269" x="6311.67" y="131" width="64" height="64"/>
+  <object id="68" gid="269" x="6217.67" y="137" width="64" height="64"/>
+  <object id="69" gid="269" x="6013.67" y="141" width="64" height="64"/>
+  <object id="70" gid="269" x="5921.67" y="135" width="64" height="64"/>
   <object id="79" gid="1073742093" x="1041.67" y="51" width="64" height="64"/>
  </objectgroup>
  <objectgroup id="18" name="mines">
