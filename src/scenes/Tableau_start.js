@@ -72,7 +72,7 @@ class Tableau_start extends Tableau {
                 this.cameras.main.fadeOut(1000, 0, 0, 0)
                 this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) =>
                 {
-                    this.game.scene.start(tableau_v);
+                    this.game.scene.start(Tableau_v);
                     this.scene.start("test_v");
 
 

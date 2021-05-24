@@ -21,7 +21,7 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_75.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_76.json');
         this.load.image('back', 'assets/images/background.png');
 
 
@@ -314,7 +314,7 @@ class Level_1 extends Tableau {
                 ease: 'Sine.easeInOut',
 
             })
-            console.log('ok');
+            
         } else if (this.player.x >= 100 ) {
             //this.tuto_dash.alpha=0;
             Tableau.current.tweens.add({
