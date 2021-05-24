@@ -24,6 +24,8 @@ class Level_1 extends Tableau {
         this.load.tilemapTiledJSON('map', 'TILED/end/VFX_76.json');
         this.load.image('back', 'assets/images/background.png');
 
+        this.load.image('txt1', 'assets/txt1.png');
+
 
         this.load.audio('amb', 'son/ambiance.wav');
 
@@ -58,9 +60,6 @@ class Level_1 extends Tableau {
 
         //notre map
         this.map = this.make.tilemap({key: 'map'});
-
-
-
         this.tileset = this.map.addTilesetImage('sprite_', 'sprite');
 
         //on agrandit le champ de la caméra du coup
@@ -76,11 +75,18 @@ class Level_1 extends Tableau {
 
         //   ---- PLACEMENT texte ------
 
-        let text1_x = 560;
-        let text1_y = 160;
+        // txt 1
 
-        this.tuto = this.add.image(text1_x,text1_y,"test_1")
-        this.tuto.setDisplaySize(100,100);
+        let text1_x = 580;
+        let text1_y = 140;
+        this.txt1 = this.add.image(text1_x, text1_y, "txt1")
+        this.txt1.setDisplaySize(165,100);
+
+        // txt1 fin
+
+
+
+
 
         //   ---- PLACEMENT texte FIN ------
 
@@ -279,7 +285,7 @@ class Level_1 extends Tableau {
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
         this.player.setDepth(z--);
-        this.tuto.setDepth(z);
+        this.txt1.setDepth(z);
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
         this.mechantContainer.setDepth(z);
@@ -303,29 +309,59 @@ class Level_1 extends Tableau {
 
     // ***-*-*-*-*-*-*- NEW FONCTIONS  -*-*-*-*-*-*-*-*-
 
-    apparitionTexte() {
+    // ***-*-*-*-*-*-*- TXT -*-*-*-*-*-*-*-*-
 
-        if (this.player.x < 300 ) {
+    apparitionText1() {
+
+        let x_ok_start = 250;
+        let x_ok_fin = 735;
+
+
+        if (this.player.x < x_ok_start) {
             //this.tuto_dash.alpha=1;
             Tableau.current.tweens.add({
-                targets: Tableau.current.tuto,
-                alpha: 1,
-                duration: 30,
-                ease: 'Sine.easeInOut',
-
-            })
-            
-        } else if (this.player.x >= 100 ) {
-            //this.tuto_dash.alpha=0;
-            Tableau.current.tweens.add({
-                targets: Tableau.current.tuto,
+                targets: Tableau.current.txt1,
                 alpha: 0,
                 duration: 30,
                 ease: 'Sine.easeInOut',
 
             })
+
+        } else if (this.player.x > x_ok_fin) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt1,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_start + 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt1,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x < x_ok_fin - 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt1,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
         }
     }
+
+    // ***-*-*-*-*-*-*- TXT FIN -*-*-*-*-*-*-*-*-
+
 
     // ***-*-*-*-*-*-*- NEW FONCTIONS FIN  -*-*-*-*-*-*-*-*-
     
@@ -334,7 +370,7 @@ class Level_1 extends Tableau {
     update() {
         super.update();
 
-        this.apparitionTexte();
+        this.apparitionText1();
         //le second plan se déplace moins vite pour accentuer l'effet
         this.sky.tilePositionX = this.cameras.main.scrollX * 0.1;
         this.sky.tilePositionY = this.cameras.main.scrollY * 0.05;
