@@ -20,7 +20,7 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_104.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_110.json');
         this.load.image('back', 'assets/images/background.png');
 
         this.load.image('txt1', 'assets/txt1.png');
@@ -608,9 +608,10 @@ class Level_1 extends Tableau {
 
         if (this.player.x > TP1_X && this.player.y > TP_Y && this.player.x < TP1_X + 128 ) {
 
-            this.player.setPosition(target_X1,200);
             this.sound.play('die', {volume : 1 });
-
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_X1,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
 
         }
         // -*-*-*-*-*-*- TP 1 FIN
@@ -623,9 +624,10 @@ class Level_1 extends Tableau {
 
         if (this.player.x > TP2_X && this.player.y > TP_Y && this.player.x < TP2_X + 128 ) {
 
-            this.player.setPosition(target_X2,200);
             this.sound.play('die', {volume : 1 });
-
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_X2,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
 
         }
         // -*-*-*-*-*-*- TP 2 FIN
@@ -638,12 +640,15 @@ class Level_1 extends Tableau {
 
         if (this.player.x > TP3_X && this.player.y > TP_Y && this.player.x < TP3_X + 128 ) {
 
-            this.player.setPosition(target_X3,200);
             this.sound.play('die', {volume : 1 });
-
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_X3,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
 
         }
         // -*-*-*-*-*-*- TP3 FIN
+
+        // -*-*-*-*-*-*- TP4
 
         let TP4_X = 7783;
         let target_X4 = 8600;
@@ -651,10 +656,26 @@ class Level_1 extends Tableau {
 
         if (this.player.x > TP4_X &&  this.player.x < TP4_X + 128 ) {
 
+            this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X4,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
+
 
         }
-        // -*-*-*-*-*-*- TP3 FIN
+        // -*-*-*-*-*-*- TP4 FIN
+
+        // -*-*-*-*-*-*-  TP LVL 2
+        let TP5_X = 50;
+        let target_X5 = 8600;
+
+        if (this.player.x > TP5_X &&  this.player.x < TP5_X + 128  ) {
+
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_X5,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
+
+        }
+        // -*-*-*-*-*-*- TP5 FIN
 
     }
 
