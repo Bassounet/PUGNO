@@ -53,18 +53,6 @@ class Tableau extends Phaser.Scene{
         this.sound.add('fire');
         this.musicamb = this.sound.add('amb');
 
-
-        // var musicConfig =
-        //     {
-        //         mute: false,
-        //         volume: 0.2,
-        //         rate : 1,
-        //         detune: 0,
-        //         seek: 0,
-        //         loop: true,
-        //         delay:0,
-        //     }
-        // this.musicamb.play(musicConfig);
     }
 
     update(){

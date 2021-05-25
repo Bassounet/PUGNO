@@ -100,14 +100,6 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
     }
 
-    shooter ()
-    {
-        this.input.on('pointerdown', function (pointer) {
-
-            console.log( 'down B');
-            }, this);
-    }
-
 
     shoot(){
         var bullet = new Tir(this.scene,this.x, this.y);
@@ -115,6 +107,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         setTimeout(function(){
             bullet.destroy();
             },1500);
+
+
 
     }
 
