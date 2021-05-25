@@ -1,24 +1,18 @@
-
-/**
- * Toutes les fonctions propres à un tableau dans notre jeu.
- * Cette classe n'est pas à utiliser directement, elle doit être extend !
- */
 class Tableau extends Phaser.Scene{
-    /**
-     *
-     * @param {String} key identifiant de la scène à jouer
-     */
+
     constructor(key) {
         super(key);
     }
 
 
     preload(){
+
         this.load.image('sky', 'assets/sky.png');
-        // this.load.image('spike', 'assets/spike.png');
+
         this.load.spritesheet('player','assets/player2.png',
             { frameWidth: 61, frameHeight: 64  }
         );
+
         this.load.audio('moleu', 'son/collect.wav');
         this.load.audio('die', 'son/die.wav');
         this.load.audio('talkie', 'son/talkie.wav');
@@ -31,10 +25,11 @@ class Tableau extends Phaser.Scene{
 
 
     create(){
+
         Tableau.current=this;
+
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
-
 
         this.player=new Player(this,80,250);
 
@@ -131,7 +126,7 @@ class Tableau extends Phaser.Scene{
                         me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
-                        // this.sound.play('die', {volume : 1 });
+
 
                     })
 
@@ -144,6 +139,7 @@ class Tableau extends Phaser.Scene{
     hitMine (player, mine)
     {
         let me=this;
+
         if(mine.isDead !== true){
             if(
 

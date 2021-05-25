@@ -1,6 +1,7 @@
 class Tir extends ObjetPhysique{
     constructor(scene, x, y){
         super(scene, x, y, "tir");
+
         scene.add.existing(this);
         scene.physics.add.existing(this);
 
@@ -8,25 +9,22 @@ class Tir extends ObjetPhysique{
         this.setDisplaySize(10,5);
         this.setBodySize(this.body.width,this.body.height);
 
-        // if ( scene.player.sens= -1 ){
-        //
-        //     this.flipX = true;
-        // };
-
-
         this.setVelocityX(450 * scene.player.sens);
         this.setBounce(1);
         this.setDepth(1000);
 
 
+
+
+
         scene.cibleContainer.iterate(cibleu=>{
             scene.physics.add.overlap(this, cibleu, function(){cibleu.killcible()}, null, scene);
+
         })
 
 
         scene.mechantContainer.iterate(monster=>{
             scene.physics.add.overlap(this, monster, function(){monster.killmonster()}, null, scene);
-
 
         })
     }
