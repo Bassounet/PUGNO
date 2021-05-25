@@ -20,7 +20,7 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_110.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_111.json');
         this.load.image('back', 'assets/images/background.png');
 
         this.load.image('txt1', 'assets/txt1.png');
@@ -163,7 +163,6 @@ class Level_1 extends Tableau {
 
         this.platform_t = this.physics.add.group();
 
-        this.platform_t.create(1000,150,"platform_t");
         this.platform_t.create(2688,288,"platform_t");
         this.platform_t.create(3390,288,"platform_t");
         this.platform_t.create(3583,288,"platform_t");
@@ -178,7 +177,7 @@ class Level_1 extends Tableau {
             child.setFriction(1); // pour que les éléments ne glissent sur cette plateforme
             child.setOrigin(0, 0); // pour positionner plus facilement, repère en haut à gauche (descendant, vers la droite)
             child.setDisplaySize(190, 8);
-            //child.refreshBody();
+
         });
 
         // _*_*_*_*_*_*__* PLATFORM tente FIN   *--*-*-*-*-
@@ -244,6 +243,7 @@ class Level_1 extends Tableau {
         // ----------- ***** ---- ON CREE NOS CRISTAUX  ---*****---------
 
         this.moleu=this.physics.add.group();
+
         this.moleu.create(663,263,"moleu_");
         this.moleu.create(6750,220,"moleu_");
         this.moleu.create(7066,220,"moleu_");
@@ -271,6 +271,7 @@ class Level_1 extends Tableau {
 
         //----------collisions---------------------
 
+        // this.physics.add.collider(this.player., this.floor);
         this.floor.setCollisionByExclusion(-1, true);
         this.physics.add.collider(this.player, this.floor);
         this.physics.add.collider(this.player, this.platforms);
@@ -665,16 +666,16 @@ class Level_1 extends Tableau {
         // -*-*-*-*-*-*- TP4 FIN
 
         // -*-*-*-*-*-*-  TP LVL 2
-        let TP5_X = 50;
-        let target_X5 = 8600;
-
-        if (this.player.x > TP5_X &&  this.player.x < TP5_X + 128  ) {
-
-            this.cameras.main.fadeOut(1, 0, 0, 0);
-            this.player.setPosition(target_X5,200);
-            this.cameras.main.fadeIn(3000, 0, 0, 0);
-
-        }
+        // let TP5_X = 50;
+        // let target_X5 = 8600;
+        //
+        // if (this.player.x > TP5_X &&  this.player.x < TP5_X + 128  ) {
+        //
+        //     this.cameras.main.fadeOut(1, 0, 0, 0);
+        //     this.player.setPosition(target_X5,200);
+        //     this.cameras.main.fadeIn(3000, 0, 0, 0);
+        //
+        // }
         // -*-*-*-*-*-*- TP5 FIN
 
     }

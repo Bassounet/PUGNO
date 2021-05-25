@@ -36,7 +36,7 @@ class Tableau extends Phaser.Scene{
         console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
 
 
-        this.player=new Player(this,300,250);
+        this.player=new Player(this,67,250);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
