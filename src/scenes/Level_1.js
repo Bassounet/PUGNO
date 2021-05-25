@@ -20,7 +20,7 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_111.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_112.json');
         this.load.image('back', 'assets/images/background.png');
 
         this.load.image('txt1', 'assets/txt1.png');
@@ -28,6 +28,7 @@ class Level_1 extends Tableau {
         this.load.image('txt3', 'assets/txt3.png');
         this.load.image('txt4', 'assets/txt4.png');
         this.load.image('txt5', 'assets/txt5.png');
+        this.load.image('txt6', 'assets/txt6.png');
 
 
         this.load.audio('amb', 'son/ambiance.wav');
@@ -80,35 +81,41 @@ class Level_1 extends Tableau {
 
 
 
-        let text1_x = 580;
-        let text1_y = 140;
+        let text1_x = 192;
+        let text1_y = 270;
 
         this.txt1 = this.add.image(text1_x, text1_y, "txt1")
-        this.txt1.setDisplaySize(165,100);
+        this.txt1.setDisplaySize(185,60);
 
-        let text2_x = 3210;
-        let text2_y = 145;
+        let text2_x = 2130;
+        let text2_y = 150;
 
         this.txt2 = this.add.image(text2_x, text2_y, "txt2")
-        this.txt2.setDisplaySize(165,80);
+        this.txt2.setDisplaySize(165,60);
 
-        let text3_x = 4620;
-        let text3_y = 90;
+        let text3_x = 3200;
+        let text3_y = 150;
 
         this.txt3 = this.add.image(text3_x, text3_y, "txt3")
-        this.txt3.setDisplaySize(160,60);
+        this.txt3.setDisplaySize(185,50);
 
-        let text4_x = 6470;
-        let text4_y = 160;
+        let text4_x = 4600;
+        let text4_y = 90;
 
         this.txt4 = this.add.image(text4_x, text4_y, "txt4")
         this.txt4.setDisplaySize(160,60);
 
-        let text5_x = 7530;
-        let text5_y = 285;
+        let text5_x = 5580;
+        let text5_y = 150;
 
         this.txt5 = this.add.image(text5_x, text5_y, "txt5")
-        this.txt5.setDisplaySize(160,60);
+        this.txt5.setDisplaySize(160,50);
+
+        let text6_x = 6600;
+        let text6_y = 150;
+
+        this.txt5 = this.add.image(text6_x, text6_y, "txt6")
+        this.txt5.setDisplaySize(160,50);
 
 
 
@@ -348,8 +355,8 @@ class Level_1 extends Tableau {
 
         // -*-*-*-*-*-*- TXT 1
 
-        let x_ok_start_1 = 250;
-        let x_ok_fin_1 = 735;
+        let x_ok_start_1 = 70;
+        let x_ok_fin_1 = 400;
 
 
         if (this.player.x < x_ok_start_1) {
@@ -398,8 +405,8 @@ class Level_1 extends Tableau {
 
         // -*-*-*-*-*-*- TXT 2
 
-        let x_ok_start_2 = 2920;
-        let x_ok_fin_2 = 3150;
+        let x_ok_start_2 = 1850;
+        let x_ok_fin_2 = 2300;
 
 
         if (this.player.x < x_ok_start_2) {
@@ -448,8 +455,8 @@ class Level_1 extends Tableau {
 
         // -*-*-*-*-*-*- TXT 3
 
-        let x_ok_start_3 = 4366;
-        let x_ok_fin_3 = 4656;
+        let x_ok_start_3 = 2900;
+        let x_ok_fin_3 = 3280;
 
 
         if (this.player.x < x_ok_start_3) {
@@ -498,8 +505,8 @@ class Level_1 extends Tableau {
 
         // -*-*-*-*-*-*- TXT 4
 
-        let x_ok_start_4 = 6450;
-        let x_ok_fin_4 = 6690;
+        let x_ok_start_4 = 4200;
+        let x_ok_fin_4 = 4700;
 
 
         if (this.player.x < x_ok_start_4) {
@@ -548,8 +555,8 @@ class Level_1 extends Tableau {
 
         // -*-*-*-*-*-*- TXT 5
 
-        let x_ok_start_5 = 7370;
-        let x_ok_fin_5 = 7616;
+        let x_ok_start_5 = 5250;
+        let x_ok_fin_5 = 5700;
 
 
         if (this.player.x < x_ok_start_5) {
