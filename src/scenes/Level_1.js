@@ -29,6 +29,8 @@ class Level_1 extends Tableau {
         this.load.image('txt4', 'assets/txt4.png');
         this.load.image('txt5', 'assets/txt5.png');
         this.load.image('txt6', 'assets/txt6.png');
+        this.load.image('txt7', 'assets/txt7.png');
+
 
 
         this.load.audio('amb', 'son/ambiance.wav');
@@ -111,11 +113,17 @@ class Level_1 extends Tableau {
         this.txt5 = this.add.image(text5_x, text5_y, "txt5")
         this.txt5.setDisplaySize(160,50);
 
-        let text6_x = 6600;
-        let text6_y = 150;
+        let text6_x = 6660;
+        let text6_y = 160;
 
-        this.txt5 = this.add.image(text6_x, text6_y, "txt6")
-        this.txt5.setDisplaySize(160,50);
+        this.txt6 = this.add.image(text6_x, text6_y, "txt6")
+        this.txt6.setDisplaySize(170,50);
+
+        let text7_x = 7560;
+        let text7_y = 280;
+
+        this.txt7 = this.add.image(text7_x, text7_y, "txt7")
+        this.txt7.setDisplaySize(180,50);
 
 
 
@@ -324,6 +332,8 @@ class Level_1 extends Tableau {
         this.txt3.setDepth(z);
         this.txt4.setDepth(z);
         this.txt5.setDepth(z);
+        this.txt6.setDepth(z);
+        this.txt7.setDepth(z);
 
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
@@ -602,6 +612,106 @@ class Level_1 extends Tableau {
         }
 
         // -*-*-*-*-*-*- TXT 5 FIN
+
+        // -*-*-*-*-*-*- TXT 6
+
+        let x_ok_start_6 = 6450;
+        let x_ok_fin_6 = 6740;
+
+
+        if (this.player.x < x_ok_start_6) {
+            //this.tuto_dash.alpha=1;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt6,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_fin_6) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt6,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_start_6 + 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt6,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x < x_ok_fin_6 - 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt6,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        }
+
+        // -*-*-*-*-*-*- TXT 6 FIN
+
+        // -*-*-*-*-*-*- TXT 7
+
+        let x_ok_start_7 = 7200;
+        let x_ok_fin_7 = 7600;
+
+
+        if (this.player.x < x_ok_start_7) {
+            //this.tuto_dash.alpha=1;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt7,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_fin_7) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt7,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_start_7 + 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt7,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x < x_ok_fin_7 - 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txt7,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        }
+
+        // -*-*-*-*-*-*- TXT 7 FIN
     }
 
     // ***-*-*-*-*-*-*- TXT FIN -*-*-*-*-*-*-*-*-

@@ -13,11 +13,19 @@ class ObjetEnnemi extends ObjetPhysique{
         );
         scene.physics.add.collider(scene.platform_t, this);
     }
-    Tupue(){
+    killmonster(){
         this.disableBody(true, true);
         console.log('gg');
         this.scene.sound.play('die',{volume : 1});
-        // this.sound.play('die', {volume : 1 });
+
+
+    }
+
+    killcible(){
+        this.disableBody(true, true);
+        console.log('gg1');
+        this.scene.sound.play('moleu',{volume : 1});
+
 
     }
 
