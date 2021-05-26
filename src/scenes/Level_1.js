@@ -18,6 +18,7 @@ class Level_1 extends Tableau {
         this.load.image('tir', 'assets/new_image/Bullet.png');
         this.load.image('moleu_', 'assets/moleu.png');
         this.load.image('cible', 'assets/cible.png');
+        this.load.image('fire', 'assets/start_button.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
         this.load.tilemapTiledJSON('map', 'TILED/end/VFX_112.json');
@@ -317,6 +318,21 @@ class Level_1 extends Tableau {
 
         //--------------- Debug -----------------
 
+        // ***-*-*-*-*-*-*- LE BOUTON SHOOT -*-*-*-*-*-*-*-*-
+
+        this.boutonshoot = this.add.image(428,162, 'fire');
+        this.boutonshoot.setInteractive();
+        this.boutonshoot.on('pointerdown', function () {
+            console.log('maque');
+            Tableau.current.player.shoot();
+            Tableau.current.sound.play('fire', {volume: 3});
+
+        })
+
+        this.boutonshoot.setDepth(1000);
+
+        // ***-*-*-*-*-*-*- LE BOUTON SHOOT -*-*-*-*-*-*-*-*-
+
         // ***-*-*-*-*-*-*- Z ORDER -*-*-*-*-*-*-*-*-
 
         let z = 1000;
@@ -326,6 +342,7 @@ class Level_1 extends Tableau {
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
         this.player.setDepth(z--);
+        this.boutonshoot.setDepth(z);
 
         this.txt1.setDepth(z)
         this.txt2.setDepth(z);
@@ -353,6 +370,8 @@ class Level_1 extends Tableau {
         //derrière
 
         // ***-*-*-*-*-*-*- Z ORDER FIN -*-*-*-*-*-*-*-*-
+
+
 
 
     }

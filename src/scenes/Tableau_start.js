@@ -5,6 +5,7 @@ class Tableau_start extends Tableau {
         this.load.image('fond', 'assets/starting_screenV6.png');
         this.load.audio('go', 'son/go.wav');
         this.load.audio('woosh', 'son/woosh.wav');
+        this.load.image('start', 'assets/start_button.png');
 
 
 
@@ -16,6 +17,12 @@ class Tableau_start extends Tableau {
         super.create();
 
         this.add.image(448,224,'fond');
+
+        this.boutonstart = this.add.image(428,162, 'start');
+        this.boutonstart.setInteractive();
+        this.boutonstart.on('pointerdown', function () {
+            Tableau.suivant();
+        })
 
 
         // ---- *** ---- VERS SUIVANT  ---- *** ----
