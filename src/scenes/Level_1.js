@@ -20,8 +20,8 @@ class Level_1 extends Tableau {
         this.load.image('cible', 'assets/cible.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_112.json');
-        this.load.image('back', 'assets/images/background.png');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_113.json');
+        this.load.image('back', 'assets/images/background1.png');
 
         this.load.image('txt1', 'assets/txt1.png');
         this.load.image('txt2', 'assets/txt2.png');
@@ -268,7 +268,7 @@ class Level_1 extends Tableau {
         this.moleu.children.iterate(function (child) {
             child.setCollideWorldBounds(true);
             child.setBounce(0);
-            child.setDisplaySize(30,50)
+            child.setDisplaySize(24,50)
             child.setBodySize(20,45);
             child.body.allowGravity = false;
             child.flipX = false;

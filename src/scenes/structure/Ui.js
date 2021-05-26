@@ -17,7 +17,7 @@ class Ui extends Phaser.Scene{
         this.moleui = this.add.image(58, 53 , 'moleu_');
 
         this._scoreText = this.add.text(36, 36, '...', {
-            font:'32px "Hanalei Fill"',
+            font:'32px " "',
             fill: '#fff'
         });
 
