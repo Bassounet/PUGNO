@@ -18,7 +18,7 @@ class Level_1 extends Tableau {
         this.load.image('tir', 'assets/new_image/Bullet.png');
         this.load.image('moleu_', 'assets/moleu.png');
         this.load.image('cible', 'assets/cible.png');
-        this.load.image('fire', 'assets/start_button.png');
+        this.load.image('bouton_tir', 'assets/ui/fire_button2.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
         this.load.tilemapTiledJSON('map', 'TILED/end/VFX_112.json');
@@ -320,7 +320,7 @@ class Level_1 extends Tableau {
 
         // ***-*-*-*-*-*-*- LE BOUTON SHOOT -*-*-*-*-*-*-*-*-
 
-        this.boutonshoot = this.add.image(428,162, 'fire');
+        this.boutonshoot = this.add.image(428,162, 'bouton_tir');
         this.boutonshoot.setInteractive();
         this.boutonshoot.on('pointerdown', function () {
             console.log('maque');
