@@ -21,7 +21,11 @@ class Tableau_start extends Tableau {
         this.boutonstart = this.add.image(428,162, 'start');
         this.boutonstart.setInteractive();
         this.boutonstart.on('pointerdown', function () {
+
             Tableau.suivant();
+            Tableau.current.sound.play('go',{volume : 1});
+            Tableau.current.cameras.main.fadeOut(1000, 0, 0, 0)
+
         })
 
 
