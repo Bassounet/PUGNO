@@ -75,12 +75,16 @@ class Ui extends Phaser.Scene{
         btFs.x=this.sys.canvas.width;
         btFs.y=this.sys.canvas.height;
 
+        let boutondowneuh = false;
+
+
         this.boutonshoot = this.add.image(60,300, 'bouton_tir');
         this.boutonshoot.setInteractive();
         this.boutonshoot.on('pointerdown', function () {
             console.log('maque');
             Tableau.current.player.shoot();
             Tableau.current.sound.play('fire', {volume: 3});
+            boutondowneuh = true;
 
         })
 

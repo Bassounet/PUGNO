@@ -328,7 +328,6 @@ class Level_1 extends Tableau {
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
         this.player.setDepth(z--);
-        // this.boutonshoot.setDepth(z);
 
         this.txt1.setDepth(z)
         this.txt2.setDepth(z);
