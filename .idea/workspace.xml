@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tente_barre.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/tente_barre.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref/sprite3.png" beforeDir="false" afterPath="$PROJECT_DIR$/ref/sprite3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/structure/Ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Ui.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +141,7 @@
       <workItem from="1621957133860" duration="4951000" />
       <workItem from="1621972018948" duration="6593000" />
       <workItem from="1622026167789" duration="4247000" />
-      <workItem from="1622035726409" duration="8224000" />
+      <workItem from="1622035726409" duration="9531000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
@@ -246,6 +240,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/objects/mechant1.js</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/scenes/Level_1.js</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
