@@ -18,7 +18,6 @@ class Level_1 extends Tableau {
         this.load.image('tir', 'assets/new_image/Bullet.png');
         this.load.image('moleu_', 'assets/moleu.png');
         this.load.image('cible', 'assets/cible.png');
-        // this.load.image('bouton_tir', 'assets/ui/fire_button2.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
         this.load.tilemapTiledJSON('map', 'TILED/end/VFX_112.json');
@@ -61,6 +60,7 @@ class Level_1 extends Tableau {
                 delay:0,
             }
         this.musicamb.play(musicConfig);
+
 
 
         //--------chargement de la tile map & configuration de la scène-----------------------
@@ -325,6 +325,7 @@ class Level_1 extends Tableau {
 
         //devant
 
+        
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
         this.player.setDepth(z--);

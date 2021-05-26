@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/structure/Ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Ui.js" afterDir="false" />
     </list>
@@ -52,6 +51,16 @@
       <recent name="C:\xampp\htdocs\pugno\src\objects" />
       <recent name="C:\xampp\htdocs\Platformer\src\objects" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Level_1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/scenes/Level_1.js" working-dir="$PROJECT_DIR$/src/scenes">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.Level_1.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -132,7 +141,8 @@
       <workItem from="1621932009729" duration="7223000" />
       <workItem from="1621957133860" duration="4951000" />
       <workItem from="1621972018948" duration="6593000" />
-      <workItem from="1622026167789" duration="4086000" />
+      <workItem from="1622026167789" duration="4247000" />
+      <workItem from="1622035726409" duration="4088000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

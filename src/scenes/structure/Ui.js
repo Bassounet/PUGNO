@@ -7,13 +7,16 @@ class Ui extends Phaser.Scene{
     preload(){
         this.load.image('ui/full-screen-icon', 'assets/ui/full-screen.png');
         this.load.image('bouton_tir', 'assets/ui/fire_button2.png');
+        this.load.image('moleu_', 'assets/moleu.png');
     }
     create (){
         console.log("create Ui")
 
         this.score=0;
 
-        this._scoreText = this.add.text(16, 16, '...', {
+        this.moleui = this.add.image(58, 53 , 'moleu_');
+
+        this._scoreText = this.add.text(36, 36, '...', {
             font:'32px "Hanalei Fill"',
             fill: '#fff'
         });
@@ -57,6 +60,7 @@ class Ui extends Phaser.Scene{
         pad.x=this.sys.canvas.width-pad.size-60;
         pad.y=this.sys.canvas.height-pad.size-60;
 
+        // *è*_*_*_*_*_*_*_* full screen
 
 
         let btFs=this.add.image(0,0,'ui/full-screen-icon');
@@ -75,6 +79,10 @@ class Ui extends Phaser.Scene{
         btFs.x=this.sys.canvas.width;
         btFs.y=this.sys.canvas.height;
 
+        // *_*_*_*_*_*_*_*_* full screen end
+
+        // *_*_*_*_*_*_*_*_* bouton tir
+
         let boutondowneuh = false;
 
 
@@ -88,13 +96,15 @@ class Ui extends Phaser.Scene{
 
         })
 
+        // *_*_*_*_*_*_*_*_* bouton tir END
+
 
     }
 
-    gagne(points=10)
+    gagne(points=1)
     {
         this.score+=points;
-        this._scoreText.setText('Score: ' + this.score);
+        this._scoreText.setText('         x  ' + this.score);
 
     }
     update(){
