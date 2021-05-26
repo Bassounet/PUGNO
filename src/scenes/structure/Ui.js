@@ -6,6 +6,7 @@ class Ui extends Phaser.Scene{
     }
     preload(){
         this.load.image('ui/full-screen-icon', 'assets/ui/full-screen.png');
+        this.load.image('bouton_tir', 'assets/ui/fire_button2.png');
     }
     create (){
         console.log("create Ui")
@@ -73,6 +74,15 @@ class Ui extends Phaser.Scene{
         btFs.setDisplaySize(48,48)
         btFs.x=this.sys.canvas.width;
         btFs.y=this.sys.canvas.height;
+
+        this.boutonshoot = this.add.image(60,300, 'bouton_tir');
+        this.boutonshoot.setInteractive();
+        this.boutonshoot.on('pointerdown', function () {
+            console.log('maque');
+            Tableau.current.player.shoot();
+            Tableau.current.sound.play('fire', {volume: 3});
+
+        })
 
 
     }
