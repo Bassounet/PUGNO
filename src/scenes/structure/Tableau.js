@@ -24,6 +24,7 @@ class Tableau extends Phaser.Scene{
         this.load.audio('amb', 'son/ambiance.wav');
         this.load.audio('cible', 'son/hit_cible.wav');
         this.load.audio('barbeles', 'son/barbles.wav');
+        this.load.audio('mines', 'son/mines.wav');
 
     }
 
@@ -115,7 +116,7 @@ class Tableau extends Phaser.Scene{
 
                 this.sound.play('explosion', {volume : 2 });
 
-                this.saigne(tono,function(){
+                // this.saigne(tono,function(){
 
                 })
 
@@ -159,9 +160,9 @@ class Tableau extends Phaser.Scene{
                 mine.isDead=true;
                 mine.visible=false;
 
-                this.sound.play('explosion', {volume : 2 });
+                this.sound.play('mines', {volume : 0.2 });
 
-                this.saigne(mine,function(){
+                // this.saigne(mine,function(){
 
                 })
 

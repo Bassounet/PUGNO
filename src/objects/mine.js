@@ -9,7 +9,6 @@ class mine extends ObjetPhysique{
             null,
             scene
         );
-        // this.setBodySize(30,55);
-        // this.setOffset(20,10);
+
     }
 }
