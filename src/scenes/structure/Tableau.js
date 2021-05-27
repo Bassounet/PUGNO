@@ -115,7 +115,7 @@ class Tableau extends Phaser.Scene{
                 tono.isDead=true;
                 tono.visible=false;
 
-                this.sound.play('barrel', {volume : 2 });
+                this.sound.play('barrel', {volume : 0.9 });
 
                 // this.saigne(tono,function(){
 
@@ -161,7 +161,7 @@ class Tableau extends Phaser.Scene{
                 mine.isDead=true;
                 mine.visible=false;
 
-                this.sound.play('mines', {volume : 0.2 });
+                this.sound.play('mines', {volume : 0.6 });
 
                 // this.saigne(mine,function(){
 

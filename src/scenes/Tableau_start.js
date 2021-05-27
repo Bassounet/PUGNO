@@ -20,7 +20,7 @@ class Tableau_start extends Tableau {
 
         this.add.image(448,224,'fond');
 
-        this.boutonstart = this.add.image(428,162, 'start');
+        this.boutonstart = this.add.image(430,160, 'start');
         this.boutonstart.setInteractive();
         this.boutonstart.on('pointerdown', function () {
 
