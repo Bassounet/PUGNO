@@ -35,10 +35,11 @@ class Level_1 extends Tableau {
         this.load.image('txt5', 'assets/txt5.png');
         this.load.image('txt6', 'assets/txt6.png');
         this.load.image('txt7', 'assets/txt7.png');
+        this.load.image('sam_text', 'assets/sam_text.png');
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_113.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_121.json');
 
 
 
@@ -49,6 +50,9 @@ class Level_1 extends Tableau {
         console.log(Phaser);
 
         super.create();
+
+        this.lights.enable().setAmbientColor(0x555555);
+
 
 
 
@@ -100,7 +104,7 @@ class Level_1 extends Tableau {
         let text2_y = 150;
 
         this.txt2 = this.add.image(text2_x, text2_y, "txt2")
-        this.txt2.setDisplaySize(165,60);
+        this.txt2.setDisplaySize(175,60);
 
         let text3_x = 3200;
         let text3_y = 150;
@@ -132,6 +136,12 @@ class Level_1 extends Tableau {
         this.txt7 = this.add.image(text7_x, text7_y, "txt7")
         this.txt7.setDisplaySize(180,50);
 
+        let text_sam_X = 13950;
+        let text_sam_Y = 300;
+
+        this.txtsam = this.add.image(text_sam_X, text_sam_Y, "sam_text")
+        this.txtsam.setDisplaySize(180,50);
+
 
 
 
@@ -140,9 +150,12 @@ class Level_1 extends Tableau {
 
         this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
         this.floor.setOrigin(0, 0);
+        // this.floor.setPipeline('Light2D');
+
 
         this.background = this.map.createLayer('backgroundF', this.tileset, 0, 0);
         this.background.setOrigin(0, 0);
+        // this.background.setPipeline('Light2D');
 
         this.sky = this.add.tileSprite(
             0,
@@ -323,8 +336,6 @@ class Level_1 extends Tableau {
 
 
 
-
-
         //----------collisions---------------------
 
         // this.physics.add.collider(this.player., this.floor);
@@ -377,6 +388,7 @@ class Level_1 extends Tableau {
         this.txt5.setDepth(z);
         this.txt6.setDepth(z);
         this.txt7.setDepth(z);
+        this.txtsam.setDepth(z);
 
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
@@ -766,6 +778,56 @@ class Level_1 extends Tableau {
         }
 
         // -*-*-*-*-*-*- TXT 7 FIN
+
+        // -*-*-*-*-*-*- TXT 7
+
+        let x_ok_start_sam = 13700;
+        let x_ok_fin_sam = 15000;
+
+
+        if (this.player.x < x_ok_start_sam) {
+            //this.tuto_dash.alpha=1;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txtsam,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_fin_sam) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txtsam,
+                alpha: 0,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x > x_ok_start_sam + 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txtsam,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        } else if (this.player.x < x_ok_fin_sam - 1) {
+            //this.tuto_dash.alpha=0;
+            Tableau.current.tweens.add({
+                targets: Tableau.current.txtsam,
+                alpha: 1,
+                duration: 30,
+                ease: 'Sine.easeInOut',
+
+            })
+
+        }
+
+        // -*-*-*-*-*-*- TXT 7 FIN
     }
 
     // ***-*-*-*-*-*-*- TXT FIN -*-*-*-*-*-*-*-*-
@@ -837,16 +899,33 @@ class Level_1 extends Tableau {
         // -*-*-*-*-*-*- TP4 FIN
 
         // -*-*-*-*-*-*-  TP LVL 2
-        // let TP5_X = 50;
-        // let target_X5 = 8600;
-        //
-        // if (this.player.x > TP5_X &&  this.player.x < TP5_X + 128  ) {
-        //
-        //     this.cameras.main.fadeOut(1, 0, 0, 0);
-        //     this.player.setPosition(target_X5,200);
-        //     this.cameras.main.fadeIn(3000, 0, 0, 0);
-        //
-        // }
+
+        let TP_SAM = 440;
+        let target_sam = 8600;
+
+        if (this.player.x > TP_SAM && this.player.y > TP_Y && this.player.x < TP_SAM + 128   ) {
+
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_sam,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
+
+        }
+
+        // -*-*-*-*-*-*- TP5 FIN
+
+        // -*-*-*-*-*-*-  TP LVL 2
+
+        let TP_SAM2 = 10900;
+        let target_sam2 = 12400;
+
+        if (this.player.x > TP_SAM2  && this.player.x < TP_SAM2 + 128   ) {
+
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_sam2,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
+
+        }
+
         // -*-*-*-*-*-*- TP5 FIN
 
     }
