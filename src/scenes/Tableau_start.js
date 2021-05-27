@@ -24,18 +24,18 @@ class Tableau_start extends Tableau {
         this.boutonstart.setInteractive();
         this.boutonstart.on('pointerdown', function () {
 
+
             Tableau.current.cameras.main.fadeOut(1000, 0, 0, 0)
             Tableau.current.sound.play('go', {volume: 1});
             Tableau.current.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
-                
+
                 Tableau.suivant();
 
             })
 
 
         })
-
-
+        
 
         // ---- *** ---- VERS SUIVANT  ---- *** ----
 
