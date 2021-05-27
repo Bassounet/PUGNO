@@ -28,6 +28,7 @@ class Tableau extends Phaser.Scene{
         this.load.audio('mines', 'son/mines.wav');
         this.load.audio('blood', 'son/blood_effect.wav');
         this.load.audio('mechant', 'son/badguy.wav');
+        this.load.audio('recovery', 'son/recovery.wav');
 
     }
 
@@ -129,6 +130,8 @@ class Tableau extends Phaser.Scene{
                         me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
+                        this.sound.play('recovery', { delay : 0.04 });
+
 
 
                     })
@@ -168,6 +171,7 @@ class Tableau extends Phaser.Scene{
                         me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
+                        me.sound.play('recovery', { delay : 0.04 });
 
 
 

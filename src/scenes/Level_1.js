@@ -848,7 +848,13 @@ class Level_1 extends Tableau {
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X1,200);
-            this.cameras.main.fadeIn(3000, 0, 0, 0);
+            this.cameras.main.fadeIn(700, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
+            {
+                this.sound.play('recovery', {volume : 1 });
+
+
+            })
 
         }
         // -*-*-*-*-*-*- TP 1 FIN
@@ -864,7 +870,13 @@ class Level_1 extends Tableau {
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X1,200);
-            this.cameras.main.fadeIn(3000, 0, 0, 0);
+            this.cameras.main.fadeIn(700, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
+            {
+                this.sound.play('recovery', {volume : 1 });
+
+
+            })
 
         }
         // -*-*-*-*-*-*- TP 1-2 FIN
@@ -881,7 +893,13 @@ class Level_1 extends Tableau {
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X2,200);
-            this.cameras.main.fadeIn(3000, 0, 0, 0);
+            this.cameras.main.fadeIn(700, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
+            {
+                this.sound.play('recovery', {volume : 1 });
+
+
+            })
 
         }
         // -*-*-*-*-*-*- TP 2 FIN
@@ -897,8 +915,13 @@ class Level_1 extends Tableau {
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X1,200);
-            this.cameras.main.fadeIn(3000, 0, 0, 0);
+            this.cameras.main.fadeIn(700, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
+            {
+                this.sound.play('recovery', {volume : 1 });
 
+
+            })
         }
         // -*-*-*-*-*-*- TP 2-1 FIN
 
@@ -914,8 +937,13 @@ class Level_1 extends Tableau {
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X3,200);
-            this.cameras.main.fadeIn(3000, 0, 0, 0);
+            this.cameras.main.fadeIn(700, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
+            {
+                this.sound.play('recovery', {volume : 1 });
 
+
+            })
         }
         // -*-*-*-*-*-*- TP3 FIN
 
@@ -933,8 +961,13 @@ class Level_1 extends Tableau {
 
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X4,200);
-            this.cameras.main.fadeIn(3000, 0, 0, 0);
+            this.cameras.main.fadeIn(700, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
+            {
+                this.sound.play('recovery', {volume : 1 });
 
+
+            })
 
         }
         // -*-*-*-*-*-*- TP4 FIN
