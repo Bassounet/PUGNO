@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/ObjetEnnemi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ObjetEnnemi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Tir.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Tir.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/cible1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/cible1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/mechant1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/mechant1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/structure/Ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Ui.js" afterDir="false" />
     </list>
@@ -144,7 +152,8 @@
       <workItem from="1622026167789" duration="4247000" />
       <workItem from="1622035726409" duration="10139000" />
       <workItem from="1622097356532" duration="11849000" />
-      <workItem from="1622117907876" duration="11907000" />
+      <workItem from="1622117907876" duration="12038000" />
+      <workItem from="1622135501498" duration="8403000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

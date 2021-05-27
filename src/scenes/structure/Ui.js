@@ -94,16 +94,7 @@ class Ui extends Phaser.Scene{
 
         })
 
-        // *_*_*_*_*_*_*_*_* bouton tir END
 
-        // this.boutonpause = this.add.image(700,415, 'bouton_tir');
-        // this.boutonpause.setInteractive();
-        // this.boutonpause.on('pointerdown', function () {
-        //
-        //     Tableau.current.player.pause();
-        //
-        //
-        // })
 
 
     }

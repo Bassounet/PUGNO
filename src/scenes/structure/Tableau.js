@@ -27,8 +27,10 @@ class Tableau extends Phaser.Scene{
         this.load.audio('barrel', 'son/barrels.wav');
         this.load.audio('mines', 'son/mines.wav');
         this.load.audio('blood', 'son/blood_effect.wav');
-        this.load.audio('mechant', 'son/badguy.wav');
+        this.load.audio('mechant', 'son/die_mechant.wav');
         this.load.audio('recovery', 'son/recovery.wav');
+        this.load.audio('ouch', 'son/ouch.wav');
+        this.load.audio('punch', 'son/punch.wav');
 
     }
 
@@ -150,8 +152,6 @@ class Tableau extends Phaser.Scene{
         if(mine.isDead !== true){
 
 
-
-
                 mine.isDead=true;
                 mine.visible=false;
 
@@ -190,7 +190,7 @@ class Tableau extends Phaser.Scene{
 
     hitMechant(player, monster){
         let me=this;
-        if(monster.isDead !== true){
+        if(monster.isDead !== true ){
             if(
 
                 player.body.velocity.y > 0
@@ -198,11 +198,11 @@ class Tableau extends Phaser.Scene{
                 && player.getBounds().bottom < monster.getBounds().top+30
 
             ){
-                ui.gagne();
+
                 monster.isDead=true;
                 monster.visible=false;
 
-                this.sound.play('die', {volume : 1 });
+
 
                 this.saigne(monster,function(){
 
@@ -215,6 +215,9 @@ class Tableau extends Phaser.Scene{
                     me.player.isDead=true;
                     this.musicamb.stop();
                     me.player.visible=false;
+                    this.sound.play('die', {volume : 1 });
+                    this.sound.play('punch', {volume : 3 });
+                    Tableau.current.cameras.main.shake(1000, 0.02, true);
 
                     me.saigne(me.player,function(){
 
@@ -222,6 +225,7 @@ class Tableau extends Phaser.Scene{
                         me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
+                        me.sound.play('recovery', { delay : 0.04 });
                     })
 
                 }
@@ -230,17 +234,59 @@ class Tableau extends Phaser.Scene{
 
     }
 
+    hitCible(player, monster){
+
+        let me=this;
+
+        if(monster.isDead !== true){
+
+
+            monster.isDead=true;
+            monster.visible=false;
+
+            this.sound.play('cible', {volume : 0.6 });
+            this.sound.play('ouch', { delay : 0.15 });
+
+
+            Tableau.current.cameras.main.shake(50, 0.07, true);
+
+            if(!me.player.isDead){
+
+                this.musicamb.stop();
+                me.player.isDead=true;
+                me.player.visible=false;
+
+
+                me.saigne(me.player,function(){
+
+
+                    me.blood.visible=false;
+                    me.player.anims.play('turn');
+                    me.player.isDead=false;
+                    me.scene.restart();
+                    me.sound.play('recovery', { delay : 0.04 });
+
+
+
+                })
+
+            }
+
+        }
+
+    }
+
+
     getMoleu (player, star)
     {
+
         star.disableBody(true, true);
         ui.gagne();
         this.sound.play('moleu', {volume : 1 });
 
-
-
         let totalActive=0;
         for(let child of this.children.getChildren()){
-            if(child.texture && child.texture.key==="star"){
+            if(child.texture && child.texture.key === "star"){
                 if(child.active){
                     totalActive++;
                     this.sound.play('collect_1', {volume : 1 });

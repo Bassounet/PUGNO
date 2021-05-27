@@ -2,6 +2,10 @@ class mechant1 extends ObjetEnnemi{
 
     constructor(scene, x, y) {
         super(scene, x, y, "mechant");
+
+
+
+
         this.body.allowGravity=true;
         this.flipX=true;
         this.setGravityY(40);

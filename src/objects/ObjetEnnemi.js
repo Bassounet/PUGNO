@@ -9,15 +9,16 @@ class ObjetEnnemi extends ObjetPhysique{
     }
 
     killmonster(){
+
         this.disableBody(true, true);
-        console.log('gg');
-        this.scene.sound.play('mechant',{volume : 1});
+        this.scene.sound.play('mechant',{volume : 3});
+
 
     }
 
     killcible(){
+
         this.disableBody(true, true);
-        console.log('gg1');
         this.scene.sound.play('cible',{volume : 1});
 
     }

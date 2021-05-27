@@ -39,7 +39,7 @@ class Level_1 extends Tableau {
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_121.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_122.json');
 
 
 
@@ -338,7 +338,7 @@ class Level_1 extends Tableau {
 
         //----------collisions---------------------
 
-        // this.physics.add.collider(this.player., this.floor);
+
         this.floor.setCollisionByExclusion(-1, true);
         this.physics.add.collider(this.player, this.floor);
         this.physics.add.collider(this.player, this.platforms);
@@ -346,7 +346,8 @@ class Level_1 extends Tableau {
         this.physics.add.collider(this.mineContainer, this.floor);
         this.physics.add.collider(this.tonoContainer, this.floor);
         this.physics.add.collider(this.mechantContainer, this.floor);
-        this.physics.add.collider(this.platform_t, this.mechantContainer);
+        this.physics.add.collider(this.platform_t, this.mechantContainer)
+
 
         //----------collisions FIN ---------------------
 
@@ -354,16 +355,15 @@ class Level_1 extends Tableau {
         //----------débug---------------------
 
 
-        //pour débugger les collisions sur chaque layer
         let debug = this.add.graphics().setAlpha(this.game.config.physics.arcade.debug ? 0.75 : 0);
         if (this.game.config.physics.arcade.debug === false) {
             debug.visible = true;
         }
-        //débug solides en vers
+
         this.floor.renderDebug(debug, {
-            tileColor: null, // Couleur des tiles qui ne collident pas
-            collidingTileColor: new Phaser.Display.Color(0, 255, 0, 255), //Couleur des tiles qui collident
-            faceColor: null // Color of colliding face edges
+            tileColor: null,
+            collidingTileColor: new Phaser.Display.Color(0, 255, 0, 255),
+            faceColor: null
         });
 
 
@@ -375,7 +375,6 @@ class Level_1 extends Tableau {
         let z = 1000;
 
         //devant
-
 
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
@@ -844,6 +843,7 @@ class Level_1 extends Tableau {
 
         if (this.player.x > TP1_X && this.player.y > TP_Y && this.player.x < TP1_X + 128 ) {
 
+            this.cameras.main.shake(50, 0.07, true);
             this.sound.play('barbeles', {volume : 1 });
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
@@ -865,6 +865,7 @@ class Level_1 extends Tableau {
 
 
         if (this.player.x > TP1_2_X && this.player.y > TP_Y && this.player.x < TP1_2_X + 128 ) {
+
 
             this.sound.play('barbeles', {volume : 1 });
             this.sound.play('die', {volume : 1 });
