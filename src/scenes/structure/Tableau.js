@@ -26,6 +26,8 @@ class Tableau extends Phaser.Scene{
         this.load.audio('barbeles', 'son/barbles.wav');
         this.load.audio('barrel', 'son/barrels.wav');
         this.load.audio('mines', 'son/mines.wav');
+        this.load.audio('blood', 'son/blood_effect.wav');
+        this.load.audio('mechant', 'son/badguy.wav');
 
     }
 
@@ -110,6 +112,7 @@ class Tableau extends Phaser.Scene{
 
                 this.sound.play('barrel', {volume : 0.4 });
                 this.sound.play('die', { delay : 0.15 });
+                this.sound.play('blood', { delay : 0.04 });
 
 
                 if(!me.player.isDead){
@@ -118,6 +121,8 @@ class Tableau extends Phaser.Scene{
                     me.player.visible=false;
 
                     me.saigne(me.player,function(){
+
+
 
 
                         me.blood.visible=false;
@@ -147,6 +152,7 @@ class Tableau extends Phaser.Scene{
 
                 this.sound.play('mines', {volume : 0.6 });
                 this.sound.play('die', { delay : 0.15 });
+            this.sound.play('blood', { delay : 0.15 });
 
                 if(!me.player.isDead){
 
