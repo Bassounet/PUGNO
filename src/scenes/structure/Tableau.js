@@ -150,43 +150,34 @@ class Tableau extends Phaser.Scene{
         let me=this;
 
         if(mine.isDead !== true){
-            if(
 
-                player.body.velocity.y > 0
-
-                && player.getBounds().bottom < mine.getBounds().top+30
-
-            ){
 
                 mine.isDead=true;
                 mine.visible=false;
 
                 this.sound.play('mines', {volume : 0.6 });
 
-                // this.saigne(mine,function(){
-
-                // })
-
-                player.directionY=500;
-            }else{
-
                 if(!me.player.isDead){
+
                     this.musicamb.stop();
                     me.player.isDead=true;
                     me.player.visible=false;
 
+
                     me.saigne(me.player,function(){
 
+                        Tableau.current.sound.play('die', {volume : 1 });
                         me.blood.visible=false;
                         me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
-                        // this.sound.play('die', {volume : 1 });
+
+
 
                     })
 
                 }
-            }
+
         }
 
     }
