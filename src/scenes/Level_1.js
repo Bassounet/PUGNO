@@ -21,9 +21,12 @@ class Level_1 extends Tableau {
         this.load.image('blood', 'assets/blood.png');
 
         this.load.image('sprite', 'ref/sprite3.png');
-        this.load.image('back', 'assets/images/background1.png');
+        this.load.image('back', 'assets/images/backgroundB.png');
+        this.load.image('background2', 'assets/images/background2.png');
+        this.load.image('background2_5', 'assets/images/background3.png');
         this.load.image('blue_sky', 'assets/blue_sky.png');
         this.load.image('cloud', 'assets/cloud.png');
+
 
         this.load.image('txt1', 'assets/txt1.png');
         this.load.image('txt2', 'assets/txt2.png');
@@ -154,7 +157,7 @@ class Level_1 extends Tableau {
 
         this.sky2 = this.add.tileSprite(
             0,
-            100,
+            130,
             this.sys.canvas.width * 2,
             this.sys.canvas.height * 2,
             'back'
@@ -174,9 +177,28 @@ class Level_1 extends Tableau {
         this.cloud.setScrollFactor(0);
         this.cloud.displayWidth = 21 * 64;
 
+        this.background2 = this.add.tileSprite(
+            -200,
+            160,
+            this.sys.canvas.width * 2,
+            this.sys.canvas.height * 2,
+            'background2'
+        );
+        this.background2.setOrigin(0, 0);
+        this.background2.setScrollFactor(0);
+        this.background2.displayWidth = 21 * 64;
 
-        // this.cloud.setvelocity()
-        // this.cloud.setVelocityX(10);
+        this.background2_5 = this.add.tileSprite(
+            0,
+            160,
+            this.sys.canvas.width * 2,
+            this.sys.canvas.height * 2,
+            'background2_5'
+        );
+        this.background2_5.setOrigin(0, 0);
+        this.background2_5.setScrollFactor(0);
+        this.background2_5.displayWidth = 21 * 64;
+
 
 
 
@@ -367,10 +389,18 @@ class Level_1 extends Tableau {
         this.floor.setDepth(z--);
 
         this.background.setDepth(z--);
+        this.background2.setDepth(z--);
 
-        this.sky2.setDepth(z--);
+        this.sky2.setDepth(z--)
+        this.background2_5.setDepth(z--);
+        this.background2.setDepth(z--);
+
         this.cloud.setDepth(z--);
+
+
+
         this.sky.setDepth(z--);
+
 
         //derrière
 
@@ -821,6 +851,11 @@ class Level_1 extends Tableau {
 
     }
 
+    Toggle_Pause() {
+
+
+    }
+
 
 
     // ***-*-*-*-*-*-*- NEW FONCTIONS FIN  -*-*-*-*-*-*-*-*-
@@ -830,6 +865,7 @@ class Level_1 extends Tableau {
     update() {
         super.update();
 
+        this.Toggle_Pause();
         this.apparitionText1();
         this.TP();
 
@@ -841,11 +877,19 @@ class Level_1 extends Tableau {
         this.sky2.tilePositionY = this.cameras.main.scrollY * 0.1;
 
         // le fond se déplace moins vite que la caméra pour donner un effet paralax
-        this.background.tilePositionX = this.cameras.main.scrollX * 0.2;
+        this.background.tilePositionX = this.cameras.main.scrollX * 0.3;
         this.background.tilePositionY = this.cameras.main.scrollY * 0.15;
+
+        this.background2_5.tilePositionX = this.cameras.main.scrollX * 0.12;
+        this.background2_5.tilePositionY = this.cameras.main.scrollY * 0.5;
+
+        this.background2.tilePositionX = this.cameras.main.scrollX * 0.1;
+        this.background2.tilePositionY = this.cameras.main.scrollY * 0.5;
 
         this.cloud.tilePositionX = this.cameras.main.scrollX * 0.2;
         this.cloud.tilePositionY = this.cameras.main.scrollY * 0.15;
+
+
 
         //optimisation
         //teste si la caméra a bougé

@@ -8,6 +8,11 @@ body{
 
 }
 
+@font-face {
+    font-family: "Yoster";
+    src: url('assets/yoster.otf');
+}
+
 #game{
     background-color: #111;
     --w:896px;

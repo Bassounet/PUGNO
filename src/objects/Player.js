@@ -108,9 +108,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             bullet.destroy();
             },1500);
 
-
-
     }
+
 
 
 

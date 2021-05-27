@@ -9,6 +9,7 @@ class Tableau extends Phaser.Scene{
 
         this.load.image('sky', 'assets/sky.png');
         this.load.image('fire', 'assets/start_button.png');
+        this.load.image('fire', 'assets/start_button.png');
 
         this.load.spritesheet('player','assets/player2.png',
             { frameWidth: 61, frameHeight: 64  }
@@ -40,6 +41,8 @@ class Tableau extends Phaser.Scene{
         this.blood.visible=false;
 
         this.boutonTir = this.input.keyboard.addKey('A');
+        this.bouton_Pause = this.input.keyboard.addKey('P');
+
 
         this.sound.add('moleu');
         this.sound.add('die');
@@ -49,16 +52,6 @@ class Tableau extends Phaser.Scene{
         this.sound.add('fire');
         this.musicamb = this.sound.add('amb');
 
-        // this.boutonshoot = this.add.image(428,162, 'fire');
-        // this.boutonshoot.setInteractive();
-        // this.boutonshoot.on('pointerdown', function () {
-        //     console.log('maque');
-        //     Tableau.current.player.shoot();
-        //     Tableau.current.sound.play('fire', {volume: 3});
-        //
-        // })
-        //
-        // this.boutonshoot.setDepth(1000);
 
     }
 

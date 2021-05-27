@@ -14,23 +14,23 @@ class Ui extends Phaser.Scene{
 
         this.score=0;
 
-        this.moleui = this.add.image(58, 53 , 'moleu_');
+        this.moleui = this.add.image(50, 53 , 'moleu_');
 
         this._scoreText = this.add.text(36, 36, '...', {
-            font:'32px " "',
+            font:'32px "Yoster"',
             fill: '#fff'
         });
 
 
         this._tableauText = this.add.text(this.sys.canvas.width-16, 16, '...', {
-            font:'32px "Hanalei Fill"',
+            font:'32px "Yoster"',
             align: 'right',
             fill: '#fff'
         })
 
 
         this._tableauTextClass = this.add.text(this.sys.canvas.width-16, 16+32, '...', {
-            font:'24px "Hanalei Fill"',
+            font:'24px "Yoster"',
             align: 'right',
             fill: '#fff',
         }).setAlpha(0.5)
@@ -83,20 +83,26 @@ class Ui extends Phaser.Scene{
 
         // *_*_*_*_*_*_*_*_* bouton tir
 
-        let boutondowneuh = false;
-
 
         this.boutonshoot = this.add.image(60,300, 'bouton_tir');
         this.boutonshoot.setInteractive();
         this.boutonshoot.on('pointerdown', function () {
-            console.log('maque');
+
             Tableau.current.player.shoot();
             Tableau.current.sound.play('fire', {volume: 3});
-            boutondowneuh = true;
 
         })
 
         // *_*_*_*_*_*_*_*_* bouton tir END
+
+        // this.boutonpause = this.add.image(700,415, 'bouton_tir');
+        // this.boutonpause.setInteractive();
+        // this.boutonpause.on('pointerdown', function () {
+        //
+        //     Tableau.current.player.pause();
+        //
+        //
+        // })
 
 
     }
@@ -104,7 +110,7 @@ class Ui extends Phaser.Scene{
     gagne(points=1)
     {
         this.score+=points;
-        this._scoreText.setText('         x  ' + this.score);
+        this._scoreText.setText('     x  ' + this.score);
 
     }
     update(){
