@@ -37,6 +37,8 @@ class Level_1 extends Tableau {
         this.load.image('txt7', 'assets/txt7.png');
         this.load.image('sam_text', 'assets/sam_text.png');
 
+        this.load.image('particlesg', 'assets/particles/particle1.png');
+
         this.load.audio('amb', 'son/ambiance.wav');
 
         this.load.tilemapTiledJSON('map', 'TILED/end/VFX_122.json');
@@ -51,7 +53,7 @@ class Level_1 extends Tableau {
 
         super.create();
 
-        this.lights.enable().setAmbientColor(0x555555);
+        // this.lights.enable().setAmbientColor(0x555555);
 
 
 
@@ -89,6 +91,24 @@ class Level_1 extends Tableau {
 
 
         //   ---- PLACEMENT GRAPH ------
+
+        //   ---- Particles ------
+
+        this.emitter1 = this.add.particles('particlesg').createEmitter({
+            x: 100,
+            y: 100,
+            speed: { min: -800, max: 800 },
+            angle: { min: 0, max: 360 },
+            scale: { start: 0.5, end: 0 },
+            blendMode: 'SCREEN',
+            active: true,
+            lifespan: 600,
+            gravityY: 800
+        });
+
+
+        //   ---- Particles ------
+
 
         //   ---- PLACEMENT texte ------
 
@@ -388,6 +408,9 @@ class Level_1 extends Tableau {
         this.txt6.setDepth(z);
         this.txt7.setDepth(z);
         this.txtsam.setDepth(z);
+
+        // this.emitter0.setDepth(z);
+
 
         this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);

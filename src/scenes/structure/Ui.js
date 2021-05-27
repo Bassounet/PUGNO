@@ -5,14 +5,19 @@ class Ui extends Phaser.Scene{
         window.ui=this;
     }
     preload(){
+
         this.load.image('ui/full-screen-icon', 'assets/ui/full-screen.png');
         this.load.image('bouton_tir', 'assets/ui/fire_button2.png');
         this.load.image('moleu_', 'assets/moleu.png');
+        this.load.image('particlesg', 'assets/particles/particle1.png');
+
+
     }
     create (){
         console.log("create Ui")
 
         this.score=0;
+
 
         this.moleui = this.add.image(50, 53 , 'moleu_');
 
@@ -94,21 +99,18 @@ class Ui extends Phaser.Scene{
 
         })
 
-        var emitter0 = this.add.particles('bouton_tir').createEmitter({
+        var emitter0 = this.add.particles('particlesg').createEmitter({
             x: 50,
             y: 53,
-            speed: { min: -800, max: 800 },
+            speed: { min: -90, max: 90 },
             angle: { min: 0, max: 360 },
-            scale: { start: 0.5, end: 0 },
+            scale: { start: 0.1, end: 0 },
             blendMode: 'SCREEN',
             active: true,
-            lifespan: 600,
-            gravityY: 800
+            lifespan: 350,
+            gravityY: 100 ,
+            quantity : 0.05 ,
         });
-
-        // emitter0.explode();
-
-
 
 
     }
