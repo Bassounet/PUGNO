@@ -22,6 +22,8 @@ class Tableau extends Phaser.Scene{
         this.load.audio('explosion', 'son/explo.wav');
         this.load.audio('fire', 'son/fire.wav');
         this.load.audio('amb', 'son/ambiance.wav');
+        this.load.audio('cible', 'son/hit_cible.wav');
+        this.load.audio('barbeles', 'son/barbles.wav');
 
     }
 

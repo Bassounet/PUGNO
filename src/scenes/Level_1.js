@@ -232,7 +232,7 @@ class Level_1 extends Tableau {
 
         this.platform_t = this.physics.add.group();
 
-        this.platform_t.create(2688,288,"platform_t");
+        // this.platform_t.create(2688,288,"platform_t");
         this.platform_t.create(3390,288,"platform_t");
         this.platform_t.create(3583,288,"platform_t");
         this.platform_t.create(3774,288,"platform_t");
@@ -834,6 +834,8 @@ class Level_1 extends Tableau {
 
     TP() {
 
+        // -*-*-*-*-*-*- BARBELS
+
         // -*-*-*-*-*-*- TP 1 FIN
 
         let TP1_X = 2493;
@@ -842,6 +844,7 @@ class Level_1 extends Tableau {
 
         if (this.player.x > TP1_X && this.player.y > TP_Y && this.player.x < TP1_X + 128 ) {
 
+            this.sound.play('barbeles', {volume : 1 });
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X1,200);
@@ -849,6 +852,22 @@ class Level_1 extends Tableau {
 
         }
         // -*-*-*-*-*-*- TP 1 FIN
+
+        // -*-*-*-*-*-*- TP 1-2
+
+        let TP1_2_X = 2300;
+
+
+        if (this.player.x > TP1_2_X && this.player.y > TP_Y && this.player.x < TP1_2_X + 128 ) {
+
+            this.sound.play('barbeles', {volume : 1 });
+            this.sound.play('die', {volume : 1 });
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_X1,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
+
+        }
+        // -*-*-*-*-*-*- TP 1-2 FIN
 
         // -*-*-*-*-*-*- TP 2
 
@@ -858,6 +877,7 @@ class Level_1 extends Tableau {
 
         if (this.player.x > TP2_X && this.player.y > TP_Y && this.player.x < TP2_X + 128 ) {
 
+            this.sound.play('barbeles', {volume : 1 });
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X2,200);
@@ -865,6 +885,22 @@ class Level_1 extends Tableau {
 
         }
         // -*-*-*-*-*-*- TP 2 FIN
+
+        // -*-*-*-*-*-*- TP 2-1
+
+        let TP2_1X = 2685;
+
+
+        if (this.player.x > TP2_1X && this.player.y > TP_Y && this.player.x < TP2_1X + 128 ) {
+
+            this.sound.play('barbeles', {volume : 1 });
+            this.sound.play('die', {volume : 1 });
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_X1,200);
+            this.cameras.main.fadeIn(3000, 0, 0, 0);
+
+        }
+        // -*-*-*-*-*-*- TP 2-1 FIN
 
         // -*-*-*-*-*-*- TP 3
 
@@ -874,6 +910,7 @@ class Level_1 extends Tableau {
 
         if (this.player.x > TP3_X && this.player.y > TP_Y && this.player.x < TP3_X + 128 ) {
 
+            this.sound.play('barbeles', {volume : 1 });
             this.sound.play('die', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X3,200);
@@ -883,6 +920,10 @@ class Level_1 extends Tableau {
         // -*-*-*-*-*-*- TP3 FIN
 
         // -*-*-*-*-*-*- TP4
+
+        // -*-*-*-*-*-*- BARBELS
+
+
 
         let TP4_X = 7783;
         let target_X4 = 8600;

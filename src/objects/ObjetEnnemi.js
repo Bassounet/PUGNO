@@ -18,7 +18,7 @@ class ObjetEnnemi extends ObjetPhysique{
     killcible(){
         this.disableBody(true, true);
         console.log('gg1');
-        this.scene.sound.play('moleu',{volume : 1});
+        this.scene.sound.play('cible',{volume : 1});
 
     }
 

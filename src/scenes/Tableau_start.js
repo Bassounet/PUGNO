@@ -35,7 +35,7 @@ class Tableau_start extends Tableau {
 
 
         })
-        
+
 
         // ---- *** ---- VERS SUIVANT  ---- *** ----
 
