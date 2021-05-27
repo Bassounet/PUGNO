@@ -91,6 +91,7 @@ class Ui extends Phaser.Scene{
             Tableau.current.player.shoot();
             Tableau.current.sound.play('fire', {volume: 3});
 
+
         })
 
         // *_*_*_*_*_*_*_*_* bouton tir END

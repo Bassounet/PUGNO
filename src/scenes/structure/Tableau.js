@@ -115,6 +115,8 @@ class Tableau extends Phaser.Scene{
                 this.sound.play('die', { delay : 0.15 });
                 this.sound.play('blood', { delay : 0.04 });
 
+            Tableau.current.cameras.main.shake(1000, 0.1, true);
+
 
                 if(!me.player.isDead){
                     this.musicamb.stop();
@@ -130,7 +132,7 @@ class Tableau extends Phaser.Scene{
                         me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
-                        this.sound.play('recovery', { delay : 0.04 });
+                        me.sound.play('recovery', { delay : 0.04 });
 
 
 
@@ -155,7 +157,9 @@ class Tableau extends Phaser.Scene{
 
                 this.sound.play('mines', {volume : 0.6 });
                 this.sound.play('die', { delay : 0.15 });
-            this.sound.play('blood', { delay : 0.15 });
+                this.sound.play('blood', { delay : 0.15 });
+
+                Tableau.current.cameras.main.shake(1000, 0.07, true);
 
                 if(!me.player.isDead){
 
