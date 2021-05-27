@@ -108,11 +108,9 @@ class Ui extends Phaser.Scene{
             blendMode: 'SCREEN',
             active: true,
             lifespan: 350,
-            gravityY: 100 ,
-            quantity : 0.05 ,
+            gravityY: 0 ,
+            quantity : 0.001 ,
         });
-
-
     }
 
     gagne(points=1)
@@ -121,10 +119,13 @@ class Ui extends Phaser.Scene{
         this._scoreText.setText('     x  ' + this.score);
 
     }
+
     update(){
+
         if(Tableau.current){
             this._tableauText.setText(Tableau.current.scene.key);
             this._tableauTextClass.setText(Tableau.current.constructor.name);
+
         }
     }
 }

@@ -1,4 +1,5 @@
 class Player extends Phaser.Physics.Arcade.Sprite{
+
     constructor(scene, x, y) {
         super(scene, x, y, "player")
         scene.add.existing(this)
@@ -48,19 +49,14 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this._directionY=value;
     }
 
-    /**
-     * arrête le joueur
-     */
+    *
     stop(){
         this.setVelocityY(0);
         this.directionY=0;
         this.directionX=0;
     }
 
-    /**
-     * Déplace le joueur en fonction des directions données
-     */
-    move(){
+        move(){
         switch (true){
             case this._directionX<0:
                 this.sens=-1;
@@ -94,10 +90,9 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         if(this._directionY<0){
             if(this.body.blocked.down || this.body.touching.down){
-                this.setVelocityY(-650); // vitesse en montée 
+                this.setVelocityY(-650);
             }
         }
-
     }
 
 

@@ -14,11 +14,6 @@
   <object id="68" gid="269" x="6217.67" y="137" width="64" height="64"/>
   <object id="69" gid="269" x="6013.67" y="141" width="64" height="64"/>
   <object id="70" gid="269" x="5921.67" y="135" width="64" height="64"/>
-  <object id="87" gid="269" x="903.667" y="102.333" width="64" height="64"/>
-  <object id="88" gid="269" x="1035.67" y="105" width="64" height="64"/>
-  <object id="89" gid="269" x="1162.33" y="110.333" width="64" height="64"/>
-  <object id="90" gid="269" x="1255.67" y="109" width="64" height="64"/>
-  <object id="91" gid="269" x="1366.33" y="121" width="64" height="64"/>
  </objectgroup>
  <objectgroup id="18" name="mines">
   <object id="34" gid="181" x="1734" y="356" width="64" height="64"/>
