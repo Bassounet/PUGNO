@@ -963,9 +963,9 @@ class Level_1 extends Tableau {
         this.background2_5.tilePositionY = this.cameras.main.scrollY * 0.5;
 
         this.background2.tilePositionX = this.cameras.main.scrollX * 0.1;
-        this.background2.tilePositionY = this.cameras.main.scrollY * 0.5;
+        this.background2.tilePositionY = this.cameras.main.scrollY * 0.3;
 
-        this.cloud.tilePositionX = this.cameras.main.scrollX * 0.2;
+        this.cloud.tilePositionX = this.cameras.main.scrollX * 0.07;
         this.cloud.tilePositionY = this.cameras.main.scrollY * 0.15;
 
 

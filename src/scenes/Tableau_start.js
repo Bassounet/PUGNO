@@ -16,22 +16,30 @@ class Tableau_start extends Tableau {
 
         super.create();
 
+        this.touchePressed = false;
+
         this.add.image(448,224,'fond');
 
         this.boutonstart = this.add.image(428,162, 'start');
         this.boutonstart.setInteractive();
         this.boutonstart.on('pointerdown', function () {
 
-            Tableau.suivant();
-            Tableau.current.sound.play('go',{volume : 1});
             Tableau.current.cameras.main.fadeOut(1000, 0, 0, 0)
+            Tableau.current.sound.play('go', {volume: 1});
+            Tableau.current.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
+                
+                Tableau.suivant();
+
+            })
+
 
         })
 
 
+
         // ---- *** ---- VERS SUIVANT  ---- *** ----
 
-        this.input.keyboard.on('keydown-ENTER', function () //'keydown-SPACE', function ()
+        this.input.keyboard.on('keydown-ENTER', function ()
         {
             if (!this.touchePressed)
             {
