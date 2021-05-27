@@ -94,6 +94,20 @@ class Ui extends Phaser.Scene{
 
         })
 
+        var emitter0 = this.add.particles('bouton_tir').createEmitter({
+            x: 50,
+            y: 53,
+            speed: { min: -800, max: 800 },
+            angle: { min: 0, max: 360 },
+            scale: { start: 0.5, end: 0 },
+            blendMode: 'SCREEN',
+            active: true,
+            lifespan: 600,
+            gravityY: 800
+        });
+
+        // emitter0.explode();
+
 
 
 
