@@ -191,26 +191,6 @@ class Tableau extends Phaser.Scene{
     hitMechant(player, monster){
         let me=this;
         if(monster.isDead !== true ){
-            if(
-
-                player.body.velocity.y > 0
-
-                && player.getBounds().bottom < monster.getBounds().top+30
-
-            ){
-
-                monster.isDead=true;
-                monster.visible=false;
-
-
-
-                this.saigne(monster,function(){
-
-                })
-
-                player.directionY=500;
-            }else{
-
                 if(!me.player.isDead){
                     me.player.isDead=true;
                     this.musicamb.stop();
@@ -229,7 +209,6 @@ class Tableau extends Phaser.Scene{
                     })
 
                 }
-            }
         }
 
     }
