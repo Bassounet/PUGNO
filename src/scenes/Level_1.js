@@ -56,6 +56,10 @@ class Level_1 extends Tableau {
 
         super.create();
 
+         this.moleuux = new Moleux(this, 500, 100);
+         this.moleuux.setDepth(1000)
+
+
 
         this.musicamb = this.sound.add('amb');
         var musicConfig =
@@ -401,7 +405,7 @@ class Level_1 extends Tableau {
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
         this.player.setDepth(z--);
-        
+
 
 
         this.txt1.setDepth(z)

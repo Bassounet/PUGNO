@@ -260,6 +260,11 @@ class Tableau extends Phaser.Scene{
 
     }
 
+    playtest(){
+
+        console.log('greg');
+    }
+
 
     getMoleu (player, star)
     {
