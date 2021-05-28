@@ -38,10 +38,12 @@ class Level_1 extends Tableau {
         this.load.image('sam_text', 'assets/sam_text.png');
 
         this.load.image('particlesg', 'assets/particles/particle1.png');
+        this.load.image('particle_mine', 'assets/particles/particle_mine.png');
+        this.load.image('particle_tono', 'assets/particles/particle_tono.png');
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_122.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_132.json');
 
 
 
@@ -307,16 +309,14 @@ class Level_1 extends Tableau {
             ici.tonoContainer.add(tono);
             ici.physics.add.collider(tono, this.floor);
 
-
-
         });
+
 
         ici.mineObjects = ici.map.getObjectLayer('mines')['objects'];
         ici.mineObjects.forEach(mineObject => {
             let minex = new mine(ici, mineObject.x, mineObject.y);
             ici.mineContainer.add(minex);
             ici.physics.add.collider(minex, this.floor);
-
         });
 
         ici.cibleObjects = ici.map.getObjectLayer('cibles')['objects'];
@@ -333,7 +333,17 @@ class Level_1 extends Tableau {
 
         this.moleu=this.physics.add.group();
 
-        this.moleu.create(663,263,"moleu_");
+        this.moleu.create(790,140,"moleu_");
+        this.moleu.create(1090,293,"moleu_");
+        this.moleu.create(2066,220,"moleu_");
+        this.moleu.create(1628,224,"moleu_");
+        this.moleu.create(2447,350,"moleu_");
+        this.moleu.create(2643,350,"moleu_");
+        this.moleu.create(2881,259,"moleu_");
+        this.moleu.create(3580,236,"moleu_");
+        this.moleu.create(3773,236,"moleu_");
+        this.moleu.create(4395,140,"moleu_");
+        this.moleu.create(4868,140,"moleu_");
         this.moleu.create(6750,220,"moleu_");
         this.moleu.create(7066,220,"moleu_");
         this.moleu.create(7354,220,"moleu_");
@@ -971,6 +981,28 @@ class Level_1 extends Tableau {
         }
         // -*-*-*-*-*-*- TP3 FIN
 
+        // -*-*-*-*-*-*- TP 3-1
+
+        let TP3_1_X = 6068;
+        let target_X3_1 = 5550;
+
+
+        if (this.player.x > TP3_1_X && this.player.y > TP_Y && this.player.x < TP3_1_X + 128 ) {
+
+            this.sound.play('barbeles', {volume : 1 });
+            this.sound.play('die', {volume : 1 });
+            this.cameras.main.fadeOut(1, 0, 0, 0);
+            this.player.setPosition(target_X3_1,200);
+            this.cameras.main.fadeIn(700, 0, 0, 0);
+            this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
+            {
+                this.sound.play('recovery', {volume : 1 });
+
+
+            })
+        }
+        // -*-*-*-*-*-*- TP3-1 FIN
+
         // -*-*-*-*-*-*- TP4
 
         // -*-*-*-*-*-*- BARBELS
@@ -1027,6 +1059,35 @@ class Level_1 extends Tableau {
         // -*-*-*-*-*-*- TP5 FIN
 
     }
+
+    /*pointLightMines()
+    {
+        this.uneFois = true;
+        if(this.uneFois)
+        {
+            this.antenne = Tableau.current.scene.add.pointlight(this.x - 14, this.y + 32, 0xff0000, 10, 10, 100);
+            this.antenne2 = Tableau.current.scene.add.pointlight(this.x + 14, this.y + 32, 0xff0000, 10, 10, 10);
+
+            Tableau.current.scene.tweens.add({
+                targets: [this.antenne, this.antenne2],
+                duration: 1000,
+                yoyo: true,
+                repeat: -1,
+                delay: 0,
+                alpha:
+                    {
+                        startDelay: 0,
+                        from: 0,
+                        to: 1,
+                    }
+            });
+
+            this.antenne.setDepth(1000);
+            this.antenne2.setDepth(1000);
+
+            this.uneFois = false;
+        }
+    }*/
 
     Toggle_Pause() {
 

@@ -113,11 +113,13 @@ class Tableau extends Phaser.Scene{
                 tono.isDead=true;
                 tono.visible=false;
 
+                tono.emit(MyEvents.EXPLODE);
+
                 this.sound.play('barrel', {volume : 0.4 });
                 this.sound.play('die', { delay : 0.15 });
                 this.sound.play('blood', { delay : 0.04 });
 
-            Tableau.current.cameras.main.shake(1000, 0.1, true);
+                Tableau.current.cameras.main.shake(200, 0.1, true);
 
 
                 if(!me.player.isDead){
@@ -128,14 +130,11 @@ class Tableau extends Phaser.Scene{
                     me.saigne(me.player,function(){
 
 
-
-
                         me.blood.visible=false;
                         me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
                         me.sound.play('recovery', { delay : 0.04 });
-
 
 
                     })
@@ -155,11 +154,13 @@ class Tableau extends Phaser.Scene{
                 mine.isDead=true;
                 mine.visible=false;
 
+                mine.emit(MyEvents.EXPLODE);
+
                 this.sound.play('mines', {volume : 0.6 });
                 this.sound.play('die', { delay : 0.15 });
                 this.sound.play('blood', { delay : 0.15 });
 
-                Tableau.current.cameras.main.shake(1000, 0.07, true);
+                Tableau.current.cameras.main.shake(100, 0.07, true);
 
                 if(!me.player.isDead){
 

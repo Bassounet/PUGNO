@@ -15,6 +15,8 @@ class Tir extends ObjetPhysique{
 
         let tir = this;
 
+
+
         scene.cibleContainer.iterate(cibleu=>{
             scene.physics.add.overlap(this, cibleu, function(){cibleu.killcible();
             tir.destroy()}, null, scene);

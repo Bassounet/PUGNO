@@ -57,36 +57,22 @@ class Player extends Phaser.Physics.Arcade.Sprite{
     }
 
         move(){
-        switch (true){
-            case this._directionX<0:
-                this.sens=-1;
-                this.setVelocityX(-600);
+        switch (true) {
+            case this._directionX < 0:
+                this.sens = -1;
+                this.setVelocityX(-420);
                 this.anims.play('left', true);
                 break;
-            case this._directionX>0:
-                this.sens=1;
-                this.setVelocityX(600);
+            case this._directionX > 0:
+                this.sens = 1;
+                this.setVelocityX(420);
                 this.anims.play('right', true);
                 break;
             default:
                 this.setVelocityX(0);
-            // this.anims.play('stance', true);
-            //this.anims.play(this.sens===-1 ? 'back' : 'stance' ,true); //équivalent d'un if, pour mémoriser la position du personnage pour qu'il regarde à gauche ou à droite en fonction du dernier déplacement effectué
-        }
-        /*switch (true){
-            case this._directionX<0:
-                this.setVelocityX(-300);
-                this.anims.play('left', true);
-                break;
-            case this._directionX>0:
 
-                this.setVelocityX(300);
-                this.anims.play('right', true);
-                break;
-            default:
-                this.setVelocityX(0);
-                this.anims.play('turn', true);
-        }*/
+        }
+
 
         if(this._directionY<0){
             if(this.body.blocked.down || this.body.touching.down){
@@ -99,6 +85,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
     shoot(){
 
         var bullet = new Tir(this.scene,this.x, this.y);
+        Tableau.current.cameras.main.shake(10, 0.01, true)
 
         setTimeout(function(){
             bullet.destroy();
