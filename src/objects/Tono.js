@@ -10,7 +10,26 @@ class Tono extends ObjetPhysique{
             scene
         );
         this.setBodySize(30,55);
-        this.setOffset(20,10);
+        this.setOffset(2,6);
+
+        this.C4 = this.scene.add.pointlight(this.x +5, this.y +32 , 0xff0000, 10, 10, 100);
+        this.C4.attenuation = 0.05;
+
+        this.C4.setDepth(1000);
+
+        this.scene.tweens.add({
+            targets: [this.C4],
+            duration: 1000,
+            yoyo: true,
+            repeat: -1,
+            delay: 0,
+            alpha:
+                {
+                    startDelay: 0,
+                    from: 0,
+                    to: 1,
+                }
+        });
 
         this.tonoepxlode = scene.add.particles('particle_tono');
 

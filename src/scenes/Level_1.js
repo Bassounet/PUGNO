@@ -6,7 +6,7 @@ class Level_1 extends Tableau {
         this.load.image('tourelleV2', 'assets/tourelleV2.png');
         this.load.image('drone', 'assets/drone.png');
         this.load.image('mechant', 'assets/mechant.png');
-        this.load.image('tono', 'assets/tono.png');
+        this.load.image('tono', 'assets/tono1.png');
         this.load.image('mine', 'assets/mine.png');
 
         this.load.image('sol', 'assets/platformes_sol.png');
@@ -20,7 +20,7 @@ class Level_1 extends Tableau {
         this.load.image('bullet', 'assets/bullet.png');
         this.load.image('blood', 'assets/blood.png');
 
-        this.load.image('sprite', 'ref/sprite3.png');
+        this.load.image('sprite', 'ref/sprite4.png');
         this.load.image('back', 'assets/images/backgroundB.png');
         this.load.image('background2', 'assets/images/background2.png');
         this.load.image('background2_5', 'assets/images/background3.png');
@@ -43,7 +43,7 @@ class Level_1 extends Tableau {
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_132.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_164.json');
 
 
 
@@ -55,14 +55,8 @@ class Level_1 extends Tableau {
 
         super.create();
 
-        // this.lights.enable().setAmbientColor(0x555555);
-
-
-
 
         this.musicamb = this.sound.add('amb');
-
-
         var musicConfig =
             {
                 mute: false,
@@ -140,7 +134,7 @@ class Level_1 extends Tableau {
         this.txt4 = this.add.image(text4_x, text4_y, "txt4")
         this.txt4.setDisplaySize(160,60);
 
-        let text5_x = 5580;
+        let text5_x = 4580;
         let text5_y = 150;
 
         this.txt5 = this.add.image(text5_x, text5_y, "txt5")
@@ -298,19 +292,15 @@ class Level_1 extends Tableau {
             ici.mechantContainer.add(mechant);
             ici.physics.add.collider(mechant, this.floor);
 
-
-
         });
 
         ici.tonoObjects = ici.map.getObjectLayer('tono')['objects'];
-
         ici.tonoObjects.forEach(tonoObject => {
             let tono = new Tono(ici, tonoObject.x, tonoObject.y);
             ici.tonoContainer.add(tono);
             ici.physics.add.collider(tono, this.floor);
 
         });
-
 
         ici.mineObjects = ici.map.getObjectLayer('mines')['objects'];
         ici.mineObjects.forEach(mineObject => {
@@ -330,6 +320,7 @@ class Level_1 extends Tableau {
         // ----------- ***** ---- ON CREE NOS MONSTRES FIN ---*****---------
 
         // ----------- ***** ---- ON CREE NOS CRISTAUX  ---*****---------
+
 
         this.moleu=this.physics.add.group();
 
@@ -419,13 +410,11 @@ class Level_1 extends Tableau {
         this.txt7.setDepth(z);
         this.txtsam.setDepth(z);
 
-        // this.emitter0.setDepth(z);
 
-
-        this.tonoContainer.setDepth(z);
         this.mineContainer.setDepth(z);
         this.mechantContainer.setDepth(z);
         this.cibleContainer.setDepth(z);
+        this.tonoContainer.setDepth(z);
 
         this.platform_t.setDepth(z);
         this.platforms.setDepth(z);
@@ -613,8 +602,8 @@ class Level_1 extends Tableau {
 
         // -*-*-*-*-*-*- TXT 4
 
-        let x_ok_start_4 = 4200;
-        let x_ok_fin_4 = 4700;
+        let x_ok_start_4 = 4032;
+        let x_ok_fin_4 = 4400;
 
 
         if (this.player.x < x_ok_start_4) {

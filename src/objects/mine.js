@@ -13,8 +13,8 @@ class mine extends ObjetPhysique{
         );
 
 
-        this.antenne = this.scene.add.pointlight(this.x - 14, this.y + 32, 0xff0000, 10, 10, 100);
-        this.antenne2 = this.scene.add.pointlight(this.x + 14, this.y + 32, 0xff0000, 10, 10, 10);
+        this.antenne = this.scene.add.pointlight(this.x - 14, this.y -20, 0xff0000, 10, 10, 100);
+        this.antenne2 = this.scene.add.pointlight(this.x + 14, this.y -20 , 0xff0000, 10, 10, 10);
         this.antenne2.attenuation = 0.05;
         this.antenne2.color.setTo(255, 0, 0);
         this.antenne.attenuation = 0.05;
