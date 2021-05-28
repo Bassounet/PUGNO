@@ -40,6 +40,7 @@ class Level_1 extends Tableau {
         this.load.image('particlesg', 'assets/particles/particle1.png');
         this.load.image('particle_mine', 'assets/particles/particle_mine.png');
         this.load.image('particle_tono', 'assets/particles/particle_tono.png');
+        this.load.image('particle_target', 'assets/particles/particle_target.png');
 
         this.load.audio('amb', 'son/ambiance.wav');
 
@@ -110,11 +111,11 @@ class Level_1 extends Tableau {
 
 
 
-        let text1_x = 192;
-        let text1_y = 270;
+        let text1_x = 175;
+        let text1_y = 285;
 
         this.txt1 = this.add.image(text1_x, text1_y, "txt1")
-        this.txt1.setDisplaySize(185,60);
+        this.txt1.setDisplaySize(190,60);
 
         let text2_x = 2130;
         let text2_y = 150;
@@ -122,20 +123,20 @@ class Level_1 extends Tableau {
         this.txt2 = this.add.image(text2_x, text2_y, "txt2")
         this.txt2.setDisplaySize(175,60);
 
-        let text3_x = 3200;
-        let text3_y = 150;
+        let text3_x = 3225;
+        let text3_y = 160;
 
         this.txt3 = this.add.image(text3_x, text3_y, "txt3")
-        this.txt3.setDisplaySize(185,50);
+        this.txt3.setDisplaySize(185,45);
 
-        let text4_x = 4600;
-        let text4_y = 90;
+        let text4_x = 4150;
+        let text4_y = 155;
 
         this.txt4 = this.add.image(text4_x, text4_y, "txt4")
         this.txt4.setDisplaySize(160,60);
 
-        let text5_x = 4580;
-        let text5_y = 150;
+        let text5_x = 5370;
+        let text5_y = 165;
 
         this.txt5 = this.add.image(text5_x, text5_y, "txt5")
         this.txt5.setDisplaySize(160,50);
@@ -1049,41 +1050,6 @@ class Level_1 extends Tableau {
 
     }
 
-    /*pointLightMines()
-    {
-        this.uneFois = true;
-        if(this.uneFois)
-        {
-            this.antenne = Tableau.current.scene.add.pointlight(this.x - 14, this.y + 32, 0xff0000, 10, 10, 100);
-            this.antenne2 = Tableau.current.scene.add.pointlight(this.x + 14, this.y + 32, 0xff0000, 10, 10, 10);
-
-            Tableau.current.scene.tweens.add({
-                targets: [this.antenne, this.antenne2],
-                duration: 1000,
-                yoyo: true,
-                repeat: -1,
-                delay: 0,
-                alpha:
-                    {
-                        startDelay: 0,
-                        from: 0,
-                        to: 1,
-                    }
-            });
-
-            this.antenne.setDepth(1000);
-            this.antenne2.setDepth(1000);
-
-            this.uneFois = false;
-        }
-    }*/
-
-    Toggle_Pause() {
-
-
-    }
-
-
 
     // ***-*-*-*-*-*-*- NEW FONCTIONS FIN  -*-*-*-*-*-*-*-*-
     
@@ -1092,7 +1058,7 @@ class Level_1 extends Tableau {
     update() {
         super.update();
 
-        this.Toggle_Pause();
+        // this.target_ground();
         this.apparitionText1();
         this.TP();
 

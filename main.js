@@ -7,7 +7,7 @@ window.MyEvents = {
 
 
 let width=14*64; //896;
-let height=7*64; //448;
+let height=7*64; //448;z
 
 let config = {
     type: Phaser.AUTO,
