@@ -9,7 +9,7 @@ class Tir extends ObjetPhysique{
         this.setDisplaySize(10, 5);
         this.setBodySize(this.body.width, this.body.height);
 
-        this.setVelocityX(450 * scene.player.sens);
+        this.setVelocityX(800 * scene.player.sens);
         this.setBounce(1);
         this.setDepth(1000);
 

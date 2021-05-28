@@ -7,8 +7,6 @@ class Tableau_start extends Tableau {
         this.load.audio('woosh', 'son/woosh.wav');
         this.load.image('start', 'assets/start_button.png');
 
-
-
     }
 
 
@@ -30,11 +28,14 @@ class Tableau_start extends Tableau {
             Tableau.current.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
 
                 Tableau.suivant();
+                ui.playok = true;
 
             })
 
 
         })
+
+        // this.playok = false;
 
 
         // ---- *** ---- VERS SUIVANT  ---- *** ----
@@ -49,6 +50,7 @@ class Tableau_start extends Tableau {
                 this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) =>
                 {
                     Tableau.suivant();
+                    ui.playok = true;
 
 
                 })
@@ -101,7 +103,6 @@ class Tableau_start extends Tableau {
         }, this);
 
         // ---- *** ---- VERS QUITTER  ---- *** ----
-
 
     }
 

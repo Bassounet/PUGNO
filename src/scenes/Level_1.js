@@ -322,11 +322,10 @@ class Level_1 extends Tableau {
 
         // ----------- ***** ---- ON CREE NOS CRISTAUX  ---*****---------
 
-
         this.moleu=this.physics.add.group();
 
         this.moleu.create(790,140,"moleu_");
-        this.moleu.create(1090,293,"moleu_");
+        this.moleu.create(this.moleu1X,this.moleu1Y,"moleu_");
         this.moleu.create(2066,220,"moleu_");
         this.moleu.create(1628,224,"moleu_");
         this.moleu.create(2447,350,"moleu_");
@@ -351,6 +350,7 @@ class Level_1 extends Tableau {
         });
 
         this.physics.add.overlap(this.player, this.moleu, this.getMoleu, null, this);
+
 
         // ----------- ***** ---- ON CREE NOS CRISTAUX FIN   ---*****---------
 
@@ -401,6 +401,8 @@ class Level_1 extends Tableau {
         this.blood.setDepth(z--);
         this.moleu.setDepth(z--);
         this.player.setDepth(z--);
+        
+
 
         this.txt1.setDepth(z)
         this.txt2.setDepth(z);
@@ -1051,16 +1053,16 @@ class Level_1 extends Tableau {
     }
 
 
-    // ***-*-*-*-*-*-*- NEW FONCTIONS FIN  -*-*-*-*-*-*-*-*-
     
 
 
     update() {
         super.update();
 
-        // this.target_ground();
         this.apparitionText1();
         this.TP();
+
+
 
         //le second plan se déplace moins vite pour accentuer l'effet
         this.sky.tilePositionX = this.cameras.main.scrollX * 0.1;

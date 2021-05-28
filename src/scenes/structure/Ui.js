@@ -61,16 +61,16 @@ class Ui extends Phaser.Scene{
 
 
 
-        let pad=new GamePad(this,0,0);
-        pad.x=this.sys.canvas.width-pad.size-60;
-        pad.y=this.sys.canvas.height-pad.size-60;
+        this.pad=new GamePad(this,0,0);
+        this.pad.x=this.sys.canvas.width-this.pad.size-60;
+        this.pad.y=this.sys.canvas.height-this.pad.size-60;
 
         // *è*_*_*_*_*_*_*_* full screen
 
 
-        let btFs=this.add.image(0,0,'ui/full-screen-icon');
-        btFs.setInteractive();
-        btFs.on('pointerup', function () {
+        this.btFs=this.add.image(0,0,'ui/full-screen-icon');
+        this.btFs.setInteractive();
+        this.btFs.on('pointerup', function () {
 
             if (this.scale.isFullscreen){
                 this.scale.stopFullscreen();
@@ -79,12 +79,14 @@ class Ui extends Phaser.Scene{
             }
 
         }, this);
-        btFs.setOrigin(1,1)
-        btFs.setDisplaySize(48,48)
-        btFs.x=this.sys.canvas.width;
-        btFs.y=this.sys.canvas.height;
+        this.btFs.setOrigin(1,1)
+        this.btFs.setDisplaySize(48,48)
+        this.btFs.x=this.sys.canvas.width;
+        this.btFs.y=this.sys.canvas.height;
 
         // *_*_*_*_*_*_*_*_* full screen end
+
+        this.playok = false;
 
         // *_*_*_*_*_*_*_*_* bouton tir
 
@@ -95,22 +97,8 @@ class Ui extends Phaser.Scene{
 
             Tableau.current.player.shoot();
             Tableau.current.sound.play('fire', {volume: 3});
-
-
         })
 
-        var emitter0 = this.add.particles('particlesg').createEmitter({
-            x: 50,
-            y: 53,
-            speed: { min: -90, max: 90 },
-            angle: { min: 0, max: 360 },
-            scale: { start: 0.1, end: 0 },
-            blendMode: 'SCREEN',
-            active: true,
-            lifespan: 350,
-            gravityY: 0 ,
-            quantity : 0.001 ,
-        });
     }
 
     gagne(points=1)
@@ -122,9 +110,29 @@ class Ui extends Phaser.Scene{
 
     update(){
 
-        if(Tableau.current){
-            this._tableauText.setText(Tableau.current.scene.key);
-            this._tableauTextClass.setText(Tableau.current.constructor.name);
+
+
+        if(this.playok)
+        {
+            this.pad.visible = true;
+            this._scoreText.visible = true;
+            this.moleui.visible = true ;
+            this.boutonshoot.visible = true ;
+            this.btFs.visible = true ;
+            this._tableauText= true;
+
+
+        }
+        else
+        {
+            this.pad.visible = false;
+            this._scoreText.visible = false;
+            this.moleui.visible = false ;
+            this.boutonshoot.visible = false;
+            this.btFs.visible = false ;
+            this._tableauText= false ;
+
+
 
         }
     }

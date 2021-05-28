@@ -89,7 +89,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         setTimeout(function(){
             bullet.destroy();
-            },1500);
+            },600);
 
     }
 

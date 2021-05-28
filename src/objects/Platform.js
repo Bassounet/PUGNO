@@ -8,8 +8,6 @@ class Platform extends ObjetPhysique
 
         this.body.setImmovable();
         this.body.allowGravity=false;
-        // this.physics.add.collider(this.player, this);
-        // this.setCollideWorldBounds(true)
 
     }
 
