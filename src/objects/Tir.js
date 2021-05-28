@@ -16,21 +16,7 @@ class Tir extends ObjetPhysique{
         let tir = this;
 
 
-        scene.cibleContainer.iterate(cibleu => {
-            scene.physics.add.overlap(this, cibleu, function () {
-                cibleu.killcible();
-                tir.destroy()
-            }, null, scene);
 
-        })
-
-        scene.mechantContainer.iterate(monster => {
-            scene.physics.add.overlap(this, monster, function () {
-                monster.killmonster();
-                tir.destroy()
-            }, null, scene);
-
-        })
 
         this.target_groundex = scene.add.particles('particle_tono');
 
@@ -69,11 +55,48 @@ class Tir extends ObjetPhysique{
 
         });
 
-        let mec = this ;
+        scene.cibleContainer.iterate(cibleu => {
+            scene.physics.add.overlap(this, cibleu, function () {
+
+                me.emit(MyEvents.EXPLODE);
+                cibleu.killcible();
+                tir.destroy()
+
+            }, null, scene);
+
+        })
+
+        scene.tonoContainer.iterate(monster => {
+            scene.physics.add.overlap(this, monster, function () {
+
+                Tableau.current.sound.play('hit_tono_song', {volume : 1});
+                me.emit(MyEvents.EXPLODE);
+                tir.destroy()
+
+
+            }, null, scene);
+
+        })
+
+        scene.mechantContainer.iterate(monster => {
+            scene.physics.add.overlap(this, monster, function () {
+
+                Tableau.current.sound.play('hitman', {volume : 0.1});
+                monster.killmonster();
+                me.emit(MyEvents.EXPLODE);
+                tir.destroy()
+
+
+            }, null, scene);
+
+        })
+
+
+
 
         scene.physics.add.collider(this, scene.floor, function () {
 
-            mec.emit(MyEvents.EXPLODE);
+            me.emit(MyEvents.EXPLODE);
             tir.destroy();
             Tableau.current.sound.play('hitground', {volume : 0.1});
 
