@@ -217,73 +217,11 @@ class Tableau extends Phaser.Scene{
         }
 
     }
-
-    hitCible(player, monster){
-
-        let me=this;
-
-        if(monster.isDead !== true){
-
-
-            monster.isDead=true;
-            monster.visible=false;
-
-            this.sound.play('cible', {volume : 0.6 });
-            this.sound.play('ouch', { delay : 0.15 });
-
-
-            Tableau.current.cameras.main.shake(50, 0.07, true);
-
-            if(!me.player.isDead){
-
-                this.musicamb.stop();
-                me.player.isDead=true;
-                me.player.visible=false;
-
-
-                me.saigne(me.player,function(){
-
-
-                    me.blood.visible=false;
-                    me.player.anims.play('turn');
-                    me.player.isDead=false;
-                    me.scene.restart();
-                    me.sound.play('recovery', { delay : 0.04 });
-
-
-
-                })
-
-            }
-
-        }
-
-    }
+    
 
     playtest(){
 
         console.log('greg');
-    }
-
-
-    getMoleu (player, star)
-    {
-
-        star.disableBody(true, true);
-        ui.gagne();
-        this.sound.play('moleu', {volume : 1 });
-
-        let totalActive=0;
-        for(let child of this.children.getChildren()){
-            if(child.texture && child.texture.key === "star"){
-                if(child.active){
-                    totalActive++;
-                    this.sound.play('collect_1', {volume : 1 });
-
-                }
-            }
-        }
-
     }
 
 

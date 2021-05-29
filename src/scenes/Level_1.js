@@ -44,7 +44,7 @@ class Level_1 extends Tableau {
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_164.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_165.json');
 
 
 
@@ -55,19 +55,6 @@ class Level_1 extends Tableau {
         console.log(Phaser);
 
         super.create();
-
-         this.moleuux = new Moleux(this, 500, 100);
-         this.moleuux.setDepth(1000)
-
-        Tableau.current.physics.add.overlap(this.moleuux, this.player, function (){
-
-            ui.gagne();
-            console.log('hey');
-            this.moleuux.destroy();
-
-        }, null, this);
-
-
 
 
         this.musicamb = this.sound.add('amb');
@@ -82,7 +69,6 @@ class Level_1 extends Tableau {
                 delay:0,
             }
         this.musicamb.play(musicConfig);
-
 
 
         //--------chargement de la tile map & configuration de la scène-----------------------
@@ -262,7 +248,6 @@ class Level_1 extends Tableau {
 
         this.platform_t = this.physics.add.group();
 
-        // this.platform_t.create(2688,288,"platform_t");
         this.platform_t.create(3390,288,"platform_t");
         this.platform_t.create(3583,288,"platform_t");
         this.platform_t.create(3774,288,"platform_t");
@@ -331,38 +316,69 @@ class Level_1 extends Tableau {
 
         });
 
+        ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
+
+        ici.mechantObjects.forEach(monsterObject => {
+            let mechant = new mechant1(ici, monsterObject.x, monsterObject.y);
+            ici.mechantContainer.add(mechant);
+            ici.physics.add.collider(mechant, this.floor);
+
+        });
+
         // ----------- ***** ---- ON CREE NOS MONSTRES FIN ---*****---------
 
         // ----------- ***** ---- ON CREE NOS CRISTAUX  ---*****---------
 
-        this.moleu=this.physics.add.group();
+        this.moleuContainer = this.add.container();
 
-        this.moleu.create(790,140,"moleu_");
-        this.moleu.create(this.moleu1X,this.moleu1Y,"moleu_");
-        this.moleu.create(2066,220,"moleu_");
-        this.moleu.create(1628,224,"moleu_");
-        this.moleu.create(2447,350,"moleu_");
-        this.moleu.create(2643,350,"moleu_");
-        this.moleu.create(2881,259,"moleu_");
-        this.moleu.create(3580,236,"moleu_");
-        this.moleu.create(3773,236,"moleu_");
-        this.moleu.create(4395,140,"moleu_");
-        this.moleu.create(4868,140,"moleu_");
-        this.moleu.create(6750,220,"moleu_");
-        this.moleu.create(7066,220,"moleu_");
-        this.moleu.create(7354,220,"moleu_");
 
-        this.moleu.children.iterate(function (child) {
-            child.setCollideWorldBounds(true);
-            child.setBounce(0);
-            child.setDisplaySize(24,50)
-            child.setBodySize(20,45);
-            child.body.allowGravity = false;
-            child.flipX = false;
+        ici.moleuuuObjects = ici.map.getObjectLayer('moleu')['objects'];
+        ici.moleuuuObjects.forEach(moleuObject => {
+            let moleuu = new Moleux(ici, moleuObject.x, moleuObject.y);
+            ici.moleuContainer.add(moleuu);
+            // ici.physics.add.collider(moleuu, this.floor);
+            this.add.image(0,0,'moleu_');
 
         });
 
-        this.physics.add.overlap(this.player, this.moleu, this.getMoleu, null, this);
+        // Tableau.current.physics.add.overlap(Tableau.current.Moleux, Tableau.current.player, function (){
+        //
+        //
+        //     this.Moleux.destroy();
+        //
+        // }, null, this);
+
+        // this.moleuux.setDepth(1000)
+
+
+        // this.moleu=this.physics.add.group();
+
+        // this.moleu.create(790,140,"moleu_");
+        // this.moleu.create(this.moleu1X,this.moleu1Y,"moleu_");
+        // this.moleu.create(2066,220,"moleu_");
+        // this.moleu.create(1628,224,"moleu_");
+        // this.moleu.create(2447,350,"moleu_");
+        // this.moleu.create(2643,350,"moleu_");
+        // this.moleu.create(2881,259,"moleu_");
+        // this.moleu.create(3580,236,"moleu_");
+        // this.moleu.create(3773,236,"moleu_");
+        // this.moleu.create(4395,140,"moleu_");
+        // this.moleu.create(4868,140,"moleu_");
+        // this.moleu.create(6750,220,"moleu_");
+        // this.moleu.create(7066,220,"moleu_");
+        // this.moleu.create(7354,220,"moleu_");
+
+        // this.moleu.children.iterate(function (child) {
+        //     child.setCollideWorldBounds(true);
+        //     child.setBounce(0);
+        //     child.setDisplaySize(24,50)
+        //     child.setBodySize(20,45);
+        //     child.body.allowGravity = false;
+        //     child.flipX = false;
+        //
+        // });
+        //
+        // this.physics.add.overlap(this.player, this.moleu, this.getMoleu, null, this);
 
 
         // ----------- ***** ---- ON CREE NOS CRISTAUX FIN   ---*****---------
@@ -383,8 +399,8 @@ class Level_1 extends Tableau {
         this.physics.add.collider(this.mechantContainer, this.floor);
         this.physics.add.collider(this.platform_t, this.mechantContainer)
 
-        this.physics.add.collider(this.moleuux, this.player);
-        this.physics.add.collider(this.moleuux, this.floor);
+        // this.physics.add.collider(this.moleuux, this.player);
+        // this.physics.add.collider(this.moleuux, this.floor);
 
 
         //----------collisions FIN ---------------------
@@ -415,7 +431,7 @@ class Level_1 extends Tableau {
         //devant
 
         this.blood.setDepth(z--);
-        this.moleu.setDepth(z--);
+        // this.moleu.setDepth(z--);
         this.player.setDepth(z--);
 
 
@@ -434,6 +450,7 @@ class Level_1 extends Tableau {
         this.mechantContainer.setDepth(z);
         this.cibleContainer.setDepth(z);
         this.tonoContainer.setDepth(z);
+        this.moleuContainer.setDepth(z);
 
         this.platform_t.setDepth(z);
         this.platforms.setDepth(z);

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/objects/Moleux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Moleux.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
@@ -25,6 +26,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/scenes/Level_1.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1qWgOxfa2by1hO9sus9SqWsUXaR" />
   <component name="ProjectViewState">
@@ -149,7 +153,7 @@
       <workItem from="1622135501498" duration="13597000" />
       <workItem from="1622187178839" duration="14777000" />
       <workItem from="1622207589732" duration="23087000" />
-      <workItem from="1622280085812" duration="2580000" />
+      <workItem from="1622280085812" duration="6998000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
