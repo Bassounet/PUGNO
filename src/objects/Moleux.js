@@ -16,16 +16,16 @@ class Moleux extends ObjetPhysique{
         this.recolt_m = this.recolt.createEmitter({
             x : this.x,
             y : this.y,
-            speed: { min: 0, max: 500 },
+            speed: { min: 0, max: 200 },
             radial : true,
             angle: { min: -20, max: -120 },
-            scale: { start: 1, end: 1 },
-            blendMode: 'NORMAL',
+            scale: { start: 0.7, end: 0.1 },
+            blendMode: 'SCREEN',
             active: true,
             lifespan: 300,
             gravityY: 1200 ,
             frequency : 20,
-            quantity : 2 ,
+            quantity : 5 ,
             rotate : { min : 0, max : 360 } ,
 
         });
