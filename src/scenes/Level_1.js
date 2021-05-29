@@ -59,6 +59,15 @@ class Level_1 extends Tableau {
          this.moleuux = new Moleux(this, 500, 100);
          this.moleuux.setDepth(1000)
 
+        Tableau.current.physics.add.overlap(this.moleuux, this.player, function (){
+
+            ui.gagne();
+            console.log('hey');
+            this.moleuux.destroy();
+
+        }, null, this);
+
+
 
 
         this.musicamb = this.sound.add('amb');
@@ -374,6 +383,9 @@ class Level_1 extends Tableau {
         this.physics.add.collider(this.mechantContainer, this.floor);
         this.physics.add.collider(this.platform_t, this.mechantContainer)
 
+        this.physics.add.collider(this.moleuux, this.player);
+        this.physics.add.collider(this.moleuux, this.floor);
+
 
         //----------collisions FIN ---------------------
 
@@ -436,7 +448,6 @@ class Level_1 extends Tableau {
         this.background2.setDepth(z--);
 
         this.cloud.setDepth(z--);
-
 
 
         this.sky.setDepth(z--);
