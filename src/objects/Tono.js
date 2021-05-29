@@ -66,7 +66,17 @@ class Tono extends ObjetPhysique{
             }, 100 )
 
 
-        })
+        });
+
+        let ici = this ;
+
+        Tableau.current.physics.add.overlap( this ,Tableau.current.player, function() {
+
+                ici.C4.destroy();
+
+            } , null, scene
+
+        );
     }
 
 
