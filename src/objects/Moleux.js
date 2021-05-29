@@ -23,7 +23,7 @@ class Moleux extends ObjetPhysique{
             blendMode: 'SCREEN',
             active: true,
             lifespan: 300,
-            gravityY: 1200 ,
+            gravityY: 1000 ,
             frequency : 20,
             quantity : 5 ,
             rotate : { min : 0, max : 360 } ,
