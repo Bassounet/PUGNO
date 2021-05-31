@@ -1,7 +1,6 @@
-/**
- * Un objet qui écoute les touches du clavier et mouvements sur le pad et qui influent le déplacement du joueur
- */
+
 class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick ( c'est l'horreur )
+
     constructor(scene, x, y,size=100) {
         super(scene, x, y)
 
@@ -53,7 +52,6 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
                         console.log(' le y pointeur est : ' + (( scene.pointer.y) - 7 ));
                         console.log(Tableau.current.player.x);
                         console.log(Tableau.current.player.y);
-
 
                         break;
 

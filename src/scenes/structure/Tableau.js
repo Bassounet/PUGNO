@@ -9,7 +9,6 @@ class Tableau extends Phaser.Scene{
 
         this.load.image('sky', 'assets/sky.png');
         this.load.image('fire', 'assets/start_button.png');
-        this.load.image('fire', 'assets/start_button.png');
 
         this.load.spritesheet('player','assets/player2.png',
             { frameWidth: 61, frameHeight: 64  }
@@ -21,6 +20,7 @@ class Tableau extends Phaser.Scene{
         this.load.audio('jump', 'son/jump.wav');
         this.load.audio('explosion', 'son/explo.wav');
         this.load.audio('fire', 'son/fire.wav');
+        this.load.audio('gunshot', 'son/gunshot.wav');
         this.load.audio('amb', 'son/ambiance.wav');
         this.load.audio('cible', 'son/hit_cible.wav');
         this.load.audio('barbeles', 'son/barbles.wav');
@@ -62,7 +62,7 @@ class Tableau extends Phaser.Scene{
         this.sound.add('talkie');
         this.sound.add('jump');
         this.sound.add('explosion');
-        this.sound.add('fire');
+        this.sound.add('gunshot');
         this.musicamb = this.sound.add('amb');
 
 
@@ -77,7 +77,7 @@ class Tableau extends Phaser.Scene{
     tirPlayer(){
         if (Phaser.Input.Keyboard.JustDown(this.boutonTir)){
             this.player.shoot();
-            this.sound.play('fire', {volume: 3});
+            this.sound.play('gunshot', {volume: 3});
 
         }
     }

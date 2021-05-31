@@ -31,11 +31,7 @@ class Tableau_start extends Tableau {
                 ui.playok = true;
 
             })
-
-
         })
-
-        // this.playok = false;
 
 
         // ---- *** ---- VERS SUIVANT  ---- *** ----
@@ -60,6 +56,7 @@ class Tableau_start extends Tableau {
 
         // ---- *** ---- VERS SUIVANT FIN ---- *** ----
 
+
         // ---- *** ---- VERS REGLAGES ---- *** ----
 
         this.input.keyboard.on('keydown-R', function () //'keydown-SPACE', function ()
@@ -71,7 +68,7 @@ class Tableau_start extends Tableau {
                 this.cameras.main.fadeOut(1000, 0, 0, 0)
                 this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) =>
                 {
-                    // Tableau.suivant();
+
                     this.game.scene.start(settings);
                     this.scene.start("settings");
 
@@ -103,10 +100,6 @@ class Tableau_start extends Tableau {
         }, this);
 
         // ---- *** ---- VERS QUITTER  ---- *** ----
-
-    }
-
-    update() {     
 
     }
 

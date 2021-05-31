@@ -91,9 +91,6 @@ class Tir extends ObjetPhysique{
 
         })
 
-
-
-
         scene.physics.add.collider(this, scene.floor, function () {
 
             me.emit(MyEvents.EXPLODE);
