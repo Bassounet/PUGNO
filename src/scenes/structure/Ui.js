@@ -25,28 +25,7 @@ class Ui extends Phaser.Scene{
             font:'32px "Yoster"',
             fill: '#fff'
         });
-
-
-        this._tableauText = this.add.text(this.sys.canvas.width-16, 16, '...', {
-            font:'32px "Yoster"',
-            align: 'right',
-            fill: '#fff'
-        })
-
-
-        this._tableauTextClass = this.add.text(this.sys.canvas.width-16, 16+32, '...', {
-            font:'24px "Yoster"',
-            align: 'right',
-            fill: '#fff',
-        }).setAlpha(0.5)
-
-        this._tableauText.originX=1;
-        this._tableauTextClass.originX=1;
-
-        this._tableauText.setInteractive();
-        this._tableauText.on('pointerdown', function () {
-            Tableau.suivant();
-        })
+        
 
 
         this.scene.bringToTop();
