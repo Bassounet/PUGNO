@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/objects/Tir.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Tir.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +157,7 @@
       <workItem from="1622463900278" duration="641000" />
       <workItem from="1622486169191" duration="6756000" />
       <workItem from="1622498108216" duration="2975000" />
-      <workItem from="1622502332009" duration="656000" />
+      <workItem from="1622502332009" duration="1403000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

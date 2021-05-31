@@ -92,7 +92,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         var bullet = new Tir(this.scene,this.departx, this.departy);
 
-        Tableau.current.cameras.main.shake(10, 0.01, true)
+        Tableau.current.cameras.main.shake(30, 0.01, true)
 
         setTimeout(function(){
             bullet.destroy();
