@@ -87,6 +87,33 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
     shoot(){
 
+        this.target_groundex = Tableau.current.add.particles('tincelles');
+
+        this.departx = this.x +15 ;
+        this.departy = this.y ;
+
+        this.emitter_target = this.target_groundex.createEmitter({
+            x: this.departx,
+            y: this.departy,
+            speed: {min: 0, max: 200},
+            radial: true,
+            angle: {min: -1, max: -180},
+            scale: {start: 1, end: 1},
+            blendMode: 'NORMAL',
+            active: true,
+            lifespan: 300,
+            gravityY: 1000,
+            frequency: 100,
+            quantity: 0.5,
+            rotate: {min: 0, max: 360},
+
+        });
+
+        this.emitter_target.on = true;
+        this.target_groundex.setDepth(1000);
+
+        let me = this;
+
         this.departx = this.x ;
         this.departy = this.y ;
 
@@ -95,7 +122,15 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         Tableau.current.cameras.main.shake(30, 0.01, true)
 
         setTimeout(function(){
+
+            me.emitter_target.on = false;
+
+            },50);
+
+        setTimeout(function(){
+
             bullet.destroy();
+
             },600);
 
 

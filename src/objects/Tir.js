@@ -41,7 +41,6 @@ class Tir extends ObjetPhysique{
         let me = this;
         this.once(MyEvents.EXPLODE, function () {
 
-            // me.emitter_target.on = false;
 
             me.emitter_target.on = true
             me.emitter_target.startFollow(me);
