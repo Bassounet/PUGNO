@@ -75,7 +75,7 @@ class Ui extends Phaser.Scene{
         this.boutonshoot.on('pointerdown', function () {
 
             Tableau.current.player.shoot();
-            Tableau.current.sound.play('fire', {volume: 3});
+            Tableau.current.sound.play('gunshot', {volume:0.2});
         })
 
     }
@@ -90,7 +90,6 @@ class Ui extends Phaser.Scene{
     update(){
 
 
-
         if(this.playok)
         {
             this.pad.visible = true;
@@ -100,18 +99,14 @@ class Ui extends Phaser.Scene{
             this.btFs.visible = true ;
             this._tableauText= true;
 
+        }else {
 
-        }
-        else
-        {
             this.pad.visible = false;
             this._scoreText.visible = false;
             this.moleui.visible = false ;
             this.boutonshoot.visible = false;
             this.btFs.visible = false ;
             this._tableauText= false ;
-
-
 
         }
     }

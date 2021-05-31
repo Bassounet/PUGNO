@@ -41,8 +41,6 @@ class Moleux extends ObjetPhysique{
             me.recolt_m.startFollow(me);
 
 
-
-
         });
 
         this.brillance = this.scene.add.pointlight(this.x , this.y, 0xff0000, 30, 3, 5);

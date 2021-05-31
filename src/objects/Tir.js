@@ -18,6 +18,8 @@ class Tir extends ObjetPhysique{
 
 
 
+
+
         this.target_groundex = scene.add.particles('particle_tono');
 
         this.emitter_target = this.target_groundex.createEmitter({

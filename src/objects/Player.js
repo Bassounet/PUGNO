@@ -40,6 +40,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this._directionX=0;
         this._directionY=0;
 
+        
+
 
     }
 
@@ -95,6 +97,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         setTimeout(function(){
             bullet.destroy();
             },600);
+
 
     }
 
