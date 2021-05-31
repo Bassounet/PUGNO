@@ -2,7 +2,7 @@ class settings extends Tableau {
 
     preload() { 
 
-        this.load.image('back', 'assets/settings_.png');
+        this.load.image('backsettings', 'assets/settings_.png');
 
 
     }
@@ -12,7 +12,7 @@ class settings extends Tableau {
 
         super.create();
 
-        this.add.image(448,224,'back');
+        this.add.image(448,224,'backsettings');
 
 
         // ---- *** ---- VERS START  ---- *** ----
