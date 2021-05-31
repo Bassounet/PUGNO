@@ -38,16 +38,25 @@ class Tir extends ObjetPhysique{
             rotate: {min: 0, max: 360},
 
         });
+        // let me = this;
+
+        this.emitter_target.on = false;
+        this.target_groundex.setDepth(1000);
+
         let me = this;
-
-        setTimeout(function () {
-
+        this.once(MyEvents.EXPLODE, function () {
             me.emitter_target.on = false;
 
         }, 100)
 
-
-
+        // setTimeout(function () {
+        //
+        //     me.emitter_target.on = false;
+        //
+        // }, 100)
+        //
+        //
+        //
         // let me = this;
         // this.once(MyEvents.EXPLODE, function () {
         //
@@ -62,12 +71,21 @@ class Tir extends ObjetPhysique{
         //
         //
         // });
+        //
 
 
 
+        me.emitter_target.on = true
+        me.emitter_target.startFollow(me);
+
+        setTimeout(function () {
+
+            me.emitter_target.on = false;
+
+        }, 100)
 
 
-
+    // });
 
         scene.cibleContainer.iterate(cibleu => {
             scene.physics.add.overlap(this, cibleu, function () {
