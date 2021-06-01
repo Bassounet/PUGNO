@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/player2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/player2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/run.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/run.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/objects/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Tir.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Tir.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/ui/GamePad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ui/GamePad.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_v.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_v.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
     </list>
@@ -167,7 +163,7 @@
       <workItem from="1622502332009" duration="5128000" />
       <workItem from="1622507579165" duration="637000" />
       <workItem from="1622546208023" duration="3987000" />
-      <workItem from="1622556391181" duration="3936000" />
+      <workItem from="1622556391181" duration="6473000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
@@ -276,6 +272,11 @@
           <url>file://$PROJECT_DIR$/src/scenes/structure/Tableau.js</url>
           <line>3</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/objects/Player.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,7 +5,7 @@ class Tableau_v extends Tableau {
         this.load.video('test', 'assets/video/test_logo.mp4', 'loadeddata', false, true);
         this.load.image('sky', 'assets/sky.png');
         // this.load.image('spike', 'assets/spike.png');
-        this.load.spritesheet('player','assets/run_cycle.png',
+        this.load.spritesheet('player','assets/player1.png',
             { frameWidth: 61, frameHeight: 64  }
         );
         this.load.audio('moleu', 'son/collect.wav');
@@ -23,8 +23,7 @@ class Tableau_v extends Tableau {
     create() {
 
         super.create();
-
-        // this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
+        z
         this.blood.displayWidth=64;
         this.blood.displayHeight=64;
         this.blood.visible=false;

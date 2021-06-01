@@ -33,7 +33,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.anims.create({
             key: 'turn',
             // frames: [ { key: 'player', frame: 4 } ],
-            frames: this.anims.generateFrameNumbers('player', { start: 4, end: 7 }),
+            // frames: this.anims.generateFrameNumbers('player', { start: 4, end: 7 }),
             frameRate: 10
         });
 
@@ -59,6 +59,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.directionX=0;
     }
 
+    let ce = this;
+
         move(){
         switch (true) {
             case this._directionX < 0:
@@ -73,6 +75,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
                 break;
             default:
                 this.setVelocityX(0);
+
 
         }
 
@@ -111,7 +114,6 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         this.emitter_target.on = true;
         this.target_groundex.setDepth(1000);
-
 
         let me = this;
 

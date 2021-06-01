@@ -10,9 +10,7 @@ class Tableau extends Phaser.Scene{
         this.load.image('sky', 'assets/sky.png');
         this.load.image('fire', 'assets/start_button.png');
 
-        this.load.spritesheet('player','assets/player2.png',
-            { frameWidth: 61, frameHeight: 64  }
-        );
+
 
         this.load.audio('moleu', 'son/collect.wav');
         this.load.audio('die', 'son/die.wav');
