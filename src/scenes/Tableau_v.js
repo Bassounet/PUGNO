@@ -23,7 +23,7 @@ class Tableau_v extends Tableau {
     create() {
 
         super.create();
-        z
+
         this.blood.displayWidth=64;
         this.blood.displayHeight=64;
         this.blood.visible=false;
