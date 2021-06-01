@@ -16,6 +16,10 @@ class Tir extends ObjetPhysique{
         let tir = this;
 
 
+
+        // ___ ici tono shot
+
+
         this.target_groundex = scene.add.particles('particle_tono');
 
         this.emitter_target = this.target_groundex.createEmitter({
@@ -53,12 +57,93 @@ class Tir extends ObjetPhysique{
 
         }, 100)
 
+        // ___ ici tono shot fin
+
+
+        // ___ ici cible shot
+
+        this.target_ciblex = scene.add.particles('ciblex');
+
+        this.emitter_cible = this.target_ciblex.createEmitter({
+            x: this.x,
+            y: this.y,
+            speed: {min: 0, max: 200},
+            radial: true,
+            angle: {min: -1, max: -180},
+            scale: {start: 1, end: 1},
+            blendMode: 'NORMAL',
+            active: true,
+            lifespan: 300,
+            gravityY: 1000,
+            frequency: 100,
+            quantity: 4,
+            rotate: {min: 0, max: 360},
+
+        });
+
+        this.emitter_cible.on = false;
+        this.target_ciblex.setDepth(1000);
+
+         let je = this;
+        this.once(MyEvents.EXPLODE_cible, function () {
+
+
+            je.emitter_cible.on = true
+            je.emitter_cible.startFollow(je);
+
+            setTimeout(function () {
+
+                je.emitter_cible.on = false;
+
+            }, 100)
+
+        }, 100)
+
+        // ___ ici cible shot fin
+
+        this.target_blood = scene.add.particles('pasblood');
+
+        this.emitter_blood = this.target_blood.createEmitter({
+            x: this.x,
+            y: this.y,
+            speed: {min: 0, max: 200},
+            radial: true,
+            angle: {min: -1, max: -180},
+            scale: {start: 1, end: 1},
+            blendMode: 'NORMAL',
+            active: true,
+            lifespan: 300,
+            gravityY: 1000,
+            frequency: 100,
+            quantity: 4,
+            rotate: {min: 0, max: 360},
+
+        });
+
+        this.emitter_blood.on = false;
+        this.target_blood.setDepth(1000);
+
+        let tu = this;
+        this.once(MyEvents.EXPLODE_mechant, function () {
+
+
+            tu.emitter_blood.on = true
+            tu.emitter_blood.startFollow(tu);
+
+            setTimeout(function () {
+
+                tu.emitter_blood.on = false;
+
+            }, 100)
+
+        }, 100)
+
 
 
         scene.cibleContainer.iterate(cibleu => {
             scene.physics.add.overlap(this, cibleu, function () {
 
-                me.emit(MyEvents.EXPLODE);
+                me.emit(MyEvents.EXPLODE_cible);
                 cibleu.killcible();
                 tir.destroy()
 
@@ -83,7 +168,7 @@ class Tir extends ObjetPhysique{
 
                 Tableau.current.sound.play('hitman', {volume : 0.1});
                 monster.killmonster();
-                me.emit(MyEvents.EXPLODE);
+                me.emit(MyEvents.EXPLODE_mechant);
                 tir.destroy()
 
 

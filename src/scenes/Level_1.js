@@ -42,6 +42,9 @@ class Level_1 extends Tableau {
         this.load.image('particle_tono', 'assets/particles/particle_tono.png');
         this.load.image('particle_target', 'assets/particles/particle_target.png');
         this.load.image('tincelles', 'assets/particles/tincelles.png');
+        this.load.image('ciblex', 'assets/particles/ciblex.png');
+        this.load.image('pasblood', 'assets/particles/pasblood.png');
+
 
         this.load.audio('amb', 'son/ambiance.wav');
 

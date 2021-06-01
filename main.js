@@ -2,7 +2,9 @@
 
 window.MyEvents = {
 
-    EXPLODE : " explode "
+    EXPLODE : " explode " ,
+    EXPLODE_cible : " explode_cible " ,
+    EXPLODE_mechant : " explode_mechant " ,
 }
 
 
