@@ -5,7 +5,7 @@ class Tableau_v extends Tableau {
         this.load.video('test', 'assets/video/test_logo.mp4', 'loadeddata', false, true);
         this.load.image('sky', 'assets/sky.png');
         // this.load.image('spike', 'assets/spike.png');
-        this.load.spritesheet('player','assets/player2.png',
+        this.load.spritesheet('player','assets/run_cycle.png',
             { frameWidth: 61, frameHeight: 64  }
         );
         this.load.audio('moleu', 'son/collect.wav');

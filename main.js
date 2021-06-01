@@ -4,7 +4,9 @@ window.MyEvents = {
 
     EXPLODE : " explode " ,
     EXPLODE_cible : " explode_cible " ,
-    EXPLODE_mechant : " explode_mechant " ,
+    EXPLODE_mechant : " explode_mechant ",
+    EXPLODE_tono : " explode_tono ",
+    EXPLODE_moleu : " explode_moleu ",
 }
 
 

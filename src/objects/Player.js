@@ -112,6 +112,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.emitter_target.on = true;
         this.target_groundex.setDepth(1000);
 
+
         let me = this;
 
         this.departx = this.x ;

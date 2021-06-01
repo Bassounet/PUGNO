@@ -20,7 +20,7 @@ class Tir extends ObjetPhysique{
         // ___ ici tono shot
 
 
-        this.target_groundex = scene.add.particles('particle_tono');
+        this.target_groundex = scene.add.particles('tono_particle');
 
         this.emitter_target = this.target_groundex.createEmitter({
             x: this.x,
@@ -28,7 +28,7 @@ class Tir extends ObjetPhysique{
             speed: {min: 0, max: 200},
             radial: true,
             angle: {min: -1, max: -180},
-            scale: {start: 1, end: 1},
+            scale: {start: 0.5, end: 0.6},
             blendMode: 'NORMAL',
             active: true,
             lifespan: 300,
@@ -43,7 +43,7 @@ class Tir extends ObjetPhysique{
         this.target_groundex.setDepth(1000);
 
         let me = this;
-        this.once(MyEvents.EXPLODE, function () {
+        this.once(MyEvents.EXPLODE_tono, function () {
 
 
             me.emitter_target.on = true
@@ -76,7 +76,7 @@ class Tir extends ObjetPhysique{
             lifespan: 300,
             gravityY: 1000,
             frequency: 100,
-            quantity: 4,
+            quantity: 3,
             rotate: {min: 0, max: 360},
 
         });
@@ -138,6 +138,88 @@ class Tir extends ObjetPhysique{
 
         }, 100)
 
+        // ___ ici floor hit
+
+        this.target_ = scene.add.particles('particle_target');
+
+        this.emitter_f = this.target_.createEmitter({
+            x: this.x,
+            y: this.y,
+            speed: {min: 0, max: 200},
+            radial: true,
+            angle: {min: -1, max: -180},
+            scale: {start: 0.6, end: 0.8},
+            blendMode: 'NORMAL',
+            active: true,
+            lifespan: 300,
+            gravityY: 1000,
+            frequency: 100,
+            quantity: 2,
+            rotate: {min: 0, max: 360},
+
+        });
+
+        this.emitter_f.on = false;
+        this.target_.setDepth(1000);
+
+        let ce = this;
+        this.once(MyEvents.EXPLODE, function () {
+
+
+            ce.emitter_f.on = true
+            ce.emitter_f.startFollow(ce);
+
+            setTimeout(function () {
+
+                ce.emitter_f.on = false;
+
+            }, 100)
+
+        }, 100)
+
+        // ___ ici floor hit FIN
+
+        // ___ ici floor hit
+
+        this.target_moleux = scene.add.particles('particlesg');
+
+        this.emitter_moleux = this.target_moleux.createEmitter({
+            x: this.x,
+            y: this.y,
+            speed: {min: 0, max: 200},
+            radial: true,
+            angle: {min: -1, max: -180},
+            scale: {start: 0.05, end: 0.1},
+            blendMode: 'NORMAL',
+            active: true,
+            lifespan: 300,
+            gravityY: 1000,
+            frequency: 100,
+            quantity: 7,
+            rotate: {min: 0, max: 360},
+
+        });
+
+        this.emitter_moleux.on = false;
+        this.target_moleux.setDepth(1000);
+
+        let te = this;
+        this.once(MyEvents.EXPLODE_moleu, function () {
+
+
+            te.emitter_moleux.on = true
+            te.emitter_moleux.startFollow(te);
+
+            setTimeout(function () {
+
+                te.emitter_moleux.on = false;
+
+            }, 100)
+
+        }, 100)
+
+        // ___ ici floor hit FIN
+
 
 
         scene.cibleContainer.iterate(cibleu => {
@@ -155,7 +237,7 @@ class Tir extends ObjetPhysique{
             scene.physics.add.overlap(this, monster, function () {
 
                 Tableau.current.sound.play('hit_tono_song', {volume : 1});
-                me.emit(MyEvents.EXPLODE);
+                me.emit(MyEvents.EXPLODE_tono);
                 tir.destroy()
 
 
@@ -183,5 +265,24 @@ class Tir extends ObjetPhysique{
             Tableau.current.sound.play('hitground', {volume : 0.1});
 
         });
+
+        let elle = this;
+        scene.moleuContainer.iterate(moleuu => {
+            scene.physics.add.overlap(this, moleuu, function () {
+
+                Tableau.current.sound.play('hitcrystal', {volume : 0.1});
+                me.emit(MyEvents.EXPLODE_moleu);
+                tir.destroy();
+                elle.destroy();
+
+
+
+            }, null, scene);
+
+        })
+
+
+
+
     }
 }

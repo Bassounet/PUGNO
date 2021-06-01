@@ -1,5 +1,5 @@
 
-class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick ( c'est l'horreur )
+class GamePad extends Phaser.GameObjects.Container{
 
     constructor(scene, x, y,size=100) {
         super(scene, x, y)
@@ -13,7 +13,7 @@ class GamePad extends Phaser.GameObjects.Container{ // on paramètre le joystick
         let dragW=this.size/2;
         let pad2=scene.add.container();
 
-        let circle=scene.add.circle(0,0,this.size/2,0xffffff,0.1) // on donne les couleurs et tout le bordel ;) 
+        let circle=scene.add.circle(0,0,this.size/2,0xffffff,0.1)
         let circleDrag=scene.add.circle(0,0,dragW/2,0xffffff,0.3)
         this.add(pad2);
         pad2.add(circle);

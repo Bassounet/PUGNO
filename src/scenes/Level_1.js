@@ -44,6 +44,7 @@ class Level_1 extends Tableau {
         this.load.image('tincelles', 'assets/particles/tincelles.png');
         this.load.image('ciblex', 'assets/particles/ciblex.png');
         this.load.image('pasblood', 'assets/particles/pasblood.png');
+        this.load.image('tono_particle', 'assets/particles/tono_particle.png');
 
 
         this.load.audio('amb', 'son/ambiance.wav');
@@ -170,12 +171,9 @@ class Level_1 extends Tableau {
 
         this.floor = this.map.createLayer('floor', this.tileset, 0, 0);
         this.floor.setOrigin(0, 0);
-        // this.floor.setPipeline('Light2D');
-
 
         this.background = this.map.createLayer('backgroundF', this.tileset, 0, 0);
         this.background.setOrigin(0, 0);
-        // this.background.setPipeline('Light2D');
 
         this.sky = this.add.tileSprite(
             0,
