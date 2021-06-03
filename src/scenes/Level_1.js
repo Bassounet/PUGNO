@@ -62,6 +62,8 @@ class Level_1 extends Tableau {
 
         super.create();
 
+        ui.playok = true;
+
 
         this.musicamb = this.sound.add('amb');
         var musicConfig =
@@ -1196,11 +1198,13 @@ class Level_1 extends Tableau {
         if (this.player.x > TP11_X && this.player.x < TP11_X + 128 ) {
 
 
+
             this.sound.play('victory', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.game.scene.start(Tableau_v);
             this.scene.start("test_v");
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            ui.playok = false;
+            this.cameras.main.fadeIn(1000, 0, 0, 0);
 
         }
 
