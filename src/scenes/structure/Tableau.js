@@ -42,7 +42,7 @@ class Tableau extends Phaser.Scene{
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
 
-        this.player=new Player(this,80,50);
+        this.player=new Player(this,12000,50);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"crane")
         this.blood.displayWidth=35;
@@ -209,11 +209,10 @@ class Tableau extends Phaser.Scene{
                     me.saigne(me.player,function(){
 
                         me.blood.visible=false;
-                        // me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
                         me.sound.play('recovery', { delay : 0.04 });
-                        // Tableau.current.cameras.main.fadeIn(2000, 100, 0, 0);
+
                     })
 
 

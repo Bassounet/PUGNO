@@ -1204,6 +1204,7 @@ class Level_1 extends Tableau {
 
 
             this.sound.play('victory', {volume : 1 });
+            Tableau.current.musicamb.stop();
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.game.scene.start(Tableau_end);
             this.scene.start("end");
@@ -1213,8 +1214,6 @@ class Level_1 extends Tableau {
         }
 
         // -*-*-*-*-*-*- TP11 FIN
-
-
 
 
         // -*-*-*-*-*-*- BARBELS
@@ -1276,7 +1275,7 @@ class Level_1 extends Tableau {
         if (!this.previousPosition || this.previousPosition !== actualPosition) {
 
             this.previousPosition = actualPosition;
-            // this.optimizeDisplay();
+
 
         }
     }

@@ -6,6 +6,46 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/refs - Raccourci.lnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V10.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V11.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V12.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V9.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/fond.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13ASSETS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13BACKGOURND.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13HUD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13LVL-1--copie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13LVL-1-.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13LVL-CLEAN-MERGED.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13LVL-CLEAN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13LVL-CLEAN_TEST.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13LVL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13SCREEN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13SPRITE_SHEET-.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13SPRITE_SHEET_with_map-copie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13SPRITE_SHEET_with_map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13bulles-de-dialogues.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu - Copie/01_MAP_2D_V13explain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/01_MAP_2D_V3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/ASSETS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/BACKGOURND.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/LVL CLEAN MERGED.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/LVL CLEAN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/LVL CLEAN_TEST.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/LVL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/SPRITE_SHEET .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/SPRITE_SHEET_with_map1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/SPRITE_SHEET_with_map2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/STARTING SCREEN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/rendu/refs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/run.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ref/toshop/sam-Récupéré.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_end.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_end.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +203,7 @@
       <workItem from="1622714879573" duration="12766000" />
       <workItem from="1622734568628" duration="1381000" />
       <workItem from="1622736356268" duration="1775000" />
-      <workItem from="1622748326630" duration="5676000" />
+      <workItem from="1622748326630" duration="6309000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
