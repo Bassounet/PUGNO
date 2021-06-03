@@ -50,7 +50,7 @@ class Level_1 extends Tableau {
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_211.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_216.json');
 
 
 
@@ -303,7 +303,6 @@ class Level_1 extends Tableau {
 
 
         ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
-
         ici.mechantObjects.forEach(monsterObject => {
             let mechant = new mechant1(ici, monsterObject.x, monsterObject.y);
             ici.mechantContainer.add(mechant);
@@ -335,7 +334,6 @@ class Level_1 extends Tableau {
         });
 
         ici.mechantObjects = ici.map.getObjectLayer('mechant')['objects'];
-
         ici.mechantObjects.forEach(monsterObject => {
             let mechant = new mechant1(ici, monsterObject.x, monsterObject.y);
             ici.mechantContainer.add(mechant);
@@ -349,12 +347,10 @@ class Level_1 extends Tableau {
 
         this.moleuContainer = this.add.container();
 
-
         ici.moleuuuObjects = ici.map.getObjectLayer('moleu')['objects'];
         ici.moleuuuObjects.forEach(moleuObject => {
             let moleuu = new Moleux(ici, moleuObject.x + 35, moleuObject.y);
             ici.moleuContainer.add(moleuu);
-            // ici.physics.add.collider(moleuu, this.floor);
             this.add.image(0,0,'moleu_');
 
         });
@@ -931,7 +927,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X1,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -955,7 +952,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X1,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -979,7 +977,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X2,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1002,7 +1001,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X1,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1016,7 +1016,7 @@ class Level_1 extends Tableau {
         // -*-*-*-*-*-*- TP 3
 
         let TP3_X = 6590;
-        let target_X3 = 5550;
+        let target_X3 = 5730;
 
 
         if (this.player.x > TP3_X && this.player.y > TP_Y && this.player.x < TP3_X + 128 ) {
@@ -1025,7 +1025,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X3,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1039,7 +1040,7 @@ class Level_1 extends Tableau {
         // -*-*-*-*-*-*- TP 3-1
 
         let TP3_1_X = 6068;
-        let target_X3_1 = 5550;
+        let target_X3_1 = 5700;
 
 
         if (this.player.x > TP3_1_X && this.player.y > TP_Y && this.player.x < TP3_1_X + 128 ) {
@@ -1048,7 +1049,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X3_1,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1071,7 +1073,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X5,120);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1093,7 +1096,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X5,120);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1113,7 +1117,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X7,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1135,7 +1140,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X8,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1157,7 +1163,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X9,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });
@@ -1179,7 +1186,8 @@ class Level_1 extends Tableau {
             this.sound.play('medic', {volume : 0.4 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
             this.player.setPosition(target_X10,200);
-            this.cameras.main.fadeIn(700, 0, 0, 0);
+            Tableau.current.cameras.main.shake(600, 0.01, true)
+            this.cameras.main.fadeIn(700, 100, 0, 0);
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, (cam, effect) =>
             {
                 this.sound.play('recovery', {volume : 1 });

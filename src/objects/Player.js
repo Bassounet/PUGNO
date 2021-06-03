@@ -65,6 +65,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
                 this.anims.play('right', true);
                 break;
             default:
+
                 this.setVelocityX(0);
 
 

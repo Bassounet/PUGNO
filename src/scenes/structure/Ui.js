@@ -108,6 +108,8 @@ class Ui extends Phaser.Scene{
 
     }
 
+
+
     update(){
 
 
@@ -118,7 +120,7 @@ class Ui extends Phaser.Scene{
             this._scorecible.visible = true;
             this.moleui.visible = true ;
             this.cible.visible = true ;
-            this.boutonshoot.visible = true ;
+            this.boutonshoot.visible = false ;
             this.btFs.visible = true ;
             this._tableauText= true;
 

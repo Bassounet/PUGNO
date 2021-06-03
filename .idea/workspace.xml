@@ -8,9 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Tir.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Tir.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/mechant1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/mechant1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/structure/Ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Ui.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +42,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scenes" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -165,7 +166,10 @@
       <workItem from="1622507579165" duration="637000" />
       <workItem from="1622546208023" duration="3987000" />
       <workItem from="1622556391181" duration="6770000" />
-      <workItem from="1622714879573" duration="12707000" />
+      <workItem from="1622714879573" duration="12766000" />
+      <workItem from="1622734568628" duration="1381000" />
+      <workItem from="1622736356268" duration="1775000" />
+      <workItem from="1622748326630" duration="1837000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>

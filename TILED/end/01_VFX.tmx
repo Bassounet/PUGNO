@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="500" height="7" tilewidth="64" tileheight="64" infinite="0" nextlayerid="27" nextobjectid="245">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="500" height="7" tilewidth="64" tileheight="64" infinite="0" nextlayerid="27" nextobjectid="256">
  <editorsettings>
-  <export target="VFX_210.json" format="json"/>
+  <export target="VFX_215.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="sprite_" tilewidth="64" tileheight="64" tilecount="308" columns="44">
   <image source="../../ref/sprite4.png" width="2816" height="448"/>
@@ -11,6 +11,10 @@
   <object id="127" gid="271" x="5610.27" y="202.909" width="64" height="64"/>
   <object id="128" gid="271" x="6437.45" y="330.909" width="64" height="64"/>
   <object id="220" gid="271" x="10774" y="333.667" width="64" height="64"/>
+  <object id="252" gid="271" x="8309" y="333.667" width="64" height="64"/>
+  <object id="253" gid="271" x="9910.33" y="332.333" width="64" height="64"/>
+  <object id="254" gid="271" x="11329" y="339" width="64" height="64"/>
+  <object id="255" gid="271" x="12439.7" y="341.667" width="64" height="64"/>
  </objectgroup>
  <layer id="25" name="Calque de Tuiles 4" width="500" height="7">
   <data encoding="csv">
@@ -24,15 +28,17 @@
 </data>
  </layer>
  <objectgroup id="14" name="mechant" offsetx="-3.66667" offsety="35">
-  <object id="67" gid="269" x="6311.67" y="131" width="64" height="64"/>
-  <object id="68" gid="269" x="6217.67" y="137" width="64" height="64"/>
-  <object id="69" gid="269" x="6013.67" y="141" width="64" height="64"/>
-  <object id="70" gid="269" x="5921.67" y="135" width="64" height="64"/>
-  <object id="165" gid="269" x="9831.67" y="119" width="64" height="64"/>
-  <object id="166" gid="269" x="9049.67" y="125" width="64" height="64"/>
-  <object id="167" gid="269" x="8481.67" y="117" width="64" height="64"/>
-  <object id="184" gid="269" x="13099.7" y="117" width="64" height="64"/>
-  <object id="186" gid="269" x="12185.7" y="107" width="64" height="64"/>
+  <object id="68" gid="269" x="6337.67" y="226.333" width="64" height="64"/>
+  <object id="70" gid="269" x="6015" y="213.667" width="64" height="64"/>
+  <object id="165" gid="269" x="9921" y="141.667" width="64" height="64"/>
+  <object id="166" gid="269" x="9151" y="131.667" width="64" height="64"/>
+  <object id="167" gid="269" x="8579" y="139.667" width="64" height="64"/>
+  <object id="184" gid="269" x="13183.7" y="134.333" width="64" height="64"/>
+  <object id="186" gid="269" x="12292.4" y="129.667" width="64" height="64"/>
+  <object id="248" gid="269" x="11200" y="192" width="64" height="64"/>
+  <object id="249" gid="269" x="11008" y="192" width="64" height="64"/>
+  <object id="250" gid="269" x="10816" y="192" width="64" height="64"/>
+  <object id="251" gid="269" x="10624" y="192" width="64" height="64"/>
  </objectgroup>
  <objectgroup id="18" name="mines">
   <object id="65" gid="181" x="4700.45" y="320.909" width="64" height="64"/>
@@ -118,19 +124,17 @@
   <object id="193" gid="226" x="10846" y="276" width="64" height="64"/>
   <object id="194" gid="226" x="10656" y="274" width="64" height="64"/>
   <object id="195" gid="226" x="8218.48" y="327.697" width="64" height="64"/>
-  <object id="196" gid="226" x="8406.36" y="179.212" width="64" height="64"/>
-  <object id="197" gid="226" x="8766.97" y="288.303" width="64" height="64"/>
-  <object id="198" gid="226" x="8985.15" y="191.333" width="64" height="64"/>
-  <object id="199" gid="226" x="9348.79" y="306.485" width="64" height="64"/>
-  <object id="200" gid="226" x="9736.67" y="185.273" width="64" height="64"/>
-  <object id="201" gid="226" x="10045.8" y="264.061" width="64" height="64"/>
+  <object id="196" gid="226" x="8406.36" y="197.879" width="64" height="64"/>
+  <object id="197" gid="226" x="8770.97" y="264.303" width="64" height="64"/>
+  <object id="198" gid="226" x="8986.48" y="194" width="64" height="64"/>
+  <object id="199" gid="226" x="9342.12" y="267.818" width="64" height="64"/>
+  <object id="200" gid="226" x="9736.67" y="189.273" width="64" height="64"/>
   <object id="202" gid="226" x="10388.2" y="218.606" width="64" height="64"/>
   <object id="203" gid="226" x="4827.58" y="218.606" width="64" height="64"/>
   <object id="204" gid="226" x="5154.85" y="261.03" width="64" height="64"/>
   <object id="205" gid="226" x="5497.27" y="194.364" width="64" height="64"/>
   <object id="206" gid="226" x="6112.42" y="261.03" width="64" height="64"/>
   <object id="207" gid="226" x="6627.58" y="224.667" width="64" height="64"/>
-  <object id="208" gid="226" x="6885.15" y="285.273" width="64" height="64"/>
   <object id="209" gid="226" x="7085.15" y="209.515" width="64" height="64"/>
   <object id="210" gid="226" x="7391.21" y="297.394" width="64" height="64"/>
   <object id="211" gid="226" x="7730.61" y="276.182" width="64" height="64"/>
