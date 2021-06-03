@@ -7,15 +7,11 @@ class Tableau extends Phaser.Scene{
 
     preload(){
 
-        this.load.image('sky', 'assets/sky.png');
+
         this.load.image('fire', 'assets/start_button.png');
 
 
 
-        this.load.audio('moleu', 'son/collect.wav');
-        this.load.audio('die', 'son/die.wav');
-        this.load.audio('talkie', 'son/talkie.wav');
-        this.load.audio('jump', 'son/jump.wav');
         this.load.audio('explosion', 'son/explo.wav');
         this.load.audio('amb', 'son/ambiance.wav');
         this.load.audio('cible', 'son/hit_cible.wav');
@@ -56,11 +52,7 @@ class Tableau extends Phaser.Scene{
         this.boutonTir = this.input.keyboard.addKey('A');
 
 
-        this.sound.add('moleu');
-        this.sound.add('die');
-        this.sound.add('talkie');
-        this.sound.add('jump');
-        this.sound.add('explosion');
+
         this.musicamb = this.sound.add('amb');
 
 

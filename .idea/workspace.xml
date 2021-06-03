@@ -6,13 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/TILED/end/01_VFX.tmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/blood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" beforeDir="false" afterPath="$PROJECT_DIR$/ref/toshop/01_MAP_2D_V13.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Char.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Drone.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Tourelle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Pnonante.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/drone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/RegisteredTM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/particles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/spike.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/sprite_shitV2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/medikitV2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/HK copie 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/garbage copie 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/glock copie 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/medikit copie 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/platform copie 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/platform copie 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/platform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/snipet copie 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/tanks copie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/test-dgt-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/tonneau copie 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/new_image/tourelle copie 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/platform_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/ui/fire_button.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_v.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_v.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +187,7 @@
       <workItem from="1622714879573" duration="12766000" />
       <workItem from="1622734568628" duration="1381000" />
       <workItem from="1622736356268" duration="1775000" />
-      <workItem from="1622748326630" duration="4823000" />
+      <workItem from="1622748326630" duration="5458000" />
     </task>
     <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
       <created>1617202782973</created>
