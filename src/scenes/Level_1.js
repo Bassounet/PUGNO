@@ -1201,8 +1201,8 @@ class Level_1 extends Tableau {
 
             this.sound.play('victory', {volume : 1 });
             this.cameras.main.fadeOut(1, 0, 0, 0);
-            this.game.scene.start(Tableau_v);
-            this.scene.start("test_v");
+            this.game.scene.start(Tableau_end);
+            this.scene.start("end");
             ui.playok = false;
             this.cameras.main.fadeIn(1000, 0, 0, 0);
 
@@ -1218,7 +1218,7 @@ class Level_1 extends Tableau {
 
 
         let TP_SAM = 440;
-        let target_sam = 8600;
+        let target_sam = 15600;
 
         if (this.player.x > TP_SAM && this.player.y > TP_Y && this.player.x < TP_SAM + 128   ) {
 
