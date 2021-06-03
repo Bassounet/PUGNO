@@ -4,7 +4,7 @@ class cible1 extends ObjetEnnemi{
         super(scene, x, y, "cible");
 
 
-        this.body.allowGravity=false;
+        this.body.allowGravity=true;
         this.flipX=false;
         this.setGravityY(40);
 

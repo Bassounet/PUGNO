@@ -32,6 +32,8 @@ class Tableau extends Phaser.Scene{
         this.load.audio('hit_tono_song', 'son/bullet_hit_tono.wav');
         this.load.audio('gunshot', 'son/gunshot.wav');
         this.load.audio('hitcrystal', 'son/hitcrystal.wav');
+        this.load.audio('victory', 'son/victory.wav');
+        this.load.audio('medic', 'son/medic.wav');
 
 
     }
@@ -44,7 +46,7 @@ class Tableau extends Phaser.Scene{
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
 
-        this.player=new Player(this,80,250);
+        this.player=new Player(this,13860,50);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
@@ -52,7 +54,6 @@ class Tableau extends Phaser.Scene{
         this.blood.visible=false;
 
         this.boutonTir = this.input.keyboard.addKey('A');
-        this.bouton_Pause = this.input.keyboard.addKey('P');
 
 
         this.sound.add('moleu');
@@ -197,7 +198,7 @@ class Tableau extends Phaser.Scene{
                     me.player.isDead=true;
                     this.musicamb.stop();
                     me.player.visible=false;
-                    this.sound.play('die', {volume : 1 });
+                    this.sound.play('medic', {volume : 0.3 });
                     this.sound.play('punch', {volume : 3 });
                     Tableau.current.cameras.main.shake(1000, 0.02, true);
 

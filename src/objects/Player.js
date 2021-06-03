@@ -30,17 +30,9 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             frameRate: 10,
             repeat: -1
         });
-        // this.anims.create({
-        //     key: 'turn',
-        //     // frames: [ { key: 'player', frame: 4 } ],
-        //     // frames: this.anims.generateFrameNumbers('player', { start: 4, end: 7 }),
-        //     frameRate: 10
-        // });
 
         this._directionX=0;
         this._directionY=0;
-
-
 
 
     }
