@@ -50,7 +50,7 @@ class Level_1 extends Tableau {
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_210.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_211.json');
 
 
 

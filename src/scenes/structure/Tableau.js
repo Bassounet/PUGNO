@@ -46,7 +46,7 @@ class Tableau extends Phaser.Scene{
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
 
-        this.player=new Player(this,13724,50);
+        this.player=new Player(this,80,50);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
@@ -223,11 +223,6 @@ class Tableau extends Phaser.Scene{
         this.scene.stop();
     }
 
-
-    win(){
-        Tableau.suivant();
-        this.musicamb.stop();
-    }
 
 
     static suivant(){

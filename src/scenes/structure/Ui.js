@@ -10,6 +10,7 @@ class Ui extends Phaser.Scene{
         this.load.image('bouton_tir', 'assets/ui/fire_button2.png');
         this.load.image('moleu_', 'assets/moleu.png');
         this.load.image('particlesg', 'assets/particles/particle1.png');
+        this.load.image('cibleux', 'assets/cibleui.png');
 
 
     }
@@ -17,11 +18,18 @@ class Ui extends Phaser.Scene{
         console.log("create Ui")
 
         this.score=0;
+        this.score_cible=0;
 
 
         this.moleui = this.add.image(50, 53 , 'moleu_');
+        this.cible = this.add.image(50, 100 , 'cibleux');
 
         this._scoreText = this.add.text(36, 36, '...', {
+            font:'32px "Yoster"',
+            fill: '#fff'
+        });
+
+        this._scorecible = this.add.text(36, 80, '...', {
             font:'32px "Yoster"',
             fill: '#fff'
         });
@@ -36,6 +44,12 @@ class Ui extends Phaser.Scene{
         setTimeout(function(){
             me.tableau="Hello World";
             me.gagne(0)
+        },100)
+
+
+        setTimeout(function(){
+            me.tableau="Hello World";
+            me.gagne_cible(0)
         },100)
 
 
@@ -87,6 +101,13 @@ class Ui extends Phaser.Scene{
 
     }
 
+    gagne_cible(points=1)
+    {
+        this.score_cible+=points;
+        this._scorecible.setText('     x  ' + this.score_cible);
+
+    }
+
     update(){
 
 
@@ -94,7 +115,9 @@ class Ui extends Phaser.Scene{
         {
             this.pad.visible = true;
             this._scoreText.visible = true;
+            this._scorecible.visible = true;
             this.moleui.visible = true ;
+            this.cible.visible = true ;
             this.boutonshoot.visible = true ;
             this.btFs.visible = true ;
             this._tableauText= true;
@@ -103,7 +126,9 @@ class Ui extends Phaser.Scene{
 
             this.pad.visible = false;
             this._scoreText.visible = false;
+            this._scorecible.visible = false;
             this.moleui.visible = false ;
+            this.cible.visible = false ;
             this.boutonshoot.visible = false;
             this.btFs.visible = false ;
             this._tableauText= false ;

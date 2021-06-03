@@ -227,7 +227,8 @@ class Tir extends ObjetPhysique{
 
                 me.emit(MyEvents.EXPLODE_cible);
                 cibleu.killcible();
-                tir.destroy()
+                tir.destroy();
+                ui.gagne_cible();
 
             }, null, scene);
 
