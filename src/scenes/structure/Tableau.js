@@ -42,7 +42,7 @@ class Tableau extends Phaser.Scene{
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("Mais où sommes-nous ?"+this.constructor.name+" / "+this.scene.key);
 
-        this.player=new Player(this,12000,50);
+        this.player=new Player(this,80,50);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"crane")
         this.blood.displayWidth=35;
