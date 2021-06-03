@@ -18,7 +18,8 @@ class Level_1 extends Tableau {
         this.load.image('moleu_', 'assets/moleu.png');
         this.load.image('cible', 'assets/cible.png');
         this.load.image('bullet', 'assets/bullet.png');
-        this.load.image('blood', 'assets/blood.png');
+        this.load.image('crane', 'assets/crane.png');
+
 
         this.load.image('sprite', 'ref/sprite4.png');
         this.load.image('back', 'assets/images/backgroundB.png');
@@ -50,7 +51,7 @@ class Level_1 extends Tableau {
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_216.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_218.json');
 
 
 

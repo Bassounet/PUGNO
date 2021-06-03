@@ -48,8 +48,8 @@ class Tableau extends Phaser.Scene{
 
         this.player=new Player(this,80,50);
 
-        this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
-        this.blood.displayWidth=64;
+        this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"crane")
+        this.blood.displayWidth=35;
         this.blood.displayHeight=64;
         this.blood.visible=false;
 
@@ -81,29 +81,36 @@ class Tableau extends Phaser.Scene{
     }
 
     saigne(object,onComplete){
+
         let me=this;
         me.blood.visible=true;
 
-        me.blood.rotation = Phaser.Math.Between(0,21);
+        me.blood.rotation = Phaser.Math.Between(0,130);
         me.blood.x=object.x;
         me.blood.y=object.y;
         me.tweens.add({
             targets:me.blood,
 
-            duration:500,
+            duration:650,
             displayHeight:{
                 from:10,
-                to:100,
+                to:120,
             },
             displayWidth:{
                 from:10,
-                to:100,
+                to:120,
             },
             onComplete: function () {
                 me.blood.visible=false;
                 onComplete();
             }
         })
+    }
+
+    bloodeffect(){
+
+        this.cameras.main.fadeOut(700, 100, 0, 0);
+
     }
 
 
@@ -120,6 +127,8 @@ class Tableau extends Phaser.Scene{
                 this.sound.play('barrel', {volume : 0.4 });
                 this.sound.play('die', { delay : 0.15 });
                 this.sound.play('blood', { delay : 0.04 });
+
+                this.bloodeffect();
 
                 Tableau.current.cameras.main.shake(200, 0.1, true);
 
@@ -162,6 +171,7 @@ class Tableau extends Phaser.Scene{
                 this.sound.play('die', { delay : 0.15 });
                 this.sound.play('blood', { delay : 0.15 });
 
+                this.bloodeffect();
                 Tableau.current.cameras.main.shake(100, 0.07, true);
 
                 if(!me.player.isDead){
@@ -198,18 +208,22 @@ class Tableau extends Phaser.Scene{
                     me.player.isDead=true;
                     this.musicamb.stop();
                     me.player.visible=false;
-                    this.sound.play('medic', {volume : 0.3 });
+                    this.sound.play('ouch', {volume : 0.3 });
                     this.sound.play('punch', {volume : 3 });
+                    this.bloodeffect();
                     Tableau.current.cameras.main.shake(1000, 0.02, true);
+
 
                     me.saigne(me.player,function(){
 
                         me.blood.visible=false;
-                        me.player.anims.play('turn');
+                        // me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
                         me.sound.play('recovery', { delay : 0.04 });
+                        // Tableau.current.cameras.main.fadeIn(2000, 100, 0, 0);
                     })
+
 
                 }
         }
