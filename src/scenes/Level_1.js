@@ -851,57 +851,7 @@ class Level_1 extends Tableau {
 
         }
 
-        // -*-*-*-*-*-*- TXT last FIN
 
-        // -*-*-*-*-*-*- TXT 7
-
-        // let x_ok_start_sam = 13700;
-        // let x_ok_fin_sam = 15000;
-        //
-        //
-        // if (this.player.x < x_ok_start_sam) {
-        //     //this.tuto_dash.alpha=1;
-        //     Tableau.current.tweens.add({
-        //         targets: Tableau.current.txtsam,
-        //         alpha: 0,
-        //         duration: 30,
-        //         ease: 'Sine.easeInOut',
-        //
-        //     })
-        //
-        // } else if (this.player.x > x_ok_fin_sam) {
-        //     //this.tuto_dash.alpha=0;
-        //     Tableau.current.tweens.add({
-        //         targets: Tableau.current.txtsam,
-        //         alpha: 0,
-        //         duration: 30,
-        //         ease: 'Sine.easeInOut',
-        //
-        //     })
-        //
-        // } else if (this.player.x > x_ok_start_sam + 1) {
-        //     //this.tuto_dash.alpha=0;
-        //     Tableau.current.tweens.add({
-        //         targets: Tableau.current.txtsam,
-        //         alpha: 1,
-        //         duration: 30,
-        //         ease: 'Sine.easeInOut',
-        //
-        //     })
-        //
-        // } else if (this.player.x < x_ok_fin_sam - 1) {
-        //     //this.tuto_dash.alpha=0;
-        //     Tableau.current.tweens.add({
-        //         targets: Tableau.current.txtsam,
-        //         alpha: 1,
-        //         duration: 30,
-        //         ease: 'Sine.easeInOut',
-        //
-        //     })
-        //
-        // }
-
-        // -*-*-*-*-*-*- TXT 7 FIN
     }
 
     // ***-*-*-*-*-*-*- TXT FIN -*-*-*-*-*-*-*-*-

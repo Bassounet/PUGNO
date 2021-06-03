@@ -20,19 +20,10 @@ class Tableau_v extends Tableau {
 
         super.create();
 
-        // this.blood.displayWidth=64;
-        // this.blood.displayHeight=64;
-        // this.blood.visible=false;
+
 
         this.boutonTir = this.input.keyboard.addKey('A');
 
-        // this.sound.add('moleu');
-        // this.sound.add('die');
-        // this.sound.add('talkie');
-        // this.sound.add('jump');
-        // this.sound.add('explosion');
-        // this.sound.add('fire');
-        // this.musicamb = this.sound.add('amb');
 
 
             var vid = this.add.video(448, 224, 'test');
@@ -41,7 +32,7 @@ class Tableau_v extends Tableau {
             vid.play(true);
             vid.setPaused(false);
             vid.setLoop(false);
-            // var timer = this.time.delayedCall(0, callback, args, scope);  // delay in ms
+
             var timedEvent;
 
             timedEvent = this.time.addEvent({ 

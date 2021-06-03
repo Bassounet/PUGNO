@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="Little_clean_for_vide_and_start">
+    <list default="true" id="67398db2-0f54-47c7-b9dd-77fbc188f665" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Platformer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Tableau.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/structure/Ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/structure/Ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/ui/GamePad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ui/GamePad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_v.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_v.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,270 +20,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/scenes/Level_1.js" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="ProjectId" id="1qWgOxfa2by1hO9sus9SqWsUXaR" />
+  <component name="ProjectId" id="1tSH3Gqnxk61v80SDcqKj1N3BUi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scenes" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\pugno\src\scenes" />
-      <recent name="C:\xampp\htdocs\pugno\src\objects" />
-      <recent name="C:\xampp\htdocs\Platformer\src\objects" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Level_1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/scenes/Level_1.js" working-dir="$PROJECT_DIR$/src/scenes">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.Level_1.js" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4a221bd3-0d22-4ede-ac9d-ce99e0c6cdff" name="Default Changelist" comment="" />
-      <created>1617200732959</created>
+      <changelist id="67398db2-0f54-47c7-b9dd-77fbc188f665" name="Default Changelist" comment="" />
+      <created>1622755371329</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1617200732959</updated>
-      <workItem from="1617200735004" duration="3766000" />
-      <workItem from="1617207172362" duration="3856000" />
-      <workItem from="1617220973679" duration="181000" />
-      <workItem from="1617265303914" duration="101000" />
-      <workItem from="1617349429157" duration="7454000" />
-      <workItem from="1617485598611" duration="173000" />
-      <workItem from="1617696845584" duration="47000" />
-      <workItem from="1617789014735" duration="335000" />
-      <workItem from="1617906424613" duration="1000" />
-      <workItem from="1618248274221" duration="50000" />
-      <workItem from="1618657344245" duration="335000" />
-      <workItem from="1618658056737" duration="2575000" />
-      <workItem from="1618674209160" duration="5238000" />
-      <workItem from="1618679798363" duration="131000" />
-      <workItem from="1618679956684" duration="778000" />
-      <workItem from="1618680787997" duration="950000" />
-      <workItem from="1618685860739" duration="7381000" />
-      <workItem from="1618693912908" duration="1916000" />
-      <workItem from="1618695879771" duration="1642000" />
-      <workItem from="1618738807353" duration="5171000" />
-      <workItem from="1618749308810" duration="3112000" />
-      <workItem from="1618753780796" duration="1822000" />
-      <workItem from="1618756234465" duration="8553000" />
-      <workItem from="1618777310149" duration="2065000" />
-      <workItem from="1618792352788" duration="10251000" />
-      <workItem from="1618995779766" duration="594000" />
-      <workItem from="1619440227459" duration="1255000" />
-      <workItem from="1619507560518" duration="71000" />
-      <workItem from="1619694591503" duration="594000" />
-      <workItem from="1619699266909" duration="6000" />
-      <workItem from="1619780126941" duration="596000" />
-      <workItem from="1619877210586" duration="594000" />
-      <workItem from="1620034192676" duration="8000" />
-      <workItem from="1620208725840" duration="594000" />
-      <workItem from="1620231717180" duration="596000" />
-      <workItem from="1620630786421" duration="1599000" />
-      <workItem from="1620632457818" duration="8414000" />
-      <workItem from="1620648031187" duration="6549000" />
-      <workItem from="1620657424464" duration="6238000" />
-      <workItem from="1620727082019" duration="1493000" />
-      <workItem from="1620730508957" duration="962000" />
-      <workItem from="1620732958135" duration="4000000" />
-      <workItem from="1620741137745" duration="3339000" />
-      <workItem from="1620804269456" duration="324000" />
-      <workItem from="1620831191126" duration="596000" />
-      <workItem from="1620843874490" duration="594000" />
-      <workItem from="1620907818568" duration="315000" />
-      <workItem from="1621235281088" duration="3510000" />
-      <workItem from="1621259257373" duration="3478000" />
-      <workItem from="1621276589610" duration="1862000" />
-      <workItem from="1621278606238" duration="611000" />
-      <workItem from="1621332333089" duration="2042000" />
-      <workItem from="1621347840232" duration="7519000" />
-      <workItem from="1621411498283" duration="5715000" />
-      <workItem from="1621420583927" duration="1852000" />
-      <workItem from="1621424517362" duration="3002000" />
-      <workItem from="1621433515777" duration="1565000" />
-      <workItem from="1621492623105" duration="1817000" />
-      <workItem from="1621509774723" duration="1022000" />
-      <workItem from="1621521388554" duration="12009000" />
-      <workItem from="1621584967171" duration="1319000" />
-      <workItem from="1621600813451" duration="4818000" />
-      <workItem from="1621692405992" duration="8846000" />
-      <workItem from="1621707247110" duration="674000" />
-      <workItem from="1621843444258" duration="294000" />
-      <workItem from="1621844020195" duration="11731000" />
-      <workItem from="1621862519996" duration="5541000" />
-      <workItem from="1621926288961" duration="2105000" />
-      <workItem from="1621932009729" duration="7223000" />
-      <workItem from="1621957133860" duration="4951000" />
-      <workItem from="1621972018948" duration="6593000" />
-      <workItem from="1622026167789" duration="4247000" />
-      <workItem from="1622035726409" duration="10139000" />
-      <workItem from="1622097356532" duration="11849000" />
-      <workItem from="1622117907876" duration="12038000" />
-      <workItem from="1622135501498" duration="13597000" />
-      <workItem from="1622187178839" duration="14777000" />
-      <workItem from="1622207589732" duration="23087000" />
-      <workItem from="1622280085812" duration="13235000" />
-      <workItem from="1622448759730" duration="823000" />
-      <workItem from="1622451720212" duration="630000" />
-      <workItem from="1622463900278" duration="641000" />
-      <workItem from="1622486169191" duration="6756000" />
-      <workItem from="1622498108216" duration="2975000" />
-      <workItem from="1622502332009" duration="5128000" />
-      <workItem from="1622507579165" duration="637000" />
-      <workItem from="1622546208023" duration="3987000" />
-      <workItem from="1622556391181" duration="6770000" />
-      <workItem from="1622714879573" duration="12766000" />
-      <workItem from="1622734568628" duration="1381000" />
-      <workItem from="1622736356268" duration="1775000" />
-      <workItem from="1622748326630" duration="6309000" />
-      <workItem from="1622755129908" duration="136000" />
+      <updated>1622755371329</updated>
+      <workItem from="1622755374044" duration="278000" />
+      <workItem from="1622755690223" duration="315000" />
     </task>
-    <task id="LOCAL-00001" summary="Le test de webstorm ça tue :+1">
-      <created>1617202782973</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1617202782973</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Le test de webstorm ça tue :+1">
-      <created>1617202826136</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1617202826136</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Nouvel object">
-      <created>1617215435057</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1617215435057</updated>
-    </task>
-    <task id="LOCAL-00004" summary="on push du bon jus de france">
-      <created>1617265339279</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1617265339280</updated>
-    </task>
-    <task id="LOCAL-00005" summary="yep">
-      <created>1617349454395</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1617349454395</updated>
-    </task>
-    <task id="LOCAL-00006" summary="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok">
-      <created>1621359695619</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1621359695619</updated>
-    </task>
-    <task id="LOCAL-00007" summary="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok">
-      <created>1621429621081</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1621429621081</updated>
-    </task>
-    <task id="LOCAL-00008" summary="cibles presk oké">
-      <created>1621523909719</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1621523909719</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Little_clean_for_vide_and_start">
-      <created>1621686542628</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1621686542628</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Le test de webstorm ça tue :+1" />
-    <MESSAGE value="Nouvel object" />
-    <MESSAGE value="on push du bon jus de france" />
-    <MESSAGE value="yep" />
-    <MESSAGE value="la musik toujours OK, le compteur moléu OK, le sang ok, le tir du perso ok" />
-    <MESSAGE value="cibles presk oké" />
-    <MESSAGE value="Little_clean_for_vide_and_start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Little_clean_for_vide_and_start" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/objects/mechant1.js</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/scenes/Level_1.js</url>
-          <line>2</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/scenes/structure/Tableau.js</url>
-          <line>3</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/objects/Player.js</url>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
