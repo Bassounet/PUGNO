@@ -24,7 +24,7 @@ class Level_1 extends Tableau {
         this.load.image('cloud', 'assets/cloud.png');
 
 
-        this.load.image('txtdebut', 'assets/bienvenue.png');
+        this.load.image('txtdebut', 'assets/dialog_debut.png');
         this.load.image('txt2', 'assets/txt2.png');
         this.load.image('txttir', 'assets/dialog_tir1.png');
         this.load.image('txt4', 'assets/txt4.png');
@@ -46,7 +46,7 @@ class Level_1 extends Tableau {
 
         this.load.audio('amb', 'son/ambiance.wav');
 
-        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_232.json');
+        this.load.tilemapTiledJSON('map', 'TILED/end/VFX_218.json');
 
 
 
@@ -114,7 +114,7 @@ class Level_1 extends Tableau {
 
 
 
-        let text1_x = 215;
+        let text1_x = 150;
         let text1_y = 255;
 
         this.txt1 = this.add.image(text1_x, text1_y, "txtdebut")

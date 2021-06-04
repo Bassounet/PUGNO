@@ -2,7 +2,7 @@ class Tableau_end extends Tableau {
 
     preload() { 
 
-        this.load.image('end__screen', 'assets/the_end_screen.png');
+        this.load.image('end__screen', 'assets/end__screen.png');
 
     }
 

@@ -6,7 +6,7 @@ class Tableau_start extends Tableau {
         this.load.audio('go', 'son/go.wav');
         this.load.audio('woosh', 'son/woosh.wav');
         this.load.image('start', 'assets/start_button.png');
-        this.load.audio('siffle', 'son/siffle.wav');
+
     }
 
 
@@ -18,23 +18,8 @@ class Tableau_start extends Tableau {
 
         this.add.image(448,224,'fond');
 
-        let la = this;
-
         this.boutonstart = this.add.image(430,160, 'start');
         this.boutonstart.setInteractive();
-        this.boutonstart.on( 'pointerover', function(){
-
-            la.boutonstart.setAlpha(0.2);
-            la.sound.play('siffle',{volume : 1});
-
-
-        })
-        this.boutonstart.on( 'pointerout', function(){
-
-            la.boutonstart.setAlpha(0.9);
-
-
-        })
         this.boutonstart.on('pointerdown', function () {
 
 
