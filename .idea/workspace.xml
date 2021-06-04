@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67398db2-0f54-47c7-b9dd-77fbc188f665" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Platformer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/ui/GamePad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ui/GamePad.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Level_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Level_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Tableau_v.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Tableau_v.js" afterDir="false" />
-    </list>
+    <list default="true" id="67398db2-0f54-47c7-b9dd-77fbc188f665" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +32,9 @@
       <updated>1622755371329</updated>
       <workItem from="1622755374044" duration="278000" />
       <workItem from="1622755690223" duration="315000" />
+      <workItem from="1622792406572" duration="10000" />
+      <workItem from="1622792531612" duration="3619000" />
+      <workItem from="1622797320070" duration="744000" />
     </task>
     <servers />
   </component>
