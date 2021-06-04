@@ -4,7 +4,7 @@
      "export":
         {
          "format":"json",
-         "target":"VFX_230.json"
+         "target":"VFX_231.json"
         }
     },
  "height":7,
@@ -1523,8 +1523,8 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":3415,
-                 "y":229
+                 "x":3434,
+                 "y":210
                 }, 
                 {
                  "gid":226,
@@ -1547,8 +1547,8 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":3603,
-                 "y":223
+                 "x":3623,
+                 "y":200
                 }, 
                 {
                  "gid":226,
@@ -1571,8 +1571,8 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":3797,
-                 "y":222
+                 "x":3816,
+                 "y":197
                 }, 
                 {
                  "gid":226,
